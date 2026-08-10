@@ -1,10 +1,4 @@
-/*
-  BIRDLEAGUE-DATEN
-  ----------------
-  Wissenschaftliche Namen dienen als stabiler Schlüssel; deutsche Namen sind die Anzeige.
-  Nicht gesetzte Punktwerte bleiben null und werden als „noch unbewertet“ angezeigt.
-*/
-
+/* BirdLeague – veröffentlichter Datenstand */
 window.BIRDLEAGUE_DATA = {
   "leagueName": "BirdLeague",
   "season": 2026,
@@ -22,84 +16,84 @@ window.BIRDLEAGUE_DATA = {
       "germanName": "Graugans",
       "englishName": "Graylag Goose",
       "scientificName": "Anser anser",
-      "points": null
+      "points": 1
     },
     {
       "id": "branta-canadensis",
       "germanName": "Kanadagans",
       "englishName": "Canada Goose",
       "scientificName": "Branta canadensis",
-      "points": 2
+      "points": 1
     },
     {
       "id": "anas-platyrhynchos",
       "germanName": "Stockente",
       "englishName": "Mallard",
       "scientificName": "Anas platyrhynchos",
-      "points": null
+      "points": 1
     },
     {
       "id": "phasianus-colchicus",
       "germanName": "Jagdfasan",
       "englishName": "Ring-necked Pheasant",
       "scientificName": "Phasianus colchicus",
-      "points": 1
+      "points": 2
     },
     {
       "id": "columba-livia",
       "germanName": "Felsentaube",
       "englishName": "Rock Pigeon",
       "scientificName": "Columba livia",
-      "points": null
+      "points": 1
     },
     {
       "id": "columba-palumbus",
       "germanName": "Ringeltaube",
       "englishName": "Common Wood-Pigeon",
       "scientificName": "Columba palumbus",
-      "points": null
+      "points": 1
     },
     {
       "id": "streptopelia-decaocto",
       "germanName": "Türkentaube",
       "englishName": "Eurasian Collared-Dove",
       "scientificName": "Streptopelia decaocto",
-      "points": null
+      "points": 1
     },
     {
       "id": "cuculus-canorus",
       "germanName": "Kuckuck",
       "englishName": "Common Cuckoo",
       "scientificName": "Cuculus canorus",
-      "points": null
+      "points": 4
     },
     {
       "id": "apus-apus",
       "germanName": "Mauersegler",
       "englishName": "Common Swift",
       "scientificName": "Apus apus",
-      "points": null
+      "points": 2
     },
     {
       "id": "gallinula-chloropus",
       "germanName": "Teichhuhn",
       "englishName": "Eurasian Moorhen",
       "scientificName": "Gallinula chloropus",
-      "points": null
+      "points": 3
     },
     {
       "id": "fulica-atra",
       "germanName": "Blässhuhn",
       "englishName": "Eurasian Coot",
       "scientificName": "Fulica atra",
-      "points": null
+      "points": 1
     },
     {
       "id": "grus-grus",
       "germanName": "Kranich",
       "englishName": "Common Crane",
       "scientificName": "Grus grus",
-      "points": null
+      "points": 4
     },
     {
       "id": "haematopus-ostralegus",
@@ -113,518 +107,518 @@ window.BIRDLEAGUE_DATA = {
       "germanName": "Kiebitzregenpfeifer",
       "englishName": "Black-bellied Plover",
       "scientificName": "Pluvialis squatarola",
-      "points": null
+      "points": 7
     },
     {
       "id": "pluvialis-apricaria",
       "germanName": "Goldregenpfeifer",
       "englishName": "European Golden-Plover",
       "scientificName": "Pluvialis apricaria",
-      "points": null
+      "points": 6
     },
     {
       "id": "charadrius-hiaticula",
       "germanName": "Sandregenpfeifer",
       "englishName": "Common Ringed Plover",
       "scientificName": "Charadrius hiaticula",
-      "points": null
+      "points": 5
     },
     {
       "id": "actitis-hypoleucos",
       "germanName": "Flussuferläufer",
       "englishName": "Common Sandpiper",
       "scientificName": "Actitis hypoleucos",
-      "points": null
+      "points": 5
     },
     {
       "id": "tringa-totanus",
       "germanName": "Rotschenkel",
       "englishName": "Common Redshank",
       "scientificName": "Tringa totanus",
-      "points": null
+      "points": 5
     },
     {
       "id": "tringa-nebularia",
       "germanName": "Grünschenkel",
       "englishName": "Common Greenshank",
       "scientificName": "Tringa nebularia",
-      "points": null
+      "points": 6
     },
     {
       "id": "calidris-alba",
       "germanName": "Sanderling",
       "englishName": "Sanderling",
       "scientificName": "Calidris alba",
-      "points": null
+      "points": 5
     },
     {
       "id": "chroicocephalus-ridibundus",
       "germanName": "Lachmöwe",
       "englishName": "Black-headed Gull",
       "scientificName": "Chroicocephalus ridibundus",
-      "points": null
+      "points": 2
     },
     {
       "id": "larus-canus",
       "germanName": "Sturmmöwe",
       "englishName": "Common Gull",
       "scientificName": "Larus canus",
-      "points": null
+      "points": 3
     },
     {
       "id": "larus-argentatus",
       "germanName": "Silbermöwe",
       "englishName": "European Herring Gull",
       "scientificName": "Larus argentatus",
-      "points": null
+      "points": 2
     },
     {
       "id": "larus-michahellis",
       "germanName": "Mittelmeermöwe",
       "englishName": "Yellow-legged Gull",
       "scientificName": "Larus michahellis",
-      "points": null
+      "points": 5
     },
     {
       "id": "thalasseus-sandvicensis",
       "germanName": "Brandseeschwalbe",
       "englishName": "Sandwich Tern",
       "scientificName": "Thalasseus sandvicensis",
-      "points": null
+      "points": 6
     },
     {
       "id": "accipiter-nisus",
       "germanName": "Sperber",
       "englishName": "Eurasian Sparrowhawk",
       "scientificName": "Accipiter nisus",
-      "points": null
+      "points": 4
     },
     {
       "id": "buteo-buteo",
       "germanName": "Mäusebussard",
       "englishName": "Common Buzzard",
       "scientificName": "Buteo buteo",
-      "points": null
+      "points": 2
     },
     {
       "id": "asio-otus",
       "germanName": "Waldohreule",
       "englishName": "Long-eared Owl",
       "scientificName": "Asio otus",
-      "points": null
+      "points": 7
     },
     {
       "id": "dendrocopos-major",
       "germanName": "Buntspecht",
       "englishName": "Great Spotted Woodpecker",
       "scientificName": "Dendrocopos major",
-      "points": null
+      "points": 2
     },
     {
       "id": "picus-viridis",
       "germanName": "Grünspecht",
       "englishName": "Eurasian Green Woodpecker",
       "scientificName": "Picus viridis",
-      "points": null
+      "points": 3
     },
     {
       "id": "dryocopus-martius",
       "germanName": "Schwarzspecht",
       "englishName": "Black Woodpecker",
       "scientificName": "Dryocopus martius",
-      "points": null
+      "points": 5
     },
     {
       "id": "falco-tinnunculus",
       "germanName": "Turmfalke",
       "englishName": "Eurasian Kestrel",
       "scientificName": "Falco tinnunculus",
-      "points": null
+      "points": 2
     },
     {
       "id": "garrulus-glandarius",
       "germanName": "Eichelhäher",
       "englishName": "Eurasian Jay",
       "scientificName": "Garrulus glandarius",
-      "points": null
+      "points": 2
     },
     {
       "id": "pica-pica",
       "germanName": "Elster",
       "englishName": "Eurasian Magpie",
       "scientificName": "Pica pica",
-      "points": null
+      "points": 1
     },
     {
       "id": "corvus-frugilegus",
       "germanName": "Saatkrähe",
       "englishName": "Rook",
       "scientificName": "Corvus frugilegus",
-      "points": null
+      "points": 3
     },
     {
       "id": "corvus-corone",
       "germanName": "Rabenkrähe",
       "englishName": "Carrion Crow",
       "scientificName": "Corvus corone",
-      "points": null
+      "points": 1
     },
     {
       "id": "corvus-cornix",
       "germanName": "Nebelkrähe",
       "englishName": "Hooded Crow",
       "scientificName": "Corvus cornix",
-      "points": null
+      "points": 3
     },
     {
       "id": "corvus-corax",
       "germanName": "Kolkrabe",
       "englishName": "Common Raven",
       "scientificName": "Corvus corax",
-      "points": null
+      "points": 3
     },
     {
       "id": "periparus-ater",
       "germanName": "Tannenmeise",
       "englishName": "Coal Tit",
       "scientificName": "Periparus ater",
-      "points": null
+      "points": 2
     },
     {
       "id": "lophophanes-cristatus",
       "germanName": "Haubenmeise",
       "englishName": "Crested Tit",
       "scientificName": "Lophophanes cristatus",
-      "points": null
+      "points": 4
     },
     {
       "id": "poecile-palustris",
       "germanName": "Sumpfmeise",
       "englishName": "Marsh Tit",
       "scientificName": "Poecile palustris",
-      "points": null
+      "points": 3
     },
     {
       "id": "cyanistes-caeruleus",
       "germanName": "Blaumeise",
       "englishName": "Eurasian Blue Tit",
       "scientificName": "Cyanistes caeruleus",
-      "points": null
+      "points": 1
     },
     {
       "id": "parus-major",
       "germanName": "Kohlmeise",
       "englishName": "Great Tit",
       "scientificName": "Parus major",
-      "points": null
+      "points": 1
     },
     {
       "id": "lullula-arborea",
       "germanName": "Heidelerche",
       "englishName": "Wood Lark",
       "scientificName": "Lullula arborea",
-      "points": null
+      "points": 5
     },
     {
       "id": "alauda-arvensis",
       "germanName": "Feldlerche",
       "englishName": "Eurasian Skylark",
       "scientificName": "Alauda arvensis",
-      "points": null
+      "points": 2
     },
     {
       "id": "acrocephalus-schoenobaenus",
       "germanName": "Schilfrohrsänger",
       "englishName": "Sedge Warbler",
       "scientificName": "Acrocephalus schoenobaenus",
-      "points": null
+      "points": 4
     },
     {
       "id": "locustella-naevia",
       "germanName": "Feldschwirl",
       "englishName": "Common Grasshopper Warbler",
       "scientificName": "Locustella naevia",
-      "points": null
+      "points": 5
     },
     {
       "id": "hirundo-rustica",
       "germanName": "Rauchschwalbe",
       "englishName": "Barn Swallow",
       "scientificName": "Hirundo rustica",
-      "points": null
+      "points": 2
     },
     {
       "id": "delichon-urbicum",
       "germanName": "Mehlschwalbe",
       "englishName": "Western House-Martin",
       "scientificName": "Delichon urbicum",
-      "points": null
+      "points": 2
     },
     {
       "id": "phylloscopus-sibilatrix",
       "germanName": "Waldlaubsänger",
       "englishName": "Wood Warbler",
       "scientificName": "Phylloscopus sibilatrix",
-      "points": null
+      "points": 5
     },
     {
       "id": "phylloscopus-trochilus",
       "germanName": "Fitis",
       "englishName": "Willow Warbler",
       "scientificName": "Phylloscopus trochilus",
-      "points": null
+      "points": 2
     },
     {
       "id": "phylloscopus-collybita",
       "germanName": "Zilpzalp",
       "englishName": "Common Chiffchaff",
       "scientificName": "Phylloscopus collybita",
-      "points": null
+      "points": 1
     },
     {
       "id": "sylvia-atricapilla",
       "germanName": "Mönchsgrasmücke",
       "englishName": "Eurasian Blackcap",
       "scientificName": "Sylvia atricapilla",
-      "points": null
+      "points": 1
     },
     {
       "id": "sylvia-borin",
       "germanName": "Gartengrasmücke",
       "englishName": "Garden Warbler",
       "scientificName": "Sylvia borin",
-      "points": null
+      "points": 3
     },
     {
       "id": "curruca-curruca",
       "germanName": "Klappergrasmücke",
       "englishName": "Lesser Whitethroat",
       "scientificName": "Curruca curruca",
-      "points": null
+      "points": 3
     },
     {
       "id": "curruca-communis",
       "germanName": "Dorngrasmücke",
       "englishName": "Greater Whitethroat",
       "scientificName": "Curruca communis",
-      "points": null
+      "points": 2
     },
     {
       "id": "regulus-regulus",
       "germanName": "Wintergoldhähnchen",
       "englishName": "Goldcrest",
       "scientificName": "Regulus regulus",
-      "points": null
+      "points": 3
     },
     {
       "id": "regulus-ignicapilla",
       "germanName": "Sommergoldhähnchen",
       "englishName": "Common Firecrest",
       "scientificName": "Regulus ignicapilla",
-      "points": null
+      "points": 4
     },
     {
       "id": "sitta-europaea",
       "germanName": "Kleiber",
       "englishName": "Eurasian Nuthatch",
       "scientificName": "Sitta europaea",
-      "points": null
+      "points": 2
     },
     {
       "id": "certhia-brachydactyla",
       "germanName": "Gartenbaumläufer",
       "englishName": "Short-toed Treecreeper",
       "scientificName": "Certhia brachydactyla",
-      "points": null
+      "points": 3
     },
     {
       "id": "troglodytes-troglodytes",
       "germanName": "Zaunkönig",
       "englishName": "Eurasian Wren",
       "scientificName": "Troglodytes troglodytes",
-      "points": null
+      "points": 1
     },
     {
       "id": "sturnus-vulgaris",
       "germanName": "Star",
       "englishName": "European Starling",
       "scientificName": "Sturnus vulgaris",
-      "points": null
+      "points": 1
     },
     {
       "id": "turdus-viscivorus",
       "germanName": "Misteldrossel",
       "englishName": "Mistle Thrush",
       "scientificName": "Turdus viscivorus",
-      "points": null
+      "points": 3
     },
     {
       "id": "turdus-philomelos",
       "germanName": "Singdrossel",
       "englishName": "Song Thrush",
       "scientificName": "Turdus philomelos",
-      "points": null
+      "points": 2
     },
     {
       "id": "turdus-merula",
       "germanName": "Amsel",
       "englishName": "Eurasian Blackbird",
       "scientificName": "Turdus merula",
-      "points": null
+      "points": 1
     },
     {
       "id": "erithacus-rubecula",
       "germanName": "Rotkehlchen",
       "englishName": "European Robin",
       "scientificName": "Erithacus rubecula",
-      "points": null
+      "points": 1
     },
     {
       "id": "luscinia-svecica",
       "germanName": "Blaukehlchen",
       "englishName": "Bluethroat",
       "scientificName": "Luscinia svecica",
-      "points": null
+      "points": 6
     },
     {
       "id": "phoenicurus-phoenicurus",
       "germanName": "Gartenrotschwanz",
       "englishName": "Common Redstart",
       "scientificName": "Phoenicurus phoenicurus",
-      "points": null
+      "points": 4
     },
     {
       "id": "phoenicurus-ochruros",
       "germanName": "Hausrotschwanz",
       "englishName": "Black Redstart",
       "scientificName": "Phoenicurus ochruros",
-      "points": null
+      "points": 2
     },
     {
       "id": "saxicola-rubetra",
       "germanName": "Braunkehlchen",
       "englishName": "Whinchat",
       "scientificName": "Saxicola rubetra",
-      "points": null
+      "points": 6
     },
     {
       "id": "oenanthe-oenanthe",
       "germanName": "Steinschmätzer",
       "englishName": "Northern Wheatear",
       "scientificName": "Oenanthe oenanthe",
-      "points": null
+      "points": 5
     },
     {
       "id": "prunella-modularis",
       "germanName": "Heckenbraunelle",
       "englishName": "Dunnock",
       "scientificName": "Prunella modularis",
-      "points": null
+      "points": 1
     },
     {
       "id": "passer-domesticus",
       "germanName": "Haussperling",
       "englishName": "House Sparrow",
       "scientificName": "Passer domesticus",
-      "points": null
+      "points": 1
     },
     {
       "id": "passer-montanus",
       "germanName": "Feldsperling",
       "englishName": "Eurasian Tree Sparrow",
       "scientificName": "Passer montanus",
-      "points": null
+      "points": 2
     },
     {
       "id": "motacilla-flava",
       "germanName": "Schafstelze",
       "englishName": "Western Yellow Wagtail",
       "scientificName": "Motacilla flava",
-      "points": null
+      "points": 3
     },
     {
       "id": "motacilla-alba",
       "germanName": "Bachstelze",
       "englishName": "White Wagtail",
       "scientificName": "Motacilla alba",
-      "points": null
+      "points": 1
     },
     {
       "id": "anthus-pratensis",
       "germanName": "Wiesenpieper",
       "englishName": "Meadow Pipit",
       "scientificName": "Anthus pratensis",
-      "points": null
+      "points": 3
     },
     {
       "id": "anthus-trivialis",
       "germanName": "Baumpieper",
       "englishName": "Tree Pipit",
       "scientificName": "Anthus trivialis",
-      "points": null
+      "points": 3
     },
     {
       "id": "fringilla-coelebs",
       "germanName": "Buchfink",
       "englishName": "Common Chaffinch",
       "scientificName": "Fringilla coelebs",
-      "points": null
+      "points": 1
     },
     {
       "id": "pyrrhula-pyrrhula",
       "germanName": "Gimpel",
       "englishName": "Eurasian Bullfinch",
       "scientificName": "Pyrrhula pyrrhula",
-      "points": null
+      "points": 3
     },
     {
       "id": "chloris-chloris",
       "germanName": "Grünfink",
       "englishName": "European Greenfinch",
       "scientificName": "Chloris chloris",
-      "points": null
+      "points": 2
     },
     {
       "id": "linaria-cannabina",
       "germanName": "Bluthänfling",
       "englishName": "Eurasian Linnet",
       "scientificName": "Linaria cannabina",
-      "points": null
+      "points": 3
     },
     {
       "id": "acanthis-flammea",
       "germanName": "Birkenzeisig",
       "englishName": "Redpoll",
       "scientificName": "Acanthis flammea",
-      "points": null
+      "points": 5
     },
     {
       "id": "carduelis-carduelis",
       "germanName": "Stieglitz",
       "englishName": "European Goldfinch",
       "scientificName": "Carduelis carduelis",
-      "points": null
+      "points": 2
     },
     {
       "id": "spinus-spinus",
       "germanName": "Erlenzeisig",
       "englishName": "Eurasian Siskin",
       "scientificName": "Spinus spinus",
-      "points": null
+      "points": 3
     },
     {
       "id": "emberiza-citrinella",
       "germanName": "Goldammer",
       "englishName": "Yellowhammer",
       "scientificName": "Emberiza citrinella",
-      "points": null
+      "points": 2
     },
     {
       "id": "emberiza-schoeniclus",
       "germanName": "Rohrammer",
       "englishName": "Reed Bunting",
       "scientificName": "Emberiza schoeniclus",
-      "points": null
+      "points": 3
     }
   ],
   "observations": [

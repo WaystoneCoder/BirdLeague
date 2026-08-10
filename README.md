@@ -2,62 +2,39 @@
 
 BirdLeague ist eine statische, kostenlose GitHub-Pages-Website für euer Vogelstimmen-Spiel.
 
-## Aktueller Stand
+## Datenprinzip
 
-- Finns importierte Jahresarten 2026 sind bereits in `data.js` gespeichert.
-- Anzeigenamen sind auf Deutsch.
-- Der wissenschaftliche Name bleibt der stabile Schlüssel für zukünftige CSV-Importe.
-- Demo-Spieler und Demo-Funde wurden entfernt.
-- Noch nicht festgelegte Punktwerte werden als `–` / „unbewertet“ angezeigt.
-- CSV-Importe können lokal übernommen und als neue `data.js` für GitHub exportiert werden.
+- `data.js` = veröffentlichte Spieler und Funde.
+- `points.js` = Master-Punkteliste, wissenschaftlicher Name als stabiler Schlüssel.
+- `taxonomy-de.js` = deutsche Anzeigenamen.
+- `data/species-points.xlsx/csv/json` = editierbare bzw. austauschbare Master-Punkteliste.
 
-## Update in dein bestehendes GitHub-Repository einspielen
+Die aktuelle Masterliste umfasst die 87 Arten aus Finns eBird-Export. Alle 87 sind bewertet; Finns aktueller Stand beträgt 250 Punkte.
 
-Am einfachsten lädst du den kompletten Inhalt dieses Ordners erneut in dein bestehendes Repository `birdleague` hoch. Dateien mit gleichem Namen werden ersetzt; `taxonomy-de.js` kommt neu hinzu.
+## Punktelogik
 
-Besonders wichtig sind:
+Referenz ist Deutschland/Norddeutschland. Der Punktwert bleibt anschließend unabhängig vom Fundort gleich. Die Skala berücksichtigt Häufigkeit, regionale Bindung, Saisonalität und den praktischen BirdLeague-Schwierigkeitsgrad. 15 Punkte sind für echte Raritäten reserviert.
 
-- `index.html`
-- `app.js`
-- `data.js`
-- `taxonomy-de.js`
-- `styles.css`
-- `sw.js`
+## CSV-Import
 
-Danach aktualisiert GitHub Pages die Website automatisch.
+1. BirdLeague öffnen → **Import**.
+2. Spielernamen eingeben.
+3. eBird-CSV auswählen.
+4. BirdLeague reduziert auf eine Art pro Spieler/Jahr und prüft jede Art gegen `points.js`.
+5. Nur wenn alle Arten bewertet sind, kann der Import übernommen bzw. als `data.js` exportiert werden.
+6. Fehlt eine Art, wird sie mit wissenschaftlichem Namen aufgelistet. Dann zuerst Master-Punkteliste ergänzen.
+7. Neue `data.js` in GitHub ersetzen.
 
-## Künftiger CSV-Import
+## Künftige neue Arten
 
-1. BirdLeague öffnen.
-2. Zu **Import** wechseln.
-3. Spielernamen eingeben.
-4. CSV auswählen.
-5. Die Vorschau zeigt bekannte Vogelarten bereits auf Deutsch.
-6. **Lokal übernehmen** speichert den Stand nur in diesem Browser.
-7. **data.js für GitHub herunterladen** erzeugt den zusammengeführten öffentlichen Datenstand.
-8. Diese `data.js` anschließend im GitHub-Repository ersetzen.
+Wenn ein Spieler eine Art findet, die noch nicht in der Punkteliste steht, ist der saubere Workflow:
 
-Wichtig: GitHub Pages ist statisch. Eine Website kann deshalb ohne Backend oder GitHub-Zugang nicht selbst dauerhaft in das Repository schreiben. Der kleine `data.js`-Zwischenschritt hält das Projekt kostenlos und ohne Zugangstokens.
+1. eBird-Export / Liste hier hochladen.
+2. Neue Arten bewerten und `species-points.xlsx/json` ergänzen.
+3. Daraus neue `points.js` erzeugen.
+4. `points.js` auf GitHub ersetzen.
+5. CSV erneut importieren; der Check muss 100 % bewertet anzeigen.
 
-## Punkteliste
+## GitHub Pages
 
-Die Arten stehen zusätzlich in:
-
-`data/species-points.csv`
-
-Nicht bekannte Punktwerte sind dort leer. Sobald die vollständige feste BirdLeague-Punkteliste vorliegt, können die Werte in `data.js` übernommen werden.
-
-## Deutsche Sicherung
-
-`data/birdleague-finn-de.json` enthält Finns aktuellen Import noch einmal als gut lesbare deutsche JSON-Datei.
-
-## Hosting
-
-GitHub Pages:
-
-- Settings
-- Pages
-- Source: Deploy from a branch
-- Branch: `main`
-- Ordner: `/ (root)`
-
+Settings → Pages → Deploy from a branch → `main` → `/ (root)`.

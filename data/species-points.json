@@ -1,0 +1,872 @@
+[
+  {
+    "germanName": "Amsel",
+    "scientificName": "Turdus merula",
+    "englishName": "Eurasian Blackbird",
+    "points": 1,
+    "category": "sehr häufig",
+    "reason": "Sehr häufig und weit verbreitet; meist ohne gezielte Suche zu finden.",
+    "referenceRegion": "Deutschland / Norddeutschland",
+    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
+  },
+  {
+    "germanName": "Austernfischer",
+    "scientificName": "Haematopus ostralegus",
+    "englishName": "Eurasian Oystercatcher",
+    "points": 3,
+    "category": "regelmäßig / lokal",
+    "reason": "Regelmäßig, aber regional/lokal oder mit gezielterem Habitatbesuch.",
+    "referenceRegion": "Deutschland / Norddeutschland",
+    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
+  },
+  {
+    "germanName": "Bachstelze",
+    "scientificName": "Motacilla alba",
+    "englishName": "White Wagtail",
+    "points": 1,
+    "category": "sehr häufig",
+    "reason": "Sehr häufig und weit verbreitet; meist ohne gezielte Suche zu finden.",
+    "referenceRegion": "Deutschland / Norddeutschland",
+    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
+  },
+  {
+    "germanName": "Baumpieper",
+    "scientificName": "Anthus trivialis",
+    "englishName": "Tree Pipit",
+    "points": 3,
+    "category": "regelmäßig / lokal",
+    "reason": "Regelmäßig, aber regional/lokal oder mit gezielterem Habitatbesuch.",
+    "referenceRegion": "Deutschland / Norddeutschland",
+    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
+  },
+  {
+    "germanName": "Birkenzeisig",
+    "scientificName": "Acanthis flammea",
+    "englishName": "Redpoll",
+    "points": 5,
+    "category": "ungewöhnlich",
+    "reason": "In Deutschland stark saisonal/regional und in manchen Jahren deutlich leichter als in anderen.",
+    "referenceRegion": "Deutschland / Norddeutschland",
+    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
+  },
+  {
+    "germanName": "Blaukehlchen",
+    "scientificName": "Luscinia svecica",
+    "englishName": "Bluethroat",
+    "points": 6,
+    "category": "selten / stark lokalisiert",
+    "reason": "Regional stark gebundener Brutvogel mit speziellen Feuchtlebensräumen.",
+    "referenceRegion": "Deutschland / Norddeutschland",
+    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
+  },
+  {
+    "germanName": "Blaumeise",
+    "scientificName": "Cyanistes caeruleus",
+    "englishName": "Eurasian Blue Tit",
+    "points": 1,
+    "category": "sehr häufig",
+    "reason": "Sehr häufig und weit verbreitet; meist ohne gezielte Suche zu finden.",
+    "referenceRegion": "Deutschland / Norddeutschland",
+    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
+  },
+  {
+    "germanName": "Bluthänfling",
+    "scientificName": "Linaria cannabina",
+    "englishName": "Eurasian Linnet",
+    "points": 3,
+    "category": "regelmäßig / lokal",
+    "reason": "Regelmäßig, aber regional/lokal oder mit gezielterem Habitatbesuch.",
+    "referenceRegion": "Deutschland / Norddeutschland",
+    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
+  },
+  {
+    "germanName": "Blässhuhn",
+    "scientificName": "Fulica atra",
+    "englishName": "Eurasian Coot",
+    "points": 1,
+    "category": "sehr häufig",
+    "reason": "Sehr häufig und weit verbreitet; meist ohne gezielte Suche zu finden.",
+    "referenceRegion": "Deutschland / Norddeutschland",
+    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
+  },
+  {
+    "germanName": "Brandseeschwalbe",
+    "scientificName": "Thalasseus sandvicensis",
+    "englishName": "Sandwich Tern",
+    "points": 6,
+    "category": "selten / stark lokalisiert",
+    "reason": "Stark küsten- und koloniegebundene Art; im Binnenland bzw. Alltag selten.",
+    "referenceRegion": "Deutschland / Norddeutschland",
+    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
+  },
+  {
+    "germanName": "Braunkehlchen",
+    "scientificName": "Saxicola rubetra",
+    "englishName": "Whinchat",
+    "points": 6,
+    "category": "selten / stark lokalisiert",
+    "reason": "Deutlich zurückgegangener und regionaler Brutvogel; in Deutschland stark gefährdet.",
+    "referenceRegion": "Deutschland / Norddeutschland",
+    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
+  },
+  {
+    "germanName": "Buchfink",
+    "scientificName": "Fringilla coelebs",
+    "englishName": "Common Chaffinch",
+    "points": 1,
+    "category": "sehr häufig",
+    "reason": "Sehr häufig und weit verbreitet; meist ohne gezielte Suche zu finden.",
+    "referenceRegion": "Deutschland / Norddeutschland",
+    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
+  },
+  {
+    "germanName": "Buntspecht",
+    "scientificName": "Dendrocopos major",
+    "englishName": "Great Spotted Woodpecker",
+    "points": 2,
+    "category": "häufig",
+    "reason": "Häufig, aber etwas stärker an Saison oder Lebensraum gebunden.",
+    "referenceRegion": "Deutschland / Norddeutschland",
+    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
+  },
+  {
+    "germanName": "Dorngrasmücke",
+    "scientificName": "Curruca communis",
+    "englishName": "Greater Whitethroat",
+    "points": 2,
+    "category": "häufig",
+    "reason": "Häufig, aber etwas stärker an Saison oder Lebensraum gebunden.",
+    "referenceRegion": "Deutschland / Norddeutschland",
+    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
+  },
+  {
+    "germanName": "Eichelhäher",
+    "scientificName": "Garrulus glandarius",
+    "englishName": "Eurasian Jay",
+    "points": 2,
+    "category": "häufig",
+    "reason": "Häufig, aber etwas stärker an Saison oder Lebensraum gebunden.",
+    "referenceRegion": "Deutschland / Norddeutschland",
+    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
+  },
+  {
+    "germanName": "Elster",
+    "scientificName": "Pica pica",
+    "englishName": "Eurasian Magpie",
+    "points": 1,
+    "category": "sehr häufig",
+    "reason": "Sehr häufig und weit verbreitet; meist ohne gezielte Suche zu finden.",
+    "referenceRegion": "Deutschland / Norddeutschland",
+    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
+  },
+  {
+    "germanName": "Erlenzeisig",
+    "scientificName": "Spinus spinus",
+    "englishName": "Eurasian Siskin",
+    "points": 3,
+    "category": "regelmäßig / lokal",
+    "reason": "Regelmäßig, aber regional/lokal oder mit gezielterem Habitatbesuch.",
+    "referenceRegion": "Deutschland / Norddeutschland",
+    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
+  },
+  {
+    "germanName": "Feldlerche",
+    "scientificName": "Alauda arvensis",
+    "englishName": "Eurasian Skylark",
+    "points": 2,
+    "category": "häufig",
+    "reason": "Häufig, aber etwas stärker an Saison oder Lebensraum gebunden.",
+    "referenceRegion": "Deutschland / Norddeutschland",
+    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
+  },
+  {
+    "germanName": "Feldschwirl",
+    "scientificName": "Locustella naevia",
+    "englishName": "Common Grasshopper Warbler",
+    "points": 5,
+    "category": "ungewöhnlich",
+    "reason": "Saisonal, habitatgebunden und trotz markantem Gesang nicht flächig verbreitet.",
+    "referenceRegion": "Deutschland / Norddeutschland",
+    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
+  },
+  {
+    "germanName": "Feldsperling",
+    "scientificName": "Passer montanus",
+    "englishName": "Eurasian Tree Sparrow",
+    "points": 2,
+    "category": "häufig",
+    "reason": "Häufig, aber etwas stärker an Saison oder Lebensraum gebunden.",
+    "referenceRegion": "Deutschland / Norddeutschland",
+    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
+  },
+  {
+    "germanName": "Felsentaube",
+    "scientificName": "Columba livia",
+    "englishName": "Rock Pigeon",
+    "points": 1,
+    "category": "sehr häufig",
+    "reason": "Sehr häufig und weit verbreitet; meist ohne gezielte Suche zu finden.",
+    "referenceRegion": "Deutschland / Norddeutschland",
+    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
+  },
+  {
+    "germanName": "Fitis",
+    "scientificName": "Phylloscopus trochilus",
+    "englishName": "Willow Warbler",
+    "points": 2,
+    "category": "häufig",
+    "reason": "Häufig, aber etwas stärker an Saison oder Lebensraum gebunden.",
+    "referenceRegion": "Deutschland / Norddeutschland",
+    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
+  },
+  {
+    "germanName": "Flussuferläufer",
+    "scientificName": "Actitis hypoleucos",
+    "englishName": "Common Sandpiper",
+    "points": 5,
+    "category": "ungewöhnlich",
+    "reason": "Als Brutvogel lokal, als Zugvogel regelmäßiger; dennoch kein alltäglicher Nachweis.",
+    "referenceRegion": "Deutschland / Norddeutschland",
+    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
+  },
+  {
+    "germanName": "Gartenbaumläufer",
+    "scientificName": "Certhia brachydactyla",
+    "englishName": "Short-toed Treecreeper",
+    "points": 3,
+    "category": "regelmäßig / lokal",
+    "reason": "Regelmäßig, aber regional/lokal oder mit gezielterem Habitatbesuch.",
+    "referenceRegion": "Deutschland / Norddeutschland",
+    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
+  },
+  {
+    "germanName": "Gartengrasmücke",
+    "scientificName": "Sylvia borin",
+    "englishName": "Garden Warbler",
+    "points": 3,
+    "category": "regelmäßig / lokal",
+    "reason": "Regelmäßig, aber regional/lokal oder mit gezielterem Habitatbesuch.",
+    "referenceRegion": "Deutschland / Norddeutschland",
+    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
+  },
+  {
+    "germanName": "Gartenrotschwanz",
+    "scientificName": "Phoenicurus phoenicurus",
+    "englishName": "Common Redstart",
+    "points": 4,
+    "category": "besonders",
+    "reason": "Deutlich besonderer Fund; nicht flächig bzw. nur zu passenden Zeiten oder Habitaten.",
+    "referenceRegion": "Deutschland / Norddeutschland",
+    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
+  },
+  {
+    "germanName": "Gimpel",
+    "scientificName": "Pyrrhula pyrrhula",
+    "englishName": "Eurasian Bullfinch",
+    "points": 3,
+    "category": "regelmäßig / lokal",
+    "reason": "Regelmäßig, aber regional/lokal oder mit gezielterem Habitatbesuch.",
+    "referenceRegion": "Deutschland / Norddeutschland",
+    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
+  },
+  {
+    "germanName": "Goldammer",
+    "scientificName": "Emberiza citrinella",
+    "englishName": "Yellowhammer",
+    "points": 2,
+    "category": "häufig",
+    "reason": "Häufig, aber etwas stärker an Saison oder Lebensraum gebunden.",
+    "referenceRegion": "Deutschland / Norddeutschland",
+    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
+  },
+  {
+    "germanName": "Goldregenpfeifer",
+    "scientificName": "Pluvialis apricaria",
+    "englishName": "European Golden-Plover",
+    "points": 6,
+    "category": "selten / stark lokalisiert",
+    "reason": "In Deutschland kein regelmäßiger Brutvogel mehr; vor allem Zug- und Wintergast.",
+    "referenceRegion": "Deutschland / Norddeutschland",
+    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
+  },
+  {
+    "germanName": "Graugans",
+    "scientificName": "Anser anser",
+    "englishName": "Graylag Goose",
+    "points": 1,
+    "category": "sehr häufig",
+    "reason": "Sehr häufig und weit verbreitet; meist ohne gezielte Suche zu finden.",
+    "referenceRegion": "Deutschland / Norddeutschland",
+    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
+  },
+  {
+    "germanName": "Grünfink",
+    "scientificName": "Chloris chloris",
+    "englishName": "European Greenfinch",
+    "points": 2,
+    "category": "häufig",
+    "reason": "Häufig, aber etwas stärker an Saison oder Lebensraum gebunden.",
+    "referenceRegion": "Deutschland / Norddeutschland",
+    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
+  },
+  {
+    "germanName": "Grünschenkel",
+    "scientificName": "Tringa nebularia",
+    "englishName": "Common Greenshank",
+    "points": 6,
+    "category": "selten / stark lokalisiert",
+    "reason": "Vor allem Durchzügler; guter Nachweis erfordert passende Feuchtgebiete und Zugzeit.",
+    "referenceRegion": "Deutschland / Norddeutschland",
+    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
+  },
+  {
+    "germanName": "Grünspecht",
+    "scientificName": "Picus viridis",
+    "englishName": "Eurasian Green Woodpecker",
+    "points": 3,
+    "category": "regelmäßig / lokal",
+    "reason": "Regelmäßig, aber regional/lokal oder mit gezielterem Habitatbesuch.",
+    "referenceRegion": "Deutschland / Norddeutschland",
+    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
+  },
+  {
+    "germanName": "Haubenmeise",
+    "scientificName": "Lophophanes cristatus",
+    "englishName": "Crested Tit",
+    "points": 4,
+    "category": "besonders",
+    "reason": "Deutlich besonderer Fund; nicht flächig bzw. nur zu passenden Zeiten oder Habitaten.",
+    "referenceRegion": "Deutschland / Norddeutschland",
+    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
+  },
+  {
+    "germanName": "Hausrotschwanz",
+    "scientificName": "Phoenicurus ochruros",
+    "englishName": "Black Redstart",
+    "points": 2,
+    "category": "häufig",
+    "reason": "Häufig, aber etwas stärker an Saison oder Lebensraum gebunden.",
+    "referenceRegion": "Deutschland / Norddeutschland",
+    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
+  },
+  {
+    "germanName": "Haussperling",
+    "scientificName": "Passer domesticus",
+    "englishName": "House Sparrow",
+    "points": 1,
+    "category": "sehr häufig",
+    "reason": "Sehr häufig und weit verbreitet; meist ohne gezielte Suche zu finden.",
+    "referenceRegion": "Deutschland / Norddeutschland",
+    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
+  },
+  {
+    "germanName": "Heckenbraunelle",
+    "scientificName": "Prunella modularis",
+    "englishName": "Dunnock",
+    "points": 1,
+    "category": "sehr häufig",
+    "reason": "Sehr häufig und weit verbreitet; meist ohne gezielte Suche zu finden.",
+    "referenceRegion": "Deutschland / Norddeutschland",
+    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
+  },
+  {
+    "germanName": "Heidelerche",
+    "scientificName": "Lullula arborea",
+    "englishName": "Wood Lark",
+    "points": 5,
+    "category": "ungewöhnlich",
+    "reason": "An spezielle offene, trockene Lebensräume gebunden und regional begrenzt.",
+    "referenceRegion": "Deutschland / Norddeutschland",
+    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
+  },
+  {
+    "germanName": "Jagdfasan",
+    "scientificName": "Phasianus colchicus",
+    "englishName": "Ring-necked Pheasant",
+    "points": 2,
+    "category": "häufig",
+    "reason": "Häufig, aber etwas stärker an Saison oder Lebensraum gebunden.",
+    "referenceRegion": "Deutschland / Norddeutschland",
+    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
+  },
+  {
+    "germanName": "Kanadagans",
+    "scientificName": "Branta canadensis",
+    "englishName": "Canada Goose",
+    "points": 1,
+    "category": "sehr häufig",
+    "reason": "Sehr häufig und weit verbreitet; meist ohne gezielte Suche zu finden.",
+    "referenceRegion": "Deutschland / Norddeutschland",
+    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
+  },
+  {
+    "germanName": "Kiebitzregenpfeifer",
+    "scientificName": "Pluvialis squatarola",
+    "englishName": "Black-bellied Plover",
+    "points": 7,
+    "category": "sehr selten, aber regelmäßig",
+    "reason": "Regelmäßiger, aber stark küsten- und zugzeitgebundener Gast; im Alltag sehr ungewöhnlich.",
+    "referenceRegion": "Deutschland / Norddeutschland",
+    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
+  },
+  {
+    "germanName": "Klappergrasmücke",
+    "scientificName": "Curruca curruca",
+    "englishName": "Lesser Whitethroat",
+    "points": 3,
+    "category": "regelmäßig / lokal",
+    "reason": "Regelmäßig, aber regional/lokal oder mit gezielterem Habitatbesuch.",
+    "referenceRegion": "Deutschland / Norddeutschland",
+    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
+  },
+  {
+    "germanName": "Kleiber",
+    "scientificName": "Sitta europaea",
+    "englishName": "Eurasian Nuthatch",
+    "points": 2,
+    "category": "häufig",
+    "reason": "Häufig, aber etwas stärker an Saison oder Lebensraum gebunden.",
+    "referenceRegion": "Deutschland / Norddeutschland",
+    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
+  },
+  {
+    "germanName": "Kohlmeise",
+    "scientificName": "Parus major",
+    "englishName": "Great Tit",
+    "points": 1,
+    "category": "sehr häufig",
+    "reason": "Sehr häufig und weit verbreitet; meist ohne gezielte Suche zu finden.",
+    "referenceRegion": "Deutschland / Norddeutschland",
+    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
+  },
+  {
+    "germanName": "Kolkrabe",
+    "scientificName": "Corvus corax",
+    "englishName": "Common Raven",
+    "points": 3,
+    "category": "regelmäßig / lokal",
+    "reason": "Regelmäßig, aber regional/lokal oder mit gezielterem Habitatbesuch.",
+    "referenceRegion": "Deutschland / Norddeutschland",
+    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
+  },
+  {
+    "germanName": "Kranich",
+    "scientificName": "Grus grus",
+    "englishName": "Common Crane",
+    "points": 4,
+    "category": "besonders",
+    "reason": "Deutlich besonderer Fund; nicht flächig bzw. nur zu passenden Zeiten oder Habitaten.",
+    "referenceRegion": "Deutschland / Norddeutschland",
+    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
+  },
+  {
+    "germanName": "Kuckuck",
+    "scientificName": "Cuculus canorus",
+    "englishName": "Common Cuckoo",
+    "points": 4,
+    "category": "besonders",
+    "reason": "Deutlich besonderer Fund; nicht flächig bzw. nur zu passenden Zeiten oder Habitaten.",
+    "referenceRegion": "Deutschland / Norddeutschland",
+    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
+  },
+  {
+    "germanName": "Lachmöwe",
+    "scientificName": "Chroicocephalus ridibundus",
+    "englishName": "Black-headed Gull",
+    "points": 2,
+    "category": "häufig",
+    "reason": "Häufig, aber etwas stärker an Saison oder Lebensraum gebunden.",
+    "referenceRegion": "Deutschland / Norddeutschland",
+    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
+  },
+  {
+    "germanName": "Mauersegler",
+    "scientificName": "Apus apus",
+    "englishName": "Common Swift",
+    "points": 2,
+    "category": "häufig",
+    "reason": "Häufig, aber etwas stärker an Saison oder Lebensraum gebunden.",
+    "referenceRegion": "Deutschland / Norddeutschland",
+    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
+  },
+  {
+    "germanName": "Mehlschwalbe",
+    "scientificName": "Delichon urbicum",
+    "englishName": "Western House-Martin",
+    "points": 2,
+    "category": "häufig",
+    "reason": "Häufig, aber etwas stärker an Saison oder Lebensraum gebunden.",
+    "referenceRegion": "Deutschland / Norddeutschland",
+    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
+  },
+  {
+    "germanName": "Misteldrossel",
+    "scientificName": "Turdus viscivorus",
+    "englishName": "Mistle Thrush",
+    "points": 3,
+    "category": "regelmäßig / lokal",
+    "reason": "Regelmäßig, aber regional/lokal oder mit gezielterem Habitatbesuch.",
+    "referenceRegion": "Deutschland / Norddeutschland",
+    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
+  },
+  {
+    "germanName": "Mittelmeermöwe",
+    "scientificName": "Larus michahellis",
+    "englishName": "Yellow-legged Gull",
+    "points": 5,
+    "category": "ungewöhnlich",
+    "reason": "In Norddeutschland deutlich weniger alltäglich als Silber- oder Lachmöwe.",
+    "referenceRegion": "Deutschland / Norddeutschland",
+    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
+  },
+  {
+    "germanName": "Mäusebussard",
+    "scientificName": "Buteo buteo",
+    "englishName": "Common Buzzard",
+    "points": 2,
+    "category": "häufig",
+    "reason": "Häufig, aber etwas stärker an Saison oder Lebensraum gebunden.",
+    "referenceRegion": "Deutschland / Norddeutschland",
+    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
+  },
+  {
+    "germanName": "Mönchsgrasmücke",
+    "scientificName": "Sylvia atricapilla",
+    "englishName": "Eurasian Blackcap",
+    "points": 1,
+    "category": "sehr häufig",
+    "reason": "Sehr häufig und weit verbreitet; meist ohne gezielte Suche zu finden.",
+    "referenceRegion": "Deutschland / Norddeutschland",
+    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
+  },
+  {
+    "germanName": "Nebelkrähe",
+    "scientificName": "Corvus cornix",
+    "englishName": "Hooded Crow",
+    "points": 3,
+    "category": "regelmäßig / lokal",
+    "reason": "Regelmäßig, aber regional/lokal oder mit gezielterem Habitatbesuch.",
+    "referenceRegion": "Deutschland / Norddeutschland",
+    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
+  },
+  {
+    "germanName": "Rabenkrähe",
+    "scientificName": "Corvus corone",
+    "englishName": "Carrion Crow",
+    "points": 1,
+    "category": "sehr häufig",
+    "reason": "Sehr häufig und weit verbreitet; meist ohne gezielte Suche zu finden.",
+    "referenceRegion": "Deutschland / Norddeutschland",
+    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
+  },
+  {
+    "germanName": "Rauchschwalbe",
+    "scientificName": "Hirundo rustica",
+    "englishName": "Barn Swallow",
+    "points": 2,
+    "category": "häufig",
+    "reason": "Häufig, aber etwas stärker an Saison oder Lebensraum gebunden.",
+    "referenceRegion": "Deutschland / Norddeutschland",
+    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
+  },
+  {
+    "germanName": "Ringeltaube",
+    "scientificName": "Columba palumbus",
+    "englishName": "Common Wood-Pigeon",
+    "points": 1,
+    "category": "sehr häufig",
+    "reason": "Sehr häufig und weit verbreitet; meist ohne gezielte Suche zu finden.",
+    "referenceRegion": "Deutschland / Norddeutschland",
+    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
+  },
+  {
+    "germanName": "Rohrammer",
+    "scientificName": "Emberiza schoeniclus",
+    "englishName": "Reed Bunting",
+    "points": 3,
+    "category": "regelmäßig / lokal",
+    "reason": "Regelmäßig, aber regional/lokal oder mit gezielterem Habitatbesuch.",
+    "referenceRegion": "Deutschland / Norddeutschland",
+    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
+  },
+  {
+    "germanName": "Rotkehlchen",
+    "scientificName": "Erithacus rubecula",
+    "englishName": "European Robin",
+    "points": 1,
+    "category": "sehr häufig",
+    "reason": "Sehr häufig und weit verbreitet; meist ohne gezielte Suche zu finden.",
+    "referenceRegion": "Deutschland / Norddeutschland",
+    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
+  },
+  {
+    "germanName": "Rotschenkel",
+    "scientificName": "Tringa totanus",
+    "englishName": "Common Redshank",
+    "points": 5,
+    "category": "ungewöhnlich",
+    "reason": "Vor allem in Küsten- und Feuchtgebieten; regional deutlich begrenzt.",
+    "referenceRegion": "Deutschland / Norddeutschland",
+    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
+  },
+  {
+    "germanName": "Saatkrähe",
+    "scientificName": "Corvus frugilegus",
+    "englishName": "Rook",
+    "points": 3,
+    "category": "regelmäßig / lokal",
+    "reason": "Regelmäßig, aber regional/lokal oder mit gezielterem Habitatbesuch.",
+    "referenceRegion": "Deutschland / Norddeutschland",
+    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
+  },
+  {
+    "germanName": "Sanderling",
+    "scientificName": "Calidris alba",
+    "englishName": "Sanderling",
+    "points": 5,
+    "category": "ungewöhnlich",
+    "reason": "Typischer Küsten- und Zugvogel; außerhalb passender Orte und Zeiten kaum zu erwarten.",
+    "referenceRegion": "Deutschland / Norddeutschland",
+    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
+  },
+  {
+    "germanName": "Sandregenpfeifer",
+    "scientificName": "Charadrius hiaticula",
+    "englishName": "Common Ringed Plover",
+    "points": 5,
+    "category": "ungewöhnlich",
+    "reason": "Küsten- und Feuchtgebietsart mit deutlich begrenzterer Verbreitung als häufige Stadt-/Waldarten.",
+    "referenceRegion": "Deutschland / Norddeutschland",
+    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
+  },
+  {
+    "germanName": "Schafstelze",
+    "scientificName": "Motacilla flava",
+    "englishName": "Western Yellow Wagtail",
+    "points": 3,
+    "category": "regelmäßig / lokal",
+    "reason": "Regelmäßig, aber regional/lokal oder mit gezielterem Habitatbesuch.",
+    "referenceRegion": "Deutschland / Norddeutschland",
+    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
+  },
+  {
+    "germanName": "Schilfrohrsänger",
+    "scientificName": "Acrocephalus schoenobaenus",
+    "englishName": "Sedge Warbler",
+    "points": 4,
+    "category": "besonders",
+    "reason": "Deutlich besonderer Fund; nicht flächig bzw. nur zu passenden Zeiten oder Habitaten.",
+    "referenceRegion": "Deutschland / Norddeutschland",
+    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
+  },
+  {
+    "germanName": "Schwarzspecht",
+    "scientificName": "Dryocopus martius",
+    "englishName": "Black Woodpecker",
+    "points": 5,
+    "category": "ungewöhnlich",
+    "reason": "Nicht extrem selten, aber an große Waldgebiete gebunden und deutlich weniger alltäglich.",
+    "referenceRegion": "Deutschland / Norddeutschland",
+    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
+  },
+  {
+    "germanName": "Silbermöwe",
+    "scientificName": "Larus argentatus",
+    "englishName": "European Herring Gull",
+    "points": 2,
+    "category": "häufig",
+    "reason": "Häufig, aber etwas stärker an Saison oder Lebensraum gebunden.",
+    "referenceRegion": "Deutschland / Norddeutschland",
+    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
+  },
+  {
+    "germanName": "Singdrossel",
+    "scientificName": "Turdus philomelos",
+    "englishName": "Song Thrush",
+    "points": 2,
+    "category": "häufig",
+    "reason": "Häufig, aber etwas stärker an Saison oder Lebensraum gebunden.",
+    "referenceRegion": "Deutschland / Norddeutschland",
+    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
+  },
+  {
+    "germanName": "Sommergoldhähnchen",
+    "scientificName": "Regulus ignicapilla",
+    "englishName": "Common Firecrest",
+    "points": 4,
+    "category": "besonders",
+    "reason": "Deutlich besonderer Fund; nicht flächig bzw. nur zu passenden Zeiten oder Habitaten.",
+    "referenceRegion": "Deutschland / Norddeutschland",
+    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
+  },
+  {
+    "germanName": "Sperber",
+    "scientificName": "Accipiter nisus",
+    "englishName": "Eurasian Sparrowhawk",
+    "points": 4,
+    "category": "besonders",
+    "reason": "Deutlich besonderer Fund; nicht flächig bzw. nur zu passenden Zeiten oder Habitaten.",
+    "referenceRegion": "Deutschland / Norddeutschland",
+    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
+  },
+  {
+    "germanName": "Star",
+    "scientificName": "Sturnus vulgaris",
+    "englishName": "European Starling",
+    "points": 1,
+    "category": "sehr häufig",
+    "reason": "Sehr häufig und weit verbreitet; meist ohne gezielte Suche zu finden.",
+    "referenceRegion": "Deutschland / Norddeutschland",
+    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
+  },
+  {
+    "germanName": "Steinschmätzer",
+    "scientificName": "Oenanthe oenanthe",
+    "englishName": "Northern Wheatear",
+    "points": 5,
+    "category": "ungewöhnlich",
+    "reason": "Ungewöhnlicher Fund; meist gezielte Suche, passendes Habitat oder Zugzeit nötig.",
+    "referenceRegion": "Deutschland / Norddeutschland",
+    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
+  },
+  {
+    "germanName": "Stieglitz",
+    "scientificName": "Carduelis carduelis",
+    "englishName": "European Goldfinch",
+    "points": 2,
+    "category": "häufig",
+    "reason": "Häufig, aber etwas stärker an Saison oder Lebensraum gebunden.",
+    "referenceRegion": "Deutschland / Norddeutschland",
+    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
+  },
+  {
+    "germanName": "Stockente",
+    "scientificName": "Anas platyrhynchos",
+    "englishName": "Mallard",
+    "points": 1,
+    "category": "sehr häufig",
+    "reason": "Sehr häufig und weit verbreitet; meist ohne gezielte Suche zu finden.",
+    "referenceRegion": "Deutschland / Norddeutschland",
+    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
+  },
+  {
+    "germanName": "Sturmmöwe",
+    "scientificName": "Larus canus",
+    "englishName": "Common Gull",
+    "points": 3,
+    "category": "regelmäßig / lokal",
+    "reason": "Regelmäßig, aber regional/lokal oder mit gezielterem Habitatbesuch.",
+    "referenceRegion": "Deutschland / Norddeutschland",
+    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
+  },
+  {
+    "germanName": "Sumpfmeise",
+    "scientificName": "Poecile palustris",
+    "englishName": "Marsh Tit",
+    "points": 3,
+    "category": "regelmäßig / lokal",
+    "reason": "Regelmäßig, aber regional/lokal oder mit gezielterem Habitatbesuch.",
+    "referenceRegion": "Deutschland / Norddeutschland",
+    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
+  },
+  {
+    "germanName": "Tannenmeise",
+    "scientificName": "Periparus ater",
+    "englishName": "Coal Tit",
+    "points": 2,
+    "category": "häufig",
+    "reason": "Häufig, aber etwas stärker an Saison oder Lebensraum gebunden.",
+    "referenceRegion": "Deutschland / Norddeutschland",
+    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
+  },
+  {
+    "germanName": "Teichhuhn",
+    "scientificName": "Gallinula chloropus",
+    "englishName": "Eurasian Moorhen",
+    "points": 3,
+    "category": "regelmäßig / lokal",
+    "reason": "Regelmäßig, aber regional/lokal oder mit gezielterem Habitatbesuch.",
+    "referenceRegion": "Deutschland / Norddeutschland",
+    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
+  },
+  {
+    "germanName": "Turmfalke",
+    "scientificName": "Falco tinnunculus",
+    "englishName": "Eurasian Kestrel",
+    "points": 2,
+    "category": "häufig",
+    "reason": "Häufig, aber etwas stärker an Saison oder Lebensraum gebunden.",
+    "referenceRegion": "Deutschland / Norddeutschland",
+    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
+  },
+  {
+    "germanName": "Türkentaube",
+    "scientificName": "Streptopelia decaocto",
+    "englishName": "Eurasian Collared-Dove",
+    "points": 1,
+    "category": "sehr häufig",
+    "reason": "Sehr häufig und weit verbreitet; meist ohne gezielte Suche zu finden.",
+    "referenceRegion": "Deutschland / Norddeutschland",
+    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
+  },
+  {
+    "germanName": "Waldlaubsänger",
+    "scientificName": "Phylloscopus sibilatrix",
+    "englishName": "Wood Warbler",
+    "points": 5,
+    "category": "ungewöhnlich",
+    "reason": "Waldgebundener, regional rückläufiger Zugvogel; deutlich weniger alltäglich als Zilpzalp/Fitis.",
+    "referenceRegion": "Deutschland / Norddeutschland",
+    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
+  },
+  {
+    "germanName": "Waldohreule",
+    "scientificName": "Asio otus",
+    "englishName": "Long-eared Owl",
+    "points": 7,
+    "category": "sehr selten, aber regelmäßig",
+    "reason": "Nachtaktiv und trotz weiter Verbreitung schwer gezielt akustisch zu erwischen.",
+    "referenceRegion": "Deutschland / Norddeutschland",
+    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
+  },
+  {
+    "germanName": "Wiesenpieper",
+    "scientificName": "Anthus pratensis",
+    "englishName": "Meadow Pipit",
+    "points": 3,
+    "category": "regelmäßig / lokal",
+    "reason": "Regelmäßig, aber regional/lokal oder mit gezielterem Habitatbesuch.",
+    "referenceRegion": "Deutschland / Norddeutschland",
+    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
+  },
+  {
+    "germanName": "Wintergoldhähnchen",
+    "scientificName": "Regulus regulus",
+    "englishName": "Goldcrest",
+    "points": 3,
+    "category": "regelmäßig / lokal",
+    "reason": "Regelmäßig, aber regional/lokal oder mit gezielterem Habitatbesuch.",
+    "referenceRegion": "Deutschland / Norddeutschland",
+    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
+  },
+  {
+    "germanName": "Zaunkönig",
+    "scientificName": "Troglodytes troglodytes",
+    "englishName": "Eurasian Wren",
+    "points": 1,
+    "category": "sehr häufig",
+    "reason": "Sehr häufig und weit verbreitet; meist ohne gezielte Suche zu finden.",
+    "referenceRegion": "Deutschland / Norddeutschland",
+    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
+  },
+  {
+    "germanName": "Zilpzalp",
+    "scientificName": "Phylloscopus collybita",
+    "englishName": "Common Chiffchaff",
+    "points": 1,
+    "category": "sehr häufig",
+    "reason": "Sehr häufig und weit verbreitet; meist ohne gezielte Suche zu finden.",
+    "referenceRegion": "Deutschland / Norddeutschland",
+    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
+  }
+]

@@ -17,6 +17,18 @@ if (storedDataRaw) {
 
 const data = window.BIRDLEAGUE_DATA;
 const germanNames = window.BIRDLEAGUE_GERMAN_NAMES || {};
+const pointCatalog = window.BIRDLEAGUE_POINTS || {};
+
+function applyMasterPoints(targetData) {
+  (targetData.species || []).forEach((species) => {
+    const master = pointCatalog[species.scientificName];
+    species.points = master && typeof master.points === "number" ? master.points : null;
+    if (master?.germanName) species.germanName = master.germanName;
+  });
+}
+
+applyMasterPoints(data);
+
 const app = document.getElementById("app");
 const sidebar = document.getElementById("sidebar");
 const navigation = document.getElementById("navigation");
@@ -392,7 +404,7 @@ function mapImportedRows(csvText, playerName) {
     return {
       player: playerName.trim(),
       commonName,
-      germanName: existing?.germanName || germanNames[scientificName] || commonName || scientificName,
+      germanName: existing?.germanName || pointCatalog[scientificName]?.germanName || germanNames[scientificName] || commonName || scientificName,
       scientificName,
       date: normalizeDate(indexes.date >= 0 ? (row[indexes.date] || "") : ""),
       location: indexes.location >= 0 ? (row[indexes.location] || "") : ""
@@ -407,6 +419,41 @@ function mapImportedRows(csvText, playerName) {
     if (!current || (row.date && (!current.date || row.date < current.date))) unique.set(key, row);
   });
   return [...unique.values()];
+}
+
+function getImportAudit() {
+  const playerName = state.importPlayer.trim().toLowerCase();
+  const player = data.players.find((item) => item.name.toLowerCase() === playerName);
+  const speciesMap = getSpeciesMap();
+  const alreadyOwned = new Set(
+    uniqueObservations()
+      .filter((item) => item.playerId === player?.id)
+      .map((item) => speciesMap.get(item.speciesId)?.scientificName?.toLowerCase())
+      .filter(Boolean)
+  );
+
+  const missing = [];
+  const rated = [];
+  let alreadyPresentCount = 0;
+  let newCount = 0;
+
+  state.importedRows.forEach((row) => {
+    const sci = (row.scientificName || "").trim();
+    const entry = pointCatalog[sci];
+    if (entry && hasPointValue(entry.points)) rated.push(row);
+    else missing.push(row);
+    if (alreadyOwned.has(sci.toLowerCase())) alreadyPresentCount += 1;
+    else newCount += 1;
+  });
+
+  return {
+    total: state.importedRows.length,
+    ratedCount: rated.length,
+    missing,
+    alreadyPresentCount,
+    newCount,
+    complete: missing.length === 0
+  };
 }
 
 function buildMergedData() {
@@ -446,17 +493,18 @@ function buildMergedData() {
       }
       species = {
         id: speciesId,
-        germanName: germanNames[scientificName] || row.germanName || row.commonName || scientificName,
+        germanName: pointCatalog[scientificName]?.germanName || germanNames[scientificName] || row.germanName || row.commonName || scientificName,
         englishName: row.commonName || "",
         scientificName,
-        points: null
+        points: pointCatalog[scientificName]?.points ?? null
       };
       next.species.push(species);
       speciesById.set(species.id, species);
       if (scientificName) speciesByScientific.set(scientificKey, species);
     } else {
-      const translated = germanNames[scientificName];
+      const translated = pointCatalog[scientificName]?.germanName || germanNames[scientificName];
       if (translated) species.germanName = translated;
+      species.points = pointCatalog[scientificName]?.points ?? null;
       if (!species.englishName && row.commonName) species.englishName = row.commonName;
     }
 
@@ -480,6 +528,7 @@ function buildMergedData() {
   });
 
   next.updatedAt = today;
+  applyMasterPoints(next);
   return next;
 }
 
@@ -498,11 +547,21 @@ function downloadTextFile(filename, content, type = "text/plain") {
 }
 
 function downloadMergedDataJs() {
+  const audit = getImportAudit();
+  if (!audit.complete) {
+    renderImport(`${audit.missing.length} Art(en) haben noch keinen Punktwert. Bitte zuerst die Master-Punkteliste ergänzen.`);
+    return;
+  }
   const next = buildMergedData();
   downloadTextFile("data.js", serializeDataJs(next), "text/javascript");
 }
 
 function applyImportedRowsLocally() {
+  const audit = getImportAudit();
+  if (!audit.complete) {
+    renderImport(`${audit.missing.length} Art(en) haben noch keinen Punktwert. Import wurde nicht übernommen.`);
+    return;
+  }
   const next = buildMergedData();
   Object.keys(data).forEach((key) => delete data[key]);
   Object.assign(data, next);
@@ -521,23 +580,35 @@ function resetLocalData() {
 
 function renderImport(message = "") {
   const hasLocalDraft = Boolean(localStorage.getItem("birdleague-data-v1"));
+  const audit = state.importedRows.length ? getImportAudit() : null;
+  const missingHtml = audit?.missing.length ? `<div class="audit-warning"><strong>Fehlende Punktwerte</strong>${audit.missing.map((row) => `<div><span>${escapeHtml(row.germanName || row.commonName || row.scientificName)}</span><em>${escapeHtml(row.scientificName || "wissenschaftlicher Name fehlt")}</em></div>`).join("")}<p>Diese Arten müssen zuerst in der Master-Punkteliste bewertet werden. Danach <code>points.js</code> aktualisieren und den Import erneut prüfen.</p></div>` : "";
+  const readyHtml = audit?.complete ? `<div class="audit-ready">✓ ${audit.ratedCount}/${audit.total} Arten haben einen Punktwert. Import ist bereit.</div>` : "";
+
   app.innerHTML = `<section class="page-content import-page"><article class="panel import-panel">
     <div class="panel-heading"><div><p class="eyebrow">BirdLeague-Verwaltung</p><h3>CSV importieren & veröffentlichen</h3></div><span>⇧</span></div>
-    <p>Die CSV wird nur in deinem Browser verarbeitet. Vogelarten werden über den wissenschaftlichen Namen abgeglichen und – sofern bekannt – automatisch auf Deutsch angezeigt.</p>
+    <p>Die CSV wird nur in deinem Browser verarbeitet. Vogelarten werden über den wissenschaftlichen Namen abgeglichen, auf Deutsch angezeigt und automatisch gegen die Master-Punkteliste geprüft.</p>
     <label>Spielername<input id="import-player" value="${escapeHtml(state.importPlayer)}" placeholder="z. B. Finn"></label>
-    <label class="dropzone"><span class="upload-symbol">⇧</span><strong>CSV auswählen</strong><span>Unterstützt: Common Name/Art, Scientific Name, Date/Datum, Location/Ort</span><input id="csv-file" type="file" accept=".csv,text/csv"></label>
+    <label class="dropzone"><span class="upload-symbol">⇧</span><strong>CSV auswählen</strong><span>Unterstützt: eBird-Export sowie Common Name/Art, Scientific Name, Date/Datum, Location/Ort</span><input id="csv-file" type="file" accept=".csv,text/csv"></label>
     ${message ? `<div class="import-message">${escapeHtml(message)}</div>` : ""}
-    ${state.importedRows.length ? `<div class="import-preview">${state.importedRows.slice(0, 8).map((row) => `<div><strong>${escapeHtml(row.germanName || row.commonName || row.scientificName)}</strong><span><em>${escapeHtml(row.scientificName)}</em> · ${escapeHtml(row.date || "ohne Datum")} · ${escapeHtml(row.location || "ohne Ort")}</span></div>`).join("")}</div>
+    ${audit ? `<div class="audit-grid">
+      <div><strong>${audit.total}</strong><span>Jahresarten erkannt</span></div>
+      <div><strong>${audit.ratedCount}</strong><span>mit Punktwert</span></div>
+      <div><strong>${audit.newCount}</strong><span>neu für ${escapeHtml(state.importPlayer)}</span></div>
+      <div><strong>${audit.alreadyPresentCount}</strong><span>bereits vorhanden</span></div>
+    </div>${readyHtml}${missingHtml}` : ""}
+    ${state.importedRows.length ? `<div class="import-preview">${state.importedRows.slice(0, 8).map((row) => { const point = pointCatalog[row.scientificName]?.points; return `<div><strong>${escapeHtml(row.germanName || row.commonName || row.scientificName)}</strong><span><b>${hasPointValue(point) ? `${point} P` : "unbewertet"}</b> · <em>${escapeHtml(row.scientificName)}</em> · ${escapeHtml(row.date || "ohne Datum")} · ${escapeHtml(row.location || "ohne Ort")}</span></div>`; }).join("")}</div>
       <div class="import-actions">
-        <button class="primary-button" data-action="apply-import">Lokal übernehmen</button>
-        <button class="secondary-button" data-action="download-datajs">data.js für GitHub herunterladen</button>
+        <button class="primary-button" data-action="apply-import" ${audit && !audit.complete ? "disabled" : ""}>Lokal übernehmen</button>
+        <button class="secondary-button" data-action="download-datajs" ${audit && !audit.complete ? "disabled" : ""}>data.js für GitHub herunterladen</button>
       </div>` : ""}
     <hr>
     <div class="import-actions">
+      <a class="secondary-button button-link" href="data/species-points.csv" download>Master-Punkteliste als CSV</a>
+      <a class="secondary-button button-link" href="data/species-points.json" download>Master-Punkteliste als JSON</a>
       <button class="secondary-button" data-action="download-current-datajs">Aktuellen Stand als data.js herunterladen</button>
       ${hasLocalDraft ? '<button class="secondary-button" data-action="reset-local">Lokale Vorschau zurücksetzen</button>' : ""}
     </div>
-    <p class="muted"><strong>Dauerhaft für alle:</strong> Lade die erzeugte <code>data.js</code> in deinem GitHub-Repository hoch und ersetze dort die bisherige Datei. GitHub Pages veröffentlicht den neuen Stand anschließend automatisch.</p>
+    <p class="muted"><strong>Dauerhaft für alle:</strong> Lade die erzeugte <code>data.js</code> in deinem GitHub-Repository hoch und ersetze dort die bisherige Datei. Neue, noch unbewertete Arten blockieren den Import, bis sie in der Master-Punkteliste ergänzt wurden.</p>
   </article></section>`;
 }
 
@@ -598,7 +669,10 @@ app.addEventListener("change", (event) => {
   reader.onload = () => {
     try {
       state.importedRows = mapImportedRows(String(reader.result || ""), state.importPlayer);
-      renderImport(`${state.importedRows.length} eindeutige Jahresarten erkannt. Vorschau auf Deutsch erstellt – noch nicht veröffentlicht.`);
+      const audit = getImportAudit();
+      renderImport(audit.complete
+        ? `${audit.total} eindeutige Jahresarten erkannt – alle sind bewertet.`
+        : `${audit.total} eindeutige Jahresarten erkannt – ${audit.missing.length} davon noch ohne Punktwert.`);
     } catch (error) {
       state.importedRows = [];
       renderImport(error.message || "Die Datei konnte nicht gelesen werden.");
