@@ -1,6 +1,22 @@
 "use strict";
 
+const publishedData = JSON.parse(JSON.stringify(window.BIRDLEAGUE_DATA));
+const storedDataRaw = localStorage.getItem("birdleague-data-v1");
+if (storedDataRaw) {
+  try {
+    const storedData = JSON.parse(storedDataRaw);
+    if ((storedData.updatedAt || "") > (publishedData.updatedAt || "")) {
+      window.BIRDLEAGUE_DATA = storedData;
+    } else {
+      localStorage.removeItem("birdleague-data-v1");
+    }
+  } catch (_) {
+    localStorage.removeItem("birdleague-data-v1");
+  }
+}
+
 const data = window.BIRDLEAGUE_DATA;
+const germanNames = window.BIRDLEAGUE_GERMAN_NAMES || {};
 const app = document.getElementById("app");
 const sidebar = document.getElementById("sidebar");
 const navigation = document.getElementById("navigation");
@@ -9,7 +25,7 @@ const menuButton = document.getElementById("menu-button");
 
 const state = {
   view: "overview",
-  selectedPlayerId: data.players[0].id,
+  selectedPlayerId: data.players[0]?.id || "",
   importedRows: [],
   importPlayer: ""
 };
@@ -34,6 +50,25 @@ const escapeHtml = (value = "") => String(value)
   .replaceAll(">", "&gt;")
   .replaceAll('"', "&quot;")
   .replaceAll("'", "&#039;");
+
+const hasPointValue = (value) => typeof value === "number" && Number.isFinite(value);
+const getPointValue = (species) => hasPointValue(species?.points) ? species.points : 0;
+const pointLabel = (value) => hasPointValue(value) ? String(value) : "–";
+const pointText = (value) => hasPointValue(value) ? `${value} Punkte` : "noch unbewertet";
+
+function slugify(value = "") {
+  return String(value)
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
+function initialsFor(name = "") {
+  const parts = name.trim().split(/\s+/).filter(Boolean);
+  return (parts.slice(0, 2).map((part) => part[0]).join("") || "BL").toUpperCase();
+}
 
 function uniqueObservations() {
   const earliest = new Map();
@@ -69,15 +104,18 @@ function getStandings() {
 
   return data.players.map((player) => {
     const playerObservations = observations.filter((item) => item.playerId === player.id);
-    const points = playerObservations.reduce((sum, item) => sum + (speciesMap.get(item.speciesId)?.points || 0), 0);
+    const points = playerObservations.reduce((sum, item) => sum + getPointValue(speciesMap.get(item.speciesId)), 0);
     const latestPoints = playerObservations
       .filter((item) => item.importedAt === data.updatedAt)
-      .reduce((sum, item) => sum + (speciesMap.get(item.speciesId)?.points || 0), 0);
+      .reduce((sum, item) => sum + getPointValue(speciesMap.get(item.speciesId)), 0);
+    const unratedCount = playerObservations.filter((item) => !hasPointValue(speciesMap.get(item.speciesId)?.points)).length;
 
     return {
       player,
       points,
       latestPoints,
+      unratedCount,
+      pointsComplete: unratedCount === 0,
       speciesCount: playerObservations.length,
       exclusiveCount: playerObservations.filter((item) => owners.get(item.speciesId)?.size === 1).length,
       rarityCount: playerObservations.filter((item) => speciesMap.get(item.speciesId)?.points === 15).length
@@ -101,7 +139,7 @@ function getPlayerObservations(playerId) {
     .filter((item) => item.playerId === playerId)
     .map((item) => ({ ...item, species: speciesMap.get(item.speciesId) }))
     .filter((item) => item.species)
-    .sort((a, b) => b.species.points - a.species.points || a.observedAt.localeCompare(b.observedAt));
+    .sort((a, b) => getPointValue(b.species) - getPointValue(a.species) || a.observedAt.localeCompare(b.observedAt));
 }
 
 function getExclusiveSpecies() {
@@ -111,7 +149,7 @@ function getExclusiveSpecies() {
     .filter((item) => owners.get(item.speciesId)?.size === 1)
     .map((item) => ({ ...item, species: speciesMap.get(item.speciesId) }))
     .filter((item) => item.species)
-    .sort((a, b) => b.species.points - a.species.points);
+    .sort((a, b) => getPointValue(b.species) - getPointValue(a.species));
 }
 
 function getTimeline() {
@@ -122,7 +160,7 @@ function getTimeline() {
   return Array.from({ length: 12 }, (_, index) => {
     const month = `${data.season}-${String(index + 1).padStart(2, "0")}`;
     observations.filter((item) => item.observedAt.startsWith(month)).forEach((item) => {
-      running.set(item.playerId, (running.get(item.playerId) || 0) + (speciesMap.get(item.speciesId)?.points || 0));
+      running.set(item.playerId, (running.get(item.playerId) || 0) + getPointValue(speciesMap.get(item.speciesId)));
     });
     return {
       month: new Intl.DateTimeFormat("de-DE", { month: "short" }).format(new Date(`${month}-01T12:00:00`)),
@@ -144,7 +182,7 @@ function rankingTable() {
     <tbody>${getStandings().map((standing, index) => `<tr data-player="${standing.player.id}">
       <td><span class="rank rank-${index + 1}">${index + 1}</span></td>
       <td><div class="player-cell"><span class="avatar">${standing.player.initials}</span><div><strong>${escapeHtml(standing.player.name)}</strong>${standing.rarityCount ? '<small>◆ Raritätenfund</small>' : ''}</div></div></td>
-      <td><strong class="points-value">${standing.points}</strong></td>
+      <td><strong class="points-value">${standing.points}${standing.unratedCount ? "*" : ""}</strong>${standing.unratedCount ? `<small>${standing.unratedCount} unbewertet</small>` : ""}</td>
       <td>${standing.speciesCount}</td><td>${standing.exclusiveCount}</td>
       <td><span class="gain">↗ ${standing.latestPoints}</span></td>
     </tr>`).join("")}</tbody>
@@ -157,24 +195,26 @@ function renderOverview() {
   const recentFinds = getRecentFinds();
   const totalSpecies = new Set(uniqueObservations().map((item) => item.speciesId)).size;
   const rarityFinds = uniqueObservations().filter((item) => getSpeciesMap().get(item.speciesId)?.points === 15).length;
+  const unratedSpecies = data.species.filter((species) => !hasPointValue(species.points)).length;
 
   app.innerHTML = `<section class="page-content">
     <article class="hero-card">
       <div><span class="season-tag">BirdLeague ${data.season}</span><h2>Wer hört den Unterschied?</h2>
       <p>Bestätigte Vogelstimmen sammeln, seltene Arten entdecken und das Jahresranking gewinnen.</p>
       <button class="primary-button" data-action="show-players">Liga ansehen →</button></div>
-      <div class="leader-card"><span class="crown">♛</span><span>Aktuelle Führung</span><strong>${escapeHtml(leader.player.name)}</strong><b>${leader.points} Punkte</b><small>${leader.speciesCount} bestätigte Arten</small></div>
+      <div class="leader-card"><span class="crown">♛</span><span>Aktuelle Führung</span><strong>${escapeHtml(leader.player.name)}</strong><b>${leader.points}${leader.unratedCount ? "*" : ""} Punkte</b><small>${leader.speciesCount} bestätigte Arten${leader.unratedCount ? ` · ${leader.unratedCount} noch unbewertet` : ""}</small></div>
     </article>
     <div class="stats-grid">
       ${statCard("Arten in der Liga", totalSpecies, "einzigartige Vogelarten", "B")}
       ${statCard("Spieler", data.players.length, "jagen den Titel", "◎")}
       ${statCard("Raritäten", rarityFinds, "15-Punkte-Funde", "◆")}
       ${statCard("Neues Update", recentFinds.length, "neue Jahresarten", "✦")}
+      ${unratedSpecies ? statCard("Bewertung offen", unratedSpecies, "Arten ohne Punktwert", "…") : ""}
     </div>
     <div class="content-grid content-grid-wide">
       <article class="panel panel-span-2"><div class="panel-heading"><div><p class="eyebrow">Live-Tabelle</p><h3>Aktuelles Ranking</h3></div><span>♛</span></div>${rankingTable()}</article>
       <article class="panel"><div class="panel-heading"><div><p class="eyebrow">Letzter Import</p><h3>Neue Funde</h3></div><span>✦</span></div>
-        <div class="find-list">${recentFinds.map((find) => `<button data-player="${find.player.id}"><span class="points-badge ${find.species.points === 15 ? 'rarity' : ''}">+${find.species.points}</span><div><strong>${escapeHtml(find.species.germanName)}</strong><small>${escapeHtml(find.player.name)} · ${escapeHtml(find.location || "Ort unbekannt")}</small></div></button>`).join("")}</div>
+        <div class="find-list">${recentFinds.map((find) => `<button data-player="${find.player.id}"><span class="points-badge ${find.species.points === 15 ? 'rarity' : ''}">${hasPointValue(find.species.points) ? `+${find.species.points}` : "–"}</span><div><strong>${escapeHtml(find.species.germanName)}</strong><small>${escapeHtml(find.player.name)} · ${escapeHtml(find.location || "Ort unbekannt")}</small></div></button>`).join("")}</div>
       </article>
     </div>
   </section>`;
@@ -189,13 +229,13 @@ function renderPlayers() {
 
   app.innerHTML = `<section class="page-content">
     <div class="player-tabs">${standings.map((item) => `<button class="${item.player.id === selectedPlayer.id ? 'active' : ''}" data-player="${item.player.id}"><span class="avatar">${item.player.initials}</span>${escapeHtml(item.player.name)}</button>`).join("")}</div>
-    <article class="profile-hero"><div class="profile-avatar">${selectedPlayer.initials}</div><div><p class="eyebrow">Spielerprofil</p><h2>${escapeHtml(selectedPlayer.name)}</h2><p>Platz ${standings.findIndex((item) => item.player.id === selectedPlayer.id) + 1} in der BirdLeague ${data.season}</p></div><div class="profile-score"><strong>${standing.points}</strong><span>Punkte</span></div></article>
+    <article class="profile-hero"><div class="profile-avatar">${selectedPlayer.initials}</div><div><p class="eyebrow">Spielerprofil</p><h2>${escapeHtml(selectedPlayer.name)}</h2><p>Platz ${standings.findIndex((item) => item.player.id === selectedPlayer.id) + 1} in der BirdLeague ${data.season}</p></div><div class="profile-score"><strong>${standing.points}${standing.unratedCount ? "*" : ""}</strong><span>${standing.unratedCount ? `${standing.unratedCount} Arten unbewertet` : "Punkte"}</span></div></article>
     <div class="content-grid">
       <article class="panel panel-span-2"><div class="panel-heading"><div><p class="eyebrow">Sammlung</p><h3>${observations.length} Jahresarten</h3></div><span>B</span></div>
-        <div class="species-table">${observations.map((item) => `<div><span class="points-badge ${item.species.points === 15 ? 'rarity' : ''}">${item.species.points}</span><div><strong>${escapeHtml(item.species.germanName)}</strong><small><em>${escapeHtml(item.species.scientificName)}</em> · ${formatDate(item.observedAt)}${item.location ? ` · ${escapeHtml(item.location)}` : ''}</small></div></div>`).join("")}</div>
+        <div class="species-table">${observations.map((item) => `<div><span class="points-badge ${item.species.points === 15 ? 'rarity' : ''}">${pointLabel(item.species.points)}</span><div><strong>${escapeHtml(item.species.germanName)}</strong><small><em>${escapeHtml(item.species.scientificName)}</em> · ${formatDate(item.observedAt)}${item.location ? ` · ${escapeHtml(item.location)}` : ''}</small></div></div>`).join("")}</div>
       </article>
       <article class="panel"><div class="panel-heading"><div><p class="eyebrow">Besonders</p><h3>Exklusive Arten</h3></div><span>★</span></div>
-        <div class="exclusive-list">${exclusive.length ? exclusive.map((item) => `<div><strong>${escapeHtml(item.species.germanName)}</strong><span>${item.species.points} Punkte</span></div>`).join("") : '<p class="muted">Aktuell keine exklusive Art.</p>'}</div>
+        <div class="exclusive-list">${exclusive.length ? exclusive.map((item) => `<div><strong>${escapeHtml(item.species.germanName)}</strong><span>${pointText(item.species.points)}</span></div>`).join("") : '<p class="muted">Aktuell keine exklusive Art.</p>'}</div>
       </article>
     </div>
   </section>`;
@@ -242,16 +282,16 @@ function buildTimelineSvg() {
 function renderStats() {
   const exclusive = getExclusiveSpecies();
   const playerMap = getPlayerMap();
-  const valuableSpecies = [...data.species].sort((a, b) => b.points - a.points).slice(0, 6);
+  const valuableSpecies = [...data.species].filter((species) => hasPointValue(species.points)).sort((a, b) => b.points - a.points).slice(0, 6);
 
   app.innerHTML = `<section class="page-content">
     <div class="content-grid content-grid-wide">
       <article class="panel panel-span-2 chart-panel"><div class="panel-heading"><div><p class="eyebrow">Saisonverlauf</p><h3>Punkte im Jahresverlauf</h3></div><span>↗</span></div>${buildTimelineSvg()}</article>
       <article class="panel"><div class="panel-heading"><div><p class="eyebrow">Nur einmal gehört</p><h3>Exklusive Arten</h3></div><span>★</span></div>
-        <div class="exclusive-list">${exclusive.slice(0, 8).map((item) => `<div><span><strong>${escapeHtml(item.species.germanName)}</strong><small>${escapeHtml(playerMap.get(item.playerId)?.name || '')}</small></span><b>${item.species.points}</b></div>`).join("")}</div>
+        <div class="exclusive-list">${exclusive.slice(0, 8).map((item) => `<div><span><strong>${escapeHtml(item.species.germanName)}</strong><small>${escapeHtml(playerMap.get(item.playerId)?.name || '')}</small></span><b>${pointLabel(item.species.points)}</b></div>`).join("")}</div>
       </article>
       <article class="panel panel-span-3"><div class="panel-heading"><div><p class="eyebrow">Punktelogik</p><h3>Wertvollste Arten der Saison</h3></div><span>◆</span></div>
-        <div class="rarity-grid">${valuableSpecies.map((species) => `<div><span class="points-badge ${species.points === 15 ? 'rarity' : ''}">${species.points}</span><strong>${escapeHtml(species.germanName)}</strong><small>${escapeHtml(species.scientificName)}</small></div>`).join("")}</div>
+        <div class="rarity-grid">${valuableSpecies.length ? valuableSpecies.map((species) => `<div><span class="points-badge ${species.points === 15 ? 'rarity' : ''}">${pointLabel(species.points)}</span><strong>${escapeHtml(species.germanName)}</strong><small>${escapeHtml(species.scientificName)}</small></div>`).join("") : '<p class="muted">Noch keine Arten bewertet.</p>'}</div>
       </article>
     </div>
   </section>`;
@@ -268,7 +308,7 @@ function renderRules() {
   ];
 
   app.innerHTML = `<section class="page-content rules-page">
-    <article class="rules-intro"><span class="big-bird">B</span><div><p class="eyebrow">BirdLeague-Regelwerk</p><h2>Einfach, transparent und ein bisschen nerdig.</h2><p>Die Demo bildet eure festgelegten Grundregeln bereits ab.</p></div></article>
+    <article class="rules-intro"><span class="big-bird">B</span><div><p class="eyebrow">BirdLeague-Regelwerk</p><h2>Einfach, transparent und ein bisschen nerdig.</h2><p>Diese Version bildet eure festgelegten Grundregeln ab.</p></div></article>
     <div class="rules-grid">${rules.map(([number, title, text]) => `<article><span>${number}</span><h3>${escapeHtml(title)}</h3><p>${escapeHtml(text)}</p></article>`).join("")}</div>
   </section>`;
 }
@@ -315,6 +355,20 @@ function parseCsv(text) {
   return rows;
 }
 
+function normalizeDate(value = "") {
+  const input = String(value).trim();
+  if (!input) return "";
+  if (/^\d{4}-\d{2}-\d{2}$/.test(input)) return input;
+
+  const us = input.match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})$/);
+  if (us) return `${us[3]}-${us[1].padStart(2, "0")}-${us[2].padStart(2, "0")}`;
+
+  const german = input.match(/^(\d{1,2})\.(\d{1,2})\.(\d{4})$/);
+  if (german) return `${german[3]}-${german[2].padStart(2, "0")}-${german[1].padStart(2, "0")}`;
+
+  return input;
+}
+
 function mapImportedRows(csvText, playerName) {
   const rows = parseCsv(csvText);
   if (rows.length < 2) throw new Error("Die CSV enthält keine Datenzeilen.");
@@ -329,13 +383,21 @@ function mapImportedRows(csvText, playerName) {
   const indexes = Object.fromEntries(Object.entries(aliases).map(([key, names]) => [key, indexFor(names)]));
   if (indexes.commonName < 0 && indexes.scientificName < 0) throw new Error("Keine Spalte für Vogelart gefunden.");
 
-  const mapped = rows.slice(1).map((row) => ({
-    player: playerName.trim(),
-    commonName: indexes.commonName >= 0 ? (row[indexes.commonName] || "") : "",
-    scientificName: indexes.scientificName >= 0 ? (row[indexes.scientificName] || "") : "",
-    date: indexes.date >= 0 ? (row[indexes.date] || "") : "",
-    location: indexes.location >= 0 ? (row[indexes.location] || "") : ""
-  })).filter((row) => row.commonName || row.scientificName);
+  const currentByScientificName = new Map(data.species.map((species) => [species.scientificName.toLowerCase(), species]));
+
+  const mapped = rows.slice(1).map((row) => {
+    const commonName = indexes.commonName >= 0 ? (row[indexes.commonName] || "") : "";
+    const scientificName = indexes.scientificName >= 0 ? (row[indexes.scientificName] || "").trim() : "";
+    const existing = currentByScientificName.get(scientificName.toLowerCase());
+    return {
+      player: playerName.trim(),
+      commonName,
+      germanName: existing?.germanName || germanNames[scientificName] || commonName || scientificName,
+      scientificName,
+      date: normalizeDate(indexes.date >= 0 ? (row[indexes.date] || "") : ""),
+      location: indexes.location >= 0 ? (row[indexes.location] || "") : ""
+    };
+  }).filter((row) => row.commonName || row.scientificName);
 
   const unique = new Map();
   mapped.forEach((row) => {
@@ -347,25 +409,136 @@ function mapImportedRows(csvText, playerName) {
   return [...unique.values()];
 }
 
-function renderImport(message = "") {
-  app.innerHTML = `<section class="page-content import-page"><article class="panel import-panel">
-    <div class="panel-heading"><div><p class="eyebrow">Statischer MVP</p><h3>CSV vorbereiten</h3></div><span>⇧</span></div>
-    <p>Diese Seite liest eine eBird- oder BirdLeague-CSV lokal im Browser ein. Es wird nichts auf einen Server hochgeladen. Anschließend kannst du normalisierte Daten herunterladen und in das GitHub-Projekt übernehmen.</p>
-    <label>Spielername<input id="import-player" value="${escapeHtml(state.importPlayer)}" placeholder="z. B. Finn"></label>
-    <label class="dropzone"><span class="upload-symbol">⇧</span><strong>CSV auswählen</strong><span>Unterstützt: Common Name/Art, Scientific Name, Date/Datum, Location/Ort</span><input id="csv-file" type="file" accept=".csv,text/csv"></label>
-    ${message ? `<div class="import-message">${escapeHtml(message)}</div>` : ""}
-    ${state.importedRows.length ? `<div class="import-preview">${state.importedRows.slice(0, 8).map((row) => `<div><strong>${escapeHtml(row.commonName || row.scientificName)}</strong><span>${escapeHtml(row.date || 'ohne Datum')} · ${escapeHtml(row.location || 'ohne Ort')}</span></div>`).join("")}</div><button class="primary-button" data-action="download-import">Normalisierte JSON herunterladen</button>` : ""}
-  </article></section>`;
+function buildMergedData() {
+  if (!state.importedRows.length) return JSON.parse(JSON.stringify(data));
+
+  const next = JSON.parse(JSON.stringify(data));
+  const playerName = state.importPlayer.trim();
+  let player = next.players.find((item) => item.name.toLowerCase() === playerName.toLowerCase());
+
+  if (!player) {
+    let playerId = slugify(playerName) || `spieler-${next.players.length + 1}`;
+    let suffix = 2;
+    while (next.players.some((item) => item.id === playerId)) {
+      playerId = `${slugify(playerName)}-${suffix}`;
+      suffix += 1;
+    }
+    player = { id: playerId, name: playerName, initials: initialsFor(playerName) };
+    next.players.push(player);
+  }
+
+  const speciesByScientific = new Map(next.species.map((species) => [species.scientificName.toLowerCase(), species]));
+  const speciesById = new Map(next.species.map((species) => [species.id, species]));
+  const today = new Date().toISOString().slice(0, 10);
+
+  state.importedRows.forEach((row) => {
+    const scientificName = row.scientificName.trim();
+    const scientificKey = scientificName.toLowerCase();
+    let species = scientificName ? speciesByScientific.get(scientificKey) : null;
+
+    if (!species) {
+      const baseId = slugify(scientificName || row.germanName || row.commonName) || `art-${next.species.length + 1}`;
+      let speciesId = baseId;
+      let suffix = 2;
+      while (speciesById.has(speciesId)) {
+        speciesId = `${baseId}-${suffix}`;
+        suffix += 1;
+      }
+      species = {
+        id: speciesId,
+        germanName: germanNames[scientificName] || row.germanName || row.commonName || scientificName,
+        englishName: row.commonName || "",
+        scientificName,
+        points: null
+      };
+      next.species.push(species);
+      speciesById.set(species.id, species);
+      if (scientificName) speciesByScientific.set(scientificKey, species);
+    } else {
+      const translated = germanNames[scientificName];
+      if (translated) species.germanName = translated;
+      if (!species.englishName && row.commonName) species.englishName = row.commonName;
+    }
+
+    const existingObservation = next.observations.find((item) => item.playerId === player.id && item.speciesId === species.id);
+    if (existingObservation) {
+      if (row.date && (!existingObservation.observedAt || row.date < existingObservation.observedAt)) {
+        existingObservation.observedAt = row.date;
+        existingObservation.location = row.location || existingObservation.location;
+      }
+      return;
+    }
+
+    next.observations.push({
+      id: `obs-${player.id}-${String(next.observations.length + 1).padStart(3, "0")}`,
+      playerId: player.id,
+      speciesId: species.id,
+      observedAt: row.date || `${next.season}-01-01`,
+      location: row.location || "",
+      importedAt: today
+    });
+  });
+
+  next.updatedAt = today;
+  return next;
 }
 
-function downloadImportedRows() {
-  const blob = new Blob([JSON.stringify(state.importedRows, null, 2)], { type: "application/json" });
+function serializeDataJs(nextData) {
+  return `/* BirdLeague – veröffentlichter Datenstand */\nwindow.BIRDLEAGUE_DATA = ${JSON.stringify(nextData, null, 2)};\n`;
+}
+
+function downloadTextFile(filename, content, type = "text/plain") {
+  const blob = new Blob([content], { type });
   const url = URL.createObjectURL(blob);
   const anchor = document.createElement("a");
   anchor.href = url;
-  anchor.download = `birdleague-${state.importPlayer.toLowerCase().replace(/\s+/g, "-") || "import"}.json`;
+  anchor.download = filename;
   anchor.click();
   URL.revokeObjectURL(url);
+}
+
+function downloadMergedDataJs() {
+  const next = buildMergedData();
+  downloadTextFile("data.js", serializeDataJs(next), "text/javascript");
+}
+
+function applyImportedRowsLocally() {
+  const next = buildMergedData();
+  Object.keys(data).forEach((key) => delete data[key]);
+  Object.assign(data, next);
+  localStorage.setItem("birdleague-data-v1", JSON.stringify(next));
+  state.selectedPlayerId = next.players.find((item) => item.name.toLowerCase() === state.importPlayer.trim().toLowerCase())?.id || state.selectedPlayerId;
+  state.importedRows = [];
+  document.getElementById("updated-at").textContent = `Stand ${formatDate(data.updatedAt)}`;
+  document.getElementById("brand-season").textContent = `Saison ${data.season}`;
+  renderImport("Import lokal gespeichert. Für alle sichtbar wird er erst, wenn du die neue data.js in GitHub ersetzt.");
+}
+
+function resetLocalData() {
+  localStorage.removeItem("birdleague-data-v1");
+  location.reload();
+}
+
+function renderImport(message = "") {
+  const hasLocalDraft = Boolean(localStorage.getItem("birdleague-data-v1"));
+  app.innerHTML = `<section class="page-content import-page"><article class="panel import-panel">
+    <div class="panel-heading"><div><p class="eyebrow">BirdLeague-Verwaltung</p><h3>CSV importieren & veröffentlichen</h3></div><span>⇧</span></div>
+    <p>Die CSV wird nur in deinem Browser verarbeitet. Vogelarten werden über den wissenschaftlichen Namen abgeglichen und – sofern bekannt – automatisch auf Deutsch angezeigt.</p>
+    <label>Spielername<input id="import-player" value="${escapeHtml(state.importPlayer)}" placeholder="z. B. Finn"></label>
+    <label class="dropzone"><span class="upload-symbol">⇧</span><strong>CSV auswählen</strong><span>Unterstützt: Common Name/Art, Scientific Name, Date/Datum, Location/Ort</span><input id="csv-file" type="file" accept=".csv,text/csv"></label>
+    ${message ? `<div class="import-message">${escapeHtml(message)}</div>` : ""}
+    ${state.importedRows.length ? `<div class="import-preview">${state.importedRows.slice(0, 8).map((row) => `<div><strong>${escapeHtml(row.germanName || row.commonName || row.scientificName)}</strong><span><em>${escapeHtml(row.scientificName)}</em> · ${escapeHtml(row.date || "ohne Datum")} · ${escapeHtml(row.location || "ohne Ort")}</span></div>`).join("")}</div>
+      <div class="import-actions">
+        <button class="primary-button" data-action="apply-import">Lokal übernehmen</button>
+        <button class="secondary-button" data-action="download-datajs">data.js für GitHub herunterladen</button>
+      </div>` : ""}
+    <hr>
+    <div class="import-actions">
+      <button class="secondary-button" data-action="download-current-datajs">Aktuellen Stand als data.js herunterladen</button>
+      ${hasLocalDraft ? '<button class="secondary-button" data-action="reset-local">Lokale Vorschau zurücksetzen</button>' : ""}
+    </div>
+    <p class="muted"><strong>Dauerhaft für alle:</strong> Lade die erzeugte <code>data.js</code> in deinem GitHub-Repository hoch und ersetze dort die bisherige Datei. GitHub Pages veröffentlicht den neuen Stand anschließend automatisch.</p>
+  </article></section>`;
 }
 
 function render() {
@@ -403,7 +576,10 @@ app.addEventListener("click", (event) => {
     state.view = "players";
     render();
   }
-  if (action === "download-import") downloadImportedRows();
+  if (action === "apply-import") applyImportedRowsLocally();
+  if (action === "download-datajs") downloadMergedDataJs();
+  if (action === "download-current-datajs") downloadTextFile("data.js", serializeDataJs(data), "text/javascript");
+  if (action === "reset-local") resetLocalData();
 });
 
 app.addEventListener("input", (event) => {
@@ -422,7 +598,7 @@ app.addEventListener("change", (event) => {
   reader.onload = () => {
     try {
       state.importedRows = mapImportedRows(String(reader.result || ""), state.importPlayer);
-      renderImport(`${state.importedRows.length} eindeutige Jahresarten erkannt. Die Daten wurden noch nicht veröffentlicht.`);
+      renderImport(`${state.importedRows.length} eindeutige Jahresarten erkannt. Vorschau auf Deutsch erstellt – noch nicht veröffentlicht.`);
     } catch (error) {
       state.importedRows = [];
       renderImport(error.message || "Die Datei konnte nicht gelesen werden.");
@@ -432,7 +608,7 @@ app.addEventListener("change", (event) => {
   reader.readAsText(file);
 });
 
-document.getElementById("brand-season").textContent = `Season ${data.season}`;
+document.getElementById("brand-season").textContent = `Saison ${data.season}`;
 document.getElementById("updated-at").textContent = `Stand ${formatDate(data.updatedAt)}`;
 
 if ("serviceWorker" in navigator && location.protocol.startsWith("http")) {

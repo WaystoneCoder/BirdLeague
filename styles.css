@@ -158,3 +158,10 @@ tbody tr:hover { background: rgba(92,138,111,.06); }
   .import-preview > div { display: grid; }
   .import-preview span { text-align: left; }
 }
+
+.import-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
+.secondary-button { border: 1px solid var(--line); border-radius: 13px; background: rgba(255,255,255,.72); color: var(--green-900); padding: 11px 15px; display: inline-flex; align-items: center; gap: 8px; font-weight: 700; }
+.secondary-button:hover { background: white; }
+.import-panel hr { border: 0; border-top: 1px solid var(--line); margin: 22px 0 8px; }
+.import-panel code { background: rgba(24,58,44,.08); padding: 2px 5px; border-radius: 5px; }
+.points-value + small { display: block; margin-top: 2px; color: var(--ink-muted); font-size: 10px; white-space: nowrap; }

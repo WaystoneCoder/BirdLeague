@@ -1,0 +1,698 @@
+[
+  {
+    "spieler": "Finn",
+    "art": "Graugans",
+    "wissenschaftlicher_name": "Anser anser",
+    "datum": "2026-05-18",
+    "ort": "Planten un Bloomen",
+    "punkte": null
+  },
+  {
+    "spieler": "Finn",
+    "art": "Kanadagans",
+    "wissenschaftlicher_name": "Branta canadensis",
+    "datum": "2026-05-29",
+    "ort": "Hamburg",
+    "punkte": 2
+  },
+  {
+    "spieler": "Finn",
+    "art": "Stockente",
+    "wissenschaftlicher_name": "Anas platyrhynchos",
+    "datum": "2026-05-16",
+    "ort": "Hamburg",
+    "punkte": null
+  },
+  {
+    "spieler": "Finn",
+    "art": "Jagdfasan",
+    "wissenschaftlicher_name": "Phasianus colchicus",
+    "datum": "2026-05-11",
+    "ort": "Rømø",
+    "punkte": 1
+  },
+  {
+    "spieler": "Finn",
+    "art": "Felsentaube",
+    "wissenschaftlicher_name": "Columba livia",
+    "datum": "2026-05-20",
+    "ort": "Wallanlagen",
+    "punkte": null
+  },
+  {
+    "spieler": "Finn",
+    "art": "Ringeltaube",
+    "wissenschaftlicher_name": "Columba palumbus",
+    "datum": "2026-05-11",
+    "ort": "Rømø",
+    "punkte": null
+  },
+  {
+    "spieler": "Finn",
+    "art": "Türkentaube",
+    "wissenschaftlicher_name": "Streptopelia decaocto",
+    "datum": "2026-05-11",
+    "ort": "Rømø",
+    "punkte": null
+  },
+  {
+    "spieler": "Finn",
+    "art": "Kuckuck",
+    "wissenschaftlicher_name": "Cuculus canorus",
+    "datum": "2026-05-10",
+    "ort": "Rømø",
+    "punkte": null
+  },
+  {
+    "spieler": "Finn",
+    "art": "Mauersegler",
+    "wissenschaftlicher_name": "Apus apus",
+    "datum": "2026-05-17",
+    "ort": "Hamburg",
+    "punkte": null
+  },
+  {
+    "spieler": "Finn",
+    "art": "Teichhuhn",
+    "wissenschaftlicher_name": "Gallinula chloropus",
+    "datum": "2026-05-22",
+    "ort": "Wallanlagen",
+    "punkte": null
+  },
+  {
+    "spieler": "Finn",
+    "art": "Blässhuhn",
+    "wissenschaftlicher_name": "Fulica atra",
+    "datum": "2026-06-02",
+    "ort": "Wallanlagen",
+    "punkte": null
+  },
+  {
+    "spieler": "Finn",
+    "art": "Kranich",
+    "wissenschaftlicher_name": "Grus grus",
+    "datum": "2026-07-30",
+    "ort": "Unnamed Road, Västra Götalands län",
+    "punkte": null
+  },
+  {
+    "spieler": "Finn",
+    "art": "Austernfischer",
+    "wissenschaftlicher_name": "Haematopus ostralegus",
+    "datum": "2026-05-11",
+    "ort": "Rømø",
+    "punkte": 3
+  },
+  {
+    "spieler": "Finn",
+    "art": "Kiebitzregenpfeifer",
+    "wissenschaftlicher_name": "Pluvialis squatarola",
+    "datum": "2026-05-11",
+    "ort": "rømø",
+    "punkte": null
+  },
+  {
+    "spieler": "Finn",
+    "art": "Goldregenpfeifer",
+    "wissenschaftlicher_name": "Pluvialis apricaria",
+    "datum": "2026-07-28",
+    "ort": "1 Lilla Öboängen, Västra Götalands län, SE (58,61, 13,168)",
+    "punkte": null
+  },
+  {
+    "spieler": "Finn",
+    "art": "Sandregenpfeifer",
+    "wissenschaftlicher_name": "Charadrius hiaticula",
+    "datum": "2026-05-11",
+    "ort": "Rømø",
+    "punkte": null
+  },
+  {
+    "spieler": "Finn",
+    "art": "Flussuferläufer",
+    "wissenschaftlicher_name": "Actitis hypoleucos",
+    "datum": "2026-07-28",
+    "ort": "14 Stakeklevsvägen, Västra Götalands län",
+    "punkte": null
+  },
+  {
+    "spieler": "Finn",
+    "art": "Rotschenkel",
+    "wissenschaftlicher_name": "Tringa totanus",
+    "datum": "2026-05-11",
+    "ort": "Rømø",
+    "punkte": null
+  },
+  {
+    "spieler": "Finn",
+    "art": "Grünschenkel",
+    "wissenschaftlicher_name": "Tringa nebularia",
+    "datum": "2026-05-11",
+    "ort": "Rømø",
+    "punkte": null
+  },
+  {
+    "spieler": "Finn",
+    "art": "Sanderling",
+    "wissenschaftlicher_name": "Calidris alba",
+    "datum": "2026-05-11",
+    "ort": "Rømø strand",
+    "punkte": null
+  },
+  {
+    "spieler": "Finn",
+    "art": "Lachmöwe",
+    "wissenschaftlicher_name": "Chroicocephalus ridibundus",
+    "datum": "2026-07-14",
+    "ort": "Unnamed Road",
+    "punkte": null
+  },
+  {
+    "spieler": "Finn",
+    "art": "Sturmmöwe",
+    "wissenschaftlicher_name": "Larus canus",
+    "datum": "2026-05-11",
+    "ort": "Rømø",
+    "punkte": null
+  },
+  {
+    "spieler": "Finn",
+    "art": "Silbermöwe",
+    "wissenschaftlicher_name": "Larus argentatus",
+    "datum": "2026-07-13",
+    "ort": "30 Alter Badweg, Sankt Peter-Ording, Schleswig-Holstein",
+    "punkte": null
+  },
+  {
+    "spieler": "Finn",
+    "art": "Mittelmeermöwe",
+    "wissenschaftlicher_name": "Larus michahellis",
+    "datum": "2026-07-13",
+    "ort": "30 Alter Badweg, Sankt Peter-Ording, Schleswig-Holstein",
+    "punkte": null
+  },
+  {
+    "spieler": "Finn",
+    "art": "Brandseeschwalbe",
+    "wissenschaftlicher_name": "Thalasseus sandvicensis",
+    "datum": "2026-07-14",
+    "ort": "Unnamed Road",
+    "punkte": null
+  },
+  {
+    "spieler": "Finn",
+    "art": "Sperber",
+    "wissenschaftlicher_name": "Accipiter nisus",
+    "datum": "2026-07-28",
+    "ort": "1 Lilla Öboängen, Västra Götalands län, SE (58,61, 13,168)",
+    "punkte": null
+  },
+  {
+    "spieler": "Finn",
+    "art": "Mäusebussard",
+    "wissenschaftlicher_name": "Buteo buteo",
+    "datum": "2026-07-01",
+    "ort": "Wallanlagen",
+    "punkte": null
+  },
+  {
+    "spieler": "Finn",
+    "art": "Waldohreule",
+    "wissenschaftlicher_name": "Asio otus",
+    "datum": "2026-07-26",
+    "ort": "Unnamed Road, Västra Götalands län",
+    "punkte": null
+  },
+  {
+    "spieler": "Finn",
+    "art": "Buntspecht",
+    "wissenschaftlicher_name": "Dendrocopos major",
+    "datum": "2026-05-18",
+    "ort": "Wallanlagen",
+    "punkte": null
+  },
+  {
+    "spieler": "Finn",
+    "art": "Grünspecht",
+    "wissenschaftlicher_name": "Picus viridis",
+    "datum": "2026-07-24",
+    "ort": "Unnamed Road, Skåne län",
+    "punkte": null
+  },
+  {
+    "spieler": "Finn",
+    "art": "Schwarzspecht",
+    "wissenschaftlicher_name": "Dryocopus martius",
+    "datum": "2026-05-25",
+    "ort": "Billetal",
+    "punkte": null
+  },
+  {
+    "spieler": "Finn",
+    "art": "Turmfalke",
+    "wissenschaftlicher_name": "Falco tinnunculus",
+    "datum": "2026-05-11",
+    "ort": "Rømø",
+    "punkte": null
+  },
+  {
+    "spieler": "Finn",
+    "art": "Eichelhäher",
+    "wissenschaftlicher_name": "Garrulus glandarius",
+    "datum": "2026-07-24",
+    "ort": "238 NÖTARP, Skåne län",
+    "punkte": null
+  },
+  {
+    "spieler": "Finn",
+    "art": "Elster",
+    "wissenschaftlicher_name": "Pica pica",
+    "datum": "2026-05-17",
+    "ort": "Hamburg",
+    "punkte": null
+  },
+  {
+    "spieler": "Finn",
+    "art": "Saatkrähe",
+    "wissenschaftlicher_name": "Corvus frugilegus",
+    "datum": "2026-07-01",
+    "ort": "Wallanlagen",
+    "punkte": null
+  },
+  {
+    "spieler": "Finn",
+    "art": "Rabenkrähe",
+    "wissenschaftlicher_name": "Corvus corone",
+    "datum": "2026-05-10",
+    "ort": "Rømø",
+    "punkte": null
+  },
+  {
+    "spieler": "Finn",
+    "art": "Nebelkrähe",
+    "wissenschaftlicher_name": "Corvus cornix",
+    "datum": "2026-05-10",
+    "ort": "Rømø",
+    "punkte": null
+  },
+  {
+    "spieler": "Finn",
+    "art": "Kolkrabe",
+    "wissenschaftlicher_name": "Corvus corax",
+    "datum": "2026-05-25",
+    "ort": "Billetal",
+    "punkte": null
+  },
+  {
+    "spieler": "Finn",
+    "art": "Tannenmeise",
+    "wissenschaftlicher_name": "Periparus ater",
+    "datum": "2026-05-11",
+    "ort": "Rømø",
+    "punkte": null
+  },
+  {
+    "spieler": "Finn",
+    "art": "Haubenmeise",
+    "wissenschaftlicher_name": "Lophophanes cristatus",
+    "datum": "2026-07-26",
+    "ort": "26, Jönköpings län",
+    "punkte": null
+  },
+  {
+    "spieler": "Finn",
+    "art": "Sumpfmeise",
+    "wissenschaftlicher_name": "Poecile palustris",
+    "datum": "2026-05-17",
+    "ort": "Hamburg",
+    "punkte": null
+  },
+  {
+    "spieler": "Finn",
+    "art": "Blaumeise",
+    "wissenschaftlicher_name": "Cyanistes caeruleus",
+    "datum": "2026-05-17",
+    "ort": "Hamburg",
+    "punkte": null
+  },
+  {
+    "spieler": "Finn",
+    "art": "Kohlmeise",
+    "wissenschaftlicher_name": "Parus major",
+    "datum": "2026-05-10",
+    "ort": "Rømø",
+    "punkte": null
+  },
+  {
+    "spieler": "Finn",
+    "art": "Heidelerche",
+    "wissenschaftlicher_name": "Lullula arborea",
+    "datum": "2026-05-12",
+    "ort": "Rømø",
+    "punkte": null
+  },
+  {
+    "spieler": "Finn",
+    "art": "Feldlerche",
+    "wissenschaftlicher_name": "Alauda arvensis",
+    "datum": "2026-05-11",
+    "ort": "Rømø Strand",
+    "punkte": null
+  },
+  {
+    "spieler": "Finn",
+    "art": "Schilfrohrsänger",
+    "wissenschaftlicher_name": "Acrocephalus schoenobaenus",
+    "datum": "2026-05-12",
+    "ort": "Rømø",
+    "punkte": null
+  },
+  {
+    "spieler": "Finn",
+    "art": "Feldschwirl",
+    "wissenschaftlicher_name": "Locustella naevia",
+    "datum": "2026-05-14",
+    "ort": "Rømø",
+    "punkte": null
+  },
+  {
+    "spieler": "Finn",
+    "art": "Rauchschwalbe",
+    "wissenschaftlicher_name": "Hirundo rustica",
+    "datum": "2026-05-10",
+    "ort": "Rømø",
+    "punkte": null
+  },
+  {
+    "spieler": "Finn",
+    "art": "Mehlschwalbe",
+    "wissenschaftlicher_name": "Delichon urbicum",
+    "datum": "2026-05-11",
+    "ort": "Rømø",
+    "punkte": null
+  },
+  {
+    "spieler": "Finn",
+    "art": "Waldlaubsänger",
+    "wissenschaftlicher_name": "Phylloscopus sibilatrix",
+    "datum": "2026-05-25",
+    "ort": "Billetal",
+    "punkte": null
+  },
+  {
+    "spieler": "Finn",
+    "art": "Fitis",
+    "wissenschaftlicher_name": "Phylloscopus trochilus",
+    "datum": "2026-05-10",
+    "ort": "Rømø",
+    "punkte": null
+  },
+  {
+    "spieler": "Finn",
+    "art": "Zilpzalp",
+    "wissenschaftlicher_name": "Phylloscopus collybita",
+    "datum": "2026-05-11",
+    "ort": "Rømø",
+    "punkte": null
+  },
+  {
+    "spieler": "Finn",
+    "art": "Mönchsgrasmücke",
+    "wissenschaftlicher_name": "Sylvia atricapilla",
+    "datum": "2026-05-11",
+    "ort": "rømø",
+    "punkte": null
+  },
+  {
+    "spieler": "Finn",
+    "art": "Gartengrasmücke",
+    "wissenschaftlicher_name": "Sylvia borin",
+    "datum": "2026-05-14",
+    "ort": "Rømø",
+    "punkte": null
+  },
+  {
+    "spieler": "Finn",
+    "art": "Klappergrasmücke",
+    "wissenschaftlicher_name": "Curruca curruca",
+    "datum": "2026-05-11",
+    "ort": "rømø",
+    "punkte": null
+  },
+  {
+    "spieler": "Finn",
+    "art": "Dorngrasmücke",
+    "wissenschaftlicher_name": "Curruca communis",
+    "datum": "2026-05-11",
+    "ort": "Rømø",
+    "punkte": null
+  },
+  {
+    "spieler": "Finn",
+    "art": "Wintergoldhähnchen",
+    "wissenschaftlicher_name": "Regulus regulus",
+    "datum": "2026-05-31",
+    "ort": "Trittauer Heide",
+    "punkte": null
+  },
+  {
+    "spieler": "Finn",
+    "art": "Sommergoldhähnchen",
+    "wissenschaftlicher_name": "Regulus ignicapilla",
+    "datum": "2026-05-22",
+    "ort": "Wallanlagen",
+    "punkte": null
+  },
+  {
+    "spieler": "Finn",
+    "art": "Kleiber",
+    "wissenschaftlicher_name": "Sitta europaea",
+    "datum": "2026-07-24",
+    "ort": "Unnamed Road, Skåne län",
+    "punkte": null
+  },
+  {
+    "spieler": "Finn",
+    "art": "Gartenbaumläufer",
+    "wissenschaftlicher_name": "Certhia brachydactyla",
+    "datum": "2026-05-18",
+    "ort": "Wallanlagen",
+    "punkte": null
+  },
+  {
+    "spieler": "Finn",
+    "art": "Zaunkönig",
+    "wissenschaftlicher_name": "Troglodytes troglodytes",
+    "datum": "2026-05-11",
+    "ort": "rømø",
+    "punkte": null
+  },
+  {
+    "spieler": "Finn",
+    "art": "Star",
+    "wissenschaftlicher_name": "Sturnus vulgaris",
+    "datum": "2026-05-18",
+    "ort": "Hamburg",
+    "punkte": null
+  },
+  {
+    "spieler": "Finn",
+    "art": "Misteldrossel",
+    "wissenschaftlicher_name": "Turdus viscivorus",
+    "datum": "2026-05-17",
+    "ort": "Hamburg",
+    "punkte": null
+  },
+  {
+    "spieler": "Finn",
+    "art": "Singdrossel",
+    "wissenschaftlicher_name": "Turdus philomelos",
+    "datum": "2026-05-23",
+    "ort": "Volkspark",
+    "punkte": null
+  },
+  {
+    "spieler": "Finn",
+    "art": "Amsel",
+    "wissenschaftlicher_name": "Turdus merula",
+    "datum": "2026-05-11",
+    "ort": "Rømø",
+    "punkte": null
+  },
+  {
+    "spieler": "Finn",
+    "art": "Rotkehlchen",
+    "wissenschaftlicher_name": "Erithacus rubecula",
+    "datum": "2026-05-17",
+    "ort": "Hamburg",
+    "punkte": null
+  },
+  {
+    "spieler": "Finn",
+    "art": "Blaukehlchen",
+    "wissenschaftlicher_name": "Luscinia svecica",
+    "datum": "2026-05-12",
+    "ort": "Rømø",
+    "punkte": null
+  },
+  {
+    "spieler": "Finn",
+    "art": "Gartenrotschwanz",
+    "wissenschaftlicher_name": "Phoenicurus phoenicurus",
+    "datum": "2026-05-11",
+    "ort": "Rømø",
+    "punkte": null
+  },
+  {
+    "spieler": "Finn",
+    "art": "Hausrotschwanz",
+    "wissenschaftlicher_name": "Phoenicurus ochruros",
+    "datum": "2026-07-06",
+    "ort": "Hamburg",
+    "punkte": null
+  },
+  {
+    "spieler": "Finn",
+    "art": "Braunkehlchen",
+    "wissenschaftlicher_name": "Saxicola rubetra",
+    "datum": "2026-07-26",
+    "ort": "O 1700, Västra Götalands län",
+    "punkte": null
+  },
+  {
+    "spieler": "Finn",
+    "art": "Steinschmätzer",
+    "wissenschaftlicher_name": "Oenanthe oenanthe",
+    "datum": "2026-05-14",
+    "ort": "Rømø",
+    "punkte": null
+  },
+  {
+    "spieler": "Finn",
+    "art": "Heckenbraunelle",
+    "wissenschaftlicher_name": "Prunella modularis",
+    "datum": "2026-05-12",
+    "ort": "Rømø",
+    "punkte": null
+  },
+  {
+    "spieler": "Finn",
+    "art": "Haussperling",
+    "wissenschaftlicher_name": "Passer domesticus",
+    "datum": "2026-05-17",
+    "ort": "Hamburg",
+    "punkte": null
+  },
+  {
+    "spieler": "Finn",
+    "art": "Feldsperling",
+    "wissenschaftlicher_name": "Passer montanus",
+    "datum": "2026-07-26",
+    "ort": "1 Vasalyckan, Västra Götalands län",
+    "punkte": null
+  },
+  {
+    "spieler": "Finn",
+    "art": "Schafstelze",
+    "wissenschaftlicher_name": "Motacilla flava",
+    "datum": "2026-05-11",
+    "ort": "Rømø",
+    "punkte": null
+  },
+  {
+    "spieler": "Finn",
+    "art": "Bachstelze",
+    "wissenschaftlicher_name": "Motacilla alba",
+    "datum": "2026-05-11",
+    "ort": "Rømø",
+    "punkte": null
+  },
+  {
+    "spieler": "Finn",
+    "art": "Wiesenpieper",
+    "wissenschaftlicher_name": "Anthus pratensis",
+    "datum": "2026-05-14",
+    "ort": "Rømø",
+    "punkte": null
+  },
+  {
+    "spieler": "Finn",
+    "art": "Baumpieper",
+    "wissenschaftlicher_name": "Anthus trivialis",
+    "datum": "2026-05-11",
+    "ort": "rømø",
+    "punkte": null
+  },
+  {
+    "spieler": "Finn",
+    "art": "Buchfink",
+    "wissenschaftlicher_name": "Fringilla coelebs",
+    "datum": "2026-05-11",
+    "ort": "Rømø",
+    "punkte": null
+  },
+  {
+    "spieler": "Finn",
+    "art": "Gimpel",
+    "wissenschaftlicher_name": "Pyrrhula pyrrhula",
+    "datum": "2026-05-18",
+    "ort": "Hamburg",
+    "punkte": null
+  },
+  {
+    "spieler": "Finn",
+    "art": "Grünfink",
+    "wissenschaftlicher_name": "Chloris chloris",
+    "datum": "2026-05-10",
+    "ort": "Rømø",
+    "punkte": null
+  },
+  {
+    "spieler": "Finn",
+    "art": "Bluthänfling",
+    "wissenschaftlicher_name": "Linaria cannabina",
+    "datum": "2026-05-10",
+    "ort": "Rømø",
+    "punkte": null
+  },
+  {
+    "spieler": "Finn",
+    "art": "Birkenzeisig",
+    "wissenschaftlicher_name": "Acanthis flammea",
+    "datum": "2026-05-10",
+    "ort": "Rømø",
+    "punkte": null
+  },
+  {
+    "spieler": "Finn",
+    "art": "Stieglitz",
+    "wissenschaftlicher_name": "Carduelis carduelis",
+    "datum": "2026-05-12",
+    "ort": "Rømø",
+    "punkte": null
+  },
+  {
+    "spieler": "Finn",
+    "art": "Erlenzeisig",
+    "wissenschaftlicher_name": "Spinus spinus",
+    "datum": "2026-07-25",
+    "ort": "1 GÅARYD, Kronobergs län",
+    "punkte": null
+  },
+  {
+    "spieler": "Finn",
+    "art": "Goldammer",
+    "wissenschaftlicher_name": "Emberiza citrinella",
+    "datum": "2026-05-11",
+    "ort": "Rømø",
+    "punkte": null
+  },
+  {
+    "spieler": "Finn",
+    "art": "Rohrammer",
+    "wissenschaftlicher_name": "Emberiza schoeniclus",
+    "datum": "2026-05-12",
+    "ort": "Rømø",
+    "punkte": null
+  }
+]

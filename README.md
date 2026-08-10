@@ -1,105 +1,63 @@
-# BirdLeague MVP
+# BirdLeague
 
-Eine kostenlose, mobile Website für euer privates Vogelstimmen-Jahresranking.
+BirdLeague ist eine statische, kostenlose GitHub-Pages-Website für euer Vogelstimmen-Spiel.
 
-## Was bereits funktioniert
+## Aktueller Stand
 
-- Ranking nach einer festen Punkteliste
-- eine Vogelart pro Person und Jahr
-- 1–10 Punkte plus 15 Punkte für echte Raritäten
-- Spielerprofile mit vollständiger Artenliste
-- exklusive Arten
-- neue Funde seit dem letzten Datenupdate
-- Punkteverlauf über das Kalenderjahr
-- lokaler CSV-Import-Helfer
-- responsive Smartphone-Ansicht
-- installierbare Web-App-Grundlage
-- kostenloses Hosting über GitHub Pages
+- Finns importierte Jahresarten 2026 sind bereits in `data.js` gespeichert.
+- Anzeigenamen sind auf Deutsch.
+- Der wissenschaftliche Name bleibt der stabile Schlüssel für zukünftige CSV-Importe.
+- Demo-Spieler und Demo-Funde wurden entfernt.
+- Noch nicht festgelegte Punktwerte werden als `–` / „unbewertet“ angezeigt.
+- CSV-Importe können lokal übernommen und als neue `data.js` für GitHub exportiert werden.
 
-Die sichtbaren Spieler und Funde sind Demo-Daten.
+## Update in dein bestehendes GitHub-Repository einspielen
 
-## Sofort lokal ansehen
+Am einfachsten lädst du den kompletten Inhalt dieses Ordners erneut in dein bestehendes Repository `birdleague` hoch. Dateien mit gleichem Namen werden ersetzt; `taxonomy-de.js` kommt neu hinzu.
 
-Am einfachsten den Ordner in VS Code öffnen und die Erweiterung **Live Server** nutzen. Alternativ im Terminal:
+Besonders wichtig sind:
 
-```bash
-python3 -m http.server 8000
-```
+- `index.html`
+- `app.js`
+- `data.js`
+- `taxonomy-de.js`
+- `styles.css`
+- `sw.js`
 
-Dann im Browser öffnen:
+Danach aktualisiert GitHub Pages die Website automatisch.
 
-```text
-http://localhost:8000
-```
+## Künftiger CSV-Import
 
-Ein Doppelklick auf `index.html` funktioniert für fast alles ebenfalls. Für die installierbare Web-App und den Offline-Cache ist ein lokaler Server erforderlich.
+1. BirdLeague öffnen.
+2. Zu **Import** wechseln.
+3. Spielernamen eingeben.
+4. CSV auswählen.
+5. Die Vorschau zeigt bekannte Vogelarten bereits auf Deutsch.
+6. **Lokal übernehmen** speichert den Stand nur in diesem Browser.
+7. **data.js für GitHub herunterladen** erzeugt den zusammengeführten öffentlichen Datenstand.
+8. Diese `data.js` anschließend im GitHub-Repository ersetzen.
 
-## Kostenlos auf GitHub Pages veröffentlichen
+Wichtig: GitHub Pages ist statisch. Eine Website kann deshalb ohne Backend oder GitHub-Zugang nicht selbst dauerhaft in das Repository schreiben. Der kleine `data.js`-Zwischenschritt hält das Projekt kostenlos und ohne Zugangstokens.
 
-1. Bei GitHub ein neues öffentliches Repository namens `birdleague` erstellen.
-2. Alle Dateien aus diesem Ordner in das Repository hochladen.
-3. Repository öffnen: **Settings → Pages**.
-4. Unter **Build and deployment** auswählen:
-   - Source: `Deploy from a branch`
-   - Branch: `main`
-   - Folder: `/ (root)`
-5. Speichern.
+## Punkteliste
 
-Die Seite ist danach ungefähr hier erreichbar:
+Die Arten stehen zusätzlich in:
 
-```text
-https://DEIN-GITHUB-NAME.github.io/birdleague/
-```
+`data/species-points.csv`
 
-Es gibt keinen Build-Prozess und keine laufenden Hostingkosten.
+Nicht bekannte Punktwerte sind dort leer. Sobald die vollständige feste BirdLeague-Punkteliste vorliegt, können die Werte in `data.js` übernommen werden.
 
-## Daten pflegen
+## Deutsche Sicherung
 
-Die Website liest ihre Daten aus `data.js`.
+`data/birdleague-finn-de.json` enthält Finns aktuellen Import noch einmal als gut lesbare deutsche JSON-Datei.
 
-Dort gibt es drei Bereiche:
+## Hosting
 
-- `players`: Mitspieler
-- `species`: feste Punkteliste
-- `observations`: bestätigte Funde
+GitHub Pages:
 
-Eine Beobachtung sieht so aus:
+- Settings
+- Pages
+- Source: Deploy from a branch
+- Branch: `main`
+- Ordner: `/ (root)`
 
-```js
-{
-  id: "obs-101",
-  playerId: "finn",
-  speciesId: "waldkauz",
-  observedAt: "2026-03-21",
-  location: "Hamburg",
-  importedAt: "2026-07-20"
-}
-```
-
-`importedAt` entspricht dem Datenupdate, bei dem der Fund neu auf die Website kam. Dadurch kann BirdLeague „Neue Funde“ und „Punkte im letzten Update“ berechnen.
-
-Doppelte Arten pro Person werden automatisch entfernt. Es zählt der früheste Fund.
-
-## CSV-Import
-
-Unter **Import** kann eine eBird- oder eigene CSV lokal eingelesen werden. Akzeptierte Spaltennamen sind unter anderem:
-
-- `Common Name`, `Art`, `Vogelart`
-- `Scientific Name`, `Wissenschaftlicher Name`
-- `Date`, `Datum`, `Observation Date`
-- `Location`, `Ort`, `Locality`
-
-Semikolon-, Komma- und tab-getrennte Dateien werden erkannt. Die Daten verlassen den Browser nicht.
-
-Der Import erzeugt zunächst eine normalisierte JSON-Datei. Der nächste Entwicklungsschritt ist ein kleines Merge-Werkzeug, das diese Daten automatisch der `data.js` hinzufügt.
-
-## Dateien
-
-- `index.html`: Grundgerüst
-- `styles.css`: komplettes Design
-- `data.js`: Liga-, Arten- und Funddaten
-- `app.js`: Berechnungen, Ansichten und CSV-Import
-- `PRODUCT_SPEC.md`: Produktentscheidungen und Ausbaustufen
-- `VIBECODING_PROMPT.md`: Prompt für die nächste Coding-Runde
-- `data/species-points.csv`: Demo-Punkteliste
-- `data/birdleague-import-template.csv`: einfache Importvorlage
