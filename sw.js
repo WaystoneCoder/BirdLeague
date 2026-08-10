@@ -1,4 +1,4 @@
-const CACHE = "birdleague-v4";
+const CACHE = "birdleague-v5";
 const ASSETS = ["./", "./index.html", "./styles.css", "./taxonomy-de.js", "./points.js", "./data.js", "./app.js", "./logo-birdleague.png", "./icon-192.png", "./icon-512.png", "./manifest.webmanifest"];
 
 self.addEventListener("install", (event) => {

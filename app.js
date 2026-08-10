@@ -171,16 +171,34 @@ function getTimeline() {
   const running = new Map(data.players.map((player) => [player.id, 0]));
   const now = new Date();
   const season = Number(data.season);
-  const currentYear = now.getFullYear();
-  const monthCount = season < currentYear ? 12 : season === currentYear ? now.getMonth() + 1 : 0;
 
-  return Array.from({ length: monthCount }, (_, index) => {
-    const month = `${data.season}-${String(index + 1).padStart(2, "0")}`;
-    observations.filter((item) => item.observedAt.startsWith(month)).forEach((item) => {
+  // BirdLeague läuft von Mai des Saisonjahres bis einschließlich Mai des Folgejahres.
+  const seasonMonths = Array.from({ length: 13 }, (_, index) => {
+    const zeroBasedMonth = 4 + index; // 4 = Mai
+    const year = season + Math.floor(zeroBasedMonth / 12);
+    const monthIndex = zeroBasedMonth % 12;
+    return { year, monthIndex };
+  });
+
+  const currentKey = now.getFullYear() * 12 + now.getMonth();
+  const startKey = season * 12 + 4;
+  const endKey = (season + 1) * 12 + 4;
+  const visibleEndKey = Math.min(Math.max(currentKey, startKey - 1), endKey);
+  const visibleMonths = seasonMonths.filter(({ year, monthIndex }) => year * 12 + monthIndex <= visibleEndKey);
+
+  return visibleMonths.map(({ year, monthIndex }, index) => {
+    const monthNumber = monthIndex + 1;
+    const monthKey = `${year}-${String(monthNumber).padStart(2, "0")}`;
+    observations.filter((item) => item.observedAt.startsWith(monthKey)).forEach((item) => {
       running.set(item.playerId, (running.get(item.playerId) || 0) + getPointValue(speciesMap.get(item.speciesId)));
     });
+
+    const baseLabel = new Intl.DateTimeFormat("de-DE", { month: "short" })
+      .format(new Date(year, monthIndex, 1));
+    const isBoundaryMay = monthIndex === 4 && (index === 0 || year === season + 1);
+
     return {
-      month: new Intl.DateTimeFormat("de-DE", { month: "short" }).format(new Date(`${month}-01T12:00:00`)),
+      month: isBoundaryMay ? `${baseLabel} ${String(year).slice(-2)}` : baseLabel,
       values: Object.fromEntries(data.players.map((player) => [player.id, running.get(player.id) || 0]))
     };
   });
@@ -304,7 +322,7 @@ function renderStats() {
 
   app.innerHTML = `<section class="page-content">
     <div class="content-grid content-grid-wide">
-      <article class="panel panel-span-2 chart-panel"><div class="panel-heading"><div><p class="eyebrow">Saisonverlauf</p><h3>Punkte im Jahresverlauf</h3></div><span>↗</span></div>${buildTimelineSvg()}</article>
+      <article class="panel panel-span-2 chart-panel"><div class="panel-heading"><div><p class="eyebrow">Saisonverlauf</p><h3>Punkte im Saisonverlauf</h3><small>Mai ${data.season} – Mai ${Number(data.season) + 1}</small></div><span>↗</span></div>${buildTimelineSvg()}</article>
       <article class="panel"><div class="panel-heading"><div><p class="eyebrow">Nur einmal gehört</p><h3>Exklusive Arten</h3></div><span>★</span></div>
         <div class="exclusive-list">${exclusive.slice(0, 8).map((item) => `<div><span><strong>${escapeHtml(item.species.germanName)}</strong><small>${escapeHtml(playerMap.get(item.playerId)?.name || '')}</small></span><b>${pointLabel(item.species.points)}</b></div>`).join("")}</div>
       </article>
@@ -527,7 +545,7 @@ function buildMergedData() {
       id: `obs-${player.id}-${String(next.observations.length + 1).padStart(3, "0")}`,
       playerId: player.id,
       speciesId: species.id,
-      observedAt: row.date || `${next.season}-01-01`,
+      observedAt: row.date || `${next.season}-05-01`,
       location: row.location || "",
       importedAt: today
     });
@@ -575,7 +593,7 @@ function applyImportedRowsLocally() {
   state.selectedPlayerId = next.players.find((item) => item.name.toLowerCase() === state.importPlayer.trim().toLowerCase())?.id || state.selectedPlayerId;
   state.importedRows = [];
   document.getElementById("updated-at").textContent = `Stand ${formatDate(data.updatedAt)}`;
-  document.getElementById("brand-season").textContent = `Saison ${data.season}`;
+  document.getElementById("brand-season").textContent = `Mai ${data.season} – Mai ${Number(data.season) + 1}`;
   renderImport("Import lokal gespeichert. Für alle sichtbar wird er erst, wenn du die neue data.js in GitHub ersetzt.");
 }
 
@@ -695,7 +713,7 @@ app.addEventListener("change", (event) => {
   reader.readAsText(file);
 });
 
-document.getElementById("brand-season").textContent = `Saison ${data.season}`;
+document.getElementById("brand-season").textContent = `Mai ${data.season} – Mai ${Number(data.season) + 1}`;
 document.getElementById("updated-at").textContent = `Stand ${formatDate(data.updatedAt)}`;
 
 if ("serviceWorker" in navigator && location.protocol.startsWith("http")) {
