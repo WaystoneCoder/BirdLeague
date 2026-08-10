@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#183a2c">
+  <meta name="description" content="BirdLeague – das private Vogelstimmen-Ranking für Freunde.">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <title>BirdLeague</title>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true">B</div>
+        <div><strong>BirdLeague</strong><span id="brand-season">Season</span></div>
+      </div>
+      <nav id="navigation" aria-label="Hauptnavigation">
+        <button class="active" data-view="overview"><span>⌂</span>Übersicht</button>
+        <button data-view="players"><span>◎</span>Spieler</button>
+        <button data-view="stats"><span>↗</span>Statistiken</button>
+        <button data-view="rules"><span>?</span>Regeln</button>
+        <button data-view="import"><span>⇧</span>Import</button>
+      </nav>
+      <div class="sidebar-card">
+        <span class="spark">✦</span>
+        <strong>Eine Art. Einmal. Pro Jahr.</strong>
+        <span>Seltene Stimmen bringen bis zu 15 Punkte.</span>
+      </div>
+    </aside>
+
+    <main>
+      <header class="topbar">
+        <button class="menu-button" id="menu-button" aria-label="Menü öffnen">☰</button>
+        <div>
+          <p class="eyebrow">Private Vogelstimmen-Liga</p>
+          <h1 id="page-title">Übersicht</h1>
+        </div>
+        <div class="update-pill" id="updated-at"></div>
+      </header>
+      <div id="app" aria-live="polite"></div>
+    </main>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

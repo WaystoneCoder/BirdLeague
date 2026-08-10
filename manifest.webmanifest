@@ -1,0 +1,13 @@
+{
+  "name": "BirdLeague",
+  "short_name": "BirdLeague",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f3efe6",
+  "theme_color": "#183a2c",
+  "description": "Vogelarten sammeln, Punkte vergleichen, BirdLeague gewinnen.",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}
