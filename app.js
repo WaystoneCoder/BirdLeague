@@ -34,6 +34,7 @@ const sidebar = document.getElementById("sidebar");
 const navigation = document.getElementById("navigation");
 const pageTitle = document.getElementById("page-title");
 const menuButton = document.getElementById("menu-button");
+const brandHome = document.getElementById("brand-home");
 
 const state = {
   view: "overview",
@@ -168,8 +169,12 @@ function getTimeline() {
   const observations = uniqueObservations().sort((a, b) => a.observedAt.localeCompare(b.observedAt));
   const speciesMap = getSpeciesMap();
   const running = new Map(data.players.map((player) => [player.id, 0]));
+  const now = new Date();
+  const season = Number(data.season);
+  const currentYear = now.getFullYear();
+  const monthCount = season < currentYear ? 12 : season === currentYear ? now.getMonth() + 1 : 0;
 
-  return Array.from({ length: 12 }, (_, index) => {
+  return Array.from({ length: monthCount }, (_, index) => {
     const month = `${data.season}-${String(index + 1).padStart(2, "0")}`;
     observations.filter((item) => item.observedAt.startsWith(month)).forEach((item) => {
       running.set(item.playerId, (running.get(item.playerId) || 0) + getPointValue(speciesMap.get(item.speciesId)));
@@ -273,14 +278,15 @@ function buildTimelineSvg() {
     return `<line x1="${left}" y1="${y}" x2="${width - right}" y2="${y}" class="chart-grid"/><text x="${left - 10}" y="${y + 4}" text-anchor="end">${value}</text>`;
   }).join("");
 
+  const xDivisor = Math.max(timeline.length - 1, 1);
   const monthLabels = timeline.map((item, index) => {
-    const x = left + (plotWidth * index / 11);
+    const x = timeline.length === 1 ? left : left + (plotWidth * index / xDivisor);
     return `<text x="${x}" y="${height - 12}" text-anchor="middle">${escapeHtml(item.month)}</text>`;
   }).join("");
 
   const lines = data.players.map((player, playerIndex) => {
     const points = timeline.map((item, index) => {
-      const x = left + (plotWidth * index / 11);
+      const x = timeline.length === 1 ? left : left + (plotWidth * index / xDivisor);
       const y = top + plotHeight - ((item.values[player.id] / max) * plotHeight);
       return `${x},${y}`;
     }).join(" ");
@@ -320,7 +326,7 @@ function renderRules() {
   ];
 
   app.innerHTML = `<section class="page-content rules-page">
-    <article class="rules-intro"><span class="big-bird">B</span><div><p class="eyebrow">BirdLeague-Regelwerk</p><h2>Einfach, transparent und ein bisschen nerdig.</h2><p>Diese Version bildet eure festgelegten Grundregeln ab.</p></div></article>
+    <article class="rules-intro"><span class="big-bird"><img src="logo-birdleague.png" alt=""></span><div><p class="eyebrow">BirdLeague-Regelwerk</p><h2>Einfach, transparent und ein bisschen nerdig.</h2><p>Diese Version bildet eure festgelegten Grundregeln ab.</p></div></article>
     <div class="rules-grid">${rules.map(([number, title, text]) => `<article><span>${number}</span><h3>${escapeHtml(title)}</h3><p>${escapeHtml(text)}</p></article>`).join("")}</div>
   </section>`;
 }
@@ -626,6 +632,13 @@ navigation.addEventListener("click", (event) => {
   const button = event.target.closest("button[data-view]");
   if (!button) return;
   state.view = button.dataset.view;
+  sidebar.classList.remove("sidebar-open");
+  render();
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+brandHome.addEventListener("click", () => {
+  state.view = "overview";
   sidebar.classList.remove("sidebar-open");
   render();
   window.scrollTo({ top: 0, behavior: "smooth" });

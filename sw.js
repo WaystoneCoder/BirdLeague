@@ -1,5 +1,5 @@
-const CACHE = "birdleague-v3";
-const ASSETS = ["./", "./index.html", "./styles.css", "./taxonomy-de.js", "./points.js", "./data.js", "./app.js", "./icon.svg", "./manifest.webmanifest"];
+const CACHE = "birdleague-v4";
+const ASSETS = ["./", "./index.html", "./styles.css", "./taxonomy-de.js", "./points.js", "./data.js", "./app.js", "./logo-birdleague.png", "./icon-192.png", "./icon-512.png", "./manifest.webmanifest"];
 
 self.addEventListener("install", (event) => {
   self.skipWaiting();

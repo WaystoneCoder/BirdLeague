@@ -6,17 +6,17 @@
   <meta name="theme-color" content="#183a2c">
   <meta name="description" content="BirdLeague – das private Vogelstimmen-Ranking für Freunde.">
   <link rel="manifest" href="manifest.webmanifest">
-  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="icon" href="icon-192.png" type="image/png">
   <link rel="stylesheet" href="styles.css">
   <title>BirdLeague</title>
 </head>
 <body>
   <div class="app-shell">
     <aside class="sidebar" id="sidebar">
-      <div class="brand">
-        <div class="brand-mark" aria-hidden="true">B</div>
-        <div><strong>BirdLeague</strong><span id="brand-season">Season</span></div>
-      </div>
+      <button class="brand brand-home" id="brand-home" type="button" aria-label="Zur BirdLeague-Übersicht">
+        <img class="brand-logo" src="logo-birdleague.png" alt="" aria-hidden="true">
+        <span class="brand-copy"><strong>BirdLeague</strong><span id="brand-season">Season</span></span>
+      </button>
       <nav id="navigation" aria-label="Hauptnavigation">
         <button class="active" data-view="overview"><span>⌂</span>Übersicht</button>
         <button data-view="players"><span>◎</span>Spieler</button>

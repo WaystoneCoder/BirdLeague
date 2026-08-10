@@ -1,5 +1,12 @@
 # BirdLeague
 
+## UI-Update: Logo & Jahresverlauf
+
+- Das neue Eisvogel-Motiv ist als BirdLeague-Logo und PWA-Icon eingebunden.
+- Ein Klick auf das BirdLeague-Logo oben links führt immer zurück zur Übersicht.
+- Der Punkteverlauf zeigt in der laufenden Saison nur Monate bis einschließlich des aktuellen Monats; abgeschlossene Saisons zeigen weiterhin alle 12 Monate.
+
+
 BirdLeague ist eine statische, kostenlose GitHub-Pages-Website für euer Vogelstimmen-Spiel.
 
 ## Datenprinzip
