@@ -40,7 +40,8 @@ const state = {
   view: "overview",
   selectedPlayerId: data.players[0]?.id || "",
   importedRows: [],
-  importPlayer: ""
+  importPlayer: "",
+  importMeta: null
 };
 
 const viewLabels = {
@@ -335,8 +336,8 @@ function renderStats() {
 
 function renderRules() {
   const rules = [
-    ["1", "Eine Art pro Person und Jahr", "Mehrfachaufnahmen derselben Art bringen keine zusätzlichen Punkte. Es zählt der früheste bestätigte Fund."],
-    ["2", "Nur bestätigte Funde", "In die Liga kommen ausschließlich Vogelarten, die der Spieler in Merlin bewusst bestätigt hat."],
+    ["1", "Eine Art pro Person und Saison", "Mehrfachaufnahmen derselben Art bringen keine zusätzlichen Punkte. Es zählt der früheste bestätigte Fund zwischen Mai und Mai."],
+    ["2", "Nur bestätigte Funde", "In die Liga kommen ausschließlich bewusst bestätigte Vogelarten – egal ob aus Merlin/eBird oder BirdNET Live."],
     ["3", "Feste Punkteliste", "Jede Vogelart hat vorab einen festen Wert zwischen 1 und 10 Punkten."],
     ["15", "Echte Raritäten", "Außergewöhnliche Funde können mit 15 Punkten bewertet werden. Dafür sollte ein Nachweis vorliegen."],
     ["↻", "Updates in Wellen", "Alle paar Wochen werden die CSV-Dateien importiert. Das Ranking zeigt den letzten veröffentlichten Stand."],
@@ -395,6 +396,7 @@ function normalizeDate(value = "") {
   const input = String(value).trim();
   if (!input) return "";
   if (/^\d{4}-\d{2}-\d{2}$/.test(input)) return input;
+  if (/^\d{4}-\d{2}-\d{2}T/.test(input)) return input.slice(0, 10);
 
   const us = input.match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})$/);
   if (us) return `${us[3]}-${us[1].padStart(2, "0")}-${us[2].padStart(2, "0")}`;
@@ -405,44 +407,231 @@ function normalizeDate(value = "") {
   return input;
 }
 
-function mapImportedRows(csvText, playerName) {
+function seasonBounds() {
+  const season = Number(data.season);
+  return {
+    start: `${season}-05-01`,
+    end: `${season + 1}-05-31`
+  };
+}
+
+function isDateInSeason(date) {
+  if (!date) return true;
+  const normalized = normalizeDate(date);
+  const { start, end } = seasonBounds();
+  return normalized >= start && normalized <= end;
+}
+
+function isConfirmedValue(value) {
+  if (typeof value === "boolean") return value;
+  return ["true", "1", "yes", "ja", "confirmed", "bestätigt"].includes(String(value ?? "").trim().toLowerCase());
+}
+
+function dedupeImportedRows(rows) {
+  const unique = new Map();
+  rows.forEach((row) => {
+    const speciesKey = (row.scientificName || row.commonName).trim().toLowerCase();
+    if (!speciesKey) return;
+    const key = `${row.player.toLowerCase()}:${speciesKey}`;
+    const current = unique.get(key);
+    if (!current || (row.date && (!current.date || row.date < current.date))) unique.set(key, row);
+  });
+  return [...unique.values()];
+}
+
+function mapImportedRows(csvText, playerName, sourceName = "CSV") {
   const rows = parseCsv(csvText);
   if (rows.length < 2) throw new Error("Die CSV enthält keine Datenzeilen.");
   const headers = rows[0].map((header) => header.trim().toLowerCase());
   const aliases = {
     commonName: ["common name", "deutscher name", "art", "vogelart", "species"],
     scientificName: ["scientific name", "wissenschaftlicher name", "latin name"],
-    date: ["date", "datum", "observation date", "erstfund"],
-    location: ["location", "ort", "locality", "location name"]
+    date: ["date", "datum", "observation date", "erstfund", "timestamp (utc)", "timestamp"],
+    location: ["location", "ort", "locality", "location name"],
+    confirmed: ["confirmed", "bestätigt", "confirmed?", "verified"]
   };
   const indexFor = (names) => headers.findIndex((header) => names.includes(header));
   const indexes = Object.fromEntries(Object.entries(aliases).map(([key, names]) => [key, indexFor(names)]));
   if (indexes.commonName < 0 && indexes.scientificName < 0) throw new Error("Keine Spalte für Vogelart gefunden.");
 
   const currentByScientificName = new Map(data.species.map((species) => [species.scientificName.toLowerCase(), species]));
+  const hasConfirmationColumn = indexes.confirmed >= 0;
+  let unconfirmedIgnored = 0;
+  let outOfSeasonIgnored = 0;
+  let detectionCount = 0;
+  const mapped = [];
 
-  const mapped = rows.slice(1).map((row) => {
+  rows.slice(1).forEach((row) => {
+    detectionCount += 1;
+    if (hasConfirmationColumn && !isConfirmedValue(row[indexes.confirmed])) {
+      unconfirmedIgnored += 1;
+      return;
+    }
     const commonName = indexes.commonName >= 0 ? (row[indexes.commonName] || "") : "";
     const scientificName = indexes.scientificName >= 0 ? (row[indexes.scientificName] || "").trim() : "";
     const existing = currentByScientificName.get(scientificName.toLowerCase());
-    return {
+    const date = normalizeDate(indexes.date >= 0 ? (row[indexes.date] || "") : "");
+    if (date && !isDateInSeason(date)) {
+      outOfSeasonIgnored += 1;
+      return;
+    }
+    mapped.push({
       player: playerName.trim(),
       commonName,
       germanName: existing?.germanName || pointCatalog[scientificName]?.germanName || germanNames[scientificName] || commonName || scientificName,
       scientificName,
-      date: normalizeDate(indexes.date >= 0 ? (row[indexes.date] || "") : ""),
-      location: indexes.location >= 0 ? (row[indexes.location] || "") : ""
-    };
-  }).filter((row) => row.commonName || row.scientificName);
-
-  const unique = new Map();
-  mapped.forEach((row) => {
-    const speciesKey = (row.scientificName || row.commonName).trim().toLowerCase();
-    const key = `${row.player.toLowerCase()}:${speciesKey}`;
-    const current = unique.get(key);
-    if (!current || (row.date && (!current.date || row.date < current.date))) unique.set(key, row);
+      date,
+      location: indexes.location >= 0 ? (row[indexes.location] || "") : "",
+      source: sourceName
+    });
   });
-  return [...unique.values()];
+
+  return {
+    rows: dedupeImportedRows(mapped.filter((row) => row.commonName || row.scientificName)),
+    meta: {
+      files: 1,
+      detections: detectionCount,
+      confirmed: mapped.length,
+      unconfirmedIgnored,
+      outOfSeasonIgnored,
+      birdnetFiles: hasConfirmationColumn ? 1 : 0,
+      ebirdFiles: hasConfirmationColumn ? 0 : 1
+    }
+  };
+}
+
+function birdNetSessionDate(payload) {
+  const localId = payload?.meta?.session?.id || payload?.session || "";
+  const match = String(localId).match(/(\d{4}-\d{2}-\d{2})/);
+  return match?.[1] || normalizeDate(payload?.startTime || payload?.meta?.session?.startTime || "");
+}
+
+function birdNetLocation(payload) {
+  const named = payload?.locationName || payload?.meta?.session?.locationName;
+  if (named) return String(named);
+  const lat = payload?.latitude ?? payload?.meta?.session?.latitude;
+  const lon = payload?.longitude ?? payload?.meta?.session?.longitude;
+  if (Number.isFinite(Number(lat)) && Number.isFinite(Number(lon))) return `${Number(lat).toFixed(5)}, ${Number(lon).toFixed(5)}`;
+  return "";
+}
+
+function mapBirdNetJson(jsonText, playerName, sourceName = "BirdNET Live") {
+  const payload = JSON.parse(jsonText);
+  if (!Array.isArray(payload?.detections)) throw new Error("Die JSON-Datei ist kein erkannter BirdNET-Live-Export.");
+
+  const sessionDate = birdNetSessionDate(payload);
+  const location = birdNetLocation(payload);
+  let unconfirmedIgnored = 0;
+  let outOfSeasonIgnored = 0;
+  const mapped = [];
+
+  payload.detections.forEach((detection) => {
+    if (!isConfirmedValue(detection.confirmed)) {
+      unconfirmedIgnored += 1;
+      return;
+    }
+    const date = sessionDate || normalizeDate(detection.timestamp || "");
+    if (date && !isDateInSeason(date)) {
+      outOfSeasonIgnored += 1;
+      return;
+    }
+    const scientificName = String(detection.scientificName || "").trim();
+    const commonName = String(detection.commonName || "").trim();
+    mapped.push({
+      player: playerName.trim(),
+      commonName,
+      germanName: pointCatalog[scientificName]?.germanName || germanNames[scientificName] || commonName || scientificName,
+      scientificName,
+      date,
+      location,
+      source: sourceName
+    });
+  });
+
+  return {
+    rows: dedupeImportedRows(mapped),
+    meta: {
+      files: 1,
+      detections: payload.detections.length,
+      confirmed: mapped.length,
+      unconfirmedIgnored,
+      outOfSeasonIgnored,
+      birdnetFiles: 1,
+      ebirdFiles: 0
+    }
+  };
+}
+
+function mergeImportResults(results) {
+  const rows = dedupeImportedRows(results.flatMap((result) => result.rows));
+  const meta = results.reduce((sum, result) => {
+    Object.keys(sum).forEach((key) => { sum[key] += Number(result.meta?.[key] || 0); });
+    return sum;
+  }, { files: 0, detections: 0, confirmed: 0, unconfirmedIgnored: 0, outOfSeasonIgnored: 0, birdnetFiles: 0, ebirdFiles: 0 });
+  meta.uniqueSpecies = rows.length;
+  return { rows, meta };
+}
+
+async function inflateRaw(bytes) {
+  if (typeof DecompressionStream === "undefined") throw new Error("ZIP-Import wird von diesem Browser nicht unterstützt. Bitte die ZIP entpacken und die JSON-Datei auswählen.");
+  const stream = new Blob([bytes]).stream().pipeThrough(new DecompressionStream("deflate-raw"));
+  return new Uint8Array(await new Response(stream).arrayBuffer());
+}
+
+async function extractBirdNetTextFromZip(file) {
+  const bytes = new Uint8Array(await file.arrayBuffer());
+  const view = new DataView(bytes.buffer, bytes.byteOffset, bytes.byteLength);
+  const decoder = new TextDecoder("utf-8");
+  let eocd = -1;
+  for (let offset = bytes.length - 22; offset >= Math.max(0, bytes.length - 65557); offset -= 1) {
+    if (view.getUint32(offset, true) === 0x06054b50) { eocd = offset; break; }
+  }
+  if (eocd < 0) throw new Error("Die ZIP-Datei konnte nicht gelesen werden.");
+
+  const entries = view.getUint16(eocd + 10, true);
+  let cursor = view.getUint32(eocd + 16, true);
+  const candidates = [];
+
+  for (let index = 0; index < entries; index += 1) {
+    if (view.getUint32(cursor, true) !== 0x02014b50) throw new Error("Ungültige ZIP-Struktur.");
+    const method = view.getUint16(cursor + 10, true);
+    const compressedSize = view.getUint32(cursor + 20, true);
+    const filenameLength = view.getUint16(cursor + 28, true);
+    const extraLength = view.getUint16(cursor + 30, true);
+    const commentLength = view.getUint16(cursor + 32, true);
+    const localOffset = view.getUint32(cursor + 42, true);
+    const filename = decoder.decode(bytes.slice(cursor + 46, cursor + 46 + filenameLength));
+    if ((filename.endsWith(".json") && !filename.endsWith(".metadata.json")) || filename.endsWith(".csv")) {
+      candidates.push({ filename, method, compressedSize, localOffset });
+    }
+    cursor += 46 + filenameLength + extraLength + commentLength;
+  }
+
+  const candidate = candidates.find((entry) => entry.filename.endsWith(".json")) || candidates.find((entry) => entry.filename.endsWith(".csv"));
+  if (!candidate) throw new Error("In der BirdNET-ZIP wurde keine JSON- oder CSV-Datei gefunden.");
+  if (view.getUint32(candidate.localOffset, true) !== 0x04034b50) throw new Error("Ungültiger ZIP-Dateieintrag.");
+  const localNameLength = view.getUint16(candidate.localOffset + 26, true);
+  const localExtraLength = view.getUint16(candidate.localOffset + 28, true);
+  const start = candidate.localOffset + 30 + localNameLength + localExtraLength;
+  const compressed = bytes.slice(start, start + candidate.compressedSize);
+  let plain;
+  if (candidate.method === 0) plain = compressed;
+  else if (candidate.method === 8) plain = await inflateRaw(compressed);
+  else throw new Error(`ZIP-Kompressionsmethode ${candidate.method} wird nicht unterstützt.`);
+  return { filename: candidate.filename, text: decoder.decode(plain) };
+}
+
+async function parseImportFile(file, playerName) {
+  const name = file.name.toLowerCase();
+  if (name.endsWith(".zip")) {
+    const extracted = await extractBirdNetTextFromZip(file);
+    if (extracted.filename.toLowerCase().endsWith(".json")) return mapBirdNetJson(extracted.text, playerName, file.name);
+    return mapImportedRows(extracted.text, playerName, file.name);
+  }
+  const text = await file.text();
+  if (name.endsWith(".json")) return mapBirdNetJson(text, playerName, file.name);
+  if (name.endsWith(".csv")) return mapImportedRows(text, playerName, file.name);
+  throw new Error(`Dateityp von ${file.name} wird nicht unterstützt.`);
 }
 
 function getImportAudit() {
@@ -592,6 +781,7 @@ function applyImportedRowsLocally() {
   localStorage.setItem("birdleague-data-v1", JSON.stringify(next));
   state.selectedPlayerId = next.players.find((item) => item.name.toLowerCase() === state.importPlayer.trim().toLowerCase())?.id || state.selectedPlayerId;
   state.importedRows = [];
+  state.importMeta = null;
   document.getElementById("updated-at").textContent = `Stand ${formatDate(data.updatedAt)}`;
   document.getElementById("brand-season").textContent = `Mai ${data.season} – Mai ${Number(data.season) + 1}`;
   renderImport("Import lokal gespeichert. Für alle sichtbar wird er erst, wenn du die neue data.js in GitHub ersetzt.");
@@ -605,15 +795,23 @@ function resetLocalData() {
 function renderImport(message = "") {
   const hasLocalDraft = Boolean(localStorage.getItem("birdleague-data-v1"));
   const audit = state.importedRows.length ? getImportAudit() : null;
+  const meta = state.importMeta;
   const missingHtml = audit?.missing.length ? `<div class="audit-warning"><strong>Fehlende Punktwerte</strong>${audit.missing.map((row) => `<div><span>${escapeHtml(row.germanName || row.commonName || row.scientificName)}</span><em>${escapeHtml(row.scientificName || "wissenschaftlicher Name fehlt")}</em></div>`).join("")}<p>Diese Arten müssen zuerst in der Master-Punkteliste bewertet werden. Danach <code>points.js</code> aktualisieren und den Import erneut prüfen.</p></div>` : "";
   const readyHtml = audit?.complete ? `<div class="audit-ready">✓ ${audit.ratedCount}/${audit.total} Arten haben einen Punktwert. Import ist bereit.</div>` : "";
+  const sourceHtml = meta ? `<div class="import-source-summary">
+      <strong>${meta.files} Datei${meta.files === 1 ? "" : "en"} verarbeitet</strong>
+      <span>${meta.detections} Beobachtungen/Detektionen gelesen</span>
+      ${meta.birdnetFiles ? `<span>${meta.confirmed} bestätigte BirdNET-Detektionen berücksichtigt</span><span>${meta.unconfirmedIgnored} unbestätigte BirdNET-Detektionen ignoriert</span>` : ""}
+      ${meta.outOfSeasonIgnored ? `<span>${meta.outOfSeasonIgnored} außerhalb Mai ${data.season} – Mai ${Number(data.season) + 1} ignoriert</span>` : ""}
+    </div>` : "";
 
   app.innerHTML = `<section class="page-content import-page"><article class="panel import-panel">
-    <div class="panel-heading"><div><p class="eyebrow">BirdLeague-Verwaltung</p><h3>CSV importieren & veröffentlichen</h3></div><span>⇧</span></div>
-    <p>Die CSV wird nur in deinem Browser verarbeitet. Vogelarten werden über den wissenschaftlichen Namen abgeglichen, auf Deutsch angezeigt und automatisch gegen die Master-Punkteliste geprüft.</p>
+    <div class="panel-heading"><div><p class="eyebrow">BirdLeague-Verwaltung</p><h3>Beobachtungen importieren & veröffentlichen</h3></div><span>⇧</span></div>
+    <p>Unterstützt werden eBird-CSV-Dateien sowie BirdNET-Live-Exporte als ZIP, JSON oder CSV. Bei BirdNET Live zählen ausschließlich manuell bestätigte Detektionen. Mehrere Dateien können gleichzeitig ausgewählt werden.</p>
     <label>Spielername<input id="import-player" value="${escapeHtml(state.importPlayer)}" placeholder="z. B. Finn"></label>
-    <label class="dropzone"><span class="upload-symbol">⇧</span><strong>CSV auswählen</strong><span>Unterstützt: eBird-Export sowie Common Name/Art, Scientific Name, Date/Datum, Location/Ort</span><input id="csv-file" type="file" accept=".csv,text/csv"></label>
+    <label class="dropzone"><span class="upload-symbol">⇧</span><strong>Dateien auswählen</strong><span>eBird: CSV · BirdNET Live: ZIP, JSON oder CSV · Mehrfachauswahl möglich</span><input id="import-file" type="file" accept=".csv,.json,.zip,text/csv,application/json,application/zip" multiple></label>
     ${message ? `<div class="import-message">${escapeHtml(message)}</div>` : ""}
+    ${sourceHtml}
     ${audit ? `<div class="audit-grid">
       <div><strong>${audit.total}</strong><span>Jahresarten erkannt</span></div>
       <div><strong>${audit.ratedCount}</strong><span>mit Punktwert</span></div>
@@ -688,29 +886,40 @@ app.addEventListener("input", (event) => {
   if (event.target.id === "import-player") state.importPlayer = event.target.value;
 });
 
-app.addEventListener("change", (event) => {
-  if (event.target.id !== "csv-file") return;
-  const file = event.target.files?.[0];
+app.addEventListener("change", async (event) => {
+  if (event.target.id !== "import-file") return;
+  const files = [...(event.target.files || [])];
   if (!state.importPlayer.trim()) {
     renderImport("Bitte zuerst einen Spielernamen eingeben.");
     return;
   }
-  if (!file) return;
-  const reader = new FileReader();
-  reader.onload = () => {
-    try {
-      state.importedRows = mapImportedRows(String(reader.result || ""), state.importPlayer);
-      const audit = getImportAudit();
-      renderImport(audit.complete
-        ? `${audit.total} eindeutige Jahresarten erkannt – alle sind bewertet.`
-        : `${audit.total} eindeutige Jahresarten erkannt – ${audit.missing.length} davon noch ohne Punktwert.`);
-    } catch (error) {
-      state.importedRows = [];
-      renderImport(error.message || "Die Datei konnte nicht gelesen werden.");
+  if (!files.length) return;
+
+  renderImport(`${files.length} Datei${files.length === 1 ? "" : "en"} werden verarbeitet …`);
+  try {
+    const results = [];
+    for (const file of files) results.push(await parseImportFile(file, state.importPlayer));
+    const merged = mergeImportResults(results);
+    state.importedRows = merged.rows;
+    state.importMeta = merged.meta;
+
+    if (!merged.rows.length) {
+      const ignored = merged.meta.unconfirmedIgnored;
+      renderImport(ignored
+        ? `Keine bestätigten Jahresarten gefunden. ${ignored} unbestätigte BirdNET-Detektion${ignored === 1 ? " wurde" : "en wurden"} ignoriert.`
+        : "Keine importierbaren Jahresarten in der aktuellen Saison gefunden.");
+      return;
     }
-  };
-  reader.onerror = () => renderImport("Die Datei konnte nicht gelesen werden.");
-  reader.readAsText(file);
+
+    const audit = getImportAudit();
+    renderImport(audit.complete
+      ? `${audit.total} eindeutige Jahresarten erkannt – alle sind bewertet.`
+      : `${audit.total} eindeutige Jahresarten erkannt – ${audit.missing.length} davon noch ohne Punktwert.`);
+  } catch (error) {
+    state.importedRows = [];
+    state.importMeta = null;
+    renderImport(error.message || "Die Datei konnte nicht gelesen werden.");
+  }
 });
 
 document.getElementById("brand-season").textContent = `Mai ${data.season} – Mai ${Number(data.season) + 1}`;

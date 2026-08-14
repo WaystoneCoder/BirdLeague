@@ -22,15 +22,20 @@ Die aktuelle Masterliste umfasst die 87 Arten aus Finns eBird-Export. Alle 87 si
 
 Referenz ist Deutschland/Norddeutschland. Der Punktwert bleibt anschließend unabhängig vom Fundort gleich. Die Skala berücksichtigt Häufigkeit, regionale Bindung, Saisonalität und den praktischen BirdLeague-Schwierigkeitsgrad. 15 Punkte sind für echte Raritäten reserviert.
 
-## CSV-Import
+## Import: eBird und BirdNET Live
 
 1. BirdLeague öffnen → **Import**.
-2. Spielernamen eingeben.
-3. eBird-CSV auswählen.
-4. BirdLeague reduziert auf eine Art pro Spieler/Jahr und prüft jede Art gegen `points.js`.
-5. Nur wenn alle Arten bewertet sind, kann der Import übernommen bzw. als `data.js` exportiert werden.
-6. Fehlt eine Art, wird sie mit wissenschaftlichem Namen aufgelistet. Dann zuerst Master-Punkteliste ergänzen.
-7. Neue `data.js` in GitHub ersetzen.
+2. Spielername eingeben.
+3. Eine oder mehrere Dateien auswählen:
+   - eBird: CSV
+   - BirdNET Live: komplette ZIP-Datei, JSON oder CSV
+4. BirdNET Live: Nur `confirmed = true` wird berücksichtigt. Unbestätigte Detektionen werden automatisch ignoriert und gezählt.
+5. Es werden nur Funde der BirdLeague-Saison **Mai des Saisonjahres bis einschließlich Mai des Folgejahres** berücksichtigt.
+6. Mehrfachfunde derselben Art werden zusammengeführt; es zählt der früheste Fund.
+7. Die Arten werden über den wissenschaftlichen Namen gegen die Master-Punkteliste geprüft.
+8. Nur wenn alle neuen Arten bewertet sind, kann der Import übernommen bzw. als `data.js` exportiert werden.
+
+BirdNET-Live-ZIPs werden direkt im Browser gelesen; die enthaltenen Audio-Clips werden nicht hochgeladen oder verarbeitet.
 
 ## Künftige neue Arten
 
