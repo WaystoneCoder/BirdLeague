@@ -1,638 +1,1356 @@
-/* BirdLeague Master-Punkteliste. Wissenschaftlicher Name = stabiler Schlüssel. */
+/* BirdLeague Master-Punkteliste V3 – Art × Region × Zeitfenster */
+window.BIRDLEAGUE_REGIONS = {
+  "DE-NORTH": "Deutschland Nord",
+  "DE-CENTRAL": "Deutschland Mitte",
+  "DE-SOUTH": "Deutschland Süd",
+  "DK": "Dänemark",
+  "SE-SOUTH": "Südschweden",
+  "SE-CENTRAL": "Mittelschweden",
+  "SE-NORTH": "Nordschweden",
+  "NO": "Norwegen",
+  "JP-TOKYO": "Japan – Tokio",
+  "OTHER": "Sonstige Region"
+};
+window.BIRDLEAGUE_SCORE_WINDOWS = {
+  "may_aug": "Mai–August",
+  "sep_nov": "September–November",
+  "dec_feb": "Dezember–Februar",
+  "mar_apr": "März–April"
+};
 window.BIRDLEAGUE_POINTS = {
   "Calidris alpina": {
     "germanName": "Alpenstrandläufer",
-    "points": 4,
-    "category": "besonders"
+    "englishName": "Dunlin",
+    "scores": {
+      "DK": {
+        "may_aug": 2
+      }
+    }
   },
   "Turdus merula": {
     "germanName": "Amsel",
-    "points": 1,
-    "category": "sehr häufig"
+    "englishName": "Eurasian Blackbird",
+    "scores": {
+      "DK": {
+        "may_aug": 1
+      }
+    }
   },
   "Haematopus ostralegus": {
     "germanName": "Austernfischer",
-    "points": 3,
-    "category": "regelmäßig / lokal"
+    "englishName": "Eurasian Oystercatcher",
+    "scores": {
+      "DK": {
+        "may_aug": 2
+      }
+    }
   },
   "Motacilla alba": {
     "germanName": "Bachstelze",
-    "points": 1,
-    "category": "sehr häufig"
+    "englishName": "White Wagtail",
+    "scores": {
+      "DK": {
+        "may_aug": 1
+      }
+    }
   },
   "Anthus trivialis": {
     "germanName": "Baumpieper",
-    "points": 3,
-    "category": "regelmäßig / lokal"
+    "englishName": "Tree Pipit",
+    "scores": {
+      "DK": {
+        "may_aug": 2
+      }
+    }
   },
   "Gallinago gallinago": {
     "germanName": "Bekassine",
-    "points": 5,
-    "category": "ungewöhnlich"
+    "englishName": "Common Snipe",
+    "scores": {
+      "NO": {
+        "may_aug": 2
+      }
+    }
   },
   "Fringilla montifringilla": {
     "germanName": "Bergfink",
-    "points": 3,
-    "category": "regelmäßig / lokal"
+    "englishName": "Brambling",
+    "scores": {
+      "NO": {
+        "may_aug": 1
+      },
+      "SE-NORTH": {
+        "may_aug": 2
+      }
+    }
   },
   "Acanthis flammea": {
     "germanName": "Birkenzeisig",
-    "points": 5,
-    "category": "ungewöhnlich"
+    "englishName": "Redpoll",
+    "scores": {
+      "DK": {
+        "may_aug": 4
+      }
+    }
+  },
+  "Cyanopica cyanus": {
+    "germanName": "Blauelster",
+    "englishName": "Azure-winged Magpie",
+    "scores": {
+      "JP-TOKYO": {
+        "may_aug": 2
+      }
+    }
   },
   "Luscinia svecica": {
     "germanName": "Blaukehlchen",
-    "points": 6,
-    "category": "selten / stark lokalisiert"
+    "englishName": "Bluethroat",
+    "scores": {
+      "DK": {
+        "may_aug": 3
+      }
+    }
   },
   "Cyanistes caeruleus": {
     "germanName": "Blaumeise",
-    "points": 1,
-    "category": "sehr häufig"
+    "englishName": "Eurasian Blue Tit",
+    "scores": {
+      "DE-NORTH": {
+        "may_aug": 1
+      },
+      "DK": {
+        "may_aug": 1
+      }
+    }
   },
   "Linaria cannabina": {
     "germanName": "Bluthänfling",
-    "points": 3,
-    "category": "regelmäßig / lokal"
+    "englishName": "Eurasian Linnet",
+    "scores": {
+      "DK": {
+        "may_aug": 2
+      }
+    }
   },
   "Anser albifrons": {
     "germanName": "Blässgans",
-    "points": 3,
-    "category": "regelmäßig / lokal"
+    "englishName": "Greater White-fronted Goose",
+    "scores": {
+      "SE-NORTH": {
+        "may_aug": 5
+      }
+    }
   },
   "Fulica atra": {
     "germanName": "Blässhuhn",
-    "points": 1,
-    "category": "sehr häufig"
+    "englishName": "Eurasian Coot",
+    "scores": {
+      "DE-NORTH": {
+        "may_aug": 1
+      }
+    }
   },
   "Thalasseus sandvicensis": {
     "germanName": "Brandseeschwalbe",
-    "points": 6,
-    "category": "selten / stark lokalisiert"
+    "englishName": "Sandwich Tern",
+    "scores": {
+      "DE-NORTH": {
+        "may_aug": 3
+      }
+    }
   },
   "Saxicola rubetra": {
     "germanName": "Braunkehlchen",
-    "points": 6,
-    "category": "selten / stark lokalisiert"
+    "englishName": "Whinchat",
+    "scores": {
+      "SE-SOUTH": {
+        "may_aug": 3
+      }
+    }
+  },
+  "Hypsipetes amaurotis": {
+    "germanName": "Braunohrbülbül",
+    "englishName": "Brown-eared Bulbul",
+    "scores": {
+      "JP-TOKYO": {
+        "may_aug": 1
+      }
+    }
   },
   "Fringilla coelebs": {
     "germanName": "Buchfink",
-    "points": 1,
-    "category": "sehr häufig"
+    "englishName": "Common Chaffinch",
+    "scores": {
+      "DK": {
+        "may_aug": 1
+      }
+    }
   },
   "Dendrocopos major": {
     "germanName": "Buntspecht",
-    "points": 2,
-    "category": "häufig"
+    "englishName": "Great Spotted Woodpecker",
+    "scores": {
+      "DE-NORTH": {
+        "may_aug": 2
+      }
+    }
+  },
+  "Corvus macrorhynchos": {
+    "germanName": "Dickschnabelkrähe",
+    "englishName": "Large-billed Crow",
+    "scores": {
+      "JP-TOKYO": {
+        "may_aug": 1
+      }
+    }
   },
   "Coloeus monedula": {
     "germanName": "Dohle",
-    "points": 2,
-    "category": "häufig"
+    "englishName": "Eurasian Jackdaw",
+    "scores": {
+      "DE-CENTRAL": {
+        "may_aug": 2
+      }
+    }
   },
   "Curruca communis": {
     "germanName": "Dorngrasmücke",
-    "points": 2,
-    "category": "häufig"
+    "englishName": "Greater Whitethroat",
+    "scores": {
+      "DK": {
+        "may_aug": 2
+      }
+    }
   },
   "Garrulus glandarius": {
     "germanName": "Eichelhäher",
-    "points": 2,
-    "category": "häufig"
+    "englishName": "Eurasian Jay",
+    "scores": {
+      "SE-SOUTH": {
+        "may_aug": 1
+      }
+    }
   },
   "Somateria mollissima": {
     "germanName": "Eiderente",
-    "points": 3,
-    "category": "regelmäßig / lokal"
+    "englishName": "Common Eider",
+    "scores": {
+      "NO": {
+        "may_aug": 1
+      }
+    }
   },
   "Pica pica": {
     "germanName": "Elster",
-    "points": 1,
-    "category": "sehr häufig"
+    "englishName": "Eurasian Magpie",
+    "scores": {
+      "DE-NORTH": {
+        "may_aug": 1
+      }
+    }
   },
   "Spinus spinus": {
     "germanName": "Erlenzeisig",
-    "points": 3,
-    "category": "regelmäßig / lokal"
+    "englishName": "Eurasian Siskin",
+    "scores": {
+      "SE-NORTH": {
+        "may_aug": 1
+      },
+      "SE-SOUTH": {
+        "may_aug": 1
+      }
+    }
   },
   "Alauda arvensis": {
     "germanName": "Feldlerche",
-    "points": 2,
-    "category": "häufig"
+    "englishName": "Eurasian Skylark",
+    "scores": {
+      "DK": {
+        "may_aug": 1
+      }
+    }
   },
   "Locustella naevia": {
     "germanName": "Feldschwirl",
-    "points": 5,
-    "category": "ungewöhnlich"
+    "englishName": "Common Grasshopper Warbler",
+    "scores": {
+      "DK": {
+        "may_aug": 4
+      }
+    }
   },
   "Passer montanus": {
     "germanName": "Feldsperling",
-    "points": 2,
-    "category": "häufig"
+    "englishName": "Eurasian Tree Sparrow",
+    "scores": {
+      "DK": {
+        "may_aug": 2
+      },
+      "SE-SOUTH": {
+        "may_aug": 2
+      }
+    }
   },
   "Columba livia": {
     "germanName": "Felsentaube",
-    "points": 1,
-    "category": "sehr häufig"
+    "englishName": "Rock Pigeon",
+    "scores": {
+      "DE-NORTH": {
+        "may_aug": 1
+      }
+    }
   },
   "Loxia curvirostra": {
     "germanName": "Fichtenkreuzschnabel",
-    "points": 4,
-    "category": "besonders"
+    "englishName": "Red Crossbill",
+    "scores": {
+      "SE-NORTH": {
+        "may_aug": 2
+      }
+    }
   },
   "Phylloscopus trochilus": {
     "germanName": "Fitis",
-    "points": 2,
-    "category": "häufig"
+    "englishName": "Willow Warbler",
+    "scores": {
+      "DK": {
+        "may_aug": 2
+      }
+    }
   },
   "Sterna hirundo": {
     "germanName": "Flussseeschwalbe",
-    "points": 3,
-    "category": "regelmäßig / lokal"
+    "englishName": "Common Tern",
+    "scores": {
+      "DE-NORTH": {
+        "may_aug": 3
+      },
+      "DK": {
+        "may_aug": 3
+      }
+    }
   },
   "Actitis hypoleucos": {
     "germanName": "Flussuferläufer",
-    "points": 5,
-    "category": "ungewöhnlich"
+    "englishName": "Common Sandpiper",
+    "scores": {
+      "DK": {
+        "may_aug": 3
+      },
+      "SE-SOUTH": {
+        "may_aug": 2
+      }
+    }
   },
   "Certhia brachydactyla": {
     "germanName": "Gartenbaumläufer",
-    "points": 3,
-    "category": "regelmäßig / lokal"
+    "englishName": "Short-toed Treecreeper",
+    "scores": {
+      "DE-NORTH": {
+        "may_aug": 2
+      },
+      "DK": {
+        "may_aug": 2
+      }
+    }
   },
   "Sylvia borin": {
     "germanName": "Gartengrasmücke",
-    "points": 3,
-    "category": "regelmäßig / lokal"
+    "englishName": "Garden Warbler",
+    "scores": {
+      "DE-NORTH": {
+        "may_aug": 3
+      },
+      "DK": {
+        "may_aug": 3
+      }
+    }
   },
   "Phoenicurus phoenicurus": {
     "germanName": "Gartenrotschwanz",
-    "points": 4,
-    "category": "besonders"
+    "englishName": "Common Redstart",
+    "scores": {
+      "DK": {
+        "may_aug": 2
+      }
+    }
   },
   "Hippolais icterina": {
     "germanName": "Gelbspötter",
-    "points": 4,
-    "category": "besonders"
+    "englishName": "Icterine Warbler",
+    "scores": {
+      "DE-NORTH": {
+        "may_aug": 3
+      }
+    }
   },
   "Pyrrhula pyrrhula": {
     "germanName": "Gimpel",
-    "points": 3,
-    "category": "regelmäßig / lokal"
+    "englishName": "Eurasian Bullfinch",
+    "scores": {
+      "DE-NORTH": {
+        "may_aug": 2
+      }
+    }
   },
   "Serinus serinus": {
     "germanName": "Girlitz",
-    "points": 4,
-    "category": "besonders"
+    "englishName": "European Serin",
+    "scores": {
+      "DE-SOUTH": {
+        "may_aug": 2
+      }
+    }
   },
   "Emberiza citrinella": {
     "germanName": "Goldammer",
-    "points": 2,
-    "category": "häufig"
+    "englishName": "Yellowhammer",
+    "scores": {
+      "DK": {
+        "may_aug": 2
+      }
+    }
   },
   "Pluvialis apricaria": {
     "germanName": "Goldregenpfeifer",
-    "points": 6,
-    "category": "selten / stark lokalisiert"
+    "englishName": "European Golden-Plover",
+    "scores": {
+      "DK": {
+        "may_aug": 3
+      },
+      "NO": {
+        "may_aug": 2
+      },
+      "SE-SOUTH": {
+        "may_aug": 3
+      }
+    }
   },
   "Anser anser": {
     "germanName": "Graugans",
-    "points": 1,
-    "category": "sehr häufig"
+    "englishName": "Graylag Goose",
+    "scores": {
+      "DE-NORTH": {
+        "may_aug": 1
+      },
+      "DK": {
+        "may_aug": 1
+      }
+    }
   },
   "Ardea cinerea": {
     "germanName": "Graureiher",
-    "points": 1,
-    "category": "sehr häufig"
+    "englishName": "Gray Heron",
+    "scores": {
+      "DK": {
+        "may_aug": 1
+      }
+    }
   },
   "Muscicapa striata": {
     "germanName": "Grauschnäpper",
-    "points": 4,
-    "category": "besonders"
+    "englishName": "Spotted Flycatcher",
+    "scores": {
+      "DE-NORTH": {
+        "may_aug": 3
+      }
+    }
   },
   "Numenius arquata": {
     "germanName": "Großer Brachvogel",
-    "points": 4,
-    "category": "besonders"
+    "englishName": "Eurasian Curlew",
+    "scores": {
+      "DK": {
+        "may_aug": 2
+      }
+    }
   },
   "Chloris chloris": {
     "germanName": "Grünfink",
-    "points": 2,
-    "category": "häufig"
+    "englishName": "European Greenfinch",
+    "scores": {
+      "DK": {
+        "may_aug": 2
+      }
+    }
   },
   "Tringa nebularia": {
     "germanName": "Grünschenkel",
-    "points": 6,
-    "category": "selten / stark lokalisiert"
+    "englishName": "Common Greenshank",
+    "scores": {
+      "DK": {
+        "may_aug": 3
+      },
+      "SE-NORTH": {
+        "may_aug": 2
+      }
+    }
   },
   "Picus viridis": {
     "germanName": "Grünspecht",
-    "points": 3,
-    "category": "regelmäßig / lokal"
+    "englishName": "Eurasian Green Woodpecker",
+    "scores": {
+      "DE-NORTH": {
+        "may_aug": 2
+      },
+      "DE-SOUTH": {
+        "may_aug": 2
+      },
+      "SE-SOUTH": {
+        "may_aug": 3
+      }
+    }
   },
   "Mergus merganser": {
     "germanName": "Gänsesäger",
-    "points": 3,
-    "category": "regelmäßig / lokal"
+    "englishName": "Common Merganser",
+    "scores": {
+      "SE-NORTH": {
+        "may_aug": 2
+      }
+    }
   },
   "Lophophanes cristatus": {
     "germanName": "Haubenmeise",
-    "points": 4,
-    "category": "besonders"
+    "englishName": "Crested Tit",
+    "scores": {
+      "SE-SOUTH": {
+        "may_aug": 2
+      }
+    }
   },
   "Phoenicurus ochruros": {
     "germanName": "Hausrotschwanz",
-    "points": 2,
-    "category": "häufig"
+    "englishName": "Black Redstart",
+    "scores": {
+      "DE-NORTH": {
+        "may_aug": 2
+      },
+      "DE-SOUTH": {
+        "may_aug": 1
+      }
+    }
   },
   "Passer domesticus": {
     "germanName": "Haussperling",
-    "points": 1,
-    "category": "sehr häufig"
+    "englishName": "House Sparrow",
+    "scores": {
+      "DE-NORTH": {
+        "may_aug": 1
+      }
+    }
   },
   "Prunella modularis": {
     "germanName": "Heckenbraunelle",
-    "points": 1,
-    "category": "sehr häufig"
+    "englishName": "Dunnock",
+    "scores": {
+      "DK": {
+        "may_aug": 1
+      }
+    }
   },
   "Lullula arborea": {
     "germanName": "Heidelerche",
-    "points": 5,
-    "category": "ungewöhnlich"
+    "englishName": "Wood Lark",
+    "scores": {
+      "DK": {
+        "may_aug": 4
+      }
+    }
   },
   "Larus fuscus": {
     "germanName": "Heringsmöwe",
-    "points": 3,
-    "category": "regelmäßig / lokal"
+    "englishName": "Lesser Black-backed Gull",
+    "scores": {
+      "DE-NORTH": {
+        "may_aug": 2
+      }
+    }
   },
   "Phasianus colchicus": {
     "germanName": "Jagdfasan",
-    "points": 2,
-    "category": "häufig"
+    "englishName": "Ring-necked Pheasant",
+    "scores": {
+      "DK": {
+        "may_aug": 2
+      }
+    }
+  },
+  "Zosterops japonicus": {
+    "germanName": "Japanbrillenvogel",
+    "englishName": "Warbling White-eye",
+    "scores": {
+      "JP-TOKYO": {
+        "may_aug": 1
+      }
+    }
   },
   "Branta canadensis": {
     "germanName": "Kanadagans",
-    "points": 1,
-    "category": "sehr häufig"
+    "englishName": "Canada Goose",
+    "scores": {
+      "DE-NORTH": {
+        "may_aug": 1
+      },
+      "DK": {
+        "may_aug": 1
+      }
+    }
   },
   "Coccothraustes coccothraustes": {
     "germanName": "Kernbeißer",
-    "points": 2,
-    "category": "häufig"
+    "englishName": "Hawfinch",
+    "scores": {
+      "DE-NORTH": {
+        "may_aug": 3
+      },
+      "DE-SOUTH": {
+        "may_aug": 2
+      }
+    }
   },
   "Vanellus vanellus": {
     "germanName": "Kiebitz",
-    "points": 4,
-    "category": "besonders"
+    "englishName": "Northern Lapwing",
+    "scores": {
+      "DK": {
+        "may_aug": 2
+      }
+    }
   },
   "Pluvialis squatarola": {
     "germanName": "Kiebitzregenpfeifer",
-    "points": 7,
-    "category": "sehr selten, aber regelmäßig"
+    "englishName": "Black-bellied Plover",
+    "scores": {
+      "DK": {
+        "may_aug": 3
+      }
+    }
   },
   "Curruca curruca": {
     "germanName": "Klappergrasmücke",
-    "points": 3,
-    "category": "regelmäßig / lokal"
+    "englishName": "Lesser Whitethroat",
+    "scores": {
+      "DK": {
+        "may_aug": 3
+      }
+    }
   },
   "Sitta europaea": {
     "germanName": "Kleiber",
-    "points": 2,
-    "category": "häufig"
+    "englishName": "Eurasian Nuthatch",
+    "scores": {
+      "DE-NORTH": {
+        "may_aug": 2
+      },
+      "SE-SOUTH": {
+        "may_aug": 1
+      }
+    }
   },
   "Parus major": {
     "germanName": "Kohlmeise",
-    "points": 1,
-    "category": "sehr häufig"
+    "englishName": "Great Tit",
+    "scores": {
+      "DK": {
+        "may_aug": 1
+      }
+    }
   },
   "Corvus corax": {
     "germanName": "Kolkrabe",
-    "points": 3,
-    "category": "regelmäßig / lokal"
+    "englishName": "Common Raven",
+    "scores": {
+      "DE-NORTH": {
+        "may_aug": 2
+      },
+      "DK": {
+        "may_aug": 2
+      }
+    }
   },
   "Grus grus": {
     "germanName": "Kranich",
-    "points": 4,
-    "category": "besonders"
+    "englishName": "Common Crane",
+    "scores": {
+      "DE-NORTH": {
+        "may_aug": 2
+      },
+      "SE-SOUTH": {
+        "may_aug": 2
+      }
+    }
   },
   "Cuculus canorus": {
     "germanName": "Kuckuck",
-    "points": 4,
-    "category": "besonders"
+    "englishName": "Common Cuckoo",
+    "scores": {
+      "DK": {
+        "may_aug": 3
+      }
+    }
   },
   "Chroicocephalus ridibundus": {
     "germanName": "Lachmöwe",
-    "points": 2,
-    "category": "häufig"
+    "englishName": "Black-headed Gull",
+    "scores": {
+      "DE-NORTH": {
+        "may_aug": 2
+      },
+      "DK": {
+        "may_aug": 2
+      }
+    }
   },
   "Larus marinus": {
     "germanName": "Mantelmöwe",
-    "points": 4,
-    "category": "besonders"
+    "englishName": "Great Black-backed Gull",
+    "scores": {
+      "NO": {
+        "may_aug": 1
+      }
+    }
   },
   "Apus apus": {
     "germanName": "Mauersegler",
-    "points": 2,
-    "category": "häufig"
+    "englishName": "Common Swift",
+    "scores": {
+      "DE-NORTH": {
+        "may_aug": 2
+      },
+      "DE-SOUTH": {
+        "may_aug": 1
+      }
+    }
   },
   "Delichon urbicum": {
     "germanName": "Mehlschwalbe",
-    "points": 2,
-    "category": "häufig"
+    "englishName": "Western House-Martin",
+    "scores": {
+      "DE-SOUTH": {
+        "may_aug": 1
+      },
+      "DK": {
+        "may_aug": 2
+      }
+    }
   },
   "Turdus viscivorus": {
     "germanName": "Misteldrossel",
-    "points": 3,
-    "category": "regelmäßig / lokal"
+    "englishName": "Mistle Thrush",
+    "scores": {
+      "DE-NORTH": {
+        "may_aug": 2
+      },
+      "DK": {
+        "may_aug": 2
+      }
+    }
   },
   "Larus michahellis": {
     "germanName": "Mittelmeermöwe",
-    "points": 5,
-    "category": "ungewöhnlich"
+    "englishName": "Yellow-legged Gull",
+    "scores": {
+      "DE-NORTH": {
+        "may_aug": 4
+      }
+    }
   },
   "Lagopus lagopus": {
     "germanName": "Moorschneehuhn",
-    "points": 15,
-    "category": "echte Rarität"
+    "englishName": "Willow Ptarmigan",
+    "scores": {
+      "NO": {
+        "may_aug": 2
+      }
+    }
   },
   "Buteo buteo": {
     "germanName": "Mäusebussard",
-    "points": 2,
-    "category": "häufig"
+    "englishName": "Common Buzzard",
+    "scores": {
+      "DE-NORTH": {
+        "may_aug": 2
+      }
+    }
   },
   "Sylvia atricapilla": {
     "germanName": "Mönchsgrasmücke",
-    "points": 1,
-    "category": "sehr häufig"
+    "englishName": "Eurasian Blackcap",
+    "scores": {
+      "DK": {
+        "may_aug": 1
+      }
+    }
   },
   "Luscinia megarhynchos": {
     "germanName": "Nachtigall",
-    "points": 3,
-    "category": "regelmäßig / lokal"
+    "englishName": "Common Nightingale",
+    "scores": {
+      "DE-NORTH": {
+        "may_aug": 2
+      }
+    }
   },
   "Corvus cornix": {
     "germanName": "Nebelkrähe",
-    "points": 3,
-    "category": "regelmäßig / lokal"
+    "englishName": "Hooded Crow",
+    "scores": {
+      "DE-NORTH": {
+        "may_aug": 3
+      },
+      "DK": {
+        "may_aug": 2
+      }
+    }
   },
   "Lanius collurio": {
     "germanName": "Neuntöter",
-    "points": 4,
-    "category": "besonders"
+    "englishName": "Red-backed Shrike",
+    "scores": {
+      "DE-NORTH": {
+        "may_aug": 3
+      }
+    }
   },
   "Oriolus oriolus": {
     "germanName": "Pirol",
-    "points": 4,
-    "category": "besonders"
+    "englishName": "Eurasian Golden Oriole",
+    "scores": {
+      "DE-NORTH": {
+        "may_aug": 4
+      }
+    }
   },
   "Corvus corone": {
     "germanName": "Rabenkrähe",
-    "points": 1,
-    "category": "sehr häufig"
+    "englishName": "Carrion Crow",
+    "scores": {
+      "DE-NORTH": {
+        "may_aug": 1
+      },
+      "DK": {
+        "may_aug": 1
+      }
+    }
+  },
+  "Hydroprogne caspia": {
+    "germanName": "Raubseeschwalbe",
+    "englishName": "Caspian Tern",
+    "scores": {
+      "DE-SOUTH": {
+        "may_aug": 6
+      }
+    }
   },
   "Hirundo rustica": {
     "germanName": "Rauchschwalbe",
-    "points": 2,
-    "category": "häufig"
+    "englishName": "Barn Swallow",
+    "scores": {
+      "DK": {
+        "may_aug": 1
+      }
+    }
   },
   "Branta bernicla": {
     "germanName": "Ringelgans",
-    "points": 3,
-    "category": "regelmäßig / lokal"
+    "englishName": "Brant",
+    "scores": {
+      "DK": {
+        "may_aug": 2
+      }
+    }
   },
   "Columba palumbus": {
     "germanName": "Ringeltaube",
-    "points": 1,
-    "category": "sehr häufig"
+    "englishName": "Common Wood-Pigeon",
+    "scores": {
+      "DK": {
+        "may_aug": 1
+      }
+    }
   },
   "Emberiza schoeniclus": {
     "germanName": "Rohrammer",
-    "points": 3,
-    "category": "regelmäßig / lokal"
+    "englishName": "Reed Bunting",
+    "scores": {
+      "DK": {
+        "may_aug": 2
+      }
+    }
+  },
+  "Botaurus stellaris": {
+    "germanName": "Rohrdommel",
+    "englishName": "Eurasian Bittern",
+    "scores": {
+      "DK": {
+        "may_aug": 5
+      }
+    }
   },
   "Tadorna ferruginea": {
     "germanName": "Rostgans",
-    "points": 4,
-    "category": "besonders"
+    "englishName": "Ruddy Shelduck",
+    "scores": {
+      "DE-SOUTH": {
+        "may_aug": 3
+      },
+      "DK": {
+        "may_aug": 4
+      }
+    }
   },
   "Turdus iliacus": {
     "germanName": "Rotdrossel",
-    "points": 3,
-    "category": "regelmäßig / lokal"
+    "englishName": "Redwing",
+    "scores": {
+      "SE-NORTH": {
+        "may_aug": 1
+      }
+    }
   },
   "Erithacus rubecula": {
     "germanName": "Rotkehlchen",
-    "points": 1,
-    "category": "sehr häufig"
+    "englishName": "European Robin",
+    "scores": {
+      "DE-NORTH": {
+        "may_aug": 1
+      },
+      "DK": {
+        "may_aug": 1
+      }
+    }
   },
   "Tringa totanus": {
     "germanName": "Rotschenkel",
-    "points": 5,
-    "category": "ungewöhnlich"
+    "englishName": "Common Redshank",
+    "scores": {
+      "DK": {
+        "may_aug": 2
+      }
+    }
   },
   "Corvus frugilegus": {
     "germanName": "Saatkrähe",
-    "points": 3,
-    "category": "regelmäßig / lokal"
+    "englishName": "Rook",
+    "scores": {
+      "DE-NORTH": {
+        "may_aug": 2
+      }
+    }
   },
   "Calidris alba": {
     "germanName": "Sanderling",
-    "points": 5,
-    "category": "ungewöhnlich"
+    "englishName": "Sanderling",
+    "scores": {
+      "DK": {
+        "may_aug": 3
+      }
+    }
   },
   "Charadrius hiaticula": {
     "germanName": "Sandregenpfeifer",
-    "points": 5,
-    "category": "ungewöhnlich"
+    "englishName": "Common Ringed Plover",
+    "scores": {
+      "DK": {
+        "may_aug": 2
+      }
+    }
   },
   "Motacilla flava": {
     "germanName": "Schafstelze",
-    "points": 3,
-    "category": "regelmäßig / lokal"
+    "englishName": "Western Yellow Wagtail",
+    "scores": {
+      "DK": {
+        "may_aug": 2
+      }
+    }
   },
   "Acrocephalus schoenobaenus": {
     "germanName": "Schilfrohrsänger",
-    "points": 4,
-    "category": "besonders"
+    "englishName": "Sedge Warbler",
+    "scores": {
+      "DK": {
+        "may_aug": 3
+      }
+    }
+  },
+  "Mareca strepera": {
+    "germanName": "Schnatterente",
+    "englishName": "Gadwall",
+    "scores": {
+      "DE-NORTH": {
+        "may_aug": 2
+      }
+    }
   },
   "Aegithalos caudatus": {
     "germanName": "Schwanzmeise",
-    "points": 2,
-    "category": "häufig"
+    "englishName": "Long-tailed Tit",
+    "scores": {
+      "DE-NORTH": {
+        "may_aug": 2
+      }
+    }
+  },
+  "Saxicola rubicola": {
+    "germanName": "Schwarzkehlchen",
+    "englishName": "European Stonechat",
+    "scores": {
+      "DK": {
+        "may_aug": 3
+      }
+    }
   },
   "Dryocopus martius": {
     "germanName": "Schwarzspecht",
-    "points": 5,
-    "category": "ungewöhnlich"
+    "englishName": "Black Woodpecker",
+    "scores": {
+      "DE-NORTH": {
+        "may_aug": 3
+      }
+    }
   },
   "Bombycilla garrulus": {
     "germanName": "Seidenschwanz",
-    "points": 6,
-    "category": "selten / stark lokalisiert"
+    "englishName": "Bohemian Waxwing",
+    "scores": {
+      "SE-NORTH": {
+        "may_aug": 3
+      }
+    }
   },
   "Larus argentatus": {
     "germanName": "Silbermöwe",
-    "points": 2,
-    "category": "häufig"
+    "englishName": "European Herring Gull",
+    "scores": {
+      "DE-NORTH": {
+        "may_aug": 2
+      }
+    }
   },
   "Turdus philomelos": {
     "germanName": "Singdrossel",
-    "points": 2,
-    "category": "häufig"
+    "englishName": "Song Thrush",
+    "scores": {
+      "DE-NORTH": {
+        "may_aug": 1
+      },
+      "DK": {
+        "may_aug": 1
+      }
+    }
   },
   "Cygnus cygnus": {
     "germanName": "Singschwan",
-    "points": 4,
-    "category": "besonders"
+    "englishName": "Whooper Swan",
+    "scores": {
+      "SE-NORTH": {
+        "may_aug": 2
+      }
+    }
   },
   "Regulus ignicapilla": {
     "germanName": "Sommergoldhähnchen",
-    "points": 4,
-    "category": "besonders"
+    "englishName": "Common Firecrest",
+    "scores": {
+      "DE-NORTH": {
+        "may_aug": 2
+      }
+    }
   },
   "Accipiter nisus": {
     "germanName": "Sperber",
-    "points": 4,
-    "category": "besonders"
+    "englishName": "Eurasian Sparrowhawk",
+    "scores": {
+      "SE-SOUTH": {
+        "may_aug": 2
+      }
+    }
   },
   "Sturnus vulgaris": {
     "germanName": "Star",
-    "points": 1,
-    "category": "sehr häufig"
+    "englishName": "European Starling",
+    "scores": {
+      "DE-NORTH": {
+        "may_aug": 1
+      },
+      "DE-SOUTH": {
+        "may_aug": 1
+      }
+    }
   },
   "Oenanthe oenanthe": {
     "germanName": "Steinschmätzer",
-    "points": 5,
-    "category": "ungewöhnlich"
+    "englishName": "Northern Wheatear",
+    "scores": {
+      "DK": {
+        "may_aug": 3
+      }
+    }
   },
   "Gavia stellata": {
     "germanName": "Sterntaucher",
-    "points": 6,
-    "category": "selten / stark lokalisiert"
+    "englishName": "Red-throated Loon",
+    "scores": {
+      "SE-NORTH": {
+        "may_aug": 3
+      }
+    }
   },
   "Carduelis carduelis": {
     "germanName": "Stieglitz",
-    "points": 2,
-    "category": "häufig"
+    "englishName": "European Goldfinch",
+    "scores": {
+      "DK": {
+        "may_aug": 2
+      }
+    }
   },
   "Anas platyrhynchos": {
     "germanName": "Stockente",
-    "points": 1,
-    "category": "sehr häufig"
+    "englishName": "Mallard",
+    "scores": {
+      "DE-NORTH": {
+        "may_aug": 1
+      },
+      "DK": {
+        "may_aug": 1
+      }
+    }
   },
   "Larus canus": {
     "germanName": "Sturmmöwe",
-    "points": 3,
-    "category": "regelmäßig / lokal"
+    "englishName": "Common Gull",
+    "scores": {
+      "DK": {
+        "may_aug": 1
+      }
+    }
   },
   "Poecile palustris": {
     "germanName": "Sumpfmeise",
-    "points": 3,
-    "category": "regelmäßig / lokal"
+    "englishName": "Marsh Tit",
+    "scores": {
+      "DE-NORTH": {
+        "may_aug": 2
+      }
+    }
+  },
+  "Acrocephalus palustris": {
+    "germanName": "Sumpfrohrsänger",
+    "englishName": "Marsh Warbler",
+    "scores": {
+      "DK": {
+        "may_aug": 3
+      }
+    }
   },
   "Recurvirostra avosetta": {
     "germanName": "Säbelschnäbler",
-    "points": 4,
-    "category": "besonders"
+    "englishName": "Pied Avocet",
+    "scores": {
+      "DK": {
+        "may_aug": 3
+      }
+    }
   },
   "Periparus ater": {
     "germanName": "Tannenmeise",
-    "points": 2,
-    "category": "häufig"
+    "englishName": "Coal Tit",
+    "scores": {
+      "DK": {
+        "may_aug": 2
+      }
+    }
   },
   "Gallinula chloropus": {
     "germanName": "Teichhuhn",
-    "points": 3,
-    "category": "regelmäßig / lokal"
+    "englishName": "Eurasian Moorhen",
+    "scores": {
+      "DE-NORTH": {
+        "may_aug": 2
+      }
+    }
   },
   "Acrocephalus scirpaceus": {
     "germanName": "Teichrohrsänger",
-    "points": 3,
-    "category": "regelmäßig / lokal"
+    "englishName": "Common Reed Warbler",
+    "scores": {
+      "DK": {
+        "may_aug": 2
+      }
+    }
   },
   "Ficedula hypoleuca": {
     "germanName": "Trauerschnäpper",
-    "points": 4,
-    "category": "besonders"
+    "englishName": "European Pied Flycatcher",
+    "scores": {
+      "SE-CENTRAL": {
+        "may_aug": 2
+      }
+    }
   },
   "Falco tinnunculus": {
     "germanName": "Turmfalke",
-    "points": 2,
-    "category": "häufig"
+    "englishName": "Eurasian Kestrel",
+    "scores": {
+      "DE-SOUTH": {
+        "may_aug": 2
+      },
+      "DK": {
+        "may_aug": 2
+      }
+    }
   },
   "Streptopelia decaocto": {
     "germanName": "Türkentaube",
-    "points": 1,
-    "category": "sehr häufig"
+    "englishName": "Eurasian Collared-Dove",
+    "scores": {
+      "DK": {
+        "may_aug": 1
+      }
+    }
   },
   "Limosa limosa": {
     "germanName": "Uferschnepfe",
-    "points": 6,
-    "category": "selten / stark lokalisiert"
+    "englishName": "Black-tailed Godwit",
+    "scores": {
+      "DK": {
+        "may_aug": 3
+      }
+    }
   },
   "Riparia riparia": {
     "germanName": "Uferschwalbe",
-    "points": 3,
-    "category": "regelmäßig / lokal"
+    "englishName": "Bank Swallow",
+    "scores": {
+      "NO": {
+        "may_aug": 2
+      },
+      "SE-NORTH": {
+        "may_aug": 2
+      }
+    }
   },
   "Turdus pilaris": {
     "germanName": "Wacholderdrossel",
-    "points": 2,
-    "category": "häufig"
+    "englishName": "Fieldfare",
+    "scores": {
+      "SE-NORTH": {
+        "may_aug": 1
+      }
+    }
+  },
+  "Strix aluco": {
+    "germanName": "Waldkauz",
+    "englishName": "Tawny Owl",
+    "scores": {
+      "DE-CENTRAL": {
+        "may_aug": 2
+      }
+    }
   },
   "Phylloscopus sibilatrix": {
     "germanName": "Waldlaubsänger",
-    "points": 5,
-    "category": "ungewöhnlich"
+    "englishName": "Wood Warbler",
+    "scores": {
+      "DE-NORTH": {
+        "may_aug": 4
+      }
+    }
   },
   "Asio otus": {
     "germanName": "Waldohreule",
-    "points": 7,
-    "category": "sehr selten, aber regelmäßig"
+    "englishName": "Long-eared Owl",
+    "scores": {
+      "SE-SOUTH": {
+        "may_aug": 4
+      }
+    }
   },
   "Scolopax rusticola": {
     "germanName": "Waldschnepfe",
-    "points": 5,
-    "category": "ungewöhnlich"
+    "englishName": "Eurasian Woodcock",
+    "scores": {
+      "SE-NORTH": {
+        "may_aug": 3
+      }
+    }
   },
   "Tringa ochropus": {
     "germanName": "Waldwasserläufer",
-    "points": 4,
-    "category": "besonders"
+    "englishName": "Green Sandpiper",
+    "scores": {
+      "SE-NORTH": {
+        "may_aug": 2
+      }
+    }
   },
   "Poecile montanus": {
     "germanName": "Weidenmeise",
-    "points": 4,
-    "category": "besonders"
+    "englishName": "Willow Tit",
+    "scores": {
+      "SE-NORTH": {
+        "may_aug": 1
+      }
+    }
   },
   "Branta leucopsis": {
     "germanName": "Weißwangengans",
-    "points": 3,
-    "category": "regelmäßig / lokal"
+    "englishName": "Barnacle Goose",
+    "scores": {
+      "SE-NORTH": {
+        "may_aug": 3
+      }
+    }
   },
   "Anthus pratensis": {
     "germanName": "Wiesenpieper",
-    "points": 3,
-    "category": "regelmäßig / lokal"
+    "englishName": "Meadow Pipit",
+    "scores": {
+      "DK": {
+        "may_aug": 2
+      }
+    }
   },
   "Regulus regulus": {
     "germanName": "Wintergoldhähnchen",
-    "points": 3,
-    "category": "regelmäßig / lokal"
+    "englishName": "Goldcrest",
+    "scores": {
+      "DE-NORTH": {
+        "may_aug": 2
+      },
+      "DK": {
+        "may_aug": 2
+      }
+    }
   },
   "Troglodytes troglodytes": {
     "germanName": "Zaunkönig",
-    "points": 1,
-    "category": "sehr häufig"
+    "englishName": "Eurasian Wren",
+    "scores": {
+      "DK": {
+        "may_aug": 1
+      }
+    }
   },
   "Phylloscopus collybita": {
     "germanName": "Zilpzalp",
-    "points": 1,
-    "category": "sehr häufig"
+    "englishName": "Common Chiffchaff",
+    "scores": {
+      "DK": {
+        "may_aug": 1
+      }
+    }
   },
   "Ficedula parva": {
     "germanName": "Zwergschnäpper",
-    "points": 8,
-    "category": "sehr selten"
+    "englishName": "Red-breasted Flycatcher",
+    "scores": {
+      "DE-NORTH": {
+        "may_aug": 7
+      }
+    }
   }
 };

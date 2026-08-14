@@ -1,5 +1,6 @@
-/* BirdLeague – veröffentlichter Datenstand */
+/* BirdLeague – veröffentlichter Datenstand V3 regional */
 window.BIRDLEAGUE_DATA = {
+  "schemaVersion": 3,
   "leagueName": "BirdLeague",
   "season": 2026,
   "updatedAt": "2026-08-14",
@@ -13,6 +14,11 @@ window.BIRDLEAGUE_DATA = {
       "id": "ida",
       "name": "Ida",
       "initials": "ID"
+    },
+    {
+      "id": "bengt",
+      "name": "Bengt",
+      "initials": "BE"
     }
   ],
   "species": [
@@ -20,947 +26,908 @@ window.BIRDLEAGUE_DATA = {
       "id": "calidris-alpina",
       "germanName": "Alpenstrandläufer",
       "englishName": "Dunlin",
-      "scientificName": "Calidris alpina",
-      "points": 4
+      "scientificName": "Calidris alpina"
     },
     {
       "id": "turdus-merula",
       "germanName": "Amsel",
       "englishName": "Eurasian Blackbird",
-      "scientificName": "Turdus merula",
-      "points": 1
+      "scientificName": "Turdus merula"
     },
     {
       "id": "haematopus-ostralegus",
       "germanName": "Austernfischer",
       "englishName": "Eurasian Oystercatcher",
-      "scientificName": "Haematopus ostralegus",
-      "points": 3
+      "scientificName": "Haematopus ostralegus"
     },
     {
       "id": "motacilla-alba",
       "germanName": "Bachstelze",
       "englishName": "White Wagtail",
-      "scientificName": "Motacilla alba",
-      "points": 1
+      "scientificName": "Motacilla alba"
     },
     {
       "id": "anthus-trivialis",
       "germanName": "Baumpieper",
       "englishName": "Tree Pipit",
-      "scientificName": "Anthus trivialis",
-      "points": 3
+      "scientificName": "Anthus trivialis"
     },
     {
       "id": "gallinago-gallinago",
       "germanName": "Bekassine",
       "englishName": "Common Snipe",
-      "scientificName": "Gallinago gallinago",
-      "points": 5
+      "scientificName": "Gallinago gallinago"
     },
     {
       "id": "fringilla-montifringilla",
       "germanName": "Bergfink",
       "englishName": "Brambling",
-      "scientificName": "Fringilla montifringilla",
-      "points": 3
+      "scientificName": "Fringilla montifringilla"
     },
     {
       "id": "acanthis-flammea",
       "germanName": "Birkenzeisig",
       "englishName": "Redpoll",
-      "scientificName": "Acanthis flammea",
-      "points": 5
+      "scientificName": "Acanthis flammea"
+    },
+    {
+      "id": "cyanopica-cyanus",
+      "germanName": "Blauelster",
+      "englishName": "Azure-winged Magpie",
+      "scientificName": "Cyanopica cyanus"
     },
     {
       "id": "luscinia-svecica",
       "germanName": "Blaukehlchen",
       "englishName": "Bluethroat",
-      "scientificName": "Luscinia svecica",
-      "points": 6
+      "scientificName": "Luscinia svecica"
     },
     {
       "id": "cyanistes-caeruleus",
       "germanName": "Blaumeise",
       "englishName": "Eurasian Blue Tit",
-      "scientificName": "Cyanistes caeruleus",
-      "points": 1
+      "scientificName": "Cyanistes caeruleus"
     },
     {
       "id": "linaria-cannabina",
       "germanName": "Bluthänfling",
       "englishName": "Eurasian Linnet",
-      "scientificName": "Linaria cannabina",
-      "points": 3
+      "scientificName": "Linaria cannabina"
     },
     {
       "id": "anser-albifrons",
       "germanName": "Blässgans",
       "englishName": "Greater White-fronted Goose",
-      "scientificName": "Anser albifrons",
-      "points": 3
+      "scientificName": "Anser albifrons"
     },
     {
       "id": "fulica-atra",
       "germanName": "Blässhuhn",
       "englishName": "Eurasian Coot",
-      "scientificName": "Fulica atra",
-      "points": 1
+      "scientificName": "Fulica atra"
     },
     {
       "id": "thalasseus-sandvicensis",
       "germanName": "Brandseeschwalbe",
       "englishName": "Sandwich Tern",
-      "scientificName": "Thalasseus sandvicensis",
-      "points": 6
+      "scientificName": "Thalasseus sandvicensis"
     },
     {
       "id": "saxicola-rubetra",
       "germanName": "Braunkehlchen",
       "englishName": "Whinchat",
-      "scientificName": "Saxicola rubetra",
-      "points": 6
+      "scientificName": "Saxicola rubetra"
+    },
+    {
+      "id": "hypsipetes-amaurotis",
+      "germanName": "Braunohrbülbül",
+      "englishName": "Brown-eared Bulbul",
+      "scientificName": "Hypsipetes amaurotis"
     },
     {
       "id": "fringilla-coelebs",
       "germanName": "Buchfink",
       "englishName": "Common Chaffinch",
-      "scientificName": "Fringilla coelebs",
-      "points": 1
+      "scientificName": "Fringilla coelebs"
     },
     {
       "id": "dendrocopos-major",
       "germanName": "Buntspecht",
       "englishName": "Great Spotted Woodpecker",
-      "scientificName": "Dendrocopos major",
-      "points": 2
+      "scientificName": "Dendrocopos major"
+    },
+    {
+      "id": "corvus-macrorhynchos",
+      "germanName": "Dickschnabelkrähe",
+      "englishName": "Large-billed Crow",
+      "scientificName": "Corvus macrorhynchos"
     },
     {
       "id": "coloeus-monedula",
       "germanName": "Dohle",
       "englishName": "Eurasian Jackdaw",
-      "scientificName": "Coloeus monedula",
-      "points": 2
+      "scientificName": "Coloeus monedula"
     },
     {
       "id": "curruca-communis",
       "germanName": "Dorngrasmücke",
       "englishName": "Greater Whitethroat",
-      "scientificName": "Curruca communis",
-      "points": 2
+      "scientificName": "Curruca communis"
     },
     {
       "id": "garrulus-glandarius",
       "germanName": "Eichelhäher",
       "englishName": "Eurasian Jay",
-      "scientificName": "Garrulus glandarius",
-      "points": 2
+      "scientificName": "Garrulus glandarius"
     },
     {
       "id": "somateria-mollissima",
       "germanName": "Eiderente",
       "englishName": "Common Eider",
-      "scientificName": "Somateria mollissima",
-      "points": 3
+      "scientificName": "Somateria mollissima"
     },
     {
       "id": "pica-pica",
       "germanName": "Elster",
       "englishName": "Eurasian Magpie",
-      "scientificName": "Pica pica",
-      "points": 1
+      "scientificName": "Pica pica"
     },
     {
       "id": "spinus-spinus",
       "germanName": "Erlenzeisig",
       "englishName": "Eurasian Siskin",
-      "scientificName": "Spinus spinus",
-      "points": 3
+      "scientificName": "Spinus spinus"
     },
     {
       "id": "alauda-arvensis",
       "germanName": "Feldlerche",
       "englishName": "Eurasian Skylark",
-      "scientificName": "Alauda arvensis",
-      "points": 2
+      "scientificName": "Alauda arvensis"
     },
     {
       "id": "locustella-naevia",
       "germanName": "Feldschwirl",
       "englishName": "Common Grasshopper Warbler",
-      "scientificName": "Locustella naevia",
-      "points": 5
+      "scientificName": "Locustella naevia"
     },
     {
       "id": "passer-montanus",
       "germanName": "Feldsperling",
       "englishName": "Eurasian Tree Sparrow",
-      "scientificName": "Passer montanus",
-      "points": 2
+      "scientificName": "Passer montanus"
     },
     {
       "id": "columba-livia",
       "germanName": "Felsentaube",
       "englishName": "Rock Pigeon",
-      "scientificName": "Columba livia",
-      "points": 1
+      "scientificName": "Columba livia"
     },
     {
       "id": "loxia-curvirostra",
       "germanName": "Fichtenkreuzschnabel",
       "englishName": "Red Crossbill",
-      "scientificName": "Loxia curvirostra",
-      "points": 4
+      "scientificName": "Loxia curvirostra"
     },
     {
       "id": "phylloscopus-trochilus",
       "germanName": "Fitis",
       "englishName": "Willow Warbler",
-      "scientificName": "Phylloscopus trochilus",
-      "points": 2
+      "scientificName": "Phylloscopus trochilus"
     },
     {
       "id": "sterna-hirundo",
       "germanName": "Flussseeschwalbe",
       "englishName": "Common Tern",
-      "scientificName": "Sterna hirundo",
-      "points": 3
+      "scientificName": "Sterna hirundo"
     },
     {
       "id": "actitis-hypoleucos",
       "germanName": "Flussuferläufer",
       "englishName": "Common Sandpiper",
-      "scientificName": "Actitis hypoleucos",
-      "points": 5
+      "scientificName": "Actitis hypoleucos"
     },
     {
       "id": "certhia-brachydactyla",
       "germanName": "Gartenbaumläufer",
       "englishName": "Short-toed Treecreeper",
-      "scientificName": "Certhia brachydactyla",
-      "points": 3
+      "scientificName": "Certhia brachydactyla"
     },
     {
       "id": "sylvia-borin",
       "germanName": "Gartengrasmücke",
       "englishName": "Garden Warbler",
-      "scientificName": "Sylvia borin",
-      "points": 3
+      "scientificName": "Sylvia borin"
     },
     {
       "id": "phoenicurus-phoenicurus",
       "germanName": "Gartenrotschwanz",
       "englishName": "Common Redstart",
-      "scientificName": "Phoenicurus phoenicurus",
-      "points": 4
+      "scientificName": "Phoenicurus phoenicurus"
     },
     {
       "id": "hippolais-icterina",
       "germanName": "Gelbspötter",
       "englishName": "Icterine Warbler",
-      "scientificName": "Hippolais icterina",
-      "points": 4
+      "scientificName": "Hippolais icterina"
     },
     {
       "id": "pyrrhula-pyrrhula",
       "germanName": "Gimpel",
       "englishName": "Eurasian Bullfinch",
-      "scientificName": "Pyrrhula pyrrhula",
-      "points": 3
+      "scientificName": "Pyrrhula pyrrhula"
     },
     {
       "id": "serinus-serinus",
       "germanName": "Girlitz",
       "englishName": "European Serin",
-      "scientificName": "Serinus serinus",
-      "points": 4
+      "scientificName": "Serinus serinus"
     },
     {
       "id": "emberiza-citrinella",
       "germanName": "Goldammer",
       "englishName": "Yellowhammer",
-      "scientificName": "Emberiza citrinella",
-      "points": 2
+      "scientificName": "Emberiza citrinella"
     },
     {
       "id": "pluvialis-apricaria",
       "germanName": "Goldregenpfeifer",
       "englishName": "European Golden-Plover",
-      "scientificName": "Pluvialis apricaria",
-      "points": 6
+      "scientificName": "Pluvialis apricaria"
     },
     {
       "id": "anser-anser",
       "germanName": "Graugans",
       "englishName": "Graylag Goose",
-      "scientificName": "Anser anser",
-      "points": 1
+      "scientificName": "Anser anser"
     },
     {
       "id": "ardea-cinerea",
       "germanName": "Graureiher",
       "englishName": "Gray Heron",
-      "scientificName": "Ardea cinerea",
-      "points": 1
+      "scientificName": "Ardea cinerea"
     },
     {
       "id": "muscicapa-striata",
       "germanName": "Grauschnäpper",
       "englishName": "Spotted Flycatcher",
-      "scientificName": "Muscicapa striata",
-      "points": 4
+      "scientificName": "Muscicapa striata"
     },
     {
       "id": "numenius-arquata",
       "germanName": "Großer Brachvogel",
       "englishName": "Eurasian Curlew",
-      "scientificName": "Numenius arquata",
-      "points": 4
+      "scientificName": "Numenius arquata"
     },
     {
       "id": "chloris-chloris",
       "germanName": "Grünfink",
       "englishName": "European Greenfinch",
-      "scientificName": "Chloris chloris",
-      "points": 2
+      "scientificName": "Chloris chloris"
     },
     {
       "id": "tringa-nebularia",
       "germanName": "Grünschenkel",
       "englishName": "Common Greenshank",
-      "scientificName": "Tringa nebularia",
-      "points": 6
+      "scientificName": "Tringa nebularia"
     },
     {
       "id": "picus-viridis",
       "germanName": "Grünspecht",
       "englishName": "Eurasian Green Woodpecker",
-      "scientificName": "Picus viridis",
-      "points": 3
+      "scientificName": "Picus viridis"
     },
     {
       "id": "mergus-merganser",
       "germanName": "Gänsesäger",
       "englishName": "Common Merganser",
-      "scientificName": "Mergus merganser",
-      "points": 3
+      "scientificName": "Mergus merganser"
     },
     {
       "id": "lophophanes-cristatus",
       "germanName": "Haubenmeise",
       "englishName": "Crested Tit",
-      "scientificName": "Lophophanes cristatus",
-      "points": 4
+      "scientificName": "Lophophanes cristatus"
     },
     {
       "id": "phoenicurus-ochruros",
       "germanName": "Hausrotschwanz",
       "englishName": "Black Redstart",
-      "scientificName": "Phoenicurus ochruros",
-      "points": 2
+      "scientificName": "Phoenicurus ochruros"
     },
     {
       "id": "passer-domesticus",
       "germanName": "Haussperling",
       "englishName": "House Sparrow",
-      "scientificName": "Passer domesticus",
-      "points": 1
+      "scientificName": "Passer domesticus"
     },
     {
       "id": "prunella-modularis",
       "germanName": "Heckenbraunelle",
       "englishName": "Dunnock",
-      "scientificName": "Prunella modularis",
-      "points": 1
+      "scientificName": "Prunella modularis"
     },
     {
       "id": "lullula-arborea",
       "germanName": "Heidelerche",
       "englishName": "Wood Lark",
-      "scientificName": "Lullula arborea",
-      "points": 5
+      "scientificName": "Lullula arborea"
     },
     {
       "id": "larus-fuscus",
       "germanName": "Heringsmöwe",
       "englishName": "Lesser Black-backed Gull",
-      "scientificName": "Larus fuscus",
-      "points": 3
+      "scientificName": "Larus fuscus"
     },
     {
       "id": "phasianus-colchicus",
       "germanName": "Jagdfasan",
       "englishName": "Ring-necked Pheasant",
-      "scientificName": "Phasianus colchicus",
-      "points": 2
+      "scientificName": "Phasianus colchicus"
+    },
+    {
+      "id": "zosterops-japonicus",
+      "germanName": "Japanbrillenvogel",
+      "englishName": "Warbling White-eye",
+      "scientificName": "Zosterops japonicus"
     },
     {
       "id": "branta-canadensis",
       "germanName": "Kanadagans",
       "englishName": "Canada Goose",
-      "scientificName": "Branta canadensis",
-      "points": 1
+      "scientificName": "Branta canadensis"
     },
     {
       "id": "coccothraustes-coccothraustes",
       "germanName": "Kernbeißer",
       "englishName": "Hawfinch",
-      "scientificName": "Coccothraustes coccothraustes",
-      "points": 2
+      "scientificName": "Coccothraustes coccothraustes"
     },
     {
       "id": "vanellus-vanellus",
       "germanName": "Kiebitz",
       "englishName": "Northern Lapwing",
-      "scientificName": "Vanellus vanellus",
-      "points": 4
+      "scientificName": "Vanellus vanellus"
     },
     {
       "id": "pluvialis-squatarola",
       "germanName": "Kiebitzregenpfeifer",
       "englishName": "Black-bellied Plover",
-      "scientificName": "Pluvialis squatarola",
-      "points": 7
+      "scientificName": "Pluvialis squatarola"
     },
     {
       "id": "curruca-curruca",
       "germanName": "Klappergrasmücke",
       "englishName": "Lesser Whitethroat",
-      "scientificName": "Curruca curruca",
-      "points": 3
+      "scientificName": "Curruca curruca"
     },
     {
       "id": "sitta-europaea",
       "germanName": "Kleiber",
       "englishName": "Eurasian Nuthatch",
-      "scientificName": "Sitta europaea",
-      "points": 2
+      "scientificName": "Sitta europaea"
     },
     {
       "id": "parus-major",
       "germanName": "Kohlmeise",
       "englishName": "Great Tit",
-      "scientificName": "Parus major",
-      "points": 1
+      "scientificName": "Parus major"
     },
     {
       "id": "corvus-corax",
       "germanName": "Kolkrabe",
       "englishName": "Common Raven",
-      "scientificName": "Corvus corax",
-      "points": 3
+      "scientificName": "Corvus corax"
     },
     {
       "id": "grus-grus",
       "germanName": "Kranich",
       "englishName": "Common Crane",
-      "scientificName": "Grus grus",
-      "points": 4
+      "scientificName": "Grus grus"
     },
     {
       "id": "cuculus-canorus",
       "germanName": "Kuckuck",
       "englishName": "Common Cuckoo",
-      "scientificName": "Cuculus canorus",
-      "points": 4
+      "scientificName": "Cuculus canorus"
     },
     {
       "id": "chroicocephalus-ridibundus",
       "germanName": "Lachmöwe",
       "englishName": "Black-headed Gull",
-      "scientificName": "Chroicocephalus ridibundus",
-      "points": 2
+      "scientificName": "Chroicocephalus ridibundus"
     },
     {
       "id": "larus-marinus",
       "germanName": "Mantelmöwe",
       "englishName": "Great Black-backed Gull",
-      "scientificName": "Larus marinus",
-      "points": 4
+      "scientificName": "Larus marinus"
     },
     {
       "id": "apus-apus",
       "germanName": "Mauersegler",
       "englishName": "Common Swift",
-      "scientificName": "Apus apus",
-      "points": 2
+      "scientificName": "Apus apus"
     },
     {
       "id": "delichon-urbicum",
       "germanName": "Mehlschwalbe",
       "englishName": "Western House-Martin",
-      "scientificName": "Delichon urbicum",
-      "points": 2
+      "scientificName": "Delichon urbicum"
     },
     {
       "id": "turdus-viscivorus",
       "germanName": "Misteldrossel",
       "englishName": "Mistle Thrush",
-      "scientificName": "Turdus viscivorus",
-      "points": 3
+      "scientificName": "Turdus viscivorus"
     },
     {
       "id": "larus-michahellis",
       "germanName": "Mittelmeermöwe",
       "englishName": "Yellow-legged Gull",
-      "scientificName": "Larus michahellis",
-      "points": 5
+      "scientificName": "Larus michahellis"
     },
     {
       "id": "lagopus-lagopus",
       "germanName": "Moorschneehuhn",
       "englishName": "Willow Ptarmigan",
-      "scientificName": "Lagopus lagopus",
-      "points": 15
+      "scientificName": "Lagopus lagopus"
     },
     {
       "id": "buteo-buteo",
       "germanName": "Mäusebussard",
       "englishName": "Common Buzzard",
-      "scientificName": "Buteo buteo",
-      "points": 2
+      "scientificName": "Buteo buteo"
     },
     {
       "id": "sylvia-atricapilla",
       "germanName": "Mönchsgrasmücke",
       "englishName": "Eurasian Blackcap",
-      "scientificName": "Sylvia atricapilla",
-      "points": 1
+      "scientificName": "Sylvia atricapilla"
     },
     {
       "id": "luscinia-megarhynchos",
       "germanName": "Nachtigall",
       "englishName": "Common Nightingale",
-      "scientificName": "Luscinia megarhynchos",
-      "points": 3
+      "scientificName": "Luscinia megarhynchos"
     },
     {
       "id": "corvus-cornix",
       "germanName": "Nebelkrähe",
       "englishName": "Hooded Crow",
-      "scientificName": "Corvus cornix",
-      "points": 3
+      "scientificName": "Corvus cornix"
     },
     {
       "id": "lanius-collurio",
       "germanName": "Neuntöter",
       "englishName": "Red-backed Shrike",
-      "scientificName": "Lanius collurio",
-      "points": 4
+      "scientificName": "Lanius collurio"
     },
     {
       "id": "oriolus-oriolus",
       "germanName": "Pirol",
       "englishName": "Eurasian Golden Oriole",
-      "scientificName": "Oriolus oriolus",
-      "points": 4
+      "scientificName": "Oriolus oriolus"
     },
     {
       "id": "corvus-corone",
       "germanName": "Rabenkrähe",
       "englishName": "Carrion Crow",
-      "scientificName": "Corvus corone",
-      "points": 1
+      "scientificName": "Corvus corone"
+    },
+    {
+      "id": "hydroprogne-caspia",
+      "germanName": "Raubseeschwalbe",
+      "englishName": "Caspian Tern",
+      "scientificName": "Hydroprogne caspia"
     },
     {
       "id": "hirundo-rustica",
       "germanName": "Rauchschwalbe",
       "englishName": "Barn Swallow",
-      "scientificName": "Hirundo rustica",
-      "points": 2
+      "scientificName": "Hirundo rustica"
     },
     {
       "id": "branta-bernicla",
       "germanName": "Ringelgans",
       "englishName": "Brant",
-      "scientificName": "Branta bernicla",
-      "points": 3
+      "scientificName": "Branta bernicla"
     },
     {
       "id": "columba-palumbus",
       "germanName": "Ringeltaube",
       "englishName": "Common Wood-Pigeon",
-      "scientificName": "Columba palumbus",
-      "points": 1
+      "scientificName": "Columba palumbus"
     },
     {
       "id": "emberiza-schoeniclus",
       "germanName": "Rohrammer",
       "englishName": "Reed Bunting",
-      "scientificName": "Emberiza schoeniclus",
-      "points": 3
+      "scientificName": "Emberiza schoeniclus"
+    },
+    {
+      "id": "botaurus-stellaris",
+      "germanName": "Rohrdommel",
+      "englishName": "Eurasian Bittern",
+      "scientificName": "Botaurus stellaris"
     },
     {
       "id": "tadorna-ferruginea",
       "germanName": "Rostgans",
       "englishName": "Ruddy Shelduck",
-      "scientificName": "Tadorna ferruginea",
-      "points": 4
+      "scientificName": "Tadorna ferruginea"
     },
     {
       "id": "turdus-iliacus",
       "germanName": "Rotdrossel",
       "englishName": "Redwing",
-      "scientificName": "Turdus iliacus",
-      "points": 3
+      "scientificName": "Turdus iliacus"
     },
     {
       "id": "erithacus-rubecula",
       "germanName": "Rotkehlchen",
       "englishName": "European Robin",
-      "scientificName": "Erithacus rubecula",
-      "points": 1
+      "scientificName": "Erithacus rubecula"
     },
     {
       "id": "tringa-totanus",
       "germanName": "Rotschenkel",
       "englishName": "Common Redshank",
-      "scientificName": "Tringa totanus",
-      "points": 5
+      "scientificName": "Tringa totanus"
     },
     {
       "id": "corvus-frugilegus",
       "germanName": "Saatkrähe",
       "englishName": "Rook",
-      "scientificName": "Corvus frugilegus",
-      "points": 3
+      "scientificName": "Corvus frugilegus"
     },
     {
       "id": "calidris-alba",
       "germanName": "Sanderling",
       "englishName": "Sanderling",
-      "scientificName": "Calidris alba",
-      "points": 5
+      "scientificName": "Calidris alba"
     },
     {
       "id": "charadrius-hiaticula",
       "germanName": "Sandregenpfeifer",
       "englishName": "Common Ringed Plover",
-      "scientificName": "Charadrius hiaticula",
-      "points": 5
+      "scientificName": "Charadrius hiaticula"
     },
     {
       "id": "motacilla-flava",
       "germanName": "Schafstelze",
       "englishName": "Western Yellow Wagtail",
-      "scientificName": "Motacilla flava",
-      "points": 3
+      "scientificName": "Motacilla flava"
     },
     {
       "id": "acrocephalus-schoenobaenus",
       "germanName": "Schilfrohrsänger",
       "englishName": "Sedge Warbler",
-      "scientificName": "Acrocephalus schoenobaenus",
-      "points": 4
+      "scientificName": "Acrocephalus schoenobaenus"
+    },
+    {
+      "id": "mareca-strepera",
+      "germanName": "Schnatterente",
+      "englishName": "Gadwall",
+      "scientificName": "Mareca strepera"
     },
     {
       "id": "aegithalos-caudatus",
       "germanName": "Schwanzmeise",
       "englishName": "Long-tailed Tit",
-      "scientificName": "Aegithalos caudatus",
-      "points": 2
+      "scientificName": "Aegithalos caudatus"
+    },
+    {
+      "id": "saxicola-rubicola",
+      "germanName": "Schwarzkehlchen",
+      "englishName": "European Stonechat",
+      "scientificName": "Saxicola rubicola"
     },
     {
       "id": "dryocopus-martius",
       "germanName": "Schwarzspecht",
       "englishName": "Black Woodpecker",
-      "scientificName": "Dryocopus martius",
-      "points": 5
+      "scientificName": "Dryocopus martius"
     },
     {
       "id": "bombycilla-garrulus",
       "germanName": "Seidenschwanz",
       "englishName": "Bohemian Waxwing",
-      "scientificName": "Bombycilla garrulus",
-      "points": 6
+      "scientificName": "Bombycilla garrulus"
     },
     {
       "id": "larus-argentatus",
       "germanName": "Silbermöwe",
       "englishName": "European Herring Gull",
-      "scientificName": "Larus argentatus",
-      "points": 2
+      "scientificName": "Larus argentatus"
     },
     {
       "id": "turdus-philomelos",
       "germanName": "Singdrossel",
       "englishName": "Song Thrush",
-      "scientificName": "Turdus philomelos",
-      "points": 2
+      "scientificName": "Turdus philomelos"
     },
     {
       "id": "cygnus-cygnus",
       "germanName": "Singschwan",
       "englishName": "Whooper Swan",
-      "scientificName": "Cygnus cygnus",
-      "points": 4
+      "scientificName": "Cygnus cygnus"
     },
     {
       "id": "regulus-ignicapilla",
       "germanName": "Sommergoldhähnchen",
       "englishName": "Common Firecrest",
-      "scientificName": "Regulus ignicapilla",
-      "points": 4
+      "scientificName": "Regulus ignicapilla"
     },
     {
       "id": "accipiter-nisus",
       "germanName": "Sperber",
       "englishName": "Eurasian Sparrowhawk",
-      "scientificName": "Accipiter nisus",
-      "points": 4
+      "scientificName": "Accipiter nisus"
     },
     {
       "id": "sturnus-vulgaris",
       "germanName": "Star",
       "englishName": "European Starling",
-      "scientificName": "Sturnus vulgaris",
-      "points": 1
+      "scientificName": "Sturnus vulgaris"
     },
     {
       "id": "oenanthe-oenanthe",
       "germanName": "Steinschmätzer",
       "englishName": "Northern Wheatear",
-      "scientificName": "Oenanthe oenanthe",
-      "points": 5
+      "scientificName": "Oenanthe oenanthe"
     },
     {
       "id": "gavia-stellata",
       "germanName": "Sterntaucher",
       "englishName": "Red-throated Loon",
-      "scientificName": "Gavia stellata",
-      "points": 6
+      "scientificName": "Gavia stellata"
     },
     {
       "id": "carduelis-carduelis",
       "germanName": "Stieglitz",
       "englishName": "European Goldfinch",
-      "scientificName": "Carduelis carduelis",
-      "points": 2
+      "scientificName": "Carduelis carduelis"
     },
     {
       "id": "anas-platyrhynchos",
       "germanName": "Stockente",
       "englishName": "Mallard",
-      "scientificName": "Anas platyrhynchos",
-      "points": 1
+      "scientificName": "Anas platyrhynchos"
     },
     {
       "id": "larus-canus",
       "germanName": "Sturmmöwe",
       "englishName": "Common Gull",
-      "scientificName": "Larus canus",
-      "points": 3
+      "scientificName": "Larus canus"
     },
     {
       "id": "poecile-palustris",
       "germanName": "Sumpfmeise",
       "englishName": "Marsh Tit",
-      "scientificName": "Poecile palustris",
-      "points": 3
+      "scientificName": "Poecile palustris"
+    },
+    {
+      "id": "acrocephalus-palustris",
+      "germanName": "Sumpfrohrsänger",
+      "englishName": "Marsh Warbler",
+      "scientificName": "Acrocephalus palustris"
     },
     {
       "id": "recurvirostra-avosetta",
       "germanName": "Säbelschnäbler",
       "englishName": "Pied Avocet",
-      "scientificName": "Recurvirostra avosetta",
-      "points": 4
+      "scientificName": "Recurvirostra avosetta"
     },
     {
       "id": "periparus-ater",
       "germanName": "Tannenmeise",
       "englishName": "Coal Tit",
-      "scientificName": "Periparus ater",
-      "points": 2
+      "scientificName": "Periparus ater"
     },
     {
       "id": "gallinula-chloropus",
       "germanName": "Teichhuhn",
       "englishName": "Eurasian Moorhen",
-      "scientificName": "Gallinula chloropus",
-      "points": 3
+      "scientificName": "Gallinula chloropus"
     },
     {
       "id": "acrocephalus-scirpaceus",
       "germanName": "Teichrohrsänger",
       "englishName": "Common Reed Warbler",
-      "scientificName": "Acrocephalus scirpaceus",
-      "points": 3
+      "scientificName": "Acrocephalus scirpaceus"
     },
     {
       "id": "ficedula-hypoleuca",
       "germanName": "Trauerschnäpper",
       "englishName": "European Pied Flycatcher",
-      "scientificName": "Ficedula hypoleuca",
-      "points": 4
+      "scientificName": "Ficedula hypoleuca"
     },
     {
       "id": "falco-tinnunculus",
       "germanName": "Turmfalke",
       "englishName": "Eurasian Kestrel",
-      "scientificName": "Falco tinnunculus",
-      "points": 2
+      "scientificName": "Falco tinnunculus"
     },
     {
       "id": "streptopelia-decaocto",
       "germanName": "Türkentaube",
       "englishName": "Eurasian Collared-Dove",
-      "scientificName": "Streptopelia decaocto",
-      "points": 1
+      "scientificName": "Streptopelia decaocto"
     },
     {
       "id": "limosa-limosa",
       "germanName": "Uferschnepfe",
       "englishName": "Black-tailed Godwit",
-      "scientificName": "Limosa limosa",
-      "points": 6
+      "scientificName": "Limosa limosa"
     },
     {
       "id": "riparia-riparia",
       "germanName": "Uferschwalbe",
       "englishName": "Bank Swallow",
-      "scientificName": "Riparia riparia",
-      "points": 3
+      "scientificName": "Riparia riparia"
     },
     {
       "id": "turdus-pilaris",
       "germanName": "Wacholderdrossel",
       "englishName": "Fieldfare",
-      "scientificName": "Turdus pilaris",
-      "points": 2
+      "scientificName": "Turdus pilaris"
+    },
+    {
+      "id": "strix-aluco",
+      "germanName": "Waldkauz",
+      "englishName": "Tawny Owl",
+      "scientificName": "Strix aluco"
     },
     {
       "id": "phylloscopus-sibilatrix",
       "germanName": "Waldlaubsänger",
       "englishName": "Wood Warbler",
-      "scientificName": "Phylloscopus sibilatrix",
-      "points": 5
+      "scientificName": "Phylloscopus sibilatrix"
     },
     {
       "id": "asio-otus",
       "germanName": "Waldohreule",
       "englishName": "Long-eared Owl",
-      "scientificName": "Asio otus",
-      "points": 7
+      "scientificName": "Asio otus"
     },
     {
       "id": "scolopax-rusticola",
       "germanName": "Waldschnepfe",
       "englishName": "Eurasian Woodcock",
-      "scientificName": "Scolopax rusticola",
-      "points": 5
+      "scientificName": "Scolopax rusticola"
     },
     {
       "id": "tringa-ochropus",
       "germanName": "Waldwasserläufer",
       "englishName": "Green Sandpiper",
-      "scientificName": "Tringa ochropus",
-      "points": 4
+      "scientificName": "Tringa ochropus"
     },
     {
       "id": "poecile-montanus",
       "germanName": "Weidenmeise",
       "englishName": "Willow Tit",
-      "scientificName": "Poecile montanus",
-      "points": 4
+      "scientificName": "Poecile montanus"
     },
     {
       "id": "branta-leucopsis",
       "germanName": "Weißwangengans",
       "englishName": "Barnacle Goose",
-      "scientificName": "Branta leucopsis",
-      "points": 3
+      "scientificName": "Branta leucopsis"
     },
     {
       "id": "anthus-pratensis",
       "germanName": "Wiesenpieper",
       "englishName": "Meadow Pipit",
-      "scientificName": "Anthus pratensis",
-      "points": 3
+      "scientificName": "Anthus pratensis"
     },
     {
       "id": "regulus-regulus",
       "germanName": "Wintergoldhähnchen",
       "englishName": "Goldcrest",
-      "scientificName": "Regulus regulus",
-      "points": 3
+      "scientificName": "Regulus regulus"
     },
     {
       "id": "troglodytes-troglodytes",
       "germanName": "Zaunkönig",
       "englishName": "Eurasian Wren",
-      "scientificName": "Troglodytes troglodytes",
-      "points": 1
+      "scientificName": "Troglodytes troglodytes"
     },
     {
       "id": "phylloscopus-collybita",
       "germanName": "Zilpzalp",
       "englishName": "Common Chiffchaff",
-      "scientificName": "Phylloscopus collybita",
-      "points": 1
+      "scientificName": "Phylloscopus collybita"
     },
     {
       "id": "ficedula-parva",
       "germanName": "Zwergschnäpper",
       "englishName": "Red-breasted Flycatcher",
-      "scientificName": "Ficedula parva",
-      "points": 8
+      "scientificName": "Ficedula parva"
     }
   ],
   "observations": [
     {
       "id": "obs-finn-001",
       "playerId": "finn",
-      "speciesId": "anser-anser",
-      "observedAt": "2026-05-18",
-      "location": "Planten un Bloomen",
+      "speciesId": "corvus-cornix",
+      "observedAt": "2026-05-10",
+      "location": "Rømø",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 2,
       "importedAt": "2026-08-10"
     },
     {
       "id": "obs-finn-002",
       "playerId": "finn",
-      "speciesId": "branta-canadensis",
-      "observedAt": "2026-05-29",
-      "location": "Hamburg",
+      "speciesId": "corvus-corone",
+      "observedAt": "2026-05-10",
+      "location": "Rømø",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 1,
       "importedAt": "2026-08-10"
     },
     {
       "id": "obs-finn-003",
       "playerId": "finn",
-      "speciesId": "anas-platyrhynchos",
-      "observedAt": "2026-05-16",
-      "location": "Hamburg",
+      "speciesId": "parus-major",
+      "observedAt": "2026-05-10",
+      "location": "Rømø",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 1,
       "importedAt": "2026-08-10"
     },
     {
       "id": "obs-finn-004",
       "playerId": "finn",
-      "speciesId": "phasianus-colchicus",
-      "observedAt": "2026-05-11",
+      "speciesId": "phylloscopus-trochilus",
+      "observedAt": "2026-05-10",
       "location": "Rømø",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 2,
       "importedAt": "2026-08-10"
     },
     {
       "id": "obs-finn-005",
       "playerId": "finn",
-      "speciesId": "columba-livia",
-      "observedAt": "2026-05-20",
-      "location": "Wallanlagen",
+      "speciesId": "acanthis-flammea",
+      "observedAt": "2026-05-10",
+      "location": "Rømø",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 4,
       "importedAt": "2026-08-10"
     },
     {
       "id": "obs-finn-006",
       "playerId": "finn",
-      "speciesId": "columba-palumbus",
-      "observedAt": "2026-05-11",
+      "speciesId": "chloris-chloris",
+      "observedAt": "2026-05-10",
       "location": "Rømø",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 2,
       "importedAt": "2026-08-10"
     },
     {
       "id": "obs-finn-007",
       "playerId": "finn",
-      "speciesId": "streptopelia-decaocto",
-      "observedAt": "2026-05-11",
+      "speciesId": "linaria-cannabina",
+      "observedAt": "2026-05-10",
       "location": "Rømø",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 2,
       "importedAt": "2026-08-10"
     },
     {
@@ -969,1542 +936,3646 @@ window.BIRDLEAGUE_DATA = {
       "speciesId": "cuculus-canorus",
       "observedAt": "2026-05-10",
       "location": "Rømø",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 3,
       "importedAt": "2026-08-10"
     },
     {
       "id": "obs-finn-009",
       "playerId": "finn",
-      "speciesId": "apus-apus",
-      "observedAt": "2026-05-17",
-      "location": "Hamburg",
+      "speciesId": "hirundo-rustica",
+      "observedAt": "2026-05-10",
+      "location": "Rømø",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 1,
       "importedAt": "2026-08-10"
     },
     {
       "id": "obs-finn-010",
       "playerId": "finn",
-      "speciesId": "gallinula-chloropus",
-      "observedAt": "2026-05-22",
-      "location": "Wallanlagen",
+      "speciesId": "curruca-communis",
+      "observedAt": "2026-05-11",
+      "location": "Rømø",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 2,
       "importedAt": "2026-08-10"
     },
     {
       "id": "obs-finn-011",
       "playerId": "finn",
-      "speciesId": "fulica-atra",
-      "observedAt": "2026-06-02",
-      "location": "Wallanlagen",
+      "speciesId": "turdus-merula",
+      "observedAt": "2026-05-11",
+      "location": "Rømø",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 1,
       "importedAt": "2026-08-10"
     },
     {
       "id": "obs-finn-012",
       "playerId": "finn",
-      "speciesId": "grus-grus",
-      "observedAt": "2026-07-30",
-      "location": "Unnamed Road, Västra Götalands län",
+      "speciesId": "columba-palumbus",
+      "observedAt": "2026-05-11",
+      "location": "Rømø",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 1,
       "importedAt": "2026-08-10"
     },
     {
       "id": "obs-finn-013",
       "playerId": "finn",
-      "speciesId": "haematopus-ostralegus",
+      "speciesId": "motacilla-alba",
       "observedAt": "2026-05-11",
       "location": "Rømø",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 1,
       "importedAt": "2026-08-10"
     },
     {
       "id": "obs-finn-014",
       "playerId": "finn",
-      "speciesId": "pluvialis-squatarola",
+      "speciesId": "fringilla-coelebs",
       "observedAt": "2026-05-11",
-      "location": "rømø",
+      "location": "Rømø",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 1,
       "importedAt": "2026-08-10"
     },
     {
       "id": "obs-finn-015",
       "playerId": "finn",
-      "speciesId": "pluvialis-apricaria",
-      "observedAt": "2026-07-28",
-      "location": "1 Lilla Öboängen, Västra Götalands län, SE (58,61, 13,168)",
+      "speciesId": "sylvia-atricapilla",
+      "observedAt": "2026-05-11",
+      "location": "rømø",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 1,
       "importedAt": "2026-08-10"
     },
     {
       "id": "obs-finn-016",
       "playerId": "finn",
-      "speciesId": "charadrius-hiaticula",
+      "speciesId": "curruca-curruca",
       "observedAt": "2026-05-11",
-      "location": "Rømø",
+      "location": "rømø",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 3,
       "importedAt": "2026-08-10"
     },
     {
       "id": "obs-finn-017",
       "playerId": "finn",
-      "speciesId": "actitis-hypoleucos",
-      "observedAt": "2026-07-28",
-      "location": "14 Stakeklevsvägen, Västra Götalands län",
+      "speciesId": "troglodytes-troglodytes",
+      "observedAt": "2026-05-11",
+      "location": "rømø",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 1,
       "importedAt": "2026-08-10"
     },
     {
       "id": "obs-finn-018",
       "playerId": "finn",
-      "speciesId": "tringa-totanus",
+      "speciesId": "pluvialis-squatarola",
       "observedAt": "2026-05-11",
-      "location": "Rømø",
+      "location": "rømø",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 3,
       "importedAt": "2026-08-10"
     },
     {
       "id": "obs-finn-019",
       "playerId": "finn",
-      "speciesId": "tringa-nebularia",
+      "speciesId": "anthus-trivialis",
       "observedAt": "2026-05-11",
-      "location": "Rømø",
+      "location": "rømø",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 2,
       "importedAt": "2026-08-10"
     },
     {
       "id": "obs-finn-020",
       "playerId": "finn",
-      "speciesId": "calidris-alba",
+      "speciesId": "streptopelia-decaocto",
       "observedAt": "2026-05-11",
-      "location": "Rømø strand",
+      "location": "Rømø",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 1,
       "importedAt": "2026-08-10"
     },
     {
       "id": "obs-finn-021",
       "playerId": "finn",
-      "speciesId": "chroicocephalus-ridibundus",
-      "observedAt": "2026-07-14",
-      "location": "Unnamed Road",
+      "speciesId": "haematopus-ostralegus",
+      "observedAt": "2026-05-11",
+      "location": "Rømø",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 2,
       "importedAt": "2026-08-10"
     },
     {
       "id": "obs-finn-022",
       "playerId": "finn",
-      "speciesId": "larus-canus",
+      "speciesId": "phoenicurus-phoenicurus",
       "observedAt": "2026-05-11",
       "location": "Rømø",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 2,
       "importedAt": "2026-08-10"
     },
     {
       "id": "obs-finn-023",
       "playerId": "finn",
-      "speciesId": "larus-argentatus",
-      "observedAt": "2026-07-13",
-      "location": "30 Alter Badweg, Sankt Peter-Ording, Schleswig-Holstein",
+      "speciesId": "periparus-ater",
+      "observedAt": "2026-05-11",
+      "location": "Rømø",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 2,
       "importedAt": "2026-08-10"
     },
     {
       "id": "obs-finn-024",
       "playerId": "finn",
-      "speciesId": "larus-michahellis",
-      "observedAt": "2026-07-13",
-      "location": "30 Alter Badweg, Sankt Peter-Ording, Schleswig-Holstein",
+      "speciesId": "tringa-totanus",
+      "observedAt": "2026-05-11",
+      "location": "Rømø",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 2,
       "importedAt": "2026-08-10"
     },
     {
       "id": "obs-finn-025",
       "playerId": "finn",
-      "speciesId": "thalasseus-sandvicensis",
-      "observedAt": "2026-07-14",
-      "location": "Unnamed Road",
+      "speciesId": "phylloscopus-collybita",
+      "observedAt": "2026-05-11",
+      "location": "Rømø",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 1,
       "importedAt": "2026-08-10"
     },
     {
       "id": "obs-finn-026",
       "playerId": "finn",
-      "speciesId": "accipiter-nisus",
-      "observedAt": "2026-07-28",
-      "location": "1 Lilla Öboängen, Västra Götalands län, SE (58,61, 13,168)",
+      "speciesId": "tringa-nebularia",
+      "observedAt": "2026-05-11",
+      "location": "Rømø",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 3,
       "importedAt": "2026-08-10"
     },
     {
       "id": "obs-finn-027",
       "playerId": "finn",
-      "speciesId": "buteo-buteo",
-      "observedAt": "2026-07-01",
-      "location": "Wallanlagen",
+      "speciesId": "charadrius-hiaticula",
+      "observedAt": "2026-05-11",
+      "location": "Rømø",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 2,
       "importedAt": "2026-08-10"
     },
     {
       "id": "obs-finn-028",
       "playerId": "finn",
-      "speciesId": "asio-otus",
-      "observedAt": "2026-07-26",
-      "location": "Unnamed Road, Västra Götalands län",
+      "speciesId": "emberiza-citrinella",
+      "observedAt": "2026-05-11",
+      "location": "Rømø",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 2,
       "importedAt": "2026-08-10"
     },
     {
       "id": "obs-finn-029",
       "playerId": "finn",
-      "speciesId": "dendrocopos-major",
-      "observedAt": "2026-05-18",
-      "location": "Wallanlagen",
+      "speciesId": "motacilla-flava",
+      "observedAt": "2026-05-11",
+      "location": "Rømø",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 2,
       "importedAt": "2026-08-10"
     },
     {
       "id": "obs-finn-030",
       "playerId": "finn",
-      "speciesId": "picus-viridis",
-      "observedAt": "2026-07-24",
-      "location": "Unnamed Road, Skåne län",
+      "speciesId": "delichon-urbicum",
+      "observedAt": "2026-05-11",
+      "location": "Rømø",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 2,
       "importedAt": "2026-08-10"
     },
     {
       "id": "obs-finn-031",
       "playerId": "finn",
-      "speciesId": "dryocopus-martius",
-      "observedAt": "2026-05-25",
-      "location": "Billetal",
+      "speciesId": "phasianus-colchicus",
+      "observedAt": "2026-05-11",
+      "location": "Rømø",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 2,
       "importedAt": "2026-08-10"
     },
     {
       "id": "obs-finn-032",
       "playerId": "finn",
-      "speciesId": "falco-tinnunculus",
+      "speciesId": "calidris-alba",
       "observedAt": "2026-05-11",
-      "location": "Rømø",
+      "location": "Rømø strand",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 3,
       "importedAt": "2026-08-10"
     },
     {
       "id": "obs-finn-033",
       "playerId": "finn",
-      "speciesId": "garrulus-glandarius",
-      "observedAt": "2026-07-24",
-      "location": "238 NÖTARP, Skåne län",
+      "speciesId": "alauda-arvensis",
+      "observedAt": "2026-05-11",
+      "location": "Rømø Strand",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 1,
       "importedAt": "2026-08-10"
     },
     {
       "id": "obs-finn-034",
       "playerId": "finn",
-      "speciesId": "pica-pica",
-      "observedAt": "2026-05-17",
-      "location": "Hamburg",
+      "speciesId": "falco-tinnunculus",
+      "observedAt": "2026-05-11",
+      "location": "Rømø",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 2,
       "importedAt": "2026-08-10"
     },
     {
       "id": "obs-finn-035",
       "playerId": "finn",
-      "speciesId": "corvus-frugilegus",
-      "observedAt": "2026-07-01",
-      "location": "Wallanlagen",
+      "speciesId": "larus-canus",
+      "observedAt": "2026-05-11",
+      "location": "Rømø",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 1,
       "importedAt": "2026-08-10"
     },
     {
       "id": "obs-finn-036",
       "playerId": "finn",
-      "speciesId": "corvus-corone",
-      "observedAt": "2026-05-10",
+      "speciesId": "prunella-modularis",
+      "observedAt": "2026-05-12",
       "location": "Rømø",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 1,
       "importedAt": "2026-08-10"
     },
     {
       "id": "obs-finn-037",
       "playerId": "finn",
-      "speciesId": "corvus-cornix",
-      "observedAt": "2026-05-10",
+      "speciesId": "carduelis-carduelis",
+      "observedAt": "2026-05-12",
       "location": "Rømø",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 2,
       "importedAt": "2026-08-10"
     },
     {
       "id": "obs-finn-038",
       "playerId": "finn",
-      "speciesId": "corvus-corax",
-      "observedAt": "2026-05-25",
-      "location": "Billetal",
+      "speciesId": "acrocephalus-schoenobaenus",
+      "observedAt": "2026-05-12",
+      "location": "Rømø",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 3,
       "importedAt": "2026-08-10"
     },
     {
       "id": "obs-finn-039",
       "playerId": "finn",
-      "speciesId": "periparus-ater",
-      "observedAt": "2026-05-11",
+      "speciesId": "lullula-arborea",
+      "observedAt": "2026-05-12",
       "location": "Rømø",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 4,
       "importedAt": "2026-08-10"
     },
     {
       "id": "obs-finn-040",
       "playerId": "finn",
-      "speciesId": "lophophanes-cristatus",
-      "observedAt": "2026-07-26",
-      "location": "26, Jönköpings län",
+      "speciesId": "luscinia-svecica",
+      "observedAt": "2026-05-12",
+      "location": "Rømø",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 3,
       "importedAt": "2026-08-10"
     },
     {
       "id": "obs-finn-041",
       "playerId": "finn",
-      "speciesId": "poecile-palustris",
-      "observedAt": "2026-05-17",
-      "location": "Hamburg",
+      "speciesId": "emberiza-schoeniclus",
+      "observedAt": "2026-05-12",
+      "location": "Rømø",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 2,
       "importedAt": "2026-08-10"
     },
     {
       "id": "obs-finn-042",
       "playerId": "finn",
-      "speciesId": "cyanistes-caeruleus",
-      "observedAt": "2026-05-17",
-      "location": "Hamburg",
+      "speciesId": "locustella-naevia",
+      "observedAt": "2026-05-14",
+      "location": "Rømø",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 4,
       "importedAt": "2026-08-10"
     },
     {
       "id": "obs-finn-043",
       "playerId": "finn",
-      "speciesId": "parus-major",
-      "observedAt": "2026-05-10",
+      "speciesId": "anthus-pratensis",
+      "observedAt": "2026-05-14",
       "location": "Rømø",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 2,
       "importedAt": "2026-08-10"
     },
     {
       "id": "obs-finn-044",
       "playerId": "finn",
-      "speciesId": "lullula-arborea",
-      "observedAt": "2026-05-12",
+      "speciesId": "sylvia-borin",
+      "observedAt": "2026-05-14",
       "location": "Rømø",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 3,
       "importedAt": "2026-08-10"
     },
     {
       "id": "obs-finn-045",
       "playerId": "finn",
-      "speciesId": "alauda-arvensis",
-      "observedAt": "2026-05-11",
-      "location": "Rømø Strand",
+      "speciesId": "oenanthe-oenanthe",
+      "observedAt": "2026-05-14",
+      "location": "Rømø",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 3,
       "importedAt": "2026-08-10"
     },
     {
       "id": "obs-finn-046",
       "playerId": "finn",
-      "speciesId": "acrocephalus-schoenobaenus",
-      "observedAt": "2026-05-12",
-      "location": "Rømø",
+      "speciesId": "anas-platyrhynchos",
+      "observedAt": "2026-05-16",
+      "location": "Hamburg",
+      "stateProvince": "DE-HH",
+      "region": "DE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 1,
       "importedAt": "2026-08-10"
     },
     {
       "id": "obs-finn-047",
       "playerId": "finn",
-      "speciesId": "locustella-naevia",
-      "observedAt": "2026-05-14",
-      "location": "Rømø",
+      "speciesId": "passer-domesticus",
+      "observedAt": "2026-05-17",
+      "location": "Hamburg",
+      "stateProvince": "DE-HH",
+      "region": "DE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 1,
       "importedAt": "2026-08-10"
     },
     {
       "id": "obs-finn-048",
       "playerId": "finn",
-      "speciesId": "hirundo-rustica",
-      "observedAt": "2026-05-10",
-      "location": "Rømø",
+      "speciesId": "cyanistes-caeruleus",
+      "observedAt": "2026-05-17",
+      "location": "Hamburg",
+      "stateProvince": "DE-HH",
+      "region": "DE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 1,
       "importedAt": "2026-08-10"
     },
     {
       "id": "obs-finn-049",
       "playerId": "finn",
-      "speciesId": "delichon-urbicum",
-      "observedAt": "2026-05-11",
-      "location": "Rømø",
+      "speciesId": "erithacus-rubecula",
+      "observedAt": "2026-05-17",
+      "location": "Hamburg",
+      "stateProvince": "DE-HH",
+      "region": "DE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 1,
       "importedAt": "2026-08-10"
     },
     {
       "id": "obs-finn-050",
       "playerId": "finn",
-      "speciesId": "phylloscopus-sibilatrix",
-      "observedAt": "2026-05-25",
-      "location": "Billetal",
+      "speciesId": "pica-pica",
+      "observedAt": "2026-05-17",
+      "location": "Hamburg",
+      "stateProvince": "DE-HH",
+      "region": "DE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 1,
       "importedAt": "2026-08-10"
     },
     {
       "id": "obs-finn-051",
       "playerId": "finn",
-      "speciesId": "phylloscopus-trochilus",
-      "observedAt": "2026-05-10",
-      "location": "Rømø",
+      "speciesId": "poecile-palustris",
+      "observedAt": "2026-05-17",
+      "location": "Hamburg",
+      "stateProvince": "DE-HH",
+      "region": "DE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 2,
       "importedAt": "2026-08-10"
     },
     {
       "id": "obs-finn-052",
       "playerId": "finn",
-      "speciesId": "phylloscopus-collybita",
-      "observedAt": "2026-05-11",
-      "location": "Rømø",
+      "speciesId": "turdus-viscivorus",
+      "observedAt": "2026-05-17",
+      "location": "Hamburg",
+      "stateProvince": "DE-HH",
+      "region": "DE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 2,
       "importedAt": "2026-08-10"
     },
     {
       "id": "obs-finn-053",
       "playerId": "finn",
-      "speciesId": "sylvia-atricapilla",
-      "observedAt": "2026-05-11",
-      "location": "rømø",
+      "speciesId": "apus-apus",
+      "observedAt": "2026-05-17",
+      "location": "Hamburg",
+      "stateProvince": "DE-HH",
+      "region": "DE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 2,
       "importedAt": "2026-08-10"
     },
     {
       "id": "obs-finn-054",
       "playerId": "finn",
-      "speciesId": "sylvia-borin",
-      "observedAt": "2026-05-14",
-      "location": "Rømø",
+      "speciesId": "pyrrhula-pyrrhula",
+      "observedAt": "2026-05-18",
+      "location": "Hamburg",
+      "stateProvince": "DE-HH",
+      "region": "DE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 2,
       "importedAt": "2026-08-10"
     },
     {
       "id": "obs-finn-055",
       "playerId": "finn",
-      "speciesId": "curruca-curruca",
-      "observedAt": "2026-05-11",
-      "location": "rømø",
+      "speciesId": "sturnus-vulgaris",
+      "observedAt": "2026-05-18",
+      "location": "Hamburg",
+      "stateProvince": "DE-HH",
+      "region": "DE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 1,
       "importedAt": "2026-08-10"
     },
     {
       "id": "obs-finn-056",
       "playerId": "finn",
-      "speciesId": "curruca-communis",
-      "observedAt": "2026-05-11",
-      "location": "Rømø",
+      "speciesId": "certhia-brachydactyla",
+      "observedAt": "2026-05-18",
+      "location": "Wallanlagen",
+      "stateProvince": "DE-HH",
+      "region": "DE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 2,
       "importedAt": "2026-08-10"
     },
     {
       "id": "obs-finn-057",
       "playerId": "finn",
-      "speciesId": "regulus-regulus",
-      "observedAt": "2026-05-31",
-      "location": "Trittauer Heide",
+      "speciesId": "dendrocopos-major",
+      "observedAt": "2026-05-18",
+      "location": "Wallanlagen",
+      "stateProvince": "DE-HH",
+      "region": "DE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 2,
       "importedAt": "2026-08-10"
     },
     {
       "id": "obs-finn-058",
       "playerId": "finn",
-      "speciesId": "regulus-ignicapilla",
-      "observedAt": "2026-05-22",
-      "location": "Wallanlagen",
+      "speciesId": "anser-anser",
+      "observedAt": "2026-05-18",
+      "location": "Planten un Bloomen",
+      "stateProvince": "DE-HH",
+      "region": "DE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 1,
       "importedAt": "2026-08-10"
     },
     {
       "id": "obs-finn-059",
       "playerId": "finn",
-      "speciesId": "sitta-europaea",
-      "observedAt": "2026-07-24",
-      "location": "Unnamed Road, Skåne län",
+      "speciesId": "columba-livia",
+      "observedAt": "2026-05-20",
+      "location": "Wallanlagen",
+      "stateProvince": "DE-HH",
+      "region": "DE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 1,
       "importedAt": "2026-08-10"
     },
     {
       "id": "obs-finn-060",
       "playerId": "finn",
-      "speciesId": "certhia-brachydactyla",
-      "observedAt": "2026-05-18",
+      "speciesId": "regulus-ignicapilla",
+      "observedAt": "2026-05-22",
       "location": "Wallanlagen",
+      "stateProvince": "DE-HH",
+      "region": "DE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 2,
       "importedAt": "2026-08-10"
     },
     {
       "id": "obs-finn-061",
       "playerId": "finn",
-      "speciesId": "troglodytes-troglodytes",
-      "observedAt": "2026-05-11",
-      "location": "rømø",
+      "speciesId": "gallinula-chloropus",
+      "observedAt": "2026-05-22",
+      "location": "Wallanlagen",
+      "stateProvince": "DE-HH",
+      "region": "DE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 2,
       "importedAt": "2026-08-10"
     },
     {
       "id": "obs-finn-062",
       "playerId": "finn",
-      "speciesId": "sturnus-vulgaris",
-      "observedAt": "2026-05-18",
-      "location": "Hamburg",
+      "speciesId": "turdus-philomelos",
+      "observedAt": "2026-05-23",
+      "location": "Volkspark",
+      "stateProvince": "DE-HH",
+      "region": "DE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 1,
       "importedAt": "2026-08-10"
     },
     {
       "id": "obs-finn-063",
       "playerId": "finn",
-      "speciesId": "turdus-viscivorus",
-      "observedAt": "2026-05-17",
-      "location": "Hamburg",
+      "speciesId": "phylloscopus-sibilatrix",
+      "observedAt": "2026-05-25",
+      "location": "Billetal",
+      "stateProvince": "DE-SH",
+      "region": "DE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 4,
       "importedAt": "2026-08-10"
     },
     {
       "id": "obs-finn-064",
       "playerId": "finn",
-      "speciesId": "turdus-philomelos",
-      "observedAt": "2026-05-23",
-      "location": "Volkspark",
+      "speciesId": "dryocopus-martius",
+      "observedAt": "2026-05-25",
+      "location": "Billetal",
+      "stateProvince": "DE-SH",
+      "region": "DE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 3,
       "importedAt": "2026-08-10"
     },
     {
       "id": "obs-finn-065",
       "playerId": "finn",
-      "speciesId": "turdus-merula",
-      "observedAt": "2026-05-11",
-      "location": "Rømø",
+      "speciesId": "corvus-corax",
+      "observedAt": "2026-05-25",
+      "location": "Billetal",
+      "stateProvince": "DE-SH",
+      "region": "DE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 2,
       "importedAt": "2026-08-10"
     },
     {
       "id": "obs-finn-066",
       "playerId": "finn",
-      "speciesId": "erithacus-rubecula",
-      "observedAt": "2026-05-17",
+      "speciesId": "branta-canadensis",
+      "observedAt": "2026-05-29",
       "location": "Hamburg",
+      "stateProvince": "DE-HH",
+      "region": "DE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 1,
       "importedAt": "2026-08-10"
     },
     {
       "id": "obs-finn-067",
       "playerId": "finn",
-      "speciesId": "luscinia-svecica",
-      "observedAt": "2026-05-12",
-      "location": "Rømø",
+      "speciesId": "regulus-regulus",
+      "observedAt": "2026-05-31",
+      "location": "Trittauer Heide",
+      "stateProvince": "DE-SH",
+      "region": "DE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 2,
       "importedAt": "2026-08-10"
     },
     {
       "id": "obs-finn-068",
       "playerId": "finn",
-      "speciesId": "phoenicurus-phoenicurus",
-      "observedAt": "2026-05-11",
-      "location": "Rømø",
+      "speciesId": "fulica-atra",
+      "observedAt": "2026-06-02",
+      "location": "Wallanlagen",
+      "stateProvince": "DE-HH",
+      "region": "DE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 1,
       "importedAt": "2026-08-10"
     },
     {
       "id": "obs-finn-069",
       "playerId": "finn",
-      "speciesId": "phoenicurus-ochruros",
-      "observedAt": "2026-07-06",
-      "location": "Hamburg",
+      "speciesId": "corvus-frugilegus",
+      "observedAt": "2026-07-01",
+      "location": "Wallanlagen",
+      "stateProvince": "DE-HH",
+      "region": "DE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 2,
       "importedAt": "2026-08-10"
     },
     {
       "id": "obs-finn-070",
       "playerId": "finn",
-      "speciesId": "saxicola-rubetra",
-      "observedAt": "2026-07-26",
-      "location": "O 1700, Västra Götalands län",
+      "speciesId": "buteo-buteo",
+      "observedAt": "2026-07-01",
+      "location": "Wallanlagen",
+      "stateProvince": "DE-HH",
+      "region": "DE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 2,
       "importedAt": "2026-08-10"
     },
     {
       "id": "obs-finn-071",
       "playerId": "finn",
-      "speciesId": "oenanthe-oenanthe",
-      "observedAt": "2026-05-14",
-      "location": "Rømø",
+      "speciesId": "phoenicurus-ochruros",
+      "observedAt": "2026-07-06",
+      "location": "Hamburg",
+      "stateProvince": "DE-HH",
+      "region": "DE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 2,
       "importedAt": "2026-08-10"
     },
     {
       "id": "obs-finn-072",
       "playerId": "finn",
-      "speciesId": "prunella-modularis",
-      "observedAt": "2026-05-12",
-      "location": "Rømø",
+      "speciesId": "larus-michahellis",
+      "observedAt": "2026-07-13",
+      "location": "30 Alter Badweg, Sankt Peter-Ording, Schleswig-Holstein",
+      "stateProvince": "DE-SH",
+      "region": "DE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 4,
       "importedAt": "2026-08-10"
     },
     {
       "id": "obs-finn-073",
       "playerId": "finn",
-      "speciesId": "passer-domesticus",
-      "observedAt": "2026-05-17",
-      "location": "Hamburg",
+      "speciesId": "larus-argentatus",
+      "observedAt": "2026-07-13",
+      "location": "30 Alter Badweg, Sankt Peter-Ording, Schleswig-Holstein",
+      "stateProvince": "DE-SH",
+      "region": "DE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 2,
       "importedAt": "2026-08-10"
     },
     {
       "id": "obs-finn-074",
       "playerId": "finn",
-      "speciesId": "passer-montanus",
-      "observedAt": "2026-07-26",
-      "location": "1 Vasalyckan, Västra Götalands län",
+      "speciesId": "thalasseus-sandvicensis",
+      "observedAt": "2026-07-14",
+      "location": "Unnamed Road",
+      "stateProvince": "DE-SH",
+      "region": "DE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 3,
       "importedAt": "2026-08-10"
     },
     {
       "id": "obs-finn-075",
       "playerId": "finn",
-      "speciesId": "motacilla-flava",
-      "observedAt": "2026-05-11",
-      "location": "Rømø",
+      "speciesId": "chroicocephalus-ridibundus",
+      "observedAt": "2026-07-14",
+      "location": "Unnamed Road",
+      "stateProvince": "DE-SH",
+      "region": "DE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 2,
       "importedAt": "2026-08-10"
     },
     {
       "id": "obs-finn-076",
       "playerId": "finn",
-      "speciesId": "motacilla-alba",
-      "observedAt": "2026-05-11",
-      "location": "Rømø",
+      "speciesId": "sitta-europaea",
+      "observedAt": "2026-07-24",
+      "location": "Unnamed Road, Skåne län",
+      "stateProvince": "SE-M",
+      "region": "SE-SOUTH",
+      "scoreWindow": "may_aug",
+      "points": 1,
       "importedAt": "2026-08-10"
     },
     {
       "id": "obs-finn-077",
       "playerId": "finn",
-      "speciesId": "anthus-pratensis",
-      "observedAt": "2026-05-14",
-      "location": "Rømø",
+      "speciesId": "garrulus-glandarius",
+      "observedAt": "2026-07-24",
+      "location": "238 NÖTARP, Skåne län",
+      "stateProvince": "SE-M",
+      "region": "SE-SOUTH",
+      "scoreWindow": "may_aug",
+      "points": 1,
       "importedAt": "2026-08-10"
     },
     {
       "id": "obs-finn-078",
       "playerId": "finn",
-      "speciesId": "anthus-trivialis",
-      "observedAt": "2026-05-11",
-      "location": "rømø",
+      "speciesId": "picus-viridis",
+      "observedAt": "2026-07-24",
+      "location": "Unnamed Road, Skåne län",
+      "stateProvince": "SE-M",
+      "region": "SE-SOUTH",
+      "scoreWindow": "may_aug",
+      "points": 3,
       "importedAt": "2026-08-10"
     },
     {
       "id": "obs-finn-079",
       "playerId": "finn",
-      "speciesId": "fringilla-coelebs",
-      "observedAt": "2026-05-11",
-      "location": "Rømø",
+      "speciesId": "spinus-spinus",
+      "observedAt": "2026-07-25",
+      "location": "1 GÅARYD, Kronobergs län",
+      "stateProvince": "SE-G",
+      "region": "SE-SOUTH",
+      "scoreWindow": "may_aug",
+      "points": 1,
       "importedAt": "2026-08-10"
     },
     {
       "id": "obs-finn-080",
       "playerId": "finn",
-      "speciesId": "pyrrhula-pyrrhula",
-      "observedAt": "2026-05-18",
-      "location": "Hamburg",
+      "speciesId": "lophophanes-cristatus",
+      "observedAt": "2026-07-26",
+      "location": "26, Jönköpings län",
+      "stateProvince": "SE-F",
+      "region": "SE-SOUTH",
+      "scoreWindow": "may_aug",
+      "points": 2,
       "importedAt": "2026-08-10"
     },
     {
       "id": "obs-finn-081",
       "playerId": "finn",
-      "speciesId": "chloris-chloris",
-      "observedAt": "2026-05-10",
-      "location": "Rømø",
+      "speciesId": "passer-montanus",
+      "observedAt": "2026-07-26",
+      "location": "1 Vasalyckan, Västra Götalands län",
+      "stateProvince": "SE-O",
+      "region": "SE-SOUTH",
+      "scoreWindow": "may_aug",
+      "points": 2,
       "importedAt": "2026-08-10"
     },
     {
       "id": "obs-finn-082",
       "playerId": "finn",
-      "speciesId": "linaria-cannabina",
-      "observedAt": "2026-05-10",
-      "location": "Rømø",
+      "speciesId": "saxicola-rubetra",
+      "observedAt": "2026-07-26",
+      "location": "O 1700, Västra Götalands län",
+      "stateProvince": "SE-O",
+      "region": "SE-SOUTH",
+      "scoreWindow": "may_aug",
+      "points": 3,
       "importedAt": "2026-08-10"
     },
     {
       "id": "obs-finn-083",
       "playerId": "finn",
-      "speciesId": "acanthis-flammea",
-      "observedAt": "2026-05-10",
-      "location": "Rømø",
+      "speciesId": "asio-otus",
+      "observedAt": "2026-07-26",
+      "location": "Unnamed Road, Västra Götalands län",
+      "stateProvince": "SE-O",
+      "region": "SE-SOUTH",
+      "scoreWindow": "may_aug",
+      "points": 4,
       "importedAt": "2026-08-10"
     },
     {
       "id": "obs-finn-084",
       "playerId": "finn",
-      "speciesId": "carduelis-carduelis",
-      "observedAt": "2026-05-12",
-      "location": "Rømø",
+      "speciesId": "accipiter-nisus",
+      "observedAt": "2026-07-28",
+      "location": "1 Lilla Öboängen, Västra Götalands län, SE (58,61, 13,168)",
+      "stateProvince": "SE-O",
+      "region": "SE-SOUTH",
+      "scoreWindow": "may_aug",
+      "points": 2,
       "importedAt": "2026-08-10"
     },
     {
       "id": "obs-finn-085",
       "playerId": "finn",
-      "speciesId": "spinus-spinus",
-      "observedAt": "2026-07-25",
-      "location": "1 GÅARYD, Kronobergs län",
+      "speciesId": "actitis-hypoleucos",
+      "observedAt": "2026-07-28",
+      "location": "14 Stakeklevsvägen, Västra Götalands län",
+      "stateProvince": "SE-O",
+      "region": "SE-SOUTH",
+      "scoreWindow": "may_aug",
+      "points": 2,
       "importedAt": "2026-08-10"
     },
     {
       "id": "obs-finn-086",
       "playerId": "finn",
-      "speciesId": "emberiza-citrinella",
-      "observedAt": "2026-05-11",
-      "location": "Rømø",
+      "speciesId": "pluvialis-apricaria",
+      "observedAt": "2026-07-28",
+      "location": "1 Lilla Öboängen, Västra Götalands län, SE (58,61, 13,168)",
+      "stateProvince": "SE-O",
+      "region": "SE-SOUTH",
+      "scoreWindow": "may_aug",
+      "points": 3,
       "importedAt": "2026-08-10"
     },
     {
       "id": "obs-finn-087",
       "playerId": "finn",
-      "speciesId": "emberiza-schoeniclus",
-      "observedAt": "2026-05-12",
-      "location": "Rømø",
+      "speciesId": "grus-grus",
+      "observedAt": "2026-07-30",
+      "location": "Unnamed Road, Västra Götalands län",
+      "stateProvince": "SE-O",
+      "region": "SE-SOUTH",
+      "scoreWindow": "may_aug",
+      "points": 2,
       "importedAt": "2026-08-10"
-    },
-    {
-      "id": "obs-ida-001",
-      "playerId": "ida",
-      "speciesId": "haematopus-ostralegus",
-      "observedAt": "2026-05-10",
-      "location": "Kromose",
-      "importedAt": "2026-08-14"
-    },
-    {
-      "id": "obs-ida-002",
-      "playerId": "ida",
-      "speciesId": "acanthis-flammea",
-      "observedAt": "2026-05-10",
-      "location": "Kromose",
-      "importedAt": "2026-08-14"
-    },
-    {
-      "id": "obs-ida-003",
-      "playerId": "ida",
-      "speciesId": "cyanistes-caeruleus",
-      "observedAt": "2026-05-10",
-      "location": "Kromose",
-      "importedAt": "2026-08-14"
-    },
-    {
-      "id": "obs-ida-004",
-      "playerId": "ida",
-      "speciesId": "linaria-cannabina",
-      "observedAt": "2026-05-10",
-      "location": "Kronos",
-      "importedAt": "2026-08-14"
-    },
-    {
-      "id": "obs-ida-005",
-      "playerId": "ida",
-      "speciesId": "fringilla-coelebs",
-      "observedAt": "2026-05-10",
-      "location": "Kromose",
-      "importedAt": "2026-08-14"
-    },
-    {
-      "id": "obs-ida-006",
-      "playerId": "ida",
-      "speciesId": "curruca-communis",
-      "observedAt": "2026-05-10",
-      "location": "Kronos",
-      "importedAt": "2026-08-14"
-    },
-    {
-      "id": "obs-ida-007",
-      "playerId": "ida",
-      "speciesId": "phylloscopus-trochilus",
-      "observedAt": "2026-05-10",
-      "location": "Kromose",
-      "importedAt": "2026-08-14"
-    },
-    {
-      "id": "obs-ida-008",
-      "playerId": "ida",
-      "speciesId": "actitis-hypoleucos",
-      "observedAt": "2026-05-10",
-      "location": "Kromose",
-      "importedAt": "2026-08-14"
-    },
-    {
-      "id": "obs-ida-009",
-      "playerId": "ida",
-      "speciesId": "phoenicurus-phoenicurus",
-      "observedAt": "2026-05-10",
-      "location": "Kromose",
-      "importedAt": "2026-08-14"
-    },
-    {
-      "id": "obs-ida-010",
-      "playerId": "ida",
-      "speciesId": "chloris-chloris",
-      "observedAt": "2026-05-10",
-      "location": "Kromose",
-      "importedAt": "2026-08-14"
-    },
-    {
-      "id": "obs-ida-011",
-      "playerId": "ida",
-      "speciesId": "prunella-modularis",
-      "observedAt": "2026-05-10",
-      "location": "Kromose",
-      "importedAt": "2026-08-14"
-    },
-    {
-      "id": "obs-ida-012",
-      "playerId": "ida",
-      "speciesId": "pluvialis-squatarola",
-      "observedAt": "2026-05-10",
-      "location": "Kromose",
-      "importedAt": "2026-08-14"
-    },
-    {
-      "id": "obs-ida-013",
-      "playerId": "ida",
-      "speciesId": "curruca-curruca",
-      "observedAt": "2026-05-10",
-      "location": "Kromose",
-      "importedAt": "2026-08-14"
-    },
-    {
-      "id": "obs-ida-014",
-      "playerId": "ida",
-      "speciesId": "tringa-totanus",
-      "observedAt": "2026-05-10",
-      "location": "Kromose",
-      "importedAt": "2026-08-14"
-    },
-    {
-      "id": "obs-ida-015",
-      "playerId": "ida",
-      "speciesId": "charadrius-hiaticula",
-      "observedAt": "2026-05-10",
-      "location": "Kromose",
-      "importedAt": "2026-08-14"
-    },
-    {
-      "id": "obs-ida-016",
-      "playerId": "ida",
-      "speciesId": "streptopelia-decaocto",
-      "observedAt": "2026-05-10",
-      "location": "Kromose",
-      "importedAt": "2026-08-14"
-    },
-    {
-      "id": "obs-ida-017",
-      "playerId": "ida",
-      "speciesId": "phylloscopus-collybita",
-      "observedAt": "2026-05-10",
-      "location": "Kromose",
-      "importedAt": "2026-08-14"
-    },
-    {
-      "id": "obs-ida-018",
-      "playerId": "ida",
-      "speciesId": "turdus-merula",
-      "observedAt": "2026-05-11",
-      "location": "Kronos",
-      "importedAt": "2026-08-14"
-    },
-    {
-      "id": "obs-ida-019",
-      "playerId": "ida",
-      "speciesId": "motacilla-alba",
-      "observedAt": "2026-05-11",
-      "location": "Kromose",
-      "importedAt": "2026-08-14"
-    },
-    {
-      "id": "obs-ida-020",
-      "playerId": "ida",
-      "speciesId": "anthus-trivialis",
-      "observedAt": "2026-05-11",
-      "location": "Kromose",
-      "importedAt": "2026-08-14"
-    },
-    {
-      "id": "obs-ida-021",
-      "playerId": "ida",
-      "speciesId": "alauda-arvensis",
-      "observedAt": "2026-05-11",
-      "location": "Rømø",
-      "importedAt": "2026-08-14"
-    },
-    {
-      "id": "obs-ida-022",
-      "playerId": "ida",
-      "speciesId": "passer-montanus",
-      "observedAt": "2026-05-11",
-      "location": "Kromose",
-      "importedAt": "2026-08-14"
-    },
-    {
-      "id": "obs-ida-023",
-      "playerId": "ida",
-      "speciesId": "emberiza-citrinella",
-      "observedAt": "2026-05-11",
-      "location": "Kronos",
-      "importedAt": "2026-08-14"
-    },
-    {
-      "id": "obs-ida-024",
-      "playerId": "ida",
-      "speciesId": "anser-anser",
-      "observedAt": "2026-05-11",
-      "location": "Kromose",
-      "importedAt": "2026-08-14"
-    },
-    {
-      "id": "obs-ida-025",
-      "playerId": "ida",
-      "speciesId": "lullula-arborea",
-      "observedAt": "2026-05-11",
-      "location": "Kronos",
-      "importedAt": "2026-08-14"
-    },
-    {
-      "id": "obs-ida-026",
-      "playerId": "ida",
-      "speciesId": "phasianus-colchicus",
-      "observedAt": "2026-05-11",
-      "location": "Kronos",
-      "importedAt": "2026-08-14"
-    },
-    {
-      "id": "obs-ida-027",
-      "playerId": "ida",
-      "speciesId": "parus-major",
-      "observedAt": "2026-05-11",
-      "location": "Kronos",
-      "importedAt": "2026-08-14"
-    },
-    {
-      "id": "obs-ida-028",
-      "playerId": "ida",
-      "speciesId": "cuculus-canorus",
-      "observedAt": "2026-05-11",
-      "location": "Kronos",
-      "importedAt": "2026-08-14"
-    },
-    {
-      "id": "obs-ida-029",
-      "playerId": "ida",
-      "speciesId": "chroicocephalus-ridibundus",
-      "observedAt": "2026-05-11",
-      "location": "Kromose",
-      "importedAt": "2026-08-14"
-    },
-    {
-      "id": "obs-ida-030",
-      "playerId": "ida",
-      "speciesId": "turdus-viscivorus",
-      "observedAt": "2026-05-11",
-      "location": "Kromose",
-      "importedAt": "2026-08-14"
-    },
-    {
-      "id": "obs-ida-031",
-      "playerId": "ida",
-      "speciesId": "sylvia-atricapilla",
-      "observedAt": "2026-05-11",
-      "location": "Kromose",
-      "importedAt": "2026-08-14"
-    },
-    {
-      "id": "obs-ida-032",
-      "playerId": "ida",
-      "speciesId": "hirundo-rustica",
-      "observedAt": "2026-05-11",
-      "location": "Kromose",
-      "importedAt": "2026-08-14"
-    },
-    {
-      "id": "obs-ida-033",
-      "playerId": "ida",
-      "speciesId": "columba-palumbus",
-      "observedAt": "2026-05-11",
-      "location": "Kronos",
-      "importedAt": "2026-08-14"
-    },
-    {
-      "id": "obs-ida-034",
-      "playerId": "ida",
-      "speciesId": "erithacus-rubecula",
-      "observedAt": "2026-05-11",
-      "location": "Kromose",
-      "importedAt": "2026-08-14"
-    },
-    {
-      "id": "obs-ida-035",
-      "playerId": "ida",
-      "speciesId": "calidris-alba",
-      "observedAt": "2026-05-11",
-      "location": "Sonderstrand",
-      "importedAt": "2026-08-14"
-    },
-    {
-      "id": "obs-ida-036",
-      "playerId": "ida",
-      "speciesId": "larus-canus",
-      "observedAt": "2026-05-11",
-      "location": "Kronos",
-      "importedAt": "2026-08-14"
-    },
-    {
-      "id": "obs-ida-037",
-      "playerId": "ida",
-      "speciesId": "periparus-ater",
-      "observedAt": "2026-05-11",
-      "location": "Kromose",
-      "importedAt": "2026-08-14"
-    },
-    {
-      "id": "obs-ida-038",
-      "playerId": "ida",
-      "speciesId": "troglodytes-troglodytes",
-      "observedAt": "2026-05-11",
-      "location": "Kromose",
-      "importedAt": "2026-08-14"
-    },
-    {
-      "id": "obs-ida-039",
-      "playerId": "ida",
-      "speciesId": "numenius-arquata",
-      "observedAt": "2026-05-12",
-      "location": "Kronos",
-      "importedAt": "2026-08-14"
-    },
-    {
-      "id": "obs-ida-040",
-      "playerId": "ida",
-      "speciesId": "vanellus-vanellus",
-      "observedAt": "2026-05-12",
-      "location": "Parkplatz",
-      "importedAt": "2026-08-14"
-    },
-    {
-      "id": "obs-ida-041",
-      "playerId": "ida",
-      "speciesId": "branta-bernicla",
-      "observedAt": "2026-05-12",
-      "location": "Deich",
-      "importedAt": "2026-08-14"
-    },
-    {
-      "id": "obs-ida-042",
-      "playerId": "ida",
-      "speciesId": "emberiza-schoeniclus",
-      "observedAt": "2026-05-12",
-      "location": "Bredebro",
-      "importedAt": "2026-08-14"
-    },
-    {
-      "id": "obs-ida-043",
-      "playerId": "ida",
-      "speciesId": "carduelis-carduelis",
-      "observedAt": "2026-05-12",
-      "location": "Kronos",
-      "importedAt": "2026-08-14"
-    },
-    {
-      "id": "obs-ida-044",
-      "playerId": "ida",
-      "speciesId": "anas-platyrhynchos",
-      "observedAt": "2026-05-12",
-      "location": "Kromose",
-      "importedAt": "2026-08-14"
-    },
-    {
-      "id": "obs-ida-045",
-      "playerId": "ida",
-      "speciesId": "recurvirostra-avosetta",
-      "observedAt": "2026-05-12",
-      "location": "Deich",
-      "importedAt": "2026-08-14"
-    },
-    {
-      "id": "obs-ida-046",
-      "playerId": "ida",
-      "speciesId": "acrocephalus-scirpaceus",
-      "observedAt": "2026-05-12",
-      "location": "Irgendwo Am Deich",
-      "importedAt": "2026-08-14"
-    },
-    {
-      "id": "obs-ida-047",
-      "playerId": "ida",
-      "speciesId": "limosa-limosa",
-      "observedAt": "2026-05-12",
-      "location": "Deich",
-      "importedAt": "2026-08-14"
-    },
-    {
-      "id": "obs-ida-048",
-      "playerId": "ida",
-      "speciesId": "anthus-pratensis",
-      "observedAt": "2026-05-12",
-      "location": "Deich",
-      "importedAt": "2026-08-14"
-    },
-    {
-      "id": "obs-ida-049",
-      "playerId": "ida",
-      "speciesId": "regulus-regulus",
-      "observedAt": "2026-05-12",
-      "location": "Kronos",
-      "importedAt": "2026-08-14"
-    },
-    {
-      "id": "obs-ida-050",
-      "playerId": "ida",
-      "speciesId": "calidris-alpina",
-      "observedAt": "2026-05-14",
-      "location": "Kromose",
-      "importedAt": "2026-08-14"
-    },
-    {
-      "id": "obs-ida-051",
-      "playerId": "ida",
-      "speciesId": "locustella-naevia",
-      "observedAt": "2026-05-14",
-      "location": "Kromose",
-      "importedAt": "2026-08-14"
-    },
-    {
-      "id": "obs-ida-052",
-      "playerId": "ida",
-      "speciesId": "sterna-hirundo",
-      "observedAt": "2026-05-14",
-      "location": "Rømø",
-      "importedAt": "2026-08-14"
-    },
-    {
-      "id": "obs-ida-053",
-      "playerId": "ida",
-      "speciesId": "pluvialis-apricaria",
-      "observedAt": "2026-05-14",
-      "location": "Rømø",
-      "importedAt": "2026-08-14"
-    },
-    {
-      "id": "obs-ida-054",
-      "playerId": "ida",
-      "speciesId": "ardea-cinerea",
-      "observedAt": "2026-05-14",
-      "location": "Kromose",
-      "importedAt": "2026-08-14"
-    },
-    {
-      "id": "obs-ida-055",
-      "playerId": "ida",
-      "speciesId": "acrocephalus-schoenobaenus",
-      "observedAt": "2026-05-14",
-      "location": "Deich",
-      "importedAt": "2026-08-14"
-    },
-    {
-      "id": "obs-ida-056",
-      "playerId": "ida",
-      "speciesId": "dendrocopos-major",
-      "observedAt": "2026-05-17",
-      "location": "Wanderweg",
-      "importedAt": "2026-08-14"
-    },
-    {
-      "id": "obs-ida-057",
-      "playerId": "ida",
-      "speciesId": "pica-pica",
-      "observedAt": "2026-05-17",
-      "location": "Wanderweg",
-      "importedAt": "2026-08-14"
-    },
-    {
-      "id": "obs-ida-058",
-      "playerId": "ida",
-      "speciesId": "certhia-brachydactyla",
-      "observedAt": "2026-05-17",
-      "location": "Wanderweg",
-      "importedAt": "2026-08-14"
-    },
-    {
-      "id": "obs-ida-059",
-      "playerId": "ida",
-      "speciesId": "sylvia-borin",
-      "observedAt": "2026-05-17",
-      "location": "Waldweg",
-      "importedAt": "2026-08-14"
-    },
-    {
-      "id": "obs-ida-060",
-      "playerId": "ida",
-      "speciesId": "hippolais-icterina",
-      "observedAt": "2026-05-17",
-      "location": "Wanderweg",
-      "importedAt": "2026-08-14"
-    },
-    {
-      "id": "obs-ida-061",
-      "playerId": "ida",
-      "speciesId": "muscicapa-striata",
-      "observedAt": "2026-05-17",
-      "location": "Wanderweg",
-      "importedAt": "2026-08-14"
-    },
-    {
-      "id": "obs-ida-062",
-      "playerId": "ida",
-      "speciesId": "passer-domesticus",
-      "observedAt": "2026-05-17",
-      "location": "Wanderweg",
-      "importedAt": "2026-08-14"
-    },
-    {
-      "id": "obs-ida-063",
-      "playerId": "ida",
-      "speciesId": "branta-canadensis",
-      "observedAt": "2026-05-17",
-      "location": "Wanderweg",
-      "importedAt": "2026-08-14"
-    },
-    {
-      "id": "obs-ida-064",
-      "playerId": "ida",
-      "speciesId": "corvus-corax",
-      "observedAt": "2026-05-17",
-      "location": "Wanderweg",
-      "importedAt": "2026-08-14"
-    },
-    {
-      "id": "obs-ida-065",
-      "playerId": "ida",
-      "speciesId": "corvus-cornix",
-      "observedAt": "2026-05-17",
-      "location": "Wanderweg",
-      "importedAt": "2026-08-14"
-    },
-    {
-      "id": "obs-ida-066",
-      "playerId": "ida",
-      "speciesId": "oriolus-oriolus",
-      "observedAt": "2026-05-17",
-      "location": "Wanderweg",
-      "importedAt": "2026-08-14"
-    },
-    {
-      "id": "obs-ida-067",
-      "playerId": "ida",
-      "speciesId": "corvus-corone",
-      "observedAt": "2026-05-17",
-      "location": "Wanderweg",
-      "importedAt": "2026-08-14"
-    },
-    {
-      "id": "obs-ida-068",
-      "playerId": "ida",
-      "speciesId": "dryocopus-martius",
-      "observedAt": "2026-05-17",
-      "location": "Wanderweg",
-      "importedAt": "2026-08-14"
-    },
-    {
-      "id": "obs-ida-069",
-      "playerId": "ida",
-      "speciesId": "turdus-philomelos",
-      "observedAt": "2026-05-17",
-      "location": "Wanderweg",
-      "importedAt": "2026-08-14"
-    },
-    {
-      "id": "obs-ida-070",
-      "playerId": "ida",
-      "speciesId": "regulus-ignicapilla",
-      "observedAt": "2026-05-17",
-      "location": "Wanderweg",
-      "importedAt": "2026-08-14"
-    },
-    {
-      "id": "obs-ida-071",
-      "playerId": "ida",
-      "speciesId": "poecile-palustris",
-      "observedAt": "2026-05-17",
-      "location": "Wanderweg",
-      "importedAt": "2026-08-14"
-    },
-    {
-      "id": "obs-ida-072",
-      "playerId": "ida",
-      "speciesId": "phylloscopus-sibilatrix",
-      "observedAt": "2026-05-17",
-      "location": "Wanderweg",
-      "importedAt": "2026-08-14"
-    },
-    {
-      "id": "obs-ida-073",
-      "playerId": "ida",
-      "speciesId": "ficedula-parva",
-      "observedAt": "2026-05-17",
-      "location": "Wanderweg",
-      "importedAt": "2026-08-14"
-    },
-    {
-      "id": "obs-ida-074",
-      "playerId": "ida",
-      "speciesId": "columba-livia",
-      "observedAt": "2026-05-18",
-      "location": "Bengt’s Wohnung",
-      "importedAt": "2026-08-14"
-    },
-    {
-      "id": "obs-ida-075",
-      "playerId": "ida",
-      "speciesId": "phoenicurus-ochruros",
-      "observedAt": "2026-05-21",
-      "location": "Reiten",
-      "importedAt": "2026-08-14"
-    },
-    {
-      "id": "obs-ida-076",
-      "playerId": "ida",
-      "speciesId": "luscinia-megarhynchos",
-      "observedAt": "2026-05-21",
-      "location": "Reitweg",
-      "importedAt": "2026-08-14"
-    },
-    {
-      "id": "obs-ida-077",
-      "playerId": "ida",
-      "speciesId": "aegithalos-caudatus",
-      "observedAt": "2026-05-21",
-      "location": "Reitweg",
-      "importedAt": "2026-08-14"
-    },
-    {
-      "id": "obs-ida-078",
-      "playerId": "ida",
-      "speciesId": "sturnus-vulgaris",
-      "observedAt": "2026-05-21",
-      "location": "Reiten",
-      "importedAt": "2026-08-14"
-    },
-    {
-      "id": "obs-ida-079",
-      "playerId": "ida",
-      "speciesId": "serinus-serinus",
-      "observedAt": "2026-05-22",
-      "location": "Gundelsheeeeiiiiiim",
-      "importedAt": "2026-08-14"
-    },
-    {
-      "id": "obs-ida-080",
-      "playerId": "ida",
-      "speciesId": "coccothraustes-coccothraustes",
-      "observedAt": "2026-05-22",
-      "location": "Gundelsheeeeiiiiiim",
-      "importedAt": "2026-08-14"
-    },
-    {
-      "id": "obs-ida-081",
-      "playerId": "ida",
-      "speciesId": "apus-apus",
-      "observedAt": "2026-05-22",
-      "location": "Gundelsheeeeiiiiiim",
-      "importedAt": "2026-08-14"
-    },
-    {
-      "id": "obs-ida-082",
-      "playerId": "ida",
-      "speciesId": "delichon-urbicum",
-      "observedAt": "2026-05-22",
-      "location": "Gundelsheeeeiiiiiim",
-      "importedAt": "2026-08-14"
-    },
-    {
-      "id": "obs-ida-083",
-      "playerId": "ida",
-      "speciesId": "tadorna-ferruginea",
-      "observedAt": "2026-05-22",
-      "location": "Gundelsheeeeiiiiiim",
-      "importedAt": "2026-08-14"
-    },
-    {
-      "id": "obs-ida-084",
-      "playerId": "ida",
-      "speciesId": "sitta-europaea",
-      "observedAt": "2026-05-26",
-      "location": "Alstertaler Wanderweg",
-      "importedAt": "2026-08-14"
-    },
-    {
-      "id": "obs-ida-085",
-      "playerId": "ida",
-      "speciesId": "fulica-atra",
-      "observedAt": "2026-05-31",
-      "location": "Reiten",
-      "importedAt": "2026-08-14"
-    },
-    {
-      "id": "obs-ida-086",
-      "playerId": "ida",
-      "speciesId": "larus-argentatus",
-      "observedAt": "2026-05-31",
-      "location": "UKE",
-      "importedAt": "2026-08-14"
-    },
-    {
-      "id": "obs-ida-087",
-      "playerId": "ida",
-      "speciesId": "ficedula-hypoleuca",
-      "observedAt": "2026-06-15",
-      "location": "See Schweden",
-      "importedAt": "2026-08-14"
     },
     {
       "id": "obs-ida-088",
       "playerId": "ida",
-      "speciesId": "anser-albifrons",
-      "observedAt": "2026-06-16",
-      "location": "Schweden Fluss",
+      "speciesId": "curruca-communis",
+      "observedAt": "2026-05-10",
+      "location": "Kronos",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 2,
       "importedAt": "2026-08-14"
     },
     {
       "id": "obs-ida-089",
       "playerId": "ida",
-      "speciesId": "spinus-spinus",
-      "observedAt": "2026-06-16",
-      "location": "Indalsälven",
+      "speciesId": "curruca-curruca",
+      "observedAt": "2026-05-10",
+      "location": "Kromose",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 3,
       "importedAt": "2026-08-14"
     },
     {
       "id": "obs-ida-090",
       "playerId": "ida",
-      "speciesId": "tringa-nebularia",
-      "observedAt": "2026-06-16",
-      "location": "Schweden Fluss",
+      "speciesId": "acanthis-flammea",
+      "observedAt": "2026-05-10",
+      "location": "Kromose",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 4,
       "importedAt": "2026-08-14"
     },
     {
       "id": "obs-ida-091",
       "playerId": "ida",
-      "speciesId": "turdus-iliacus",
-      "observedAt": "2026-06-16",
-      "location": "Schweden Fluss",
+      "speciesId": "charadrius-hiaticula",
+      "observedAt": "2026-05-10",
+      "location": "Kromose",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 2,
       "importedAt": "2026-08-14"
     },
     {
       "id": "obs-ida-092",
       "playerId": "ida",
-      "speciesId": "turdus-pilaris",
-      "observedAt": "2026-06-16",
-      "location": "Schweden Fluss",
+      "speciesId": "pluvialis-squatarola",
+      "observedAt": "2026-05-10",
+      "location": "Kromose",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 3,
       "importedAt": "2026-08-14"
     },
     {
       "id": "obs-ida-093",
       "playerId": "ida",
-      "speciesId": "branta-leucopsis",
-      "observedAt": "2026-06-16",
-      "location": "Schweden Fluss",
+      "speciesId": "haematopus-ostralegus",
+      "observedAt": "2026-05-10",
+      "location": "Kromose",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 2,
       "importedAt": "2026-08-14"
     },
     {
       "id": "obs-ida-094",
       "playerId": "ida",
-      "speciesId": "gallinago-gallinago",
-      "observedAt": "2026-06-19",
-      "location": "Grytoya",
+      "speciesId": "tringa-totanus",
+      "observedAt": "2026-05-10",
+      "location": "Kromose",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 2,
       "importedAt": "2026-08-14"
     },
     {
       "id": "obs-ida-095",
       "playerId": "ida",
-      "speciesId": "lagopus-lagopus",
-      "observedAt": "2026-06-19",
-      "location": "Grytoya",
+      "speciesId": "actitis-hypoleucos",
+      "observedAt": "2026-05-10",
+      "location": "Kromose",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 3,
       "importedAt": "2026-08-14"
     },
     {
       "id": "obs-ida-096",
       "playerId": "ida",
-      "speciesId": "fringilla-montifringilla",
-      "observedAt": "2026-06-20",
-      "location": "Grytoya berg",
+      "speciesId": "fringilla-coelebs",
+      "observedAt": "2026-05-10",
+      "location": "Kromose",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 1,
       "importedAt": "2026-08-14"
     },
     {
       "id": "obs-ida-097",
       "playerId": "ida",
-      "speciesId": "larus-marinus",
-      "observedAt": "2026-06-20",
-      "location": "Grytoya",
+      "speciesId": "chloris-chloris",
+      "observedAt": "2026-05-10",
+      "location": "Kromose",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 2,
       "importedAt": "2026-08-14"
     },
     {
       "id": "obs-ida-098",
       "playerId": "ida",
-      "speciesId": "bombycilla-garrulus",
-      "observedAt": "2026-06-21",
-      "location": "Mückenfluss",
+      "speciesId": "cyanistes-caeruleus",
+      "observedAt": "2026-05-10",
+      "location": "Kromose",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 1,
       "importedAt": "2026-08-14"
     },
     {
       "id": "obs-ida-099",
       "playerId": "ida",
-      "speciesId": "gavia-stellata",
-      "observedAt": "2026-06-21",
-      "location": "Mückenfluss",
+      "speciesId": "prunella-modularis",
+      "observedAt": "2026-05-10",
+      "location": "Kromose",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 1,
       "importedAt": "2026-08-14"
     },
     {
       "id": "obs-ida-100",
       "playerId": "ida",
-      "speciesId": "loxia-curvirostra",
-      "observedAt": "2026-06-22",
-      "location": "Mückenfluss",
+      "speciesId": "streptopelia-decaocto",
+      "observedAt": "2026-05-10",
+      "location": "Kromose",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 1,
       "importedAt": "2026-08-14"
     },
     {
       "id": "obs-ida-101",
       "playerId": "ida",
-      "speciesId": "riparia-riparia",
-      "observedAt": "2026-06-22",
-      "location": "Fluss",
+      "speciesId": "phylloscopus-collybita",
+      "observedAt": "2026-05-10",
+      "location": "Kromose",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 1,
       "importedAt": "2026-08-14"
     },
     {
       "id": "obs-ida-102",
       "playerId": "ida",
-      "speciesId": "poecile-montanus",
-      "observedAt": "2026-06-22",
-      "location": "Fluss",
+      "speciesId": "phylloscopus-trochilus",
+      "observedAt": "2026-05-10",
+      "location": "Kromose",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 2,
       "importedAt": "2026-08-14"
     },
     {
       "id": "obs-ida-103",
       "playerId": "ida",
-      "speciesId": "somateria-mollissima",
-      "observedAt": "2026-06-23",
-      "location": "Fjord",
+      "speciesId": "phoenicurus-phoenicurus",
+      "observedAt": "2026-05-10",
+      "location": "Kromose",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 2,
       "importedAt": "2026-08-14"
     },
     {
       "id": "obs-ida-104",
       "playerId": "ida",
-      "speciesId": "cygnus-cygnus",
-      "observedAt": "2026-06-25",
-      "location": "See",
+      "speciesId": "linaria-cannabina",
+      "observedAt": "2026-05-10",
+      "location": "Kronos",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 2,
       "importedAt": "2026-08-14"
     },
     {
       "id": "obs-ida-105",
       "playerId": "ida",
-      "speciesId": "mergus-merganser",
-      "observedAt": "2026-06-26",
-      "location": "Schweden Fluss",
+      "speciesId": "hirundo-rustica",
+      "observedAt": "2026-05-11",
+      "location": "Kromose",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 1,
       "importedAt": "2026-08-14"
     },
     {
       "id": "obs-ida-106",
       "playerId": "ida",
-      "speciesId": "scolopax-rusticola",
-      "observedAt": "2026-06-26",
-      "location": "Schweden Fluss",
+      "speciesId": "anthus-trivialis",
+      "observedAt": "2026-05-11",
+      "location": "Kromose",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 2,
       "importedAt": "2026-08-14"
     },
     {
       "id": "obs-ida-107",
       "playerId": "ida",
-      "speciesId": "tringa-ochropus",
-      "observedAt": "2026-06-26",
-      "location": "Schweden Fluss",
+      "speciesId": "chroicocephalus-ridibundus",
+      "observedAt": "2026-05-11",
+      "location": "Kromose",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 2,
       "importedAt": "2026-08-14"
     },
     {
       "id": "obs-ida-108",
       "playerId": "ida",
-      "speciesId": "larus-fuscus",
-      "observedAt": "2026-07-15",
-      "location": "UKE",
+      "speciesId": "passer-montanus",
+      "observedAt": "2026-05-11",
+      "location": "Kromose",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 2,
       "importedAt": "2026-08-14"
     },
     {
       "id": "obs-ida-109",
       "playerId": "ida",
-      "speciesId": "pyrrhula-pyrrhula",
-      "observedAt": "2026-07-17",
-      "location": "22391 Hamburg  Deutschland",
+      "speciesId": "emberiza-citrinella",
+      "observedAt": "2026-05-11",
+      "location": "Kronos",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 2,
       "importedAt": "2026-08-14"
     },
     {
       "id": "obs-ida-110",
       "playerId": "ida",
-      "speciesId": "picus-viridis",
-      "observedAt": "2026-07-30",
-      "location": "Westensee--Wroher Bucht",
+      "speciesId": "phasianus-colchicus",
+      "observedAt": "2026-05-11",
+      "location": "Kronos",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 2,
       "importedAt": "2026-08-14"
     },
     {
       "id": "obs-ida-111",
       "playerId": "ida",
-      "speciesId": "buteo-buteo",
-      "observedAt": "2026-08-04",
-      "location": "Reiten",
+      "speciesId": "alauda-arvensis",
+      "observedAt": "2026-05-11",
+      "location": "Rømø",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 1,
       "importedAt": "2026-08-14"
     },
     {
       "id": "obs-ida-112",
       "playerId": "ida",
-      "speciesId": "lanius-collurio",
-      "observedAt": "2026-08-11",
-      "location": "Reiten",
+      "speciesId": "calidris-alba",
+      "observedAt": "2026-05-11",
+      "location": "Sonderstrand",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 3,
       "importedAt": "2026-08-14"
     },
     {
       "id": "obs-ida-113",
       "playerId": "ida",
+      "speciesId": "turdus-viscivorus",
+      "observedAt": "2026-05-11",
+      "location": "Krosmose",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 2,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-ida-114",
+      "playerId": "ida",
+      "speciesId": "erithacus-rubecula",
+      "observedAt": "2026-05-11",
+      "location": "Kromose",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 1,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-ida-115",
+      "playerId": "ida",
+      "speciesId": "troglodytes-troglodytes",
+      "observedAt": "2026-05-11",
+      "location": "Kromose",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 1,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-ida-116",
+      "playerId": "ida",
+      "speciesId": "turdus-merula",
+      "observedAt": "2026-05-11",
+      "location": "Kronos",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 1,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-ida-117",
+      "playerId": "ida",
+      "speciesId": "larus-canus",
+      "observedAt": "2026-05-11",
+      "location": "Kronos",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 1,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-ida-118",
+      "playerId": "ida",
+      "speciesId": "cuculus-canorus",
+      "observedAt": "2026-05-11",
+      "location": "Kronos",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 3,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-ida-119",
+      "playerId": "ida",
+      "speciesId": "columba-palumbus",
+      "observedAt": "2026-05-11",
+      "location": "Kronos",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 1,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-ida-120",
+      "playerId": "ida",
+      "speciesId": "parus-major",
+      "observedAt": "2026-05-11",
+      "location": "Kronos",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 1,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-ida-121",
+      "playerId": "ida",
+      "speciesId": "lullula-arborea",
+      "observedAt": "2026-05-11",
+      "location": "Kronos",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 4,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-ida-122",
+      "playerId": "ida",
+      "speciesId": "motacilla-alba",
+      "observedAt": "2026-05-11",
+      "location": "Kromose",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 1,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-ida-123",
+      "playerId": "ida",
+      "speciesId": "sylvia-atricapilla",
+      "observedAt": "2026-05-11",
+      "location": "Kromose",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 1,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-ida-124",
+      "playerId": "ida",
+      "speciesId": "periparus-ater",
+      "observedAt": "2026-05-11",
+      "location": "Kromose",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 2,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-ida-125",
+      "playerId": "ida",
+      "speciesId": "anser-anser",
+      "observedAt": "2026-05-11",
+      "location": "Kromose",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 1,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-ida-126",
+      "playerId": "ida",
+      "speciesId": "emberiza-schoeniclus",
+      "observedAt": "2026-05-12",
+      "location": "Bredebro",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 2,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-ida-127",
+      "playerId": "ida",
+      "speciesId": "acrocephalus-scirpaceus",
+      "observedAt": "2026-05-12",
+      "location": "Irgendwo Am Deich",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 2,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-ida-128",
+      "playerId": "ida",
+      "speciesId": "vanellus-vanellus",
+      "observedAt": "2026-05-12",
+      "location": "Parkplatz",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 2,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-ida-129",
+      "playerId": "ida",
+      "speciesId": "recurvirostra-avosetta",
+      "observedAt": "2026-05-12",
+      "location": "Deich",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 3,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-ida-130",
+      "playerId": "ida",
+      "speciesId": "branta-bernicla",
+      "observedAt": "2026-05-12",
+      "location": "Deich",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 2,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-ida-131",
+      "playerId": "ida",
+      "speciesId": "limosa-limosa",
+      "observedAt": "2026-05-12",
+      "location": "Deich",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 3,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-ida-132",
+      "playerId": "ida",
+      "speciesId": "anthus-pratensis",
+      "observedAt": "2026-05-12",
+      "location": "Deich",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 2,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-ida-133",
+      "playerId": "ida",
+      "speciesId": "anas-platyrhynchos",
+      "observedAt": "2026-05-12",
+      "location": "Kromose",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 1,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-ida-134",
+      "playerId": "ida",
+      "speciesId": "carduelis-carduelis",
+      "observedAt": "2026-05-12",
+      "location": "Kronos",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 2,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-ida-135",
+      "playerId": "ida",
+      "speciesId": "numenius-arquata",
+      "observedAt": "2026-05-12",
+      "location": "Kronos",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 2,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-ida-136",
+      "playerId": "ida",
+      "speciesId": "regulus-regulus",
+      "observedAt": "2026-05-12",
+      "location": "Kronos",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 2,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-ida-137",
+      "playerId": "ida",
+      "speciesId": "ardea-cinerea",
+      "observedAt": "2026-05-14",
+      "location": "Kromose",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 1,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-ida-138",
+      "playerId": "ida",
+      "speciesId": "calidris-alpina",
+      "observedAt": "2026-05-14",
+      "location": "Kromose",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 2,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-ida-139",
+      "playerId": "ida",
+      "speciesId": "locustella-naevia",
+      "observedAt": "2026-05-14",
+      "location": "Kromose",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 4,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-ida-140",
+      "playerId": "ida",
+      "speciesId": "acrocephalus-schoenobaenus",
+      "observedAt": "2026-05-14",
+      "location": "Deich",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 3,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-ida-141",
+      "playerId": "ida",
+      "speciesId": "sterna-hirundo",
+      "observedAt": "2026-05-14",
+      "location": "Rømø",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 3,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-ida-142",
+      "playerId": "ida",
+      "speciesId": "pluvialis-apricaria",
+      "observedAt": "2026-05-14",
+      "location": "Rømø",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 3,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-ida-143",
+      "playerId": "ida",
+      "speciesId": "sylvia-borin",
+      "observedAt": "2026-05-17",
+      "location": "Waldweg",
+      "stateProvince": "DE-SH",
+      "region": "DE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 3,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-ida-144",
+      "playerId": "ida",
+      "speciesId": "corvus-corax",
+      "observedAt": "2026-05-17",
+      "location": "Wanderweg",
+      "stateProvince": "DE-SH",
+      "region": "DE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 2,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-ida-145",
+      "playerId": "ida",
+      "speciesId": "ficedula-parva",
+      "observedAt": "2026-05-17",
+      "location": "Wanderweg",
+      "stateProvince": "DE-SH",
+      "region": "DE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 7,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-ida-146",
+      "playerId": "ida",
+      "speciesId": "dendrocopos-major",
+      "observedAt": "2026-05-17",
+      "location": "Wanderweg",
+      "stateProvince": "DE-SH",
+      "region": "DE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 2,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-ida-147",
+      "playerId": "ida",
+      "speciesId": "branta-canadensis",
+      "observedAt": "2026-05-17",
+      "location": "Wanderweg",
+      "stateProvince": "DE-SH",
+      "region": "DE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 1,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-ida-148",
+      "playerId": "ida",
+      "speciesId": "turdus-philomelos",
+      "observedAt": "2026-05-17",
+      "location": "Wanderweg",
+      "stateProvince": "DE-SH",
+      "region": "DE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 1,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-ida-149",
+      "playerId": "ida",
+      "speciesId": "muscicapa-striata",
+      "observedAt": "2026-05-17",
+      "location": "Wanderweg",
+      "stateProvince": "DE-SH",
+      "region": "DE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 3,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-ida-150",
+      "playerId": "ida",
+      "speciesId": "regulus-ignicapilla",
+      "observedAt": "2026-05-17",
+      "location": "Wanderweg",
+      "stateProvince": "DE-SH",
+      "region": "DE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 2,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-ida-151",
+      "playerId": "ida",
+      "speciesId": "corvus-corone",
+      "observedAt": "2026-05-17",
+      "location": "Wanderweg",
+      "stateProvince": "DE-SH",
+      "region": "DE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 1,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-ida-152",
+      "playerId": "ida",
+      "speciesId": "pica-pica",
+      "observedAt": "2026-05-17",
+      "location": "Wanderweg",
+      "stateProvince": "DE-SH",
+      "region": "DE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 1,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-ida-153",
+      "playerId": "ida",
+      "speciesId": "hippolais-icterina",
+      "observedAt": "2026-05-17",
+      "location": "Wanderweg",
+      "stateProvince": "DE-SH",
+      "region": "DE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 3,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-ida-154",
+      "playerId": "ida",
+      "speciesId": "passer-domesticus",
+      "observedAt": "2026-05-17",
+      "location": "Wanderweg",
+      "stateProvince": "DE-SH",
+      "region": "DE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 1,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-ida-155",
+      "playerId": "ida",
+      "speciesId": "poecile-palustris",
+      "observedAt": "2026-05-17",
+      "location": "Wanderweg",
+      "stateProvince": "DE-SH",
+      "region": "DE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 2,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-ida-156",
+      "playerId": "ida",
+      "speciesId": "corvus-cornix",
+      "observedAt": "2026-05-17",
+      "location": "Wanderweg",
+      "stateProvince": "DE-SH",
+      "region": "DE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 3,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-ida-157",
+      "playerId": "ida",
+      "speciesId": "certhia-brachydactyla",
+      "observedAt": "2026-05-17",
+      "location": "Wanderweg",
+      "stateProvince": "DE-SH",
+      "region": "DE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 2,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-ida-158",
+      "playerId": "ida",
+      "speciesId": "dryocopus-martius",
+      "observedAt": "2026-05-17",
+      "location": "Wanderweg",
+      "stateProvince": "DE-SH",
+      "region": "DE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 3,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-ida-159",
+      "playerId": "ida",
+      "speciesId": "oriolus-oriolus",
+      "observedAt": "2026-05-17",
+      "location": "Wanderweg",
+      "stateProvince": "DE-SH",
+      "region": "DE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 4,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-ida-160",
+      "playerId": "ida",
+      "speciesId": "phylloscopus-sibilatrix",
+      "observedAt": "2026-05-17",
+      "location": "Wanderweg",
+      "stateProvince": "DE-SH",
+      "region": "DE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 4,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-ida-161",
+      "playerId": "ida",
+      "speciesId": "columba-livia",
+      "observedAt": "2026-05-18",
+      "location": "Bengt’s Wohnung",
+      "stateProvince": "DE-HH",
+      "region": "DE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 1,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-ida-162",
+      "playerId": "ida",
+      "speciesId": "luscinia-megarhynchos",
+      "observedAt": "2026-05-21",
+      "location": "Reitweg",
+      "stateProvince": "DE-SH",
+      "region": "DE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 2,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-ida-163",
+      "playerId": "ida",
+      "speciesId": "aegithalos-caudatus",
+      "observedAt": "2026-05-21",
+      "location": "Reitweg",
+      "stateProvince": "DE-SH",
+      "region": "DE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 2,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-ida-164",
+      "playerId": "ida",
+      "speciesId": "phoenicurus-ochruros",
+      "observedAt": "2026-05-21",
+      "location": "Reiten",
+      "stateProvince": "DE-SH",
+      "region": "DE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 2,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-ida-165",
+      "playerId": "ida",
+      "speciesId": "sturnus-vulgaris",
+      "observedAt": "2026-05-21",
+      "location": "Reiten",
+      "stateProvince": "DE-SH",
+      "region": "DE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 1,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-ida-166",
+      "playerId": "ida",
+      "speciesId": "tadorna-ferruginea",
+      "observedAt": "2026-05-22",
+      "location": "Gundelsheeeeiiiiiim",
+      "stateProvince": "DE-BY",
+      "region": "DE-SOUTH",
+      "scoreWindow": "may_aug",
+      "points": 3,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-ida-167",
+      "playerId": "ida",
+      "speciesId": "coccothraustes-coccothraustes",
+      "observedAt": "2026-05-22",
+      "location": "Gundelsheeeeiiiiiim",
+      "stateProvince": "DE-BY",
+      "region": "DE-SOUTH",
+      "scoreWindow": "may_aug",
+      "points": 2,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-ida-168",
+      "playerId": "ida",
+      "speciesId": "delichon-urbicum",
+      "observedAt": "2026-05-22",
+      "location": "Gundelsheeeeiiiiiim",
+      "stateProvince": "DE-BY",
+      "region": "DE-SOUTH",
+      "scoreWindow": "may_aug",
+      "points": 1,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-ida-169",
+      "playerId": "ida",
+      "speciesId": "apus-apus",
+      "observedAt": "2026-05-22",
+      "location": "Gundelsheeeeiiiiiim",
+      "stateProvince": "DE-BY",
+      "region": "DE-SOUTH",
+      "scoreWindow": "may_aug",
+      "points": 1,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-ida-170",
+      "playerId": "ida",
+      "speciesId": "serinus-serinus",
+      "observedAt": "2026-05-22",
+      "location": "Gundelsheeeeiiiiiim",
+      "stateProvince": "DE-BY",
+      "region": "DE-SOUTH",
+      "scoreWindow": "may_aug",
+      "points": 2,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-ida-171",
+      "playerId": "ida",
+      "speciesId": "sitta-europaea",
+      "observedAt": "2026-05-26",
+      "location": "Alstertaler Wanderweg",
+      "stateProvince": "DE-HH",
+      "region": "DE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 2,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-ida-172",
+      "playerId": "ida",
+      "speciesId": "fulica-atra",
+      "observedAt": "2026-05-31",
+      "location": "Reiten",
+      "stateProvince": "DE-SH",
+      "region": "DE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 1,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-ida-173",
+      "playerId": "ida",
+      "speciesId": "larus-argentatus",
+      "observedAt": "2026-05-31",
+      "location": "UKE",
+      "stateProvince": "DE-HH",
+      "region": "DE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 2,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-ida-174",
+      "playerId": "ida",
+      "speciesId": "ficedula-hypoleuca",
+      "observedAt": "2026-06-15",
+      "location": "See Schweden",
+      "stateProvince": "SE-S",
+      "region": "SE-CENTRAL",
+      "scoreWindow": "may_aug",
+      "points": 2,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-ida-175",
+      "playerId": "ida",
+      "speciesId": "anser-albifrons",
+      "observedAt": "2026-06-16",
+      "location": "Schweden Fluss",
+      "stateProvince": "SE-Z",
+      "region": "SE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 5,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-ida-176",
+      "playerId": "ida",
+      "speciesId": "spinus-spinus",
+      "observedAt": "2026-06-16",
+      "location": "Indalsälven",
+      "stateProvince": "SE-Z",
+      "region": "SE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 1,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-ida-177",
+      "playerId": "ida",
+      "speciesId": "turdus-iliacus",
+      "observedAt": "2026-06-16",
+      "location": "Schweden Fluss",
+      "stateProvince": "SE-Z",
+      "region": "SE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 1,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-ida-178",
+      "playerId": "ida",
+      "speciesId": "turdus-pilaris",
+      "observedAt": "2026-06-16",
+      "location": "Schweden Fluss",
+      "stateProvince": "SE-Z",
+      "region": "SE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 1,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-ida-179",
+      "playerId": "ida",
+      "speciesId": "tringa-nebularia",
+      "observedAt": "2026-06-16",
+      "location": "Schweden Fluss",
+      "stateProvince": "SE-Z",
+      "region": "SE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 2,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-ida-180",
+      "playerId": "ida",
+      "speciesId": "branta-leucopsis",
+      "observedAt": "2026-06-16",
+      "location": "Schweden Fluss",
+      "stateProvince": "SE-Z",
+      "region": "SE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 3,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-ida-181",
+      "playerId": "ida",
+      "speciesId": "gallinago-gallinago",
+      "observedAt": "2026-06-19",
+      "location": "Grytoya",
+      "stateProvince": "NO-19",
+      "region": "NO",
+      "scoreWindow": "may_aug",
+      "points": 2,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-ida-182",
+      "playerId": "ida",
+      "speciesId": "lagopus-lagopus",
+      "observedAt": "2026-06-19",
+      "location": "Grytoya",
+      "stateProvince": "NO-19",
+      "region": "NO",
+      "scoreWindow": "may_aug",
+      "points": 2,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-ida-183",
+      "playerId": "ida",
+      "speciesId": "fringilla-montifringilla",
+      "observedAt": "2026-06-20",
+      "location": "Grytoya berg",
+      "stateProvince": "NO-19",
+      "region": "NO",
+      "scoreWindow": "may_aug",
+      "points": 1,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-ida-184",
+      "playerId": "ida",
+      "speciesId": "larus-marinus",
+      "observedAt": "2026-06-20",
+      "location": "Grytoya",
+      "stateProvince": "NO-19",
+      "region": "NO",
+      "scoreWindow": "may_aug",
+      "points": 1,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-ida-185",
+      "playerId": "ida",
+      "speciesId": "bombycilla-garrulus",
+      "observedAt": "2026-06-21",
+      "location": "Mückenfluss",
+      "stateProvince": "SE-BD",
+      "region": "SE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 3,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-ida-186",
+      "playerId": "ida",
+      "speciesId": "gavia-stellata",
+      "observedAt": "2026-06-21",
+      "location": "Mückenfluss",
+      "stateProvince": "SE-BD",
+      "region": "SE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 3,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-ida-187",
+      "playerId": "ida",
+      "speciesId": "riparia-riparia",
+      "observedAt": "2026-06-22",
+      "location": "Fluss",
+      "stateProvince": "SE-BD",
+      "region": "SE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 2,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-ida-188",
+      "playerId": "ida",
+      "speciesId": "poecile-montanus",
+      "observedAt": "2026-06-22",
+      "location": "Fluss",
+      "stateProvince": "SE-BD",
+      "region": "SE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 1,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-ida-189",
+      "playerId": "ida",
+      "speciesId": "loxia-curvirostra",
+      "observedAt": "2026-06-22",
+      "location": "Mückenfluss",
+      "stateProvince": "SE-BD",
+      "region": "SE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 2,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-ida-190",
+      "playerId": "ida",
+      "speciesId": "somateria-mollissima",
+      "observedAt": "2026-06-23",
+      "location": "Fjord",
+      "stateProvince": "NO-18",
+      "region": "NO",
+      "scoreWindow": "may_aug",
+      "points": 1,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-ida-191",
+      "playerId": "ida",
+      "speciesId": "cygnus-cygnus",
+      "observedAt": "2026-06-25",
+      "location": "See",
+      "stateProvince": "SE-BD",
+      "region": "SE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 2,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-ida-192",
+      "playerId": "ida",
+      "speciesId": "tringa-ochropus",
+      "observedAt": "2026-06-26",
+      "location": "Schweden Fluss",
+      "stateProvince": "SE-Z",
+      "region": "SE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 2,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-ida-193",
+      "playerId": "ida",
+      "speciesId": "mergus-merganser",
+      "observedAt": "2026-06-26",
+      "location": "Schweden Fluss",
+      "stateProvince": "SE-Z",
+      "region": "SE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 2,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-ida-194",
+      "playerId": "ida",
+      "speciesId": "scolopax-rusticola",
+      "observedAt": "2026-06-26",
+      "location": "Schweden Fluss",
+      "stateProvince": "SE-Z",
+      "region": "SE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 3,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-ida-195",
+      "playerId": "ida",
+      "speciesId": "larus-fuscus",
+      "observedAt": "2026-07-15",
+      "location": "UKE",
+      "stateProvince": "DE-HH",
+      "region": "DE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 2,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-ida-196",
+      "playerId": "ida",
+      "speciesId": "pyrrhula-pyrrhula",
+      "observedAt": "2026-07-17",
+      "location": "22391 Hamburg  Deutschland",
+      "stateProvince": "DE-HH",
+      "region": "DE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 2,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-ida-197",
+      "playerId": "ida",
+      "speciesId": "picus-viridis",
+      "observedAt": "2026-07-30",
+      "location": "Westensee--Wroher Bucht",
+      "stateProvince": "DE-SH",
+      "region": "DE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 2,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-ida-198",
+      "playerId": "ida",
+      "speciesId": "buteo-buteo",
+      "observedAt": "2026-08-04",
+      "location": "Reiten",
+      "stateProvince": "DE-SH",
+      "region": "DE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 2,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-ida-199",
+      "playerId": "ida",
+      "speciesId": "lanius-collurio",
+      "observedAt": "2026-08-11",
+      "location": "Reiten",
+      "stateProvince": "DE-SH",
+      "region": "DE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 3,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-ida-200",
+      "playerId": "ida",
       "speciesId": "coloeus-monedula",
       "observedAt": "2026-08-14",
       "location": "Sachsenhäuser Straße 43  64753 Brombachtal  Deutschland",
+      "stateProvince": "DE-HE",
+      "region": "DE-CENTRAL",
+      "scoreWindow": "may_aug",
+      "points": 2,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-201",
+      "playerId": "bengt",
+      "speciesId": "phylloscopus-collybita",
+      "observedAt": "2026-05-10",
+      "location": "Family Holiday",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 1,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-202",
+      "playerId": "bengt",
+      "speciesId": "acanthis-flammea",
+      "observedAt": "2026-05-10",
+      "location": "Family Holiday",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 4,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-203",
+      "playerId": "bengt",
+      "speciesId": "phylloscopus-trochilus",
+      "observedAt": "2026-05-10",
+      "location": "Family Holiday",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 2,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-204",
+      "playerId": "bengt",
+      "speciesId": "chloris-chloris",
+      "observedAt": "2026-05-10",
+      "location": "Family Holiday",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 2,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-205",
+      "playerId": "bengt",
+      "speciesId": "cuculus-canorus",
+      "observedAt": "2026-05-10",
+      "location": "Family Holiday",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 3,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-206",
+      "playerId": "bengt",
+      "speciesId": "alauda-arvensis",
+      "observedAt": "2026-05-10",
+      "location": "fam",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 1,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-207",
+      "playerId": "bengt",
+      "speciesId": "emberiza-schoeniclus",
+      "observedAt": "2026-05-10",
+      "location": "fam",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 2,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-208",
+      "playerId": "bengt",
+      "speciesId": "curruca-communis",
+      "observedAt": "2026-05-10",
+      "location": "Family Holiday",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 2,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-209",
+      "playerId": "bengt",
+      "speciesId": "emberiza-citrinella",
+      "observedAt": "2026-05-10",
+      "location": "Family Holiday",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 2,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-210",
+      "playerId": "bengt",
+      "speciesId": "charadrius-hiaticula",
+      "observedAt": "2026-05-10",
+      "location": "romo",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 2,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-211",
+      "playerId": "bengt",
+      "speciesId": "pluvialis-squatarola",
+      "observedAt": "2026-05-10",
+      "location": "romo",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 3,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-212",
+      "playerId": "bengt",
+      "speciesId": "linaria-cannabina",
+      "observedAt": "2026-05-10",
+      "location": "romo",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 2,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-213",
+      "playerId": "bengt",
+      "speciesId": "tringa-totanus",
+      "observedAt": "2026-05-10",
+      "location": "romo",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 2,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-214",
+      "playerId": "bengt",
+      "speciesId": "actitis-hypoleucos",
+      "observedAt": "2026-05-10",
+      "location": "romo",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 3,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-215",
+      "playerId": "bengt",
+      "speciesId": "curruca-curruca",
+      "observedAt": "2026-05-10",
+      "location": "romo",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 3,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-216",
+      "playerId": "bengt",
+      "speciesId": "streptopelia-decaocto",
+      "observedAt": "2026-05-10",
+      "location": "romo",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 1,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-217",
+      "playerId": "bengt",
+      "speciesId": "haematopus-ostralegus",
+      "observedAt": "2026-05-10",
+      "location": "romo",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 2,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-218",
+      "playerId": "bengt",
+      "speciesId": "phoenicurus-phoenicurus",
+      "observedAt": "2026-05-10",
+      "location": "romo",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 2,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-219",
+      "playerId": "bengt",
+      "speciesId": "fringilla-coelebs",
+      "observedAt": "2026-05-10",
+      "location": "romo",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 1,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-220",
+      "playerId": "bengt",
+      "speciesId": "columba-palumbus",
+      "observedAt": "2026-05-10",
+      "location": "Family Holiday",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 1,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-221",
+      "playerId": "bengt",
+      "speciesId": "turdus-merula",
+      "observedAt": "2026-05-10",
+      "location": "Family Holiday",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 1,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-222",
+      "playerId": "bengt",
+      "speciesId": "larus-canus",
+      "observedAt": "2026-05-11",
+      "location": "Family Holiday",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 1,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-223",
+      "playerId": "bengt",
+      "speciesId": "tringa-nebularia",
+      "observedAt": "2026-05-11",
+      "location": "Family Holiday",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 3,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-224",
+      "playerId": "bengt",
+      "speciesId": "parus-major",
+      "observedAt": "2026-05-11",
+      "location": "Family Holiday",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 1,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-225",
+      "playerId": "bengt",
+      "speciesId": "sylvia-atricapilla",
+      "observedAt": "2026-05-11",
+      "location": "Family Holiday",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 1,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-226",
+      "playerId": "bengt",
+      "speciesId": "hirundo-rustica",
+      "observedAt": "2026-05-11",
+      "location": "Family Holiday",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 1,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-227",
+      "playerId": "bengt",
+      "speciesId": "anthus-pratensis",
+      "observedAt": "2026-05-11",
+      "location": "Family Holiday",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 2,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-228",
+      "playerId": "bengt",
+      "speciesId": "motacilla-alba",
+      "observedAt": "2026-05-11",
+      "location": "Family Holiday",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 1,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-229",
+      "playerId": "bengt",
+      "speciesId": "cyanistes-caeruleus",
+      "observedAt": "2026-05-11",
+      "location": "romo",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 1,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-230",
+      "playerId": "bengt",
+      "speciesId": "turdus-viscivorus",
+      "observedAt": "2026-05-11",
+      "location": "romo",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 2,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-231",
+      "playerId": "bengt",
+      "speciesId": "corvus-corone",
+      "observedAt": "2026-05-11",
+      "location": "romo",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 1,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-232",
+      "playerId": "bengt",
+      "speciesId": "periparus-ater",
+      "observedAt": "2026-05-11",
+      "location": "romo",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 2,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-233",
+      "playerId": "bengt",
+      "speciesId": "anthus-trivialis",
+      "observedAt": "2026-05-11",
+      "location": "romo",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 2,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-234",
+      "playerId": "bengt",
+      "speciesId": "chroicocephalus-ridibundus",
+      "observedAt": "2026-05-11",
+      "location": "romo",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 2,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-235",
+      "playerId": "bengt",
+      "speciesId": "phasianus-colchicus",
+      "observedAt": "2026-05-11",
+      "location": "Family Holiday",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 2,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-236",
+      "playerId": "bengt",
+      "speciesId": "branta-canadensis",
+      "observedAt": "2026-05-11",
+      "location": "Family Holiday",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 1,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-237",
+      "playerId": "bengt",
+      "speciesId": "calidris-alba",
+      "observedAt": "2026-05-11",
+      "location": "romo",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 3,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-238",
+      "playerId": "bengt",
+      "speciesId": "tadorna-ferruginea",
+      "observedAt": "2026-05-11",
+      "location": "romo",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 4,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-239",
+      "playerId": "bengt",
+      "speciesId": "erithacus-rubecula",
+      "observedAt": "2026-05-11",
+      "location": "romo",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 1,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-240",
+      "playerId": "bengt",
+      "speciesId": "troglodytes-troglodytes",
+      "observedAt": "2026-05-11",
+      "location": "romo",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 1,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-241",
+      "playerId": "bengt",
+      "speciesId": "corvus-corax",
+      "observedAt": "2026-05-12",
+      "location": "Family Holiday",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 2,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-242",
+      "playerId": "bengt",
+      "speciesId": "carduelis-carduelis",
+      "observedAt": "2026-05-12",
+      "location": "Family Holiday",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 2,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-243",
+      "playerId": "bengt",
+      "speciesId": "turdus-philomelos",
+      "observedAt": "2026-05-12",
+      "location": "Family Holiday",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 1,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-244",
+      "playerId": "bengt",
+      "speciesId": "regulus-regulus",
+      "observedAt": "2026-05-12",
+      "location": "Family Holiday",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 2,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-245",
+      "playerId": "bengt",
+      "speciesId": "vanellus-vanellus",
+      "observedAt": "2026-05-12",
+      "location": "romo",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 2,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-246",
+      "playerId": "bengt",
+      "speciesId": "recurvirostra-avosetta",
+      "observedAt": "2026-05-12",
+      "location": "romo",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 3,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-247",
+      "playerId": "bengt",
+      "speciesId": "acrocephalus-scirpaceus",
+      "observedAt": "2026-05-12",
+      "location": "romo",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 2,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-248",
+      "playerId": "bengt",
+      "speciesId": "branta-bernicla",
+      "observedAt": "2026-05-12",
+      "location": "romo",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 2,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-249",
+      "playerId": "bengt",
+      "speciesId": "numenius-arquata",
+      "observedAt": "2026-05-12",
+      "location": "romo",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 2,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-250",
+      "playerId": "bengt",
+      "speciesId": "luscinia-svecica",
+      "observedAt": "2026-05-12",
+      "location": "romo",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 3,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-251",
+      "playerId": "bengt",
+      "speciesId": "lullula-arborea",
+      "observedAt": "2026-05-12",
+      "location": "romo",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 4,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-252",
+      "playerId": "bengt",
+      "speciesId": "prunella-modularis",
+      "observedAt": "2026-05-12",
+      "location": "romo",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 1,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-253",
+      "playerId": "bengt",
+      "speciesId": "acrocephalus-palustris",
+      "observedAt": "2026-05-12",
+      "location": "romo",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 3,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-254",
+      "playerId": "bengt",
+      "speciesId": "saxicola-rubicola",
+      "observedAt": "2026-05-13",
+      "location": "Family Holiday",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 3,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-255",
+      "playerId": "bengt",
+      "speciesId": "motacilla-flava",
+      "observedAt": "2026-05-13",
+      "location": "Family Holiday",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 2,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-256",
+      "playerId": "bengt",
+      "speciesId": "botaurus-stellaris",
+      "observedAt": "2026-05-13",
+      "location": "Family Holiday",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 5,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-257",
+      "playerId": "bengt",
+      "speciesId": "acrocephalus-schoenobaenus",
+      "observedAt": "2026-05-14",
+      "location": "romo",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 3,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-258",
+      "playerId": "bengt",
+      "speciesId": "certhia-brachydactyla",
+      "observedAt": "2026-05-14",
+      "location": "romo",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 2,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-259",
+      "playerId": "bengt",
+      "speciesId": "calidris-alpina",
+      "observedAt": "2026-05-14",
+      "location": "romo",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 2,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-260",
+      "playerId": "bengt",
+      "speciesId": "locustella-naevia",
+      "observedAt": "2026-05-14",
+      "location": "romo",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "points": 4,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-261",
+      "playerId": "bengt",
+      "speciesId": "pica-pica",
+      "observedAt": "2026-05-16",
+      "location": "ham",
+      "stateProvince": "DE-HH",
+      "region": "DE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 1,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-262",
+      "playerId": "bengt",
+      "speciesId": "sylvia-borin",
+      "observedAt": "2026-05-17",
+      "location": "de",
+      "stateProvince": "DE-SH",
+      "region": "DE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 3,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-263",
+      "playerId": "bengt",
+      "speciesId": "ficedula-parva",
+      "observedAt": "2026-05-17",
+      "location": "se",
+      "stateProvince": "DE-SH",
+      "region": "DE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 7,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-264",
+      "playerId": "bengt",
+      "speciesId": "grus-grus",
+      "observedAt": "2026-05-17",
+      "location": "de",
+      "stateProvince": "DE-SH",
+      "region": "DE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 2,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-265",
+      "playerId": "bengt",
+      "speciesId": "dendrocopos-major",
+      "observedAt": "2026-05-17",
+      "location": "se",
+      "stateProvince": "DE-SH",
+      "region": "DE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 2,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-266",
+      "playerId": "bengt",
+      "speciesId": "muscicapa-striata",
+      "observedAt": "2026-05-17",
+      "location": "dam",
+      "stateProvince": "DE-SH",
+      "region": "DE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 3,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-267",
+      "playerId": "bengt",
+      "speciesId": "anser-anser",
+      "observedAt": "2026-05-17",
+      "location": "dam",
+      "stateProvince": "DE-SH",
+      "region": "DE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 1,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-268",
+      "playerId": "bengt",
+      "speciesId": "regulus-ignicapilla",
+      "observedAt": "2026-05-17",
+      "location": "dam",
+      "stateProvince": "DE-SH",
+      "region": "DE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 2,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-269",
+      "playerId": "bengt",
+      "speciesId": "anas-platyrhynchos",
+      "observedAt": "2026-05-17",
+      "location": "dam",
+      "stateProvince": "DE-SH",
+      "region": "DE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 1,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-270",
+      "playerId": "bengt",
+      "speciesId": "poecile-palustris",
+      "observedAt": "2026-05-17",
+      "location": "dam",
+      "stateProvince": "DE-SH",
+      "region": "DE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 2,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-271",
+      "playerId": "bengt",
+      "speciesId": "hippolais-icterina",
+      "observedAt": "2026-05-17",
+      "location": "sto",
+      "stateProvince": "DE-SH",
+      "region": "DE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 3,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-272",
+      "playerId": "bengt",
+      "speciesId": "passer-domesticus",
+      "observedAt": "2026-05-17",
+      "location": "ste",
+      "stateProvince": "DE-SH",
+      "region": "DE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 1,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-273",
+      "playerId": "bengt",
+      "speciesId": "corvus-cornix",
+      "observedAt": "2026-05-17",
+      "location": "de",
+      "stateProvince": "DE-SH",
+      "region": "DE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 3,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-274",
+      "playerId": "bengt",
+      "speciesId": "dryocopus-martius",
+      "observedAt": "2026-05-17",
+      "location": "de",
+      "stateProvince": "DE-SH",
+      "region": "DE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 3,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-275",
+      "playerId": "bengt",
+      "speciesId": "phylloscopus-sibilatrix",
+      "observedAt": "2026-05-17",
+      "location": "de",
+      "stateProvince": "DE-SH",
+      "region": "DE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 4,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-276",
+      "playerId": "bengt",
+      "speciesId": "coccothraustes-coccothraustes",
+      "observedAt": "2026-05-19",
+      "location": "ham",
+      "stateProvince": "DE-HH",
+      "region": "DE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 3,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-277",
+      "playerId": "bengt",
+      "speciesId": "apus-apus",
+      "observedAt": "2026-05-21",
+      "location": "ham",
+      "stateProvince": "DE-HH",
+      "region": "DE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 2,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-278",
+      "playerId": "bengt",
+      "speciesId": "serinus-serinus",
+      "observedAt": "2026-05-22",
+      "location": "guz",
+      "stateProvince": "DE-BY",
+      "region": "DE-SOUTH",
+      "scoreWindow": "may_aug",
+      "points": 2,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-279",
+      "playerId": "bengt",
+      "speciesId": "phoenicurus-ochruros",
+      "observedAt": "2026-05-22",
+      "location": "guz",
+      "stateProvince": "DE-BY",
+      "region": "DE-SOUTH",
+      "scoreWindow": "may_aug",
+      "points": 1,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-280",
+      "playerId": "bengt",
+      "speciesId": "sturnus-vulgaris",
+      "observedAt": "2026-05-22",
+      "location": "guz",
+      "stateProvince": "DE-BY",
+      "region": "DE-SOUTH",
+      "scoreWindow": "may_aug",
+      "points": 1,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-281",
+      "playerId": "bengt",
+      "speciesId": "falco-tinnunculus",
+      "observedAt": "2026-05-22",
+      "location": "guz",
+      "stateProvince": "DE-BY",
+      "region": "DE-SOUTH",
+      "scoreWindow": "may_aug",
+      "points": 2,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-282",
+      "playerId": "bengt",
+      "speciesId": "delichon-urbicum",
+      "observedAt": "2026-05-23",
+      "location": "gun",
+      "stateProvince": "DE-BY",
+      "region": "DE-SOUTH",
+      "scoreWindow": "may_aug",
+      "points": 1,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-283",
+      "playerId": "bengt",
+      "speciesId": "picus-viridis",
+      "observedAt": "2026-05-23",
+      "location": "gun",
+      "stateProvince": "DE-BY",
+      "region": "DE-SOUTH",
+      "scoreWindow": "may_aug",
+      "points": 2,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-284",
+      "playerId": "bengt",
+      "speciesId": "hydroprogne-caspia",
+      "observedAt": "2026-05-23",
+      "location": "gun",
+      "stateProvince": "DE-BY",
+      "region": "DE-SOUTH",
+      "scoreWindow": "may_aug",
+      "points": 6,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-285",
+      "playerId": "bengt",
+      "speciesId": "mareca-strepera",
+      "observedAt": "2026-05-31",
+      "location": "de",
+      "stateProvince": "DE-SH",
+      "region": "DE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 2,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-286",
+      "playerId": "bengt",
+      "speciesId": "turdus-pilaris",
+      "observedAt": "2026-06-16",
+      "location": "se",
+      "stateProvince": "SE-Z",
+      "region": "SE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 1,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-287",
+      "playerId": "bengt",
+      "speciesId": "turdus-iliacus",
+      "observedAt": "2026-06-16",
+      "location": "se",
+      "stateProvince": "SE-Z",
+      "region": "SE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 1,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-288",
+      "playerId": "bengt",
+      "speciesId": "branta-leucopsis",
+      "observedAt": "2026-06-16",
+      "location": "se",
+      "stateProvince": "SE-Z",
+      "region": "SE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 3,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-289",
+      "playerId": "bengt",
+      "speciesId": "spinus-spinus",
+      "observedAt": "2026-06-16",
+      "location": "se",
+      "stateProvince": "SE-Z",
+      "region": "SE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 1,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-290",
+      "playerId": "bengt",
+      "speciesId": "riparia-riparia",
+      "observedAt": "2026-06-19",
+      "location": "no",
+      "stateProvince": "NO-19",
+      "region": "NO",
+      "scoreWindow": "may_aug",
+      "points": 2,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-291",
+      "playerId": "bengt",
+      "speciesId": "larus-marinus",
+      "observedAt": "2026-06-19",
+      "location": "no",
+      "stateProvince": "NO-19",
+      "region": "NO",
+      "scoreWindow": "may_aug",
+      "points": 1,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-292",
+      "playerId": "bengt",
+      "speciesId": "lagopus-lagopus",
+      "observedAt": "2026-06-19",
+      "location": "no",
+      "stateProvince": "NO-19",
+      "region": "NO",
+      "scoreWindow": "may_aug",
+      "points": 2,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-293",
+      "playerId": "bengt",
+      "speciesId": "gallinago-gallinago",
+      "observedAt": "2026-06-19",
+      "location": "no",
+      "stateProvince": "NO-19",
+      "region": "NO",
+      "scoreWindow": "may_aug",
+      "points": 2,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-294",
+      "playerId": "bengt",
+      "speciesId": "gavia-stellata",
+      "observedAt": "2026-06-21",
+      "location": "se",
+      "stateProvince": "SE-BD",
+      "region": "SE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 3,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-295",
+      "playerId": "bengt",
+      "speciesId": "bombycilla-garrulus",
+      "observedAt": "2026-06-22",
+      "location": "se",
+      "stateProvince": "SE-BD",
+      "region": "SE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 3,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-296",
+      "playerId": "bengt",
+      "speciesId": "fringilla-montifringilla",
+      "observedAt": "2026-06-22",
+      "location": "se",
+      "stateProvince": "SE-BD",
+      "region": "SE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 2,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-297",
+      "playerId": "bengt",
+      "speciesId": "poecile-montanus",
+      "observedAt": "2026-06-23",
+      "location": "se",
+      "stateProvince": "SE-BD",
+      "region": "SE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 1,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-298",
+      "playerId": "bengt",
+      "speciesId": "pluvialis-apricaria",
+      "observedAt": "2026-06-24",
+      "location": "no",
+      "stateProvince": "NO-18",
+      "region": "NO",
+      "scoreWindow": "may_aug",
+      "points": 2,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-299",
+      "playerId": "bengt",
+      "speciesId": "cygnus-cygnus",
+      "observedAt": "2026-06-25",
+      "location": "se",
+      "stateProvince": "SE-BD",
+      "region": "SE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 2,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-300",
+      "playerId": "bengt",
+      "speciesId": "tringa-ochropus",
+      "observedAt": "2026-06-26",
+      "location": "se",
+      "stateProvince": "SE-Z",
+      "region": "SE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 2,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-301",
+      "playerId": "bengt",
+      "speciesId": "mergus-merganser",
+      "observedAt": "2026-06-26",
+      "location": "se",
+      "stateProvince": "SE-Z",
+      "region": "SE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 2,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-302",
+      "playerId": "bengt",
+      "speciesId": "scolopax-rusticola",
+      "observedAt": "2026-06-26",
+      "location": "se",
+      "stateProvince": "SE-Z",
+      "region": "SE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 3,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-303",
+      "playerId": "bengt",
+      "speciesId": "loxia-curvirostra",
+      "observedAt": "2026-06-28",
+      "location": "se",
+      "stateProvince": "SE-Z",
+      "region": "SE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 2,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-304",
+      "playerId": "bengt",
+      "speciesId": "hypsipetes-amaurotis",
+      "observedAt": "2026-07-08",
+      "location": "jp",
+      "stateProvince": "JP-13",
+      "region": "JP-TOKYO",
+      "scoreWindow": "may_aug",
+      "points": 1,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-305",
+      "playerId": "bengt",
+      "speciesId": "cyanopica-cyanus",
+      "observedAt": "2026-07-08",
+      "location": "jp",
+      "stateProvince": "JP-13",
+      "region": "JP-TOKYO",
+      "scoreWindow": "may_aug",
+      "points": 2,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-306",
+      "playerId": "bengt",
+      "speciesId": "zosterops-japonicus",
+      "observedAt": "2026-07-10",
+      "location": "5 5-chōme, Chuo City, Tokyo",
+      "stateProvince": "JP-13",
+      "region": "JP-TOKYO",
+      "scoreWindow": "may_aug",
+      "points": 1,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-307",
+      "playerId": "bengt",
+      "speciesId": "corvus-macrorhynchos",
+      "observedAt": "2026-07-10",
+      "location": "6 5-chōme, Chuo City, Tokyo",
+      "stateProvince": "JP-13",
+      "region": "JP-TOKYO",
+      "scoreWindow": "may_aug",
+      "points": 1,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-308",
+      "playerId": "bengt",
+      "speciesId": "buteo-buteo",
+      "observedAt": "2026-07-12",
+      "location": "17 Dorfstraße, Siek, Schleswig-Holstein",
+      "stateProvince": "DE-SH",
+      "region": "DE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 2,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-309",
+      "playerId": "bengt",
+      "speciesId": "sterna-hirundo",
+      "observedAt": "2026-07-25",
+      "location": "37 Dorfstraße, Felde, Schleswig-Holstein",
+      "stateProvince": "DE-SH",
+      "region": "DE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 3,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-310",
+      "playerId": "bengt",
+      "speciesId": "columba-livia",
+      "observedAt": "2026-08-03",
+      "location": "ham",
+      "stateProvince": "DE-HH",
+      "region": "DE-NORTH",
+      "scoreWindow": "may_aug",
+      "points": 1,
+      "importedAt": "2026-08-14"
+    },
+    {
+      "id": "obs-bengt-311",
+      "playerId": "bengt",
+      "speciesId": "strix-aluco",
+      "observedAt": "2026-08-14",
+      "location": "51 Sachsenhäuser Straße, Brombachtal, Hessen",
+      "stateProvince": "DE-HE",
+      "region": "DE-CENTRAL",
+      "scoreWindow": "may_aug",
+      "points": 2,
       "importedAt": "2026-08-14"
     }
   ]

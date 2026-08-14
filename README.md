@@ -1,52 +1,41 @@
-# BirdLeague
+# BirdLeague V3 – regionale Punktelogik
 
-## UI-Update: Logo & Jahresverlauf
+BirdLeague bewertet ab V3 **Art × Region × Zeitfenster** statt jeder Art überall denselben Wert zu geben.
 
-- Das neue Eisvogel-Motiv ist als BirdLeague-Logo und PWA-Icon eingebunden.
-- Ein Klick auf das BirdLeague-Logo oben links führt immer zurück zur Übersicht.
-- Der Punkteverlauf zeigt in der laufenden Saison nur Monate bis einschließlich des aktuellen Monats; abgeschlossene Saisons zeigen weiterhin alle 12 Monate.
+## Aktueller Datenstand
+- Bengt: 111 Jahresarten / 232 Punkte
+- Ida: 113 Jahresarten / 230 Punkte
+- Finn: 87 Jahresarten / 172 Punkte
+- 137 verschiedene Arten in der Liga
+- alle aktuellen Funde (Mai–August 2026) bewertet
 
+## Regionen
+- DE-NORTH – Deutschland Nord
+- DE-CENTRAL – Deutschland Mitte
+- DE-SOUTH – Deutschland Süd
+- DK – Dänemark
+- SE-SOUTH – Südschweden
+- SE-CENTRAL – Mittelschweden
+- SE-NORTH – Nordschweden
+- NO – Norwegen
+- JP-TOKYO – Japan / Tokio
+- OTHER – Fallback für neue Gebiete
 
-BirdLeague ist eine statische, kostenlose GitHub-Pages-Website für euer Vogelstimmen-Spiel.
+## Zeitfenster
+- may_aug – Mai bis August
+- sep_nov – September bis November
+- dec_feb – Dezember bis Februar
+- mar_apr – März bis April
 
-## Datenprinzip
+Die Masterliste enthält bewusst nur bereits benötigte Region-/Zeit-Kombinationen. Eine neue Kombination wird beim Import als unbewertet markiert und blockiert die Veröffentlichung, bis ein Wert festgelegt wurde.
 
-- `data.js` = veröffentlichte Spieler und Funde.
-- `points.js` = Master-Punkteliste, wissenschaftlicher Name als stabiler Schlüssel.
-- `taxonomy-de.js` = deutsche Anzeigenamen.
-- `data/species-points.xlsx/csv/json` = editierbare bzw. austauschbare Master-Punkteliste.
+## GitHub-Update
+Für die laufende Website insbesondere ersetzen:
+- `app.js`
+- `points.js`
+- `data.js`
+- `styles.css`
+- `sw.js`
+- `data/species-points.json`
 
-Die aktuelle Masterliste umfasst die 87 Arten aus Finns eBird-Export. Alle 87 sind bewertet; Finns aktueller Stand beträgt 250 Punkte.
-
-## Punktelogik
-
-Referenz ist Deutschland/Norddeutschland. Der Punktwert bleibt anschließend unabhängig vom Fundort gleich. Die Skala berücksichtigt Häufigkeit, regionale Bindung, Saisonalität und den praktischen BirdLeague-Schwierigkeitsgrad. 15 Punkte sind für echte Raritäten reserviert.
-
-## Import: eBird und BirdNET Live
-
-1. BirdLeague öffnen → **Import**.
-2. Spielername eingeben.
-3. Eine oder mehrere Dateien auswählen:
-   - eBird: CSV
-   - BirdNET Live: komplette ZIP-Datei, JSON oder CSV
-4. BirdNET Live: Nur `confirmed = true` wird berücksichtigt. Unbestätigte Detektionen werden automatisch ignoriert und gezählt.
-5. Es werden nur Funde der BirdLeague-Saison **Mai des Saisonjahres bis einschließlich Mai des Folgejahres** berücksichtigt.
-6. Mehrfachfunde derselben Art werden zusammengeführt; es zählt der früheste Fund.
-7. Die Arten werden über den wissenschaftlichen Namen gegen die Master-Punkteliste geprüft.
-8. Nur wenn alle neuen Arten bewertet sind, kann der Import übernommen bzw. als `data.js` exportiert werden.
-
-BirdNET-Live-ZIPs werden direkt im Browser gelesen; die enthaltenen Audio-Clips werden nicht hochgeladen oder verarbeitet.
-
-## Künftige neue Arten
-
-Wenn ein Spieler eine Art findet, die noch nicht in der Punkteliste steht, ist der saubere Workflow:
-
-1. eBird-Export / Liste hier hochladen.
-2. Neue Arten bewerten und `species-points.xlsx/json` ergänzen.
-3. Daraus neue `points.js` erzeugen.
-4. `points.js` auf GitHub ersetzen.
-5. CSV erneut importieren; der Check muss 100 % bewertet anzeigen.
-
-## GitHub Pages
-
-Settings → Pages → Deploy from a branch → `main` → `/ (root)`.
+Nach dem Commit GitHub Pages/Actions abwarten und ggf. hart neu laden.
