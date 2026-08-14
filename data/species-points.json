@@ -1,1272 +1,1514 @@
-[
-  {
-    "germanName": "Alpenstrandläufer",
-    "scientificName": "Calidris alpina",
-    "englishName": "Dunlin",
-    "points": 4,
-    "category": "besonders",
-    "reason": "Deutlich besonderer Fund; regional, saisonal oder habitatgebunden.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "BirdLeague-Spielbewertung"
-  },
-  {
-    "germanName": "Amsel",
-    "scientificName": "Turdus merula",
-    "englishName": "Eurasian Blackbird",
-    "points": 1,
-    "category": "sehr häufig",
-    "reason": "Sehr häufig und weit verbreitet; meist ohne gezielte Suche zu finden.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
-  },
-  {
-    "germanName": "Austernfischer",
-    "scientificName": "Haematopus ostralegus",
-    "englishName": "Eurasian Oystercatcher",
-    "points": 3,
-    "category": "regelmäßig / lokal",
-    "reason": "Regelmäßig, aber regional/lokal oder mit gezielterem Habitatbesuch.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
-  },
-  {
-    "germanName": "Bachstelze",
-    "scientificName": "Motacilla alba",
-    "englishName": "White Wagtail",
-    "points": 1,
-    "category": "sehr häufig",
-    "reason": "Sehr häufig und weit verbreitet; meist ohne gezielte Suche zu finden.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
-  },
-  {
-    "germanName": "Baumpieper",
-    "scientificName": "Anthus trivialis",
-    "englishName": "Tree Pipit",
-    "points": 3,
-    "category": "regelmäßig / lokal",
-    "reason": "Regelmäßig, aber regional/lokal oder mit gezielterem Habitatbesuch.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
-  },
-  {
-    "germanName": "Bekassine",
-    "scientificName": "Gallinago gallinago",
-    "englishName": "Common Snipe",
-    "points": 5,
-    "category": "ungewöhnlich",
-    "reason": "Ungewöhnlicher Fund; meist passende Zugzeit, Habitat oder gezielte Suche nötig.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "BirdLeague-Spielbewertung"
-  },
-  {
-    "germanName": "Bergfink",
-    "scientificName": "Fringilla montifringilla",
-    "englishName": "Brambling",
-    "points": 3,
-    "category": "regelmäßig / lokal",
-    "reason": "Regelmäßig, aber regional/lokal oder mit gezielterem Habitatbesuch.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "BirdLeague-Spielbewertung"
-  },
-  {
-    "germanName": "Birkenzeisig",
-    "scientificName": "Acanthis flammea",
-    "englishName": "Redpoll",
-    "points": 5,
-    "category": "ungewöhnlich",
-    "reason": "In Deutschland stark saisonal/regional und in manchen Jahren deutlich leichter als in anderen.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
-  },
-  {
-    "germanName": "Blaukehlchen",
-    "scientificName": "Luscinia svecica",
-    "englishName": "Bluethroat",
-    "points": 6,
-    "category": "selten / stark lokalisiert",
-    "reason": "Regional stark gebundener Brutvogel mit speziellen Feuchtlebensräumen.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
-  },
-  {
-    "germanName": "Blaumeise",
-    "scientificName": "Cyanistes caeruleus",
-    "englishName": "Eurasian Blue Tit",
-    "points": 1,
-    "category": "sehr häufig",
-    "reason": "Sehr häufig und weit verbreitet; meist ohne gezielte Suche zu finden.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
-  },
-  {
-    "germanName": "Bluthänfling",
-    "scientificName": "Linaria cannabina",
-    "englishName": "Eurasian Linnet",
-    "points": 3,
-    "category": "regelmäßig / lokal",
-    "reason": "Regelmäßig, aber regional/lokal oder mit gezielterem Habitatbesuch.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
-  },
-  {
-    "germanName": "Blässgans",
-    "scientificName": "Anser albifrons",
-    "englishName": "Greater White-fronted Goose",
-    "points": 3,
-    "category": "regelmäßig / lokal",
-    "reason": "Regelmäßig, aber regional/lokal oder mit gezielterem Habitatbesuch.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "BirdLeague-Spielbewertung"
-  },
-  {
-    "germanName": "Blässhuhn",
-    "scientificName": "Fulica atra",
-    "englishName": "Eurasian Coot",
-    "points": 1,
-    "category": "sehr häufig",
-    "reason": "Sehr häufig und weit verbreitet; meist ohne gezielte Suche zu finden.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
-  },
-  {
-    "germanName": "Brandseeschwalbe",
-    "scientificName": "Thalasseus sandvicensis",
-    "englishName": "Sandwich Tern",
-    "points": 6,
-    "category": "selten / stark lokalisiert",
-    "reason": "Stark küsten- und koloniegebundene Art; im Binnenland bzw. Alltag selten.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
-  },
-  {
-    "germanName": "Braunkehlchen",
-    "scientificName": "Saxicola rubetra",
-    "englishName": "Whinchat",
-    "points": 6,
-    "category": "selten / stark lokalisiert",
-    "reason": "Deutlich zurückgegangener und regionaler Brutvogel; in Deutschland stark gefährdet.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
-  },
-  {
-    "germanName": "Buchfink",
-    "scientificName": "Fringilla coelebs",
-    "englishName": "Common Chaffinch",
-    "points": 1,
-    "category": "sehr häufig",
-    "reason": "Sehr häufig und weit verbreitet; meist ohne gezielte Suche zu finden.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
-  },
-  {
-    "germanName": "Buntspecht",
-    "scientificName": "Dendrocopos major",
-    "englishName": "Great Spotted Woodpecker",
-    "points": 2,
-    "category": "häufig",
-    "reason": "Häufig, aber etwas stärker an Saison oder Lebensraum gebunden.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
-  },
-  {
-    "germanName": "Dohle",
-    "scientificName": "Coloeus monedula",
-    "englishName": "Eurasian Jackdaw",
-    "points": 2,
-    "category": "häufig",
-    "reason": "Häufig, aber etwas saisonaler oder habitatgebundener.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "BirdLeague-Spielbewertung"
-  },
-  {
-    "germanName": "Dorngrasmücke",
-    "scientificName": "Curruca communis",
-    "englishName": "Greater Whitethroat",
-    "points": 2,
-    "category": "häufig",
-    "reason": "Häufig, aber etwas stärker an Saison oder Lebensraum gebunden.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
-  },
-  {
-    "germanName": "Eichelhäher",
-    "scientificName": "Garrulus glandarius",
-    "englishName": "Eurasian Jay",
-    "points": 2,
-    "category": "häufig",
-    "reason": "Häufig, aber etwas stärker an Saison oder Lebensraum gebunden.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
-  },
-  {
-    "germanName": "Eiderente",
-    "scientificName": "Somateria mollissima",
-    "englishName": "Common Eider",
-    "points": 3,
-    "category": "regelmäßig / lokal",
-    "reason": "Regelmäßig, aber regional/lokal oder mit gezielterem Habitatbesuch.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "BirdLeague-Spielbewertung"
-  },
-  {
-    "germanName": "Elster",
-    "scientificName": "Pica pica",
-    "englishName": "Eurasian Magpie",
-    "points": 1,
-    "category": "sehr häufig",
-    "reason": "Sehr häufig und weit verbreitet; meist ohne gezielte Suche zu finden.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
-  },
-  {
-    "germanName": "Erlenzeisig",
-    "scientificName": "Spinus spinus",
-    "englishName": "Eurasian Siskin",
-    "points": 3,
-    "category": "regelmäßig / lokal",
-    "reason": "Regelmäßig, aber regional/lokal oder mit gezielterem Habitatbesuch.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
-  },
-  {
-    "germanName": "Feldlerche",
-    "scientificName": "Alauda arvensis",
-    "englishName": "Eurasian Skylark",
-    "points": 2,
-    "category": "häufig",
-    "reason": "Häufig, aber etwas stärker an Saison oder Lebensraum gebunden.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
-  },
-  {
-    "germanName": "Feldschwirl",
-    "scientificName": "Locustella naevia",
-    "englishName": "Common Grasshopper Warbler",
-    "points": 5,
-    "category": "ungewöhnlich",
-    "reason": "Saisonal, habitatgebunden und trotz markantem Gesang nicht flächig verbreitet.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
-  },
-  {
-    "germanName": "Feldsperling",
-    "scientificName": "Passer montanus",
-    "englishName": "Eurasian Tree Sparrow",
-    "points": 2,
-    "category": "häufig",
-    "reason": "Häufig, aber etwas stärker an Saison oder Lebensraum gebunden.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
-  },
-  {
-    "germanName": "Felsentaube",
-    "scientificName": "Columba livia",
-    "englishName": "Rock Pigeon",
-    "points": 1,
-    "category": "sehr häufig",
-    "reason": "Sehr häufig und weit verbreitet; meist ohne gezielte Suche zu finden.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
-  },
-  {
-    "germanName": "Fichtenkreuzschnabel",
-    "scientificName": "Loxia curvirostra",
-    "englishName": "Red Crossbill",
-    "points": 4,
-    "category": "besonders",
-    "reason": "Deutlich besonderer Fund; regional, saisonal oder habitatgebunden.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "BirdLeague-Spielbewertung"
-  },
-  {
-    "germanName": "Fitis",
-    "scientificName": "Phylloscopus trochilus",
-    "englishName": "Willow Warbler",
-    "points": 2,
-    "category": "häufig",
-    "reason": "Häufig, aber etwas stärker an Saison oder Lebensraum gebunden.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
-  },
-  {
-    "germanName": "Flussseeschwalbe",
-    "scientificName": "Sterna hirundo",
-    "englishName": "Common Tern",
-    "points": 3,
-    "category": "regelmäßig / lokal",
-    "reason": "Regelmäßig, aber regional/lokal oder mit gezielterem Habitatbesuch.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "BirdLeague-Spielbewertung"
-  },
-  {
-    "germanName": "Flussuferläufer",
-    "scientificName": "Actitis hypoleucos",
-    "englishName": "Common Sandpiper",
-    "points": 5,
-    "category": "ungewöhnlich",
-    "reason": "Als Brutvogel lokal, als Zugvogel regelmäßiger; dennoch kein alltäglicher Nachweis.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
-  },
-  {
-    "germanName": "Gartenbaumläufer",
-    "scientificName": "Certhia brachydactyla",
-    "englishName": "Short-toed Treecreeper",
-    "points": 3,
-    "category": "regelmäßig / lokal",
-    "reason": "Regelmäßig, aber regional/lokal oder mit gezielterem Habitatbesuch.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
-  },
-  {
-    "germanName": "Gartengrasmücke",
-    "scientificName": "Sylvia borin",
-    "englishName": "Garden Warbler",
-    "points": 3,
-    "category": "regelmäßig / lokal",
-    "reason": "Regelmäßig, aber regional/lokal oder mit gezielterem Habitatbesuch.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
-  },
-  {
-    "germanName": "Gartenrotschwanz",
-    "scientificName": "Phoenicurus phoenicurus",
-    "englishName": "Common Redstart",
-    "points": 4,
-    "category": "besonders",
-    "reason": "Deutlich besonderer Fund; nicht flächig bzw. nur zu passenden Zeiten oder Habitaten.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
-  },
-  {
-    "germanName": "Gelbspötter",
-    "scientificName": "Hippolais icterina",
-    "englishName": "Icterine Warbler",
-    "points": 4,
-    "category": "besonders",
-    "reason": "Deutlich besonderer Fund; regional, saisonal oder habitatgebunden.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "BirdLeague-Spielbewertung"
-  },
-  {
-    "germanName": "Gimpel",
-    "scientificName": "Pyrrhula pyrrhula",
-    "englishName": "Eurasian Bullfinch",
-    "points": 3,
-    "category": "regelmäßig / lokal",
-    "reason": "Regelmäßig, aber regional/lokal oder mit gezielterem Habitatbesuch.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
-  },
-  {
-    "germanName": "Girlitz",
-    "scientificName": "Serinus serinus",
-    "englishName": "European Serin",
-    "points": 4,
-    "category": "besonders",
-    "reason": "Deutlich besonderer Fund; regional, saisonal oder habitatgebunden.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "BirdLeague-Spielbewertung"
-  },
-  {
-    "germanName": "Goldammer",
-    "scientificName": "Emberiza citrinella",
-    "englishName": "Yellowhammer",
-    "points": 2,
-    "category": "häufig",
-    "reason": "Häufig, aber etwas stärker an Saison oder Lebensraum gebunden.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
-  },
-  {
-    "germanName": "Goldregenpfeifer",
-    "scientificName": "Pluvialis apricaria",
-    "englishName": "European Golden-Plover",
-    "points": 6,
-    "category": "selten / stark lokalisiert",
-    "reason": "In Deutschland kein regelmäßiger Brutvogel mehr; vor allem Zug- und Wintergast.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
-  },
-  {
-    "germanName": "Graugans",
-    "scientificName": "Anser anser",
-    "englishName": "Graylag Goose",
-    "points": 1,
-    "category": "sehr häufig",
-    "reason": "Sehr häufig und weit verbreitet; meist ohne gezielte Suche zu finden.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
-  },
-  {
-    "germanName": "Graureiher",
-    "scientificName": "Ardea cinerea",
-    "englishName": "Gray Heron",
-    "points": 1,
-    "category": "sehr häufig",
-    "reason": "Sehr häufig und weit verbreitet; meist ohne gezielte Suche zu finden.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "BirdLeague-Spielbewertung"
-  },
-  {
-    "germanName": "Grauschnäpper",
-    "scientificName": "Muscicapa striata",
-    "englishName": "Spotted Flycatcher",
-    "points": 4,
-    "category": "besonders",
-    "reason": "Deutlich besonderer Fund; regional, saisonal oder habitatgebunden.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "BirdLeague-Spielbewertung"
-  },
-  {
-    "germanName": "Großer Brachvogel",
-    "scientificName": "Numenius arquata",
-    "englishName": "Eurasian Curlew",
-    "points": 4,
-    "category": "besonders",
-    "reason": "Deutlich besonderer Fund; regional, saisonal oder habitatgebunden.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "BirdLeague-Spielbewertung"
-  },
-  {
-    "germanName": "Grünfink",
-    "scientificName": "Chloris chloris",
-    "englishName": "European Greenfinch",
-    "points": 2,
-    "category": "häufig",
-    "reason": "Häufig, aber etwas stärker an Saison oder Lebensraum gebunden.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
-  },
-  {
-    "germanName": "Grünschenkel",
-    "scientificName": "Tringa nebularia",
-    "englishName": "Common Greenshank",
-    "points": 6,
-    "category": "selten / stark lokalisiert",
-    "reason": "Vor allem Durchzügler; guter Nachweis erfordert passende Feuchtgebiete und Zugzeit.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
-  },
-  {
-    "germanName": "Grünspecht",
-    "scientificName": "Picus viridis",
-    "englishName": "Eurasian Green Woodpecker",
-    "points": 3,
-    "category": "regelmäßig / lokal",
-    "reason": "Regelmäßig, aber regional/lokal oder mit gezielterem Habitatbesuch.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
-  },
-  {
-    "germanName": "Gänsesäger",
-    "scientificName": "Mergus merganser",
-    "englishName": "Common Merganser",
-    "points": 3,
-    "category": "regelmäßig / lokal",
-    "reason": "Regelmäßig, aber regional/lokal oder mit gezielterem Habitatbesuch.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "BirdLeague-Spielbewertung"
-  },
-  {
-    "germanName": "Haubenmeise",
-    "scientificName": "Lophophanes cristatus",
-    "englishName": "Crested Tit",
-    "points": 4,
-    "category": "besonders",
-    "reason": "Deutlich besonderer Fund; nicht flächig bzw. nur zu passenden Zeiten oder Habitaten.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
-  },
-  {
-    "germanName": "Hausrotschwanz",
-    "scientificName": "Phoenicurus ochruros",
-    "englishName": "Black Redstart",
-    "points": 2,
-    "category": "häufig",
-    "reason": "Häufig, aber etwas stärker an Saison oder Lebensraum gebunden.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
-  },
-  {
-    "germanName": "Haussperling",
-    "scientificName": "Passer domesticus",
-    "englishName": "House Sparrow",
-    "points": 1,
-    "category": "sehr häufig",
-    "reason": "Sehr häufig und weit verbreitet; meist ohne gezielte Suche zu finden.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
-  },
-  {
-    "germanName": "Heckenbraunelle",
-    "scientificName": "Prunella modularis",
-    "englishName": "Dunnock",
-    "points": 1,
-    "category": "sehr häufig",
-    "reason": "Sehr häufig und weit verbreitet; meist ohne gezielte Suche zu finden.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
-  },
-  {
-    "germanName": "Heidelerche",
-    "scientificName": "Lullula arborea",
-    "englishName": "Wood Lark",
-    "points": 5,
-    "category": "ungewöhnlich",
-    "reason": "An spezielle offene, trockene Lebensräume gebunden und regional begrenzt.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
-  },
-  {
-    "germanName": "Heringsmöwe",
-    "scientificName": "Larus fuscus",
-    "englishName": "Lesser Black-backed Gull",
-    "points": 3,
-    "category": "regelmäßig / lokal",
-    "reason": "Regelmäßig, aber regional/lokal oder mit gezielterem Habitatbesuch.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "BirdLeague-Spielbewertung"
-  },
-  {
-    "germanName": "Jagdfasan",
-    "scientificName": "Phasianus colchicus",
-    "englishName": "Ring-necked Pheasant",
-    "points": 2,
-    "category": "häufig",
-    "reason": "Häufig, aber etwas stärker an Saison oder Lebensraum gebunden.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
-  },
-  {
-    "germanName": "Kanadagans",
-    "scientificName": "Branta canadensis",
-    "englishName": "Canada Goose",
-    "points": 1,
-    "category": "sehr häufig",
-    "reason": "Sehr häufig und weit verbreitet; meist ohne gezielte Suche zu finden.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
-  },
-  {
-    "germanName": "Kernbeißer",
-    "scientificName": "Coccothraustes coccothraustes",
-    "englishName": "Hawfinch",
-    "points": 2,
-    "category": "häufig",
-    "reason": "Häufig, aber etwas saisonaler oder habitatgebundener.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "BirdLeague-Spielbewertung"
-  },
-  {
-    "germanName": "Kiebitz",
-    "scientificName": "Vanellus vanellus",
-    "englishName": "Northern Lapwing",
-    "points": 4,
-    "category": "besonders",
-    "reason": "Deutlich besonderer Fund; regional, saisonal oder habitatgebunden.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "BirdLeague-Spielbewertung"
-  },
-  {
-    "germanName": "Kiebitzregenpfeifer",
-    "scientificName": "Pluvialis squatarola",
-    "englishName": "Black-bellied Plover",
-    "points": 7,
-    "category": "sehr selten, aber regelmäßig",
-    "reason": "Regelmäßiger, aber stark küsten- und zugzeitgebundener Gast; im Alltag sehr ungewöhnlich.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
-  },
-  {
-    "germanName": "Klappergrasmücke",
-    "scientificName": "Curruca curruca",
-    "englishName": "Lesser Whitethroat",
-    "points": 3,
-    "category": "regelmäßig / lokal",
-    "reason": "Regelmäßig, aber regional/lokal oder mit gezielterem Habitatbesuch.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
-  },
-  {
-    "germanName": "Kleiber",
-    "scientificName": "Sitta europaea",
-    "englishName": "Eurasian Nuthatch",
-    "points": 2,
-    "category": "häufig",
-    "reason": "Häufig, aber etwas stärker an Saison oder Lebensraum gebunden.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
-  },
-  {
-    "germanName": "Kohlmeise",
-    "scientificName": "Parus major",
-    "englishName": "Great Tit",
-    "points": 1,
-    "category": "sehr häufig",
-    "reason": "Sehr häufig und weit verbreitet; meist ohne gezielte Suche zu finden.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
-  },
-  {
-    "germanName": "Kolkrabe",
-    "scientificName": "Corvus corax",
-    "englishName": "Common Raven",
-    "points": 3,
-    "category": "regelmäßig / lokal",
-    "reason": "Regelmäßig, aber regional/lokal oder mit gezielterem Habitatbesuch.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
-  },
-  {
-    "germanName": "Kranich",
-    "scientificName": "Grus grus",
-    "englishName": "Common Crane",
-    "points": 4,
-    "category": "besonders",
-    "reason": "Deutlich besonderer Fund; nicht flächig bzw. nur zu passenden Zeiten oder Habitaten.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
-  },
-  {
-    "germanName": "Kuckuck",
-    "scientificName": "Cuculus canorus",
-    "englishName": "Common Cuckoo",
-    "points": 4,
-    "category": "besonders",
-    "reason": "Deutlich besonderer Fund; nicht flächig bzw. nur zu passenden Zeiten oder Habitaten.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
-  },
-  {
-    "germanName": "Lachmöwe",
-    "scientificName": "Chroicocephalus ridibundus",
-    "englishName": "Black-headed Gull",
-    "points": 2,
-    "category": "häufig",
-    "reason": "Häufig, aber etwas stärker an Saison oder Lebensraum gebunden.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
-  },
-  {
-    "germanName": "Mantelmöwe",
-    "scientificName": "Larus marinus",
-    "englishName": "Great Black-backed Gull",
-    "points": 4,
-    "category": "besonders",
-    "reason": "Deutlich besonderer Fund; regional, saisonal oder habitatgebunden.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "BirdLeague-Spielbewertung"
-  },
-  {
-    "germanName": "Mauersegler",
-    "scientificName": "Apus apus",
-    "englishName": "Common Swift",
-    "points": 2,
-    "category": "häufig",
-    "reason": "Häufig, aber etwas stärker an Saison oder Lebensraum gebunden.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
-  },
-  {
-    "germanName": "Mehlschwalbe",
-    "scientificName": "Delichon urbicum",
-    "englishName": "Western House-Martin",
-    "points": 2,
-    "category": "häufig",
-    "reason": "Häufig, aber etwas stärker an Saison oder Lebensraum gebunden.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
-  },
-  {
-    "germanName": "Misteldrossel",
-    "scientificName": "Turdus viscivorus",
-    "englishName": "Mistle Thrush",
-    "points": 3,
-    "category": "regelmäßig / lokal",
-    "reason": "Regelmäßig, aber regional/lokal oder mit gezielterem Habitatbesuch.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
-  },
-  {
-    "germanName": "Mittelmeermöwe",
-    "scientificName": "Larus michahellis",
-    "englishName": "Yellow-legged Gull",
-    "points": 5,
-    "category": "ungewöhnlich",
-    "reason": "In Norddeutschland deutlich weniger alltäglich als Silber- oder Lachmöwe.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
-  },
-  {
-    "germanName": "Moorschneehuhn",
-    "scientificName": "Lagopus lagopus",
-    "englishName": "Willow Ptarmigan",
-    "points": 15,
-    "category": "echte Rarität",
-    "reason": "Echte Rarität; außergewöhnlicher Nachweis.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "BirdLeague-Spielbewertung"
-  },
-  {
-    "germanName": "Mäusebussard",
-    "scientificName": "Buteo buteo",
-    "englishName": "Common Buzzard",
-    "points": 2,
-    "category": "häufig",
-    "reason": "Häufig, aber etwas stärker an Saison oder Lebensraum gebunden.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
-  },
-  {
-    "germanName": "Mönchsgrasmücke",
-    "scientificName": "Sylvia atricapilla",
-    "englishName": "Eurasian Blackcap",
-    "points": 1,
-    "category": "sehr häufig",
-    "reason": "Sehr häufig und weit verbreitet; meist ohne gezielte Suche zu finden.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
-  },
-  {
-    "germanName": "Nachtigall",
-    "scientificName": "Luscinia megarhynchos",
-    "englishName": "Common Nightingale",
-    "points": 3,
-    "category": "regelmäßig / lokal",
-    "reason": "Regelmäßig, aber regional/lokal oder mit gezielterem Habitatbesuch.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "BirdLeague-Spielbewertung"
-  },
-  {
-    "germanName": "Nebelkrähe",
-    "scientificName": "Corvus cornix",
-    "englishName": "Hooded Crow",
-    "points": 3,
-    "category": "regelmäßig / lokal",
-    "reason": "Regelmäßig, aber regional/lokal oder mit gezielterem Habitatbesuch.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
-  },
-  {
-    "germanName": "Neuntöter",
-    "scientificName": "Lanius collurio",
-    "englishName": "Red-backed Shrike",
-    "points": 4,
-    "category": "besonders",
-    "reason": "Deutlich besonderer Fund; regional, saisonal oder habitatgebunden.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "BirdLeague-Spielbewertung"
-  },
-  {
-    "germanName": "Pirol",
-    "scientificName": "Oriolus oriolus",
-    "englishName": "Eurasian Golden Oriole",
-    "points": 4,
-    "category": "besonders",
-    "reason": "Deutlich besonderer Fund; regional, saisonal oder habitatgebunden.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "BirdLeague-Spielbewertung"
-  },
-  {
-    "germanName": "Rabenkrähe",
-    "scientificName": "Corvus corone",
-    "englishName": "Carrion Crow",
-    "points": 1,
-    "category": "sehr häufig",
-    "reason": "Sehr häufig und weit verbreitet; meist ohne gezielte Suche zu finden.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
-  },
-  {
-    "germanName": "Rauchschwalbe",
-    "scientificName": "Hirundo rustica",
-    "englishName": "Barn Swallow",
-    "points": 2,
-    "category": "häufig",
-    "reason": "Häufig, aber etwas stärker an Saison oder Lebensraum gebunden.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
-  },
-  {
-    "germanName": "Ringelgans",
-    "scientificName": "Branta bernicla",
-    "englishName": "Brant",
-    "points": 3,
-    "category": "regelmäßig / lokal",
-    "reason": "Regelmäßig, aber regional/lokal oder mit gezielterem Habitatbesuch.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "BirdLeague-Spielbewertung"
-  },
-  {
-    "germanName": "Ringeltaube",
-    "scientificName": "Columba palumbus",
-    "englishName": "Common Wood-Pigeon",
-    "points": 1,
-    "category": "sehr häufig",
-    "reason": "Sehr häufig und weit verbreitet; meist ohne gezielte Suche zu finden.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
-  },
-  {
-    "germanName": "Rohrammer",
-    "scientificName": "Emberiza schoeniclus",
-    "englishName": "Reed Bunting",
-    "points": 3,
-    "category": "regelmäßig / lokal",
-    "reason": "Regelmäßig, aber regional/lokal oder mit gezielterem Habitatbesuch.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
-  },
-  {
-    "germanName": "Rostgans",
-    "scientificName": "Tadorna ferruginea",
-    "englishName": "Ruddy Shelduck",
-    "points": 4,
-    "category": "besonders",
-    "reason": "Deutlich besonderer Fund; regional, saisonal oder habitatgebunden.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "BirdLeague-Spielbewertung"
-  },
-  {
-    "germanName": "Rotdrossel",
-    "scientificName": "Turdus iliacus",
-    "englishName": "Redwing",
-    "points": 3,
-    "category": "regelmäßig / lokal",
-    "reason": "Regelmäßig, aber regional/lokal oder mit gezielterem Habitatbesuch.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "BirdLeague-Spielbewertung"
-  },
-  {
-    "germanName": "Rotkehlchen",
-    "scientificName": "Erithacus rubecula",
-    "englishName": "European Robin",
-    "points": 1,
-    "category": "sehr häufig",
-    "reason": "Sehr häufig und weit verbreitet; meist ohne gezielte Suche zu finden.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
-  },
-  {
-    "germanName": "Rotschenkel",
-    "scientificName": "Tringa totanus",
-    "englishName": "Common Redshank",
-    "points": 5,
-    "category": "ungewöhnlich",
-    "reason": "Vor allem in Küsten- und Feuchtgebieten; regional deutlich begrenzt.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
-  },
-  {
-    "germanName": "Saatkrähe",
-    "scientificName": "Corvus frugilegus",
-    "englishName": "Rook",
-    "points": 3,
-    "category": "regelmäßig / lokal",
-    "reason": "Regelmäßig, aber regional/lokal oder mit gezielterem Habitatbesuch.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
-  },
-  {
-    "germanName": "Sanderling",
-    "scientificName": "Calidris alba",
-    "englishName": "Sanderling",
-    "points": 5,
-    "category": "ungewöhnlich",
-    "reason": "Typischer Küsten- und Zugvogel; außerhalb passender Orte und Zeiten kaum zu erwarten.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
-  },
-  {
-    "germanName": "Sandregenpfeifer",
-    "scientificName": "Charadrius hiaticula",
-    "englishName": "Common Ringed Plover",
-    "points": 5,
-    "category": "ungewöhnlich",
-    "reason": "Küsten- und Feuchtgebietsart mit deutlich begrenzterer Verbreitung als häufige Stadt-/Waldarten.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
-  },
-  {
-    "germanName": "Schafstelze",
-    "scientificName": "Motacilla flava",
-    "englishName": "Western Yellow Wagtail",
-    "points": 3,
-    "category": "regelmäßig / lokal",
-    "reason": "Regelmäßig, aber regional/lokal oder mit gezielterem Habitatbesuch.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
-  },
-  {
-    "germanName": "Schilfrohrsänger",
-    "scientificName": "Acrocephalus schoenobaenus",
-    "englishName": "Sedge Warbler",
-    "points": 4,
-    "category": "besonders",
-    "reason": "Deutlich besonderer Fund; nicht flächig bzw. nur zu passenden Zeiten oder Habitaten.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
-  },
-  {
-    "germanName": "Schwanzmeise",
-    "scientificName": "Aegithalos caudatus",
-    "englishName": "Long-tailed Tit",
-    "points": 2,
-    "category": "häufig",
-    "reason": "Häufig, aber etwas saisonaler oder habitatgebundener.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "BirdLeague-Spielbewertung"
-  },
-  {
-    "germanName": "Schwarzspecht",
-    "scientificName": "Dryocopus martius",
-    "englishName": "Black Woodpecker",
-    "points": 5,
-    "category": "ungewöhnlich",
-    "reason": "Nicht extrem selten, aber an große Waldgebiete gebunden und deutlich weniger alltäglich.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
-  },
-  {
-    "germanName": "Seidenschwanz",
-    "scientificName": "Bombycilla garrulus",
-    "englishName": "Bohemian Waxwing",
-    "points": 6,
-    "category": "selten / stark lokalisiert",
-    "reason": "Seltener bzw. stark lokalisierter BirdLeague-Fund.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "BirdLeague-Spielbewertung"
-  },
-  {
-    "germanName": "Silbermöwe",
-    "scientificName": "Larus argentatus",
-    "englishName": "European Herring Gull",
-    "points": 2,
-    "category": "häufig",
-    "reason": "Häufig, aber etwas stärker an Saison oder Lebensraum gebunden.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
-  },
-  {
-    "germanName": "Singdrossel",
-    "scientificName": "Turdus philomelos",
-    "englishName": "Song Thrush",
-    "points": 2,
-    "category": "häufig",
-    "reason": "Häufig, aber etwas stärker an Saison oder Lebensraum gebunden.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
-  },
-  {
-    "germanName": "Singschwan",
-    "scientificName": "Cygnus cygnus",
-    "englishName": "Whooper Swan",
-    "points": 4,
-    "category": "besonders",
-    "reason": "Deutlich besonderer Fund; regional, saisonal oder habitatgebunden.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "BirdLeague-Spielbewertung"
-  },
-  {
-    "germanName": "Sommergoldhähnchen",
-    "scientificName": "Regulus ignicapilla",
-    "englishName": "Common Firecrest",
-    "points": 4,
-    "category": "besonders",
-    "reason": "Deutlich besonderer Fund; nicht flächig bzw. nur zu passenden Zeiten oder Habitaten.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
-  },
-  {
-    "germanName": "Sperber",
-    "scientificName": "Accipiter nisus",
-    "englishName": "Eurasian Sparrowhawk",
-    "points": 4,
-    "category": "besonders",
-    "reason": "Deutlich besonderer Fund; nicht flächig bzw. nur zu passenden Zeiten oder Habitaten.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
-  },
-  {
-    "germanName": "Star",
-    "scientificName": "Sturnus vulgaris",
-    "englishName": "European Starling",
-    "points": 1,
-    "category": "sehr häufig",
-    "reason": "Sehr häufig und weit verbreitet; meist ohne gezielte Suche zu finden.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
-  },
-  {
-    "germanName": "Steinschmätzer",
-    "scientificName": "Oenanthe oenanthe",
-    "englishName": "Northern Wheatear",
-    "points": 5,
-    "category": "ungewöhnlich",
-    "reason": "Ungewöhnlicher Fund; meist gezielte Suche, passendes Habitat oder Zugzeit nötig.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
-  },
-  {
-    "germanName": "Sterntaucher",
-    "scientificName": "Gavia stellata",
-    "englishName": "Red-throated Loon",
-    "points": 6,
-    "category": "selten / stark lokalisiert",
-    "reason": "Seltener bzw. stark lokalisierter BirdLeague-Fund.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "BirdLeague-Spielbewertung"
-  },
-  {
-    "germanName": "Stieglitz",
-    "scientificName": "Carduelis carduelis",
-    "englishName": "European Goldfinch",
-    "points": 2,
-    "category": "häufig",
-    "reason": "Häufig, aber etwas stärker an Saison oder Lebensraum gebunden.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
-  },
-  {
-    "germanName": "Stockente",
-    "scientificName": "Anas platyrhynchos",
-    "englishName": "Mallard",
-    "points": 1,
-    "category": "sehr häufig",
-    "reason": "Sehr häufig und weit verbreitet; meist ohne gezielte Suche zu finden.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
-  },
-  {
-    "germanName": "Sturmmöwe",
-    "scientificName": "Larus canus",
-    "englishName": "Common Gull",
-    "points": 3,
-    "category": "regelmäßig / lokal",
-    "reason": "Regelmäßig, aber regional/lokal oder mit gezielterem Habitatbesuch.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
-  },
-  {
-    "germanName": "Sumpfmeise",
-    "scientificName": "Poecile palustris",
-    "englishName": "Marsh Tit",
-    "points": 3,
-    "category": "regelmäßig / lokal",
-    "reason": "Regelmäßig, aber regional/lokal oder mit gezielterem Habitatbesuch.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
-  },
-  {
-    "germanName": "Säbelschnäbler",
-    "scientificName": "Recurvirostra avosetta",
-    "englishName": "Pied Avocet",
-    "points": 4,
-    "category": "besonders",
-    "reason": "Deutlich besonderer Fund; regional, saisonal oder habitatgebunden.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "BirdLeague-Spielbewertung"
-  },
-  {
-    "germanName": "Tannenmeise",
-    "scientificName": "Periparus ater",
-    "englishName": "Coal Tit",
-    "points": 2,
-    "category": "häufig",
-    "reason": "Häufig, aber etwas stärker an Saison oder Lebensraum gebunden.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
-  },
-  {
-    "germanName": "Teichhuhn",
-    "scientificName": "Gallinula chloropus",
-    "englishName": "Eurasian Moorhen",
-    "points": 3,
-    "category": "regelmäßig / lokal",
-    "reason": "Regelmäßig, aber regional/lokal oder mit gezielterem Habitatbesuch.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
-  },
-  {
-    "germanName": "Teichrohrsänger",
-    "scientificName": "Acrocephalus scirpaceus",
-    "englishName": "Common Reed Warbler",
-    "points": 3,
-    "category": "regelmäßig / lokal",
-    "reason": "Regelmäßig, aber regional/lokal oder mit gezielterem Habitatbesuch.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "BirdLeague-Spielbewertung"
-  },
-  {
-    "germanName": "Trauerschnäpper",
-    "scientificName": "Ficedula hypoleuca",
-    "englishName": "European Pied Flycatcher",
-    "points": 4,
-    "category": "besonders",
-    "reason": "Deutlich besonderer Fund; regional, saisonal oder habitatgebunden.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "BirdLeague-Spielbewertung"
-  },
-  {
-    "germanName": "Turmfalke",
-    "scientificName": "Falco tinnunculus",
-    "englishName": "Eurasian Kestrel",
-    "points": 2,
-    "category": "häufig",
-    "reason": "Häufig, aber etwas stärker an Saison oder Lebensraum gebunden.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
-  },
-  {
-    "germanName": "Türkentaube",
-    "scientificName": "Streptopelia decaocto",
-    "englishName": "Eurasian Collared-Dove",
-    "points": 1,
-    "category": "sehr häufig",
-    "reason": "Sehr häufig und weit verbreitet; meist ohne gezielte Suche zu finden.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
-  },
-  {
-    "germanName": "Uferschnepfe",
-    "scientificName": "Limosa limosa",
-    "englishName": "Black-tailed Godwit",
-    "points": 6,
-    "category": "selten / stark lokalisiert",
-    "reason": "Seltener bzw. stark lokalisierter BirdLeague-Fund.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "BirdLeague-Spielbewertung"
-  },
-  {
-    "germanName": "Uferschwalbe",
-    "scientificName": "Riparia riparia",
-    "englishName": "Bank Swallow",
-    "points": 3,
-    "category": "regelmäßig / lokal",
-    "reason": "Regelmäßig, aber regional/lokal oder mit gezielterem Habitatbesuch.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "BirdLeague-Spielbewertung"
-  },
-  {
-    "germanName": "Wacholderdrossel",
-    "scientificName": "Turdus pilaris",
-    "englishName": "Fieldfare",
-    "points": 2,
-    "category": "häufig",
-    "reason": "Häufig, aber etwas saisonaler oder habitatgebundener.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "BirdLeague-Spielbewertung"
-  },
-  {
-    "germanName": "Waldlaubsänger",
-    "scientificName": "Phylloscopus sibilatrix",
-    "englishName": "Wood Warbler",
-    "points": 5,
-    "category": "ungewöhnlich",
-    "reason": "Waldgebundener, regional rückläufiger Zugvogel; deutlich weniger alltäglich als Zilpzalp/Fitis.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
-  },
-  {
-    "germanName": "Waldohreule",
-    "scientificName": "Asio otus",
-    "englishName": "Long-eared Owl",
-    "points": 7,
-    "category": "sehr selten, aber regelmäßig",
-    "reason": "Nachtaktiv und trotz weiter Verbreitung schwer gezielt akustisch zu erwischen.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
-  },
-  {
-    "germanName": "Waldschnepfe",
-    "scientificName": "Scolopax rusticola",
-    "englishName": "Eurasian Woodcock",
-    "points": 5,
-    "category": "ungewöhnlich",
-    "reason": "Ungewöhnlicher Fund; meist passende Zugzeit, Habitat oder gezielte Suche nötig.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "BirdLeague-Spielbewertung"
-  },
-  {
-    "germanName": "Waldwasserläufer",
-    "scientificName": "Tringa ochropus",
-    "englishName": "Green Sandpiper",
-    "points": 4,
-    "category": "besonders",
-    "reason": "Deutlich besonderer Fund; regional, saisonal oder habitatgebunden.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "BirdLeague-Spielbewertung"
-  },
-  {
-    "germanName": "Weidenmeise",
-    "scientificName": "Poecile montanus",
-    "englishName": "Willow Tit",
-    "points": 4,
-    "category": "besonders",
-    "reason": "Deutlich besonderer Fund; regional, saisonal oder habitatgebunden.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "BirdLeague-Spielbewertung"
-  },
-  {
-    "germanName": "Weißwangengans",
-    "scientificName": "Branta leucopsis",
-    "englishName": "Barnacle Goose",
-    "points": 3,
-    "category": "regelmäßig / lokal",
-    "reason": "Regelmäßig, aber regional/lokal oder mit gezielterem Habitatbesuch.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "BirdLeague-Spielbewertung"
-  },
-  {
-    "germanName": "Wiesenpieper",
-    "scientificName": "Anthus pratensis",
-    "englishName": "Meadow Pipit",
-    "points": 3,
-    "category": "regelmäßig / lokal",
-    "reason": "Regelmäßig, aber regional/lokal oder mit gezielterem Habitatbesuch.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
-  },
-  {
-    "germanName": "Wintergoldhähnchen",
-    "scientificName": "Regulus regulus",
-    "englishName": "Goldcrest",
-    "points": 3,
-    "category": "regelmäßig / lokal",
-    "reason": "Regelmäßig, aber regional/lokal oder mit gezielterem Habitatbesuch.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
-  },
-  {
-    "germanName": "Zaunkönig",
-    "scientificName": "Troglodytes troglodytes",
-    "englishName": "Eurasian Wren",
-    "points": 1,
-    "category": "sehr häufig",
-    "reason": "Sehr häufig und weit verbreitet; meist ohne gezielte Suche zu finden.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
-  },
-  {
-    "germanName": "Zilpzalp",
-    "scientificName": "Phylloscopus collybita",
-    "englishName": "Common Chiffchaff",
-    "points": 1,
-    "category": "sehr häufig",
-    "reason": "Sehr häufig und weit verbreitet; meist ohne gezielte Suche zu finden.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "https://www.dda-web.de/aktuelles/meldungen/voegel-in-deutschland-bestandssituation-2025"
-  },
-  {
-    "germanName": "Zwergschnäpper",
-    "scientificName": "Ficedula parva",
-    "englishName": "Red-breasted Flycatcher",
-    "points": 8,
-    "category": "sehr selten",
-    "reason": "Sehr seltener Fund mit nur wenigen realistischen Gelegenheiten.",
-    "referenceRegion": "Deutschland / Norddeutschland",
-    "source": "BirdLeague-Spielbewertung"
-  }
-]
+{
+  "version": 3,
+  "scoringModel": "Art × Region × Zeitfenster",
+  "season": {
+    "startMonth": 5,
+    "endMonth": 5
+  },
+  "regions": {
+    "DE-NORTH": "Deutschland Nord",
+    "DE-CENTRAL": "Deutschland Mitte",
+    "DE-SOUTH": "Deutschland Süd",
+    "DK": "Dänemark",
+    "SE-SOUTH": "Südschweden",
+    "SE-CENTRAL": "Mittelschweden",
+    "SE-NORTH": "Nordschweden",
+    "NO": "Norwegen",
+    "JP-TOKYO": "Japan – Tokio",
+    "OTHER": "Sonstige Region"
+  },
+  "scoreWindows": {
+    "may_aug": "Mai–August",
+    "sep_nov": "September–November",
+    "dec_feb": "Dezember–Februar",
+    "mar_apr": "März–April"
+  },
+  "scale": {
+    "1": "sehr häufig",
+    "2": "häufig / gut erwartbar",
+    "3": "regelmäßig, aber habitat- oder saisongebunden",
+    "4": "ungewöhnlich / lokal",
+    "5": "selten",
+    "6": "selten, aber regelmäßig",
+    "7": "sehr selten, aber noch regelmäßig",
+    "8": "außergewöhnlich",
+    "9": "nationale Seltenheit",
+    "10": "extrem selten",
+    "15": "echte Rarität"
+  },
+  "methodNote": "V3 bewertet die Wahrscheinlichkeit/Besonderheit eines Nachweises in der jeweiligen Region und Jahreszeit. Gefährdungsstatus oder Suchaufwand allein erhöhen den Wert nicht. Nur aktuell benötigte Region-Zeit-Kombinationen sind befüllt; neue Kombinationen müssen vor Import bewertet werden.",
+  "species": [
+    {
+      "germanName": "Alpenstrandläufer",
+      "scientificName": "Calidris alpina",
+      "englishName": "Dunlin",
+      "scores": {
+        "DK": {
+          "may_aug": 2
+        }
+      }
+    },
+    {
+      "germanName": "Amsel",
+      "scientificName": "Turdus merula",
+      "englishName": "Eurasian Blackbird",
+      "scores": {
+        "DK": {
+          "may_aug": 1
+        }
+      }
+    },
+    {
+      "germanName": "Austernfischer",
+      "scientificName": "Haematopus ostralegus",
+      "englishName": "Eurasian Oystercatcher",
+      "scores": {
+        "DK": {
+          "may_aug": 2
+        }
+      }
+    },
+    {
+      "germanName": "Bachstelze",
+      "scientificName": "Motacilla alba",
+      "englishName": "White Wagtail",
+      "scores": {
+        "DK": {
+          "may_aug": 1
+        }
+      }
+    },
+    {
+      "germanName": "Baumpieper",
+      "scientificName": "Anthus trivialis",
+      "englishName": "Tree Pipit",
+      "scores": {
+        "DK": {
+          "may_aug": 2
+        }
+      }
+    },
+    {
+      "germanName": "Bekassine",
+      "scientificName": "Gallinago gallinago",
+      "englishName": "Common Snipe",
+      "scores": {
+        "NO": {
+          "may_aug": 2
+        }
+      }
+    },
+    {
+      "germanName": "Bergfink",
+      "scientificName": "Fringilla montifringilla",
+      "englishName": "Brambling",
+      "scores": {
+        "NO": {
+          "may_aug": 1
+        },
+        "SE-NORTH": {
+          "may_aug": 2
+        }
+      }
+    },
+    {
+      "germanName": "Birkenzeisig",
+      "scientificName": "Acanthis flammea",
+      "englishName": "Redpoll",
+      "scores": {
+        "DK": {
+          "may_aug": 4
+        }
+      }
+    },
+    {
+      "germanName": "Blauelster",
+      "scientificName": "Cyanopica cyanus",
+      "englishName": "Azure-winged Magpie",
+      "scores": {
+        "JP-TOKYO": {
+          "may_aug": 2
+        }
+      }
+    },
+    {
+      "germanName": "Blaukehlchen",
+      "scientificName": "Luscinia svecica",
+      "englishName": "Bluethroat",
+      "scores": {
+        "DK": {
+          "may_aug": 3
+        }
+      }
+    },
+    {
+      "germanName": "Blaumeise",
+      "scientificName": "Cyanistes caeruleus",
+      "englishName": "Eurasian Blue Tit",
+      "scores": {
+        "DE-NORTH": {
+          "may_aug": 1
+        },
+        "DK": {
+          "may_aug": 1
+        }
+      }
+    },
+    {
+      "germanName": "Bluthänfling",
+      "scientificName": "Linaria cannabina",
+      "englishName": "Eurasian Linnet",
+      "scores": {
+        "DK": {
+          "may_aug": 2
+        }
+      }
+    },
+    {
+      "germanName": "Blässgans",
+      "scientificName": "Anser albifrons",
+      "englishName": "Greater White-fronted Goose",
+      "scores": {
+        "SE-NORTH": {
+          "may_aug": 5
+        }
+      }
+    },
+    {
+      "germanName": "Blässhuhn",
+      "scientificName": "Fulica atra",
+      "englishName": "Eurasian Coot",
+      "scores": {
+        "DE-NORTH": {
+          "may_aug": 1
+        }
+      }
+    },
+    {
+      "germanName": "Brandseeschwalbe",
+      "scientificName": "Thalasseus sandvicensis",
+      "englishName": "Sandwich Tern",
+      "scores": {
+        "DE-NORTH": {
+          "may_aug": 3
+        }
+      }
+    },
+    {
+      "germanName": "Braunkehlchen",
+      "scientificName": "Saxicola rubetra",
+      "englishName": "Whinchat",
+      "scores": {
+        "SE-SOUTH": {
+          "may_aug": 3
+        }
+      }
+    },
+    {
+      "germanName": "Braunohrbülbül",
+      "scientificName": "Hypsipetes amaurotis",
+      "englishName": "Brown-eared Bulbul",
+      "scores": {
+        "JP-TOKYO": {
+          "may_aug": 1
+        }
+      }
+    },
+    {
+      "germanName": "Buchfink",
+      "scientificName": "Fringilla coelebs",
+      "englishName": "Common Chaffinch",
+      "scores": {
+        "DK": {
+          "may_aug": 1
+        }
+      }
+    },
+    {
+      "germanName": "Buntspecht",
+      "scientificName": "Dendrocopos major",
+      "englishName": "Great Spotted Woodpecker",
+      "scores": {
+        "DE-NORTH": {
+          "may_aug": 2
+        }
+      }
+    },
+    {
+      "germanName": "Dickschnabelkrähe",
+      "scientificName": "Corvus macrorhynchos",
+      "englishName": "Large-billed Crow",
+      "scores": {
+        "JP-TOKYO": {
+          "may_aug": 1
+        }
+      }
+    },
+    {
+      "germanName": "Dohle",
+      "scientificName": "Coloeus monedula",
+      "englishName": "Eurasian Jackdaw",
+      "scores": {
+        "DE-CENTRAL": {
+          "may_aug": 2
+        }
+      }
+    },
+    {
+      "germanName": "Dorngrasmücke",
+      "scientificName": "Curruca communis",
+      "englishName": "Greater Whitethroat",
+      "scores": {
+        "DK": {
+          "may_aug": 2
+        }
+      }
+    },
+    {
+      "germanName": "Eichelhäher",
+      "scientificName": "Garrulus glandarius",
+      "englishName": "Eurasian Jay",
+      "scores": {
+        "SE-SOUTH": {
+          "may_aug": 1
+        }
+      }
+    },
+    {
+      "germanName": "Eiderente",
+      "scientificName": "Somateria mollissima",
+      "englishName": "Common Eider",
+      "scores": {
+        "NO": {
+          "may_aug": 1
+        }
+      }
+    },
+    {
+      "germanName": "Elster",
+      "scientificName": "Pica pica",
+      "englishName": "Eurasian Magpie",
+      "scores": {
+        "DE-NORTH": {
+          "may_aug": 1
+        }
+      }
+    },
+    {
+      "germanName": "Erlenzeisig",
+      "scientificName": "Spinus spinus",
+      "englishName": "Eurasian Siskin",
+      "scores": {
+        "SE-NORTH": {
+          "may_aug": 1
+        },
+        "SE-SOUTH": {
+          "may_aug": 1
+        }
+      }
+    },
+    {
+      "germanName": "Feldlerche",
+      "scientificName": "Alauda arvensis",
+      "englishName": "Eurasian Skylark",
+      "scores": {
+        "DK": {
+          "may_aug": 1
+        }
+      }
+    },
+    {
+      "germanName": "Feldschwirl",
+      "scientificName": "Locustella naevia",
+      "englishName": "Common Grasshopper Warbler",
+      "scores": {
+        "DK": {
+          "may_aug": 4
+        }
+      }
+    },
+    {
+      "germanName": "Feldsperling",
+      "scientificName": "Passer montanus",
+      "englishName": "Eurasian Tree Sparrow",
+      "scores": {
+        "DK": {
+          "may_aug": 2
+        },
+        "SE-SOUTH": {
+          "may_aug": 2
+        }
+      }
+    },
+    {
+      "germanName": "Felsentaube",
+      "scientificName": "Columba livia",
+      "englishName": "Rock Pigeon",
+      "scores": {
+        "DE-NORTH": {
+          "may_aug": 1
+        }
+      }
+    },
+    {
+      "germanName": "Fichtenkreuzschnabel",
+      "scientificName": "Loxia curvirostra",
+      "englishName": "Red Crossbill",
+      "scores": {
+        "SE-NORTH": {
+          "may_aug": 2
+        }
+      }
+    },
+    {
+      "germanName": "Fitis",
+      "scientificName": "Phylloscopus trochilus",
+      "englishName": "Willow Warbler",
+      "scores": {
+        "DK": {
+          "may_aug": 2
+        }
+      }
+    },
+    {
+      "germanName": "Flussseeschwalbe",
+      "scientificName": "Sterna hirundo",
+      "englishName": "Common Tern",
+      "scores": {
+        "DE-NORTH": {
+          "may_aug": 3
+        },
+        "DK": {
+          "may_aug": 3
+        }
+      }
+    },
+    {
+      "germanName": "Flussuferläufer",
+      "scientificName": "Actitis hypoleucos",
+      "englishName": "Common Sandpiper",
+      "scores": {
+        "DK": {
+          "may_aug": 3
+        },
+        "SE-SOUTH": {
+          "may_aug": 2
+        }
+      }
+    },
+    {
+      "germanName": "Gartenbaumläufer",
+      "scientificName": "Certhia brachydactyla",
+      "englishName": "Short-toed Treecreeper",
+      "scores": {
+        "DE-NORTH": {
+          "may_aug": 2
+        },
+        "DK": {
+          "may_aug": 2
+        }
+      }
+    },
+    {
+      "germanName": "Gartengrasmücke",
+      "scientificName": "Sylvia borin",
+      "englishName": "Garden Warbler",
+      "scores": {
+        "DE-NORTH": {
+          "may_aug": 3
+        },
+        "DK": {
+          "may_aug": 3
+        }
+      }
+    },
+    {
+      "germanName": "Gartenrotschwanz",
+      "scientificName": "Phoenicurus phoenicurus",
+      "englishName": "Common Redstart",
+      "scores": {
+        "DK": {
+          "may_aug": 2
+        }
+      }
+    },
+    {
+      "germanName": "Gelbspötter",
+      "scientificName": "Hippolais icterina",
+      "englishName": "Icterine Warbler",
+      "scores": {
+        "DE-NORTH": {
+          "may_aug": 3
+        }
+      }
+    },
+    {
+      "germanName": "Gimpel",
+      "scientificName": "Pyrrhula pyrrhula",
+      "englishName": "Eurasian Bullfinch",
+      "scores": {
+        "DE-NORTH": {
+          "may_aug": 2
+        }
+      }
+    },
+    {
+      "germanName": "Girlitz",
+      "scientificName": "Serinus serinus",
+      "englishName": "European Serin",
+      "scores": {
+        "DE-SOUTH": {
+          "may_aug": 2
+        }
+      }
+    },
+    {
+      "germanName": "Goldammer",
+      "scientificName": "Emberiza citrinella",
+      "englishName": "Yellowhammer",
+      "scores": {
+        "DK": {
+          "may_aug": 2
+        }
+      }
+    },
+    {
+      "germanName": "Goldregenpfeifer",
+      "scientificName": "Pluvialis apricaria",
+      "englishName": "European Golden-Plover",
+      "scores": {
+        "DK": {
+          "may_aug": 3
+        },
+        "NO": {
+          "may_aug": 2
+        },
+        "SE-SOUTH": {
+          "may_aug": 3
+        }
+      }
+    },
+    {
+      "germanName": "Graugans",
+      "scientificName": "Anser anser",
+      "englishName": "Graylag Goose",
+      "scores": {
+        "DE-NORTH": {
+          "may_aug": 1
+        },
+        "DK": {
+          "may_aug": 1
+        }
+      }
+    },
+    {
+      "germanName": "Graureiher",
+      "scientificName": "Ardea cinerea",
+      "englishName": "Gray Heron",
+      "scores": {
+        "DK": {
+          "may_aug": 1
+        }
+      }
+    },
+    {
+      "germanName": "Grauschnäpper",
+      "scientificName": "Muscicapa striata",
+      "englishName": "Spotted Flycatcher",
+      "scores": {
+        "DE-NORTH": {
+          "may_aug": 3
+        }
+      }
+    },
+    {
+      "germanName": "Großer Brachvogel",
+      "scientificName": "Numenius arquata",
+      "englishName": "Eurasian Curlew",
+      "scores": {
+        "DK": {
+          "may_aug": 2
+        }
+      }
+    },
+    {
+      "germanName": "Grünfink",
+      "scientificName": "Chloris chloris",
+      "englishName": "European Greenfinch",
+      "scores": {
+        "DK": {
+          "may_aug": 2
+        }
+      }
+    },
+    {
+      "germanName": "Grünschenkel",
+      "scientificName": "Tringa nebularia",
+      "englishName": "Common Greenshank",
+      "scores": {
+        "DK": {
+          "may_aug": 3
+        },
+        "SE-NORTH": {
+          "may_aug": 2
+        }
+      }
+    },
+    {
+      "germanName": "Grünspecht",
+      "scientificName": "Picus viridis",
+      "englishName": "Eurasian Green Woodpecker",
+      "scores": {
+        "DE-NORTH": {
+          "may_aug": 2
+        },
+        "DE-SOUTH": {
+          "may_aug": 2
+        },
+        "SE-SOUTH": {
+          "may_aug": 3
+        }
+      }
+    },
+    {
+      "germanName": "Gänsesäger",
+      "scientificName": "Mergus merganser",
+      "englishName": "Common Merganser",
+      "scores": {
+        "SE-NORTH": {
+          "may_aug": 2
+        }
+      }
+    },
+    {
+      "germanName": "Haubenmeise",
+      "scientificName": "Lophophanes cristatus",
+      "englishName": "Crested Tit",
+      "scores": {
+        "SE-SOUTH": {
+          "may_aug": 2
+        }
+      }
+    },
+    {
+      "germanName": "Hausrotschwanz",
+      "scientificName": "Phoenicurus ochruros",
+      "englishName": "Black Redstart",
+      "scores": {
+        "DE-NORTH": {
+          "may_aug": 2
+        },
+        "DE-SOUTH": {
+          "may_aug": 1
+        }
+      }
+    },
+    {
+      "germanName": "Haussperling",
+      "scientificName": "Passer domesticus",
+      "englishName": "House Sparrow",
+      "scores": {
+        "DE-NORTH": {
+          "may_aug": 1
+        }
+      }
+    },
+    {
+      "germanName": "Heckenbraunelle",
+      "scientificName": "Prunella modularis",
+      "englishName": "Dunnock",
+      "scores": {
+        "DK": {
+          "may_aug": 1
+        }
+      }
+    },
+    {
+      "germanName": "Heidelerche",
+      "scientificName": "Lullula arborea",
+      "englishName": "Wood Lark",
+      "scores": {
+        "DK": {
+          "may_aug": 4
+        }
+      }
+    },
+    {
+      "germanName": "Heringsmöwe",
+      "scientificName": "Larus fuscus",
+      "englishName": "Lesser Black-backed Gull",
+      "scores": {
+        "DE-NORTH": {
+          "may_aug": 2
+        }
+      }
+    },
+    {
+      "germanName": "Jagdfasan",
+      "scientificName": "Phasianus colchicus",
+      "englishName": "Ring-necked Pheasant",
+      "scores": {
+        "DK": {
+          "may_aug": 2
+        }
+      }
+    },
+    {
+      "germanName": "Japanbrillenvogel",
+      "scientificName": "Zosterops japonicus",
+      "englishName": "Warbling White-eye",
+      "scores": {
+        "JP-TOKYO": {
+          "may_aug": 1
+        }
+      }
+    },
+    {
+      "germanName": "Kanadagans",
+      "scientificName": "Branta canadensis",
+      "englishName": "Canada Goose",
+      "scores": {
+        "DE-NORTH": {
+          "may_aug": 1
+        },
+        "DK": {
+          "may_aug": 1
+        }
+      }
+    },
+    {
+      "germanName": "Kernbeißer",
+      "scientificName": "Coccothraustes coccothraustes",
+      "englishName": "Hawfinch",
+      "scores": {
+        "DE-NORTH": {
+          "may_aug": 3
+        },
+        "DE-SOUTH": {
+          "may_aug": 2
+        }
+      }
+    },
+    {
+      "germanName": "Kiebitz",
+      "scientificName": "Vanellus vanellus",
+      "englishName": "Northern Lapwing",
+      "scores": {
+        "DK": {
+          "may_aug": 2
+        }
+      }
+    },
+    {
+      "germanName": "Kiebitzregenpfeifer",
+      "scientificName": "Pluvialis squatarola",
+      "englishName": "Black-bellied Plover",
+      "scores": {
+        "DK": {
+          "may_aug": 3
+        }
+      }
+    },
+    {
+      "germanName": "Klappergrasmücke",
+      "scientificName": "Curruca curruca",
+      "englishName": "Lesser Whitethroat",
+      "scores": {
+        "DK": {
+          "may_aug": 3
+        }
+      }
+    },
+    {
+      "germanName": "Kleiber",
+      "scientificName": "Sitta europaea",
+      "englishName": "Eurasian Nuthatch",
+      "scores": {
+        "DE-NORTH": {
+          "may_aug": 2
+        },
+        "SE-SOUTH": {
+          "may_aug": 1
+        }
+      }
+    },
+    {
+      "germanName": "Kohlmeise",
+      "scientificName": "Parus major",
+      "englishName": "Great Tit",
+      "scores": {
+        "DK": {
+          "may_aug": 1
+        }
+      }
+    },
+    {
+      "germanName": "Kolkrabe",
+      "scientificName": "Corvus corax",
+      "englishName": "Common Raven",
+      "scores": {
+        "DE-NORTH": {
+          "may_aug": 2
+        },
+        "DK": {
+          "may_aug": 2
+        }
+      }
+    },
+    {
+      "germanName": "Kranich",
+      "scientificName": "Grus grus",
+      "englishName": "Common Crane",
+      "scores": {
+        "DE-NORTH": {
+          "may_aug": 2
+        },
+        "SE-SOUTH": {
+          "may_aug": 2
+        }
+      }
+    },
+    {
+      "germanName": "Kuckuck",
+      "scientificName": "Cuculus canorus",
+      "englishName": "Common Cuckoo",
+      "scores": {
+        "DK": {
+          "may_aug": 3
+        }
+      }
+    },
+    {
+      "germanName": "Lachmöwe",
+      "scientificName": "Chroicocephalus ridibundus",
+      "englishName": "Black-headed Gull",
+      "scores": {
+        "DE-NORTH": {
+          "may_aug": 2
+        },
+        "DK": {
+          "may_aug": 2
+        }
+      }
+    },
+    {
+      "germanName": "Mantelmöwe",
+      "scientificName": "Larus marinus",
+      "englishName": "Great Black-backed Gull",
+      "scores": {
+        "NO": {
+          "may_aug": 1
+        }
+      }
+    },
+    {
+      "germanName": "Mauersegler",
+      "scientificName": "Apus apus",
+      "englishName": "Common Swift",
+      "scores": {
+        "DE-NORTH": {
+          "may_aug": 2
+        },
+        "DE-SOUTH": {
+          "may_aug": 1
+        }
+      }
+    },
+    {
+      "germanName": "Mehlschwalbe",
+      "scientificName": "Delichon urbicum",
+      "englishName": "Western House-Martin",
+      "scores": {
+        "DE-SOUTH": {
+          "may_aug": 1
+        },
+        "DK": {
+          "may_aug": 2
+        }
+      }
+    },
+    {
+      "germanName": "Misteldrossel",
+      "scientificName": "Turdus viscivorus",
+      "englishName": "Mistle Thrush",
+      "scores": {
+        "DE-NORTH": {
+          "may_aug": 2
+        },
+        "DK": {
+          "may_aug": 2
+        }
+      }
+    },
+    {
+      "germanName": "Mittelmeermöwe",
+      "scientificName": "Larus michahellis",
+      "englishName": "Yellow-legged Gull",
+      "scores": {
+        "DE-NORTH": {
+          "may_aug": 4
+        }
+      }
+    },
+    {
+      "germanName": "Moorschneehuhn",
+      "scientificName": "Lagopus lagopus",
+      "englishName": "Willow Ptarmigan",
+      "scores": {
+        "NO": {
+          "may_aug": 2
+        }
+      }
+    },
+    {
+      "germanName": "Mäusebussard",
+      "scientificName": "Buteo buteo",
+      "englishName": "Common Buzzard",
+      "scores": {
+        "DE-NORTH": {
+          "may_aug": 2
+        }
+      }
+    },
+    {
+      "germanName": "Mönchsgrasmücke",
+      "scientificName": "Sylvia atricapilla",
+      "englishName": "Eurasian Blackcap",
+      "scores": {
+        "DK": {
+          "may_aug": 1
+        }
+      }
+    },
+    {
+      "germanName": "Nachtigall",
+      "scientificName": "Luscinia megarhynchos",
+      "englishName": "Common Nightingale",
+      "scores": {
+        "DE-NORTH": {
+          "may_aug": 2
+        }
+      }
+    },
+    {
+      "germanName": "Nebelkrähe",
+      "scientificName": "Corvus cornix",
+      "englishName": "Hooded Crow",
+      "scores": {
+        "DE-NORTH": {
+          "may_aug": 3
+        },
+        "DK": {
+          "may_aug": 2
+        }
+      }
+    },
+    {
+      "germanName": "Neuntöter",
+      "scientificName": "Lanius collurio",
+      "englishName": "Red-backed Shrike",
+      "scores": {
+        "DE-NORTH": {
+          "may_aug": 3
+        }
+      }
+    },
+    {
+      "germanName": "Pirol",
+      "scientificName": "Oriolus oriolus",
+      "englishName": "Eurasian Golden Oriole",
+      "scores": {
+        "DE-NORTH": {
+          "may_aug": 4
+        }
+      }
+    },
+    {
+      "germanName": "Rabenkrähe",
+      "scientificName": "Corvus corone",
+      "englishName": "Carrion Crow",
+      "scores": {
+        "DE-NORTH": {
+          "may_aug": 1
+        },
+        "DK": {
+          "may_aug": 1
+        }
+      }
+    },
+    {
+      "germanName": "Raubseeschwalbe",
+      "scientificName": "Hydroprogne caspia",
+      "englishName": "Caspian Tern",
+      "scores": {
+        "DE-SOUTH": {
+          "may_aug": 6
+        }
+      }
+    },
+    {
+      "germanName": "Rauchschwalbe",
+      "scientificName": "Hirundo rustica",
+      "englishName": "Barn Swallow",
+      "scores": {
+        "DK": {
+          "may_aug": 1
+        }
+      }
+    },
+    {
+      "germanName": "Ringelgans",
+      "scientificName": "Branta bernicla",
+      "englishName": "Brant",
+      "scores": {
+        "DK": {
+          "may_aug": 2
+        }
+      }
+    },
+    {
+      "germanName": "Ringeltaube",
+      "scientificName": "Columba palumbus",
+      "englishName": "Common Wood-Pigeon",
+      "scores": {
+        "DK": {
+          "may_aug": 1
+        }
+      }
+    },
+    {
+      "germanName": "Rohrammer",
+      "scientificName": "Emberiza schoeniclus",
+      "englishName": "Reed Bunting",
+      "scores": {
+        "DK": {
+          "may_aug": 2
+        }
+      }
+    },
+    {
+      "germanName": "Rohrdommel",
+      "scientificName": "Botaurus stellaris",
+      "englishName": "Eurasian Bittern",
+      "scores": {
+        "DK": {
+          "may_aug": 5
+        }
+      }
+    },
+    {
+      "germanName": "Rostgans",
+      "scientificName": "Tadorna ferruginea",
+      "englishName": "Ruddy Shelduck",
+      "scores": {
+        "DE-SOUTH": {
+          "may_aug": 3
+        },
+        "DK": {
+          "may_aug": 4
+        }
+      }
+    },
+    {
+      "germanName": "Rotdrossel",
+      "scientificName": "Turdus iliacus",
+      "englishName": "Redwing",
+      "scores": {
+        "SE-NORTH": {
+          "may_aug": 1
+        }
+      }
+    },
+    {
+      "germanName": "Rotkehlchen",
+      "scientificName": "Erithacus rubecula",
+      "englishName": "European Robin",
+      "scores": {
+        "DE-NORTH": {
+          "may_aug": 1
+        },
+        "DK": {
+          "may_aug": 1
+        }
+      }
+    },
+    {
+      "germanName": "Rotschenkel",
+      "scientificName": "Tringa totanus",
+      "englishName": "Common Redshank",
+      "scores": {
+        "DK": {
+          "may_aug": 2
+        }
+      }
+    },
+    {
+      "germanName": "Saatkrähe",
+      "scientificName": "Corvus frugilegus",
+      "englishName": "Rook",
+      "scores": {
+        "DE-NORTH": {
+          "may_aug": 2
+        }
+      }
+    },
+    {
+      "germanName": "Sanderling",
+      "scientificName": "Calidris alba",
+      "englishName": "Sanderling",
+      "scores": {
+        "DK": {
+          "may_aug": 3
+        }
+      }
+    },
+    {
+      "germanName": "Sandregenpfeifer",
+      "scientificName": "Charadrius hiaticula",
+      "englishName": "Common Ringed Plover",
+      "scores": {
+        "DK": {
+          "may_aug": 2
+        }
+      }
+    },
+    {
+      "germanName": "Schafstelze",
+      "scientificName": "Motacilla flava",
+      "englishName": "Western Yellow Wagtail",
+      "scores": {
+        "DK": {
+          "may_aug": 2
+        }
+      }
+    },
+    {
+      "germanName": "Schilfrohrsänger",
+      "scientificName": "Acrocephalus schoenobaenus",
+      "englishName": "Sedge Warbler",
+      "scores": {
+        "DK": {
+          "may_aug": 3
+        }
+      }
+    },
+    {
+      "germanName": "Schnatterente",
+      "scientificName": "Mareca strepera",
+      "englishName": "Gadwall",
+      "scores": {
+        "DE-NORTH": {
+          "may_aug": 2
+        }
+      }
+    },
+    {
+      "germanName": "Schwanzmeise",
+      "scientificName": "Aegithalos caudatus",
+      "englishName": "Long-tailed Tit",
+      "scores": {
+        "DE-NORTH": {
+          "may_aug": 2
+        }
+      }
+    },
+    {
+      "germanName": "Schwarzkehlchen",
+      "scientificName": "Saxicola rubicola",
+      "englishName": "European Stonechat",
+      "scores": {
+        "DK": {
+          "may_aug": 3
+        }
+      }
+    },
+    {
+      "germanName": "Schwarzspecht",
+      "scientificName": "Dryocopus martius",
+      "englishName": "Black Woodpecker",
+      "scores": {
+        "DE-NORTH": {
+          "may_aug": 3
+        }
+      }
+    },
+    {
+      "germanName": "Seidenschwanz",
+      "scientificName": "Bombycilla garrulus",
+      "englishName": "Bohemian Waxwing",
+      "scores": {
+        "SE-NORTH": {
+          "may_aug": 3
+        }
+      }
+    },
+    {
+      "germanName": "Silbermöwe",
+      "scientificName": "Larus argentatus",
+      "englishName": "European Herring Gull",
+      "scores": {
+        "DE-NORTH": {
+          "may_aug": 2
+        }
+      }
+    },
+    {
+      "germanName": "Singdrossel",
+      "scientificName": "Turdus philomelos",
+      "englishName": "Song Thrush",
+      "scores": {
+        "DE-NORTH": {
+          "may_aug": 1
+        },
+        "DK": {
+          "may_aug": 1
+        }
+      }
+    },
+    {
+      "germanName": "Singschwan",
+      "scientificName": "Cygnus cygnus",
+      "englishName": "Whooper Swan",
+      "scores": {
+        "SE-NORTH": {
+          "may_aug": 2
+        }
+      }
+    },
+    {
+      "germanName": "Sommergoldhähnchen",
+      "scientificName": "Regulus ignicapilla",
+      "englishName": "Common Firecrest",
+      "scores": {
+        "DE-NORTH": {
+          "may_aug": 2
+        }
+      }
+    },
+    {
+      "germanName": "Sperber",
+      "scientificName": "Accipiter nisus",
+      "englishName": "Eurasian Sparrowhawk",
+      "scores": {
+        "SE-SOUTH": {
+          "may_aug": 2
+        }
+      }
+    },
+    {
+      "germanName": "Star",
+      "scientificName": "Sturnus vulgaris",
+      "englishName": "European Starling",
+      "scores": {
+        "DE-NORTH": {
+          "may_aug": 1
+        },
+        "DE-SOUTH": {
+          "may_aug": 1
+        }
+      }
+    },
+    {
+      "germanName": "Steinschmätzer",
+      "scientificName": "Oenanthe oenanthe",
+      "englishName": "Northern Wheatear",
+      "scores": {
+        "DK": {
+          "may_aug": 3
+        }
+      }
+    },
+    {
+      "germanName": "Sterntaucher",
+      "scientificName": "Gavia stellata",
+      "englishName": "Red-throated Loon",
+      "scores": {
+        "SE-NORTH": {
+          "may_aug": 3
+        }
+      }
+    },
+    {
+      "germanName": "Stieglitz",
+      "scientificName": "Carduelis carduelis",
+      "englishName": "European Goldfinch",
+      "scores": {
+        "DK": {
+          "may_aug": 2
+        }
+      }
+    },
+    {
+      "germanName": "Stockente",
+      "scientificName": "Anas platyrhynchos",
+      "englishName": "Mallard",
+      "scores": {
+        "DE-NORTH": {
+          "may_aug": 1
+        },
+        "DK": {
+          "may_aug": 1
+        }
+      }
+    },
+    {
+      "germanName": "Sturmmöwe",
+      "scientificName": "Larus canus",
+      "englishName": "Common Gull",
+      "scores": {
+        "DK": {
+          "may_aug": 1
+        }
+      }
+    },
+    {
+      "germanName": "Sumpfmeise",
+      "scientificName": "Poecile palustris",
+      "englishName": "Marsh Tit",
+      "scores": {
+        "DE-NORTH": {
+          "may_aug": 2
+        }
+      }
+    },
+    {
+      "germanName": "Sumpfrohrsänger",
+      "scientificName": "Acrocephalus palustris",
+      "englishName": "Marsh Warbler",
+      "scores": {
+        "DK": {
+          "may_aug": 3
+        }
+      }
+    },
+    {
+      "germanName": "Säbelschnäbler",
+      "scientificName": "Recurvirostra avosetta",
+      "englishName": "Pied Avocet",
+      "scores": {
+        "DK": {
+          "may_aug": 3
+        }
+      }
+    },
+    {
+      "germanName": "Tannenmeise",
+      "scientificName": "Periparus ater",
+      "englishName": "Coal Tit",
+      "scores": {
+        "DK": {
+          "may_aug": 2
+        }
+      }
+    },
+    {
+      "germanName": "Teichhuhn",
+      "scientificName": "Gallinula chloropus",
+      "englishName": "Eurasian Moorhen",
+      "scores": {
+        "DE-NORTH": {
+          "may_aug": 2
+        }
+      }
+    },
+    {
+      "germanName": "Teichrohrsänger",
+      "scientificName": "Acrocephalus scirpaceus",
+      "englishName": "Common Reed Warbler",
+      "scores": {
+        "DK": {
+          "may_aug": 2
+        }
+      }
+    },
+    {
+      "germanName": "Trauerschnäpper",
+      "scientificName": "Ficedula hypoleuca",
+      "englishName": "European Pied Flycatcher",
+      "scores": {
+        "SE-CENTRAL": {
+          "may_aug": 2
+        }
+      }
+    },
+    {
+      "germanName": "Turmfalke",
+      "scientificName": "Falco tinnunculus",
+      "englishName": "Eurasian Kestrel",
+      "scores": {
+        "DE-SOUTH": {
+          "may_aug": 2
+        },
+        "DK": {
+          "may_aug": 2
+        }
+      }
+    },
+    {
+      "germanName": "Türkentaube",
+      "scientificName": "Streptopelia decaocto",
+      "englishName": "Eurasian Collared-Dove",
+      "scores": {
+        "DK": {
+          "may_aug": 1
+        }
+      }
+    },
+    {
+      "germanName": "Uferschnepfe",
+      "scientificName": "Limosa limosa",
+      "englishName": "Black-tailed Godwit",
+      "scores": {
+        "DK": {
+          "may_aug": 3
+        }
+      }
+    },
+    {
+      "germanName": "Uferschwalbe",
+      "scientificName": "Riparia riparia",
+      "englishName": "Bank Swallow",
+      "scores": {
+        "NO": {
+          "may_aug": 2
+        },
+        "SE-NORTH": {
+          "may_aug": 2
+        }
+      }
+    },
+    {
+      "germanName": "Wacholderdrossel",
+      "scientificName": "Turdus pilaris",
+      "englishName": "Fieldfare",
+      "scores": {
+        "SE-NORTH": {
+          "may_aug": 1
+        }
+      }
+    },
+    {
+      "germanName": "Waldkauz",
+      "scientificName": "Strix aluco",
+      "englishName": "Tawny Owl",
+      "scores": {
+        "DE-CENTRAL": {
+          "may_aug": 2
+        }
+      }
+    },
+    {
+      "germanName": "Waldlaubsänger",
+      "scientificName": "Phylloscopus sibilatrix",
+      "englishName": "Wood Warbler",
+      "scores": {
+        "DE-NORTH": {
+          "may_aug": 4
+        }
+      }
+    },
+    {
+      "germanName": "Waldohreule",
+      "scientificName": "Asio otus",
+      "englishName": "Long-eared Owl",
+      "scores": {
+        "SE-SOUTH": {
+          "may_aug": 4
+        }
+      }
+    },
+    {
+      "germanName": "Waldschnepfe",
+      "scientificName": "Scolopax rusticola",
+      "englishName": "Eurasian Woodcock",
+      "scores": {
+        "SE-NORTH": {
+          "may_aug": 3
+        }
+      }
+    },
+    {
+      "germanName": "Waldwasserläufer",
+      "scientificName": "Tringa ochropus",
+      "englishName": "Green Sandpiper",
+      "scores": {
+        "SE-NORTH": {
+          "may_aug": 2
+        }
+      }
+    },
+    {
+      "germanName": "Weidenmeise",
+      "scientificName": "Poecile montanus",
+      "englishName": "Willow Tit",
+      "scores": {
+        "SE-NORTH": {
+          "may_aug": 1
+        }
+      }
+    },
+    {
+      "germanName": "Weißwangengans",
+      "scientificName": "Branta leucopsis",
+      "englishName": "Barnacle Goose",
+      "scores": {
+        "SE-NORTH": {
+          "may_aug": 3
+        }
+      }
+    },
+    {
+      "germanName": "Wiesenpieper",
+      "scientificName": "Anthus pratensis",
+      "englishName": "Meadow Pipit",
+      "scores": {
+        "DK": {
+          "may_aug": 2
+        }
+      }
+    },
+    {
+      "germanName": "Wintergoldhähnchen",
+      "scientificName": "Regulus regulus",
+      "englishName": "Goldcrest",
+      "scores": {
+        "DE-NORTH": {
+          "may_aug": 2
+        },
+        "DK": {
+          "may_aug": 2
+        }
+      }
+    },
+    {
+      "germanName": "Zaunkönig",
+      "scientificName": "Troglodytes troglodytes",
+      "englishName": "Eurasian Wren",
+      "scores": {
+        "DK": {
+          "may_aug": 1
+        }
+      }
+    },
+    {
+      "germanName": "Zilpzalp",
+      "scientificName": "Phylloscopus collybita",
+      "englishName": "Common Chiffchaff",
+      "scores": {
+        "DK": {
+          "may_aug": 1
+        }
+      }
+    },
+    {
+      "germanName": "Zwergschnäpper",
+      "scientificName": "Ficedula parva",
+      "englishName": "Red-breasted Flycatcher",
+      "scores": {
+        "DE-NORTH": {
+          "may_aug": 7
+        }
+      }
+    }
+  ]
+}
