@@ -85,3 +85,8 @@ Erst bei echtem Bedarf:
 - eigener Upload pro Person
 - Admin-Freigabe
 - Nachweislink für 15-Punkte-Arten
+
+
+## BirdLeague V4 scoring update
+
+Scoring is now **regional base score + acoustic difficulty bonus (0–3)**, capped at 10 for regular finds; 15 is reserved for true regional rarities. The app must expose the breakdown (`Basis X + Akustik +Y`) and block imports when either the regional/time base score or the acoustic profile is missing.

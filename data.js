@@ -1,6 +1,6 @@
-/* BirdLeague – veröffentlichter Datenstand V3 regional */
+/* BirdLeague – veröffentlichter Datenstand V4 Akustik */
 window.BIRDLEAGUE_DATA = {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "leagueName": "BirdLeague",
   "season": 2026,
   "updatedAt": "2026-08-14",
@@ -855,8 +855,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-10"
+      "points": 3,
+      "importedAt": "2026-08-10",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-finn-002",
@@ -868,7 +870,9 @@ window.BIRDLEAGUE_DATA = {
       "region": "DK",
       "scoreWindow": "may_aug",
       "points": 1,
-      "importedAt": "2026-08-10"
+      "importedAt": "2026-08-10",
+      "basePoints": 1,
+      "acousticBonus": 0
     },
     {
       "id": "obs-finn-003",
@@ -880,7 +884,9 @@ window.BIRDLEAGUE_DATA = {
       "region": "DK",
       "scoreWindow": "may_aug",
       "points": 1,
-      "importedAt": "2026-08-10"
+      "importedAt": "2026-08-10",
+      "basePoints": 1,
+      "acousticBonus": 0
     },
     {
       "id": "obs-finn-004",
@@ -891,8 +897,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-10"
+      "points": 3,
+      "importedAt": "2026-08-10",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-finn-005",
@@ -903,8 +911,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 4,
-      "importedAt": "2026-08-10"
+      "points": 5,
+      "importedAt": "2026-08-10",
+      "basePoints": 5,
+      "acousticBonus": 0
     },
     {
       "id": "obs-finn-006",
@@ -915,8 +925,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-10"
+      "points": 3,
+      "importedAt": "2026-08-10",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-finn-007",
@@ -927,8 +939,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-10"
+      "points": 4,
+      "importedAt": "2026-08-10",
+      "basePoints": 3,
+      "acousticBonus": 1
     },
     {
       "id": "obs-finn-008",
@@ -939,8 +953,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 3,
-      "importedAt": "2026-08-10"
+      "points": 4,
+      "importedAt": "2026-08-10",
+      "basePoints": 4,
+      "acousticBonus": 0
     },
     {
       "id": "obs-finn-009",
@@ -952,7 +968,9 @@ window.BIRDLEAGUE_DATA = {
       "region": "DK",
       "scoreWindow": "may_aug",
       "points": 1,
-      "importedAt": "2026-08-10"
+      "importedAt": "2026-08-10",
+      "basePoints": 1,
+      "acousticBonus": 0
     },
     {
       "id": "obs-finn-010",
@@ -963,8 +981,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-10"
+      "points": 3,
+      "importedAt": "2026-08-10",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-finn-011",
@@ -976,7 +996,9 @@ window.BIRDLEAGUE_DATA = {
       "region": "DK",
       "scoreWindow": "may_aug",
       "points": 1,
-      "importedAt": "2026-08-10"
+      "importedAt": "2026-08-10",
+      "basePoints": 1,
+      "acousticBonus": 0
     },
     {
       "id": "obs-finn-012",
@@ -988,7 +1010,9 @@ window.BIRDLEAGUE_DATA = {
       "region": "DK",
       "scoreWindow": "may_aug",
       "points": 1,
-      "importedAt": "2026-08-10"
+      "importedAt": "2026-08-10",
+      "basePoints": 1,
+      "acousticBonus": 0
     },
     {
       "id": "obs-finn-013",
@@ -999,8 +1023,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 1,
-      "importedAt": "2026-08-10"
+      "points": 2,
+      "importedAt": "2026-08-10",
+      "basePoints": 1,
+      "acousticBonus": 1
     },
     {
       "id": "obs-finn-014",
@@ -1012,7 +1038,9 @@ window.BIRDLEAGUE_DATA = {
       "region": "DK",
       "scoreWindow": "may_aug",
       "points": 1,
-      "importedAt": "2026-08-10"
+      "importedAt": "2026-08-10",
+      "basePoints": 1,
+      "acousticBonus": 0
     },
     {
       "id": "obs-finn-015",
@@ -1024,7 +1052,9 @@ window.BIRDLEAGUE_DATA = {
       "region": "DK",
       "scoreWindow": "may_aug",
       "points": 1,
-      "importedAt": "2026-08-10"
+      "importedAt": "2026-08-10",
+      "basePoints": 1,
+      "acousticBonus": 0
     },
     {
       "id": "obs-finn-016",
@@ -1035,8 +1065,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 3,
-      "importedAt": "2026-08-10"
+      "points": 4,
+      "importedAt": "2026-08-10",
+      "basePoints": 4,
+      "acousticBonus": 0
     },
     {
       "id": "obs-finn-017",
@@ -1048,7 +1080,9 @@ window.BIRDLEAGUE_DATA = {
       "region": "DK",
       "scoreWindow": "may_aug",
       "points": 1,
-      "importedAt": "2026-08-10"
+      "importedAt": "2026-08-10",
+      "basePoints": 1,
+      "acousticBonus": 0
     },
     {
       "id": "obs-finn-018",
@@ -1059,8 +1093,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 3,
-      "importedAt": "2026-08-10"
+      "points": 5,
+      "importedAt": "2026-08-10",
+      "basePoints": 4,
+      "acousticBonus": 1
     },
     {
       "id": "obs-finn-019",
@@ -1071,8 +1107,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-10"
+      "points": 3,
+      "importedAt": "2026-08-10",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-finn-020",
@@ -1084,7 +1122,9 @@ window.BIRDLEAGUE_DATA = {
       "region": "DK",
       "scoreWindow": "may_aug",
       "points": 1,
-      "importedAt": "2026-08-10"
+      "importedAt": "2026-08-10",
+      "basePoints": 1,
+      "acousticBonus": 0
     },
     {
       "id": "obs-finn-021",
@@ -1095,8 +1135,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-10"
+      "points": 3,
+      "importedAt": "2026-08-10",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-finn-022",
@@ -1107,8 +1149,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-10"
+      "points": 3,
+      "importedAt": "2026-08-10",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-finn-023",
@@ -1119,8 +1163,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-10"
+      "points": 3,
+      "importedAt": "2026-08-10",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-finn-024",
@@ -1131,8 +1177,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-10"
+      "points": 3,
+      "importedAt": "2026-08-10",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-finn-025",
@@ -1144,7 +1192,9 @@ window.BIRDLEAGUE_DATA = {
       "region": "DK",
       "scoreWindow": "may_aug",
       "points": 1,
-      "importedAt": "2026-08-10"
+      "importedAt": "2026-08-10",
+      "basePoints": 1,
+      "acousticBonus": 0
     },
     {
       "id": "obs-finn-026",
@@ -1155,8 +1205,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 3,
-      "importedAt": "2026-08-10"
+      "points": 5,
+      "importedAt": "2026-08-10",
+      "basePoints": 4,
+      "acousticBonus": 1
     },
     {
       "id": "obs-finn-027",
@@ -1167,8 +1219,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-10"
+      "points": 4,
+      "importedAt": "2026-08-10",
+      "basePoints": 3,
+      "acousticBonus": 1
     },
     {
       "id": "obs-finn-028",
@@ -1179,8 +1233,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-10"
+      "points": 3,
+      "importedAt": "2026-08-10",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-finn-029",
@@ -1191,8 +1247,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-10"
+      "points": 4,
+      "importedAt": "2026-08-10",
+      "basePoints": 3,
+      "acousticBonus": 1
     },
     {
       "id": "obs-finn-030",
@@ -1203,8 +1261,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-10"
+      "points": 3,
+      "importedAt": "2026-08-10",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-finn-031",
@@ -1215,8 +1275,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-10"
+      "points": 4,
+      "importedAt": "2026-08-10",
+      "basePoints": 3,
+      "acousticBonus": 1
     },
     {
       "id": "obs-finn-032",
@@ -1227,8 +1289,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 3,
-      "importedAt": "2026-08-10"
+      "points": 5,
+      "importedAt": "2026-08-10",
+      "basePoints": 4,
+      "acousticBonus": 1
     },
     {
       "id": "obs-finn-033",
@@ -1240,7 +1304,9 @@ window.BIRDLEAGUE_DATA = {
       "region": "DK",
       "scoreWindow": "may_aug",
       "points": 1,
-      "importedAt": "2026-08-10"
+      "importedAt": "2026-08-10",
+      "basePoints": 1,
+      "acousticBonus": 0
     },
     {
       "id": "obs-finn-034",
@@ -1251,8 +1317,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-10"
+      "points": 5,
+      "importedAt": "2026-08-10",
+      "basePoints": 3,
+      "acousticBonus": 2
     },
     {
       "id": "obs-finn-035",
@@ -1264,7 +1332,9 @@ window.BIRDLEAGUE_DATA = {
       "region": "DK",
       "scoreWindow": "may_aug",
       "points": 1,
-      "importedAt": "2026-08-10"
+      "importedAt": "2026-08-10",
+      "basePoints": 1,
+      "acousticBonus": 0
     },
     {
       "id": "obs-finn-036",
@@ -1276,7 +1346,9 @@ window.BIRDLEAGUE_DATA = {
       "region": "DK",
       "scoreWindow": "may_aug",
       "points": 1,
-      "importedAt": "2026-08-10"
+      "importedAt": "2026-08-10",
+      "basePoints": 1,
+      "acousticBonus": 0
     },
     {
       "id": "obs-finn-037",
@@ -1287,8 +1359,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-10"
+      "points": 3,
+      "importedAt": "2026-08-10",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-finn-038",
@@ -1299,8 +1373,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 3,
-      "importedAt": "2026-08-10"
+      "points": 4,
+      "importedAt": "2026-08-10",
+      "basePoints": 4,
+      "acousticBonus": 0
     },
     {
       "id": "obs-finn-039",
@@ -1311,8 +1387,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 4,
-      "importedAt": "2026-08-10"
+      "points": 5,
+      "importedAt": "2026-08-10",
+      "basePoints": 5,
+      "acousticBonus": 0
     },
     {
       "id": "obs-finn-040",
@@ -1323,8 +1401,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 3,
-      "importedAt": "2026-08-10"
+      "points": 4,
+      "importedAt": "2026-08-10",
+      "basePoints": 4,
+      "acousticBonus": 0
     },
     {
       "id": "obs-finn-041",
@@ -1335,8 +1415,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-10"
+      "points": 3,
+      "importedAt": "2026-08-10",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-finn-042",
@@ -1347,8 +1429,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 4,
-      "importedAt": "2026-08-10"
+      "points": 5,
+      "importedAt": "2026-08-10",
+      "basePoints": 5,
+      "acousticBonus": 0
     },
     {
       "id": "obs-finn-043",
@@ -1359,8 +1443,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-10"
+      "points": 3,
+      "importedAt": "2026-08-10",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-finn-044",
@@ -1371,8 +1457,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 3,
-      "importedAt": "2026-08-10"
+      "points": 4,
+      "importedAt": "2026-08-10",
+      "basePoints": 4,
+      "acousticBonus": 0
     },
     {
       "id": "obs-finn-045",
@@ -1383,8 +1471,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 3,
-      "importedAt": "2026-08-10"
+      "points": 5,
+      "importedAt": "2026-08-10",
+      "basePoints": 4,
+      "acousticBonus": 1
     },
     {
       "id": "obs-finn-046",
@@ -1395,8 +1485,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DE-HH",
       "region": "DE-NORTH",
       "scoreWindow": "may_aug",
-      "points": 1,
-      "importedAt": "2026-08-10"
+      "points": 2,
+      "importedAt": "2026-08-10",
+      "basePoints": 1,
+      "acousticBonus": 1
     },
     {
       "id": "obs-finn-047",
@@ -1408,7 +1500,9 @@ window.BIRDLEAGUE_DATA = {
       "region": "DE-NORTH",
       "scoreWindow": "may_aug",
       "points": 1,
-      "importedAt": "2026-08-10"
+      "importedAt": "2026-08-10",
+      "basePoints": 1,
+      "acousticBonus": 0
     },
     {
       "id": "obs-finn-048",
@@ -1420,7 +1514,9 @@ window.BIRDLEAGUE_DATA = {
       "region": "DE-NORTH",
       "scoreWindow": "may_aug",
       "points": 1,
-      "importedAt": "2026-08-10"
+      "importedAt": "2026-08-10",
+      "basePoints": 1,
+      "acousticBonus": 0
     },
     {
       "id": "obs-finn-049",
@@ -1432,7 +1528,9 @@ window.BIRDLEAGUE_DATA = {
       "region": "DE-NORTH",
       "scoreWindow": "may_aug",
       "points": 1,
-      "importedAt": "2026-08-10"
+      "importedAt": "2026-08-10",
+      "basePoints": 1,
+      "acousticBonus": 0
     },
     {
       "id": "obs-finn-050",
@@ -1444,7 +1542,9 @@ window.BIRDLEAGUE_DATA = {
       "region": "DE-NORTH",
       "scoreWindow": "may_aug",
       "points": 1,
-      "importedAt": "2026-08-10"
+      "importedAt": "2026-08-10",
+      "basePoints": 1,
+      "acousticBonus": 0
     },
     {
       "id": "obs-finn-051",
@@ -1455,8 +1555,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DE-HH",
       "region": "DE-NORTH",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-10"
+      "points": 3,
+      "importedAt": "2026-08-10",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-finn-052",
@@ -1467,8 +1569,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DE-HH",
       "region": "DE-NORTH",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-10"
+      "points": 3,
+      "importedAt": "2026-08-10",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-finn-053",
@@ -1479,8 +1583,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DE-HH",
       "region": "DE-NORTH",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-10"
+      "points": 3,
+      "importedAt": "2026-08-10",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-finn-054",
@@ -1491,8 +1597,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DE-HH",
       "region": "DE-NORTH",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-10"
+      "points": 5,
+      "importedAt": "2026-08-10",
+      "basePoints": 3,
+      "acousticBonus": 2
     },
     {
       "id": "obs-finn-055",
@@ -1504,7 +1612,9 @@ window.BIRDLEAGUE_DATA = {
       "region": "DE-NORTH",
       "scoreWindow": "may_aug",
       "points": 1,
-      "importedAt": "2026-08-10"
+      "importedAt": "2026-08-10",
+      "basePoints": 1,
+      "acousticBonus": 0
     },
     {
       "id": "obs-finn-056",
@@ -1515,8 +1625,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DE-HH",
       "region": "DE-NORTH",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-10"
+      "points": 3,
+      "importedAt": "2026-08-10",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-finn-057",
@@ -1527,8 +1639,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DE-HH",
       "region": "DE-NORTH",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-10"
+      "points": 4,
+      "importedAt": "2026-08-10",
+      "basePoints": 3,
+      "acousticBonus": 1
     },
     {
       "id": "obs-finn-058",
@@ -1540,7 +1654,9 @@ window.BIRDLEAGUE_DATA = {
       "region": "DE-NORTH",
       "scoreWindow": "may_aug",
       "points": 1,
-      "importedAt": "2026-08-10"
+      "importedAt": "2026-08-10",
+      "basePoints": 1,
+      "acousticBonus": 0
     },
     {
       "id": "obs-finn-059",
@@ -1551,8 +1667,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DE-HH",
       "region": "DE-NORTH",
       "scoreWindow": "may_aug",
-      "points": 1,
-      "importedAt": "2026-08-10"
+      "points": 2,
+      "importedAt": "2026-08-10",
+      "basePoints": 1,
+      "acousticBonus": 1
     },
     {
       "id": "obs-finn-060",
@@ -1563,8 +1681,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DE-HH",
       "region": "DE-NORTH",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-10"
+      "points": 3,
+      "importedAt": "2026-08-10",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-finn-061",
@@ -1575,8 +1695,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DE-HH",
       "region": "DE-NORTH",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-10"
+      "points": 4,
+      "importedAt": "2026-08-10",
+      "basePoints": 3,
+      "acousticBonus": 1
     },
     {
       "id": "obs-finn-062",
@@ -1588,7 +1710,9 @@ window.BIRDLEAGUE_DATA = {
       "region": "DE-NORTH",
       "scoreWindow": "may_aug",
       "points": 1,
-      "importedAt": "2026-08-10"
+      "importedAt": "2026-08-10",
+      "basePoints": 1,
+      "acousticBonus": 0
     },
     {
       "id": "obs-finn-063",
@@ -1599,8 +1723,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DE-SH",
       "region": "DE-NORTH",
       "scoreWindow": "may_aug",
-      "points": 4,
-      "importedAt": "2026-08-10"
+      "points": 5,
+      "importedAt": "2026-08-10",
+      "basePoints": 5,
+      "acousticBonus": 0
     },
     {
       "id": "obs-finn-064",
@@ -1611,8 +1737,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DE-SH",
       "region": "DE-NORTH",
       "scoreWindow": "may_aug",
-      "points": 3,
-      "importedAt": "2026-08-10"
+      "points": 5,
+      "importedAt": "2026-08-10",
+      "basePoints": 4,
+      "acousticBonus": 1
     },
     {
       "id": "obs-finn-065",
@@ -1623,8 +1751,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DE-SH",
       "region": "DE-NORTH",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-10"
+      "points": 3,
+      "importedAt": "2026-08-10",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-finn-066",
@@ -1636,7 +1766,9 @@ window.BIRDLEAGUE_DATA = {
       "region": "DE-NORTH",
       "scoreWindow": "may_aug",
       "points": 1,
-      "importedAt": "2026-08-10"
+      "importedAt": "2026-08-10",
+      "basePoints": 1,
+      "acousticBonus": 0
     },
     {
       "id": "obs-finn-067",
@@ -1647,8 +1779,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DE-SH",
       "region": "DE-NORTH",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-10"
+      "points": 3,
+      "importedAt": "2026-08-10",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-finn-068",
@@ -1660,7 +1794,9 @@ window.BIRDLEAGUE_DATA = {
       "region": "DE-NORTH",
       "scoreWindow": "may_aug",
       "points": 1,
-      "importedAt": "2026-08-10"
+      "importedAt": "2026-08-10",
+      "basePoints": 1,
+      "acousticBonus": 0
     },
     {
       "id": "obs-finn-069",
@@ -1671,8 +1807,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DE-HH",
       "region": "DE-NORTH",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-10"
+      "points": 3,
+      "importedAt": "2026-08-10",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-finn-070",
@@ -1683,8 +1821,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DE-HH",
       "region": "DE-NORTH",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-10"
+      "points": 4,
+      "importedAt": "2026-08-10",
+      "basePoints": 3,
+      "acousticBonus": 1
     },
     {
       "id": "obs-finn-071",
@@ -1695,8 +1835,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DE-HH",
       "region": "DE-NORTH",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-10"
+      "points": 3,
+      "importedAt": "2026-08-10",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-finn-072",
@@ -1707,8 +1849,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DE-SH",
       "region": "DE-NORTH",
       "scoreWindow": "may_aug",
-      "points": 4,
-      "importedAt": "2026-08-10"
+      "points": 5,
+      "importedAt": "2026-08-10",
+      "basePoints": 5,
+      "acousticBonus": 0
     },
     {
       "id": "obs-finn-073",
@@ -1719,8 +1863,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DE-SH",
       "region": "DE-NORTH",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-10"
+      "points": 3,
+      "importedAt": "2026-08-10",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-finn-074",
@@ -1731,8 +1877,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DE-SH",
       "region": "DE-NORTH",
       "scoreWindow": "may_aug",
-      "points": 3,
-      "importedAt": "2026-08-10"
+      "points": 4,
+      "importedAt": "2026-08-10",
+      "basePoints": 4,
+      "acousticBonus": 0
     },
     {
       "id": "obs-finn-075",
@@ -1743,8 +1891,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DE-SH",
       "region": "DE-NORTH",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-10"
+      "points": 3,
+      "importedAt": "2026-08-10",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-finn-076",
@@ -1756,7 +1906,9 @@ window.BIRDLEAGUE_DATA = {
       "region": "SE-SOUTH",
       "scoreWindow": "may_aug",
       "points": 1,
-      "importedAt": "2026-08-10"
+      "importedAt": "2026-08-10",
+      "basePoints": 1,
+      "acousticBonus": 0
     },
     {
       "id": "obs-finn-077",
@@ -1767,8 +1919,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "SE-M",
       "region": "SE-SOUTH",
       "scoreWindow": "may_aug",
-      "points": 1,
-      "importedAt": "2026-08-10"
+      "points": 2,
+      "importedAt": "2026-08-10",
+      "basePoints": 1,
+      "acousticBonus": 1
     },
     {
       "id": "obs-finn-078",
@@ -1779,8 +1933,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "SE-M",
       "region": "SE-SOUTH",
       "scoreWindow": "may_aug",
-      "points": 3,
-      "importedAt": "2026-08-10"
+      "points": 4,
+      "importedAt": "2026-08-10",
+      "basePoints": 4,
+      "acousticBonus": 0
     },
     {
       "id": "obs-finn-079",
@@ -1792,7 +1948,9 @@ window.BIRDLEAGUE_DATA = {
       "region": "SE-SOUTH",
       "scoreWindow": "may_aug",
       "points": 1,
-      "importedAt": "2026-08-10"
+      "importedAt": "2026-08-10",
+      "basePoints": 1,
+      "acousticBonus": 0
     },
     {
       "id": "obs-finn-080",
@@ -1803,8 +1961,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "SE-F",
       "region": "SE-SOUTH",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-10"
+      "points": 3,
+      "importedAt": "2026-08-10",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-finn-081",
@@ -1815,8 +1975,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "SE-O",
       "region": "SE-SOUTH",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-10"
+      "points": 3,
+      "importedAt": "2026-08-10",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-finn-082",
@@ -1827,8 +1989,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "SE-O",
       "region": "SE-SOUTH",
       "scoreWindow": "may_aug",
-      "points": 3,
-      "importedAt": "2026-08-10"
+      "points": 4,
+      "importedAt": "2026-08-10",
+      "basePoints": 4,
+      "acousticBonus": 0
     },
     {
       "id": "obs-finn-083",
@@ -1839,8 +2003,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "SE-O",
       "region": "SE-SOUTH",
       "scoreWindow": "may_aug",
-      "points": 4,
-      "importedAt": "2026-08-10"
+      "points": 7,
+      "importedAt": "2026-08-10",
+      "basePoints": 5,
+      "acousticBonus": 2
     },
     {
       "id": "obs-finn-084",
@@ -1851,8 +2017,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "SE-O",
       "region": "SE-SOUTH",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-10"
+      "points": 6,
+      "importedAt": "2026-08-10",
+      "basePoints": 3,
+      "acousticBonus": 3
     },
     {
       "id": "obs-finn-085",
@@ -1863,8 +2031,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "SE-O",
       "region": "SE-SOUTH",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-10"
+      "points": 4,
+      "importedAt": "2026-08-10",
+      "basePoints": 3,
+      "acousticBonus": 1
     },
     {
       "id": "obs-finn-086",
@@ -1875,8 +2045,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "SE-O",
       "region": "SE-SOUTH",
       "scoreWindow": "may_aug",
-      "points": 3,
-      "importedAt": "2026-08-10"
+      "points": 5,
+      "importedAt": "2026-08-10",
+      "basePoints": 4,
+      "acousticBonus": 1
     },
     {
       "id": "obs-finn-087",
@@ -1887,8 +2059,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "SE-O",
       "region": "SE-SOUTH",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-10"
+      "points": 3,
+      "importedAt": "2026-08-10",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-ida-088",
@@ -1899,8 +2073,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 3,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-ida-089",
@@ -1911,8 +2087,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 3,
-      "importedAt": "2026-08-14"
+      "points": 4,
+      "importedAt": "2026-08-14",
+      "basePoints": 4,
+      "acousticBonus": 0
     },
     {
       "id": "obs-ida-090",
@@ -1923,8 +2101,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 4,
-      "importedAt": "2026-08-14"
+      "points": 5,
+      "importedAt": "2026-08-14",
+      "basePoints": 5,
+      "acousticBonus": 0
     },
     {
       "id": "obs-ida-091",
@@ -1935,8 +2115,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 4,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 1
     },
     {
       "id": "obs-ida-092",
@@ -1947,8 +2129,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 3,
-      "importedAt": "2026-08-14"
+      "points": 5,
+      "importedAt": "2026-08-14",
+      "basePoints": 4,
+      "acousticBonus": 1
     },
     {
       "id": "obs-ida-093",
@@ -1959,8 +2143,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 3,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-ida-094",
@@ -1971,8 +2157,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 3,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-ida-095",
@@ -1983,8 +2171,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 3,
-      "importedAt": "2026-08-14"
+      "points": 5,
+      "importedAt": "2026-08-14",
+      "basePoints": 4,
+      "acousticBonus": 1
     },
     {
       "id": "obs-ida-096",
@@ -1996,7 +2186,9 @@ window.BIRDLEAGUE_DATA = {
       "region": "DK",
       "scoreWindow": "may_aug",
       "points": 1,
-      "importedAt": "2026-08-14"
+      "importedAt": "2026-08-14",
+      "basePoints": 1,
+      "acousticBonus": 0
     },
     {
       "id": "obs-ida-097",
@@ -2007,8 +2199,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 3,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-ida-098",
@@ -2020,7 +2214,9 @@ window.BIRDLEAGUE_DATA = {
       "region": "DK",
       "scoreWindow": "may_aug",
       "points": 1,
-      "importedAt": "2026-08-14"
+      "importedAt": "2026-08-14",
+      "basePoints": 1,
+      "acousticBonus": 0
     },
     {
       "id": "obs-ida-099",
@@ -2032,7 +2228,9 @@ window.BIRDLEAGUE_DATA = {
       "region": "DK",
       "scoreWindow": "may_aug",
       "points": 1,
-      "importedAt": "2026-08-14"
+      "importedAt": "2026-08-14",
+      "basePoints": 1,
+      "acousticBonus": 0
     },
     {
       "id": "obs-ida-100",
@@ -2044,7 +2242,9 @@ window.BIRDLEAGUE_DATA = {
       "region": "DK",
       "scoreWindow": "may_aug",
       "points": 1,
-      "importedAt": "2026-08-14"
+      "importedAt": "2026-08-14",
+      "basePoints": 1,
+      "acousticBonus": 0
     },
     {
       "id": "obs-ida-101",
@@ -2056,7 +2256,9 @@ window.BIRDLEAGUE_DATA = {
       "region": "DK",
       "scoreWindow": "may_aug",
       "points": 1,
-      "importedAt": "2026-08-14"
+      "importedAt": "2026-08-14",
+      "basePoints": 1,
+      "acousticBonus": 0
     },
     {
       "id": "obs-ida-102",
@@ -2067,8 +2269,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 3,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-ida-103",
@@ -2079,8 +2283,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 3,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-ida-104",
@@ -2091,8 +2297,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 4,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 1
     },
     {
       "id": "obs-ida-105",
@@ -2104,7 +2312,9 @@ window.BIRDLEAGUE_DATA = {
       "region": "DK",
       "scoreWindow": "may_aug",
       "points": 1,
-      "importedAt": "2026-08-14"
+      "importedAt": "2026-08-14",
+      "basePoints": 1,
+      "acousticBonus": 0
     },
     {
       "id": "obs-ida-106",
@@ -2115,8 +2325,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 3,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-ida-107",
@@ -2127,8 +2339,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 3,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-ida-108",
@@ -2139,8 +2353,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 3,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-ida-109",
@@ -2151,8 +2367,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 3,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-ida-110",
@@ -2163,8 +2381,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 4,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 1
     },
     {
       "id": "obs-ida-111",
@@ -2176,7 +2396,9 @@ window.BIRDLEAGUE_DATA = {
       "region": "DK",
       "scoreWindow": "may_aug",
       "points": 1,
-      "importedAt": "2026-08-14"
+      "importedAt": "2026-08-14",
+      "basePoints": 1,
+      "acousticBonus": 0
     },
     {
       "id": "obs-ida-112",
@@ -2187,8 +2409,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 3,
-      "importedAt": "2026-08-14"
+      "points": 5,
+      "importedAt": "2026-08-14",
+      "basePoints": 4,
+      "acousticBonus": 1
     },
     {
       "id": "obs-ida-113",
@@ -2199,8 +2423,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 3,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-ida-114",
@@ -2212,7 +2438,9 @@ window.BIRDLEAGUE_DATA = {
       "region": "DK",
       "scoreWindow": "may_aug",
       "points": 1,
-      "importedAt": "2026-08-14"
+      "importedAt": "2026-08-14",
+      "basePoints": 1,
+      "acousticBonus": 0
     },
     {
       "id": "obs-ida-115",
@@ -2224,7 +2452,9 @@ window.BIRDLEAGUE_DATA = {
       "region": "DK",
       "scoreWindow": "may_aug",
       "points": 1,
-      "importedAt": "2026-08-14"
+      "importedAt": "2026-08-14",
+      "basePoints": 1,
+      "acousticBonus": 0
     },
     {
       "id": "obs-ida-116",
@@ -2236,7 +2466,9 @@ window.BIRDLEAGUE_DATA = {
       "region": "DK",
       "scoreWindow": "may_aug",
       "points": 1,
-      "importedAt": "2026-08-14"
+      "importedAt": "2026-08-14",
+      "basePoints": 1,
+      "acousticBonus": 0
     },
     {
       "id": "obs-ida-117",
@@ -2248,7 +2480,9 @@ window.BIRDLEAGUE_DATA = {
       "region": "DK",
       "scoreWindow": "may_aug",
       "points": 1,
-      "importedAt": "2026-08-14"
+      "importedAt": "2026-08-14",
+      "basePoints": 1,
+      "acousticBonus": 0
     },
     {
       "id": "obs-ida-118",
@@ -2259,8 +2493,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 3,
-      "importedAt": "2026-08-14"
+      "points": 4,
+      "importedAt": "2026-08-14",
+      "basePoints": 4,
+      "acousticBonus": 0
     },
     {
       "id": "obs-ida-119",
@@ -2272,7 +2508,9 @@ window.BIRDLEAGUE_DATA = {
       "region": "DK",
       "scoreWindow": "may_aug",
       "points": 1,
-      "importedAt": "2026-08-14"
+      "importedAt": "2026-08-14",
+      "basePoints": 1,
+      "acousticBonus": 0
     },
     {
       "id": "obs-ida-120",
@@ -2284,7 +2522,9 @@ window.BIRDLEAGUE_DATA = {
       "region": "DK",
       "scoreWindow": "may_aug",
       "points": 1,
-      "importedAt": "2026-08-14"
+      "importedAt": "2026-08-14",
+      "basePoints": 1,
+      "acousticBonus": 0
     },
     {
       "id": "obs-ida-121",
@@ -2295,8 +2535,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 4,
-      "importedAt": "2026-08-14"
+      "points": 5,
+      "importedAt": "2026-08-14",
+      "basePoints": 5,
+      "acousticBonus": 0
     },
     {
       "id": "obs-ida-122",
@@ -2307,8 +2549,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 1,
-      "importedAt": "2026-08-14"
+      "points": 2,
+      "importedAt": "2026-08-14",
+      "basePoints": 1,
+      "acousticBonus": 1
     },
     {
       "id": "obs-ida-123",
@@ -2320,7 +2564,9 @@ window.BIRDLEAGUE_DATA = {
       "region": "DK",
       "scoreWindow": "may_aug",
       "points": 1,
-      "importedAt": "2026-08-14"
+      "importedAt": "2026-08-14",
+      "basePoints": 1,
+      "acousticBonus": 0
     },
     {
       "id": "obs-ida-124",
@@ -2331,8 +2577,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 3,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-ida-125",
@@ -2344,7 +2592,9 @@ window.BIRDLEAGUE_DATA = {
       "region": "DK",
       "scoreWindow": "may_aug",
       "points": 1,
-      "importedAt": "2026-08-14"
+      "importedAt": "2026-08-14",
+      "basePoints": 1,
+      "acousticBonus": 0
     },
     {
       "id": "obs-ida-126",
@@ -2355,8 +2605,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 3,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-ida-127",
@@ -2367,8 +2619,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 3,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-ida-128",
@@ -2379,8 +2633,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 3,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-ida-129",
@@ -2391,8 +2647,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 3,
-      "importedAt": "2026-08-14"
+      "points": 5,
+      "importedAt": "2026-08-14",
+      "basePoints": 4,
+      "acousticBonus": 1
     },
     {
       "id": "obs-ida-130",
@@ -2403,8 +2661,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 3,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-ida-131",
@@ -2415,8 +2675,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 3,
-      "importedAt": "2026-08-14"
+      "points": 5,
+      "importedAt": "2026-08-14",
+      "basePoints": 4,
+      "acousticBonus": 1
     },
     {
       "id": "obs-ida-132",
@@ -2427,8 +2689,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 3,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-ida-133",
@@ -2439,8 +2703,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 1,
-      "importedAt": "2026-08-14"
+      "points": 2,
+      "importedAt": "2026-08-14",
+      "basePoints": 1,
+      "acousticBonus": 1
     },
     {
       "id": "obs-ida-134",
@@ -2451,8 +2717,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 3,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-ida-135",
@@ -2463,8 +2731,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 4,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 1
     },
     {
       "id": "obs-ida-136",
@@ -2475,8 +2745,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 3,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-ida-137",
@@ -2487,8 +2759,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 1,
-      "importedAt": "2026-08-14"
+      "points": 2,
+      "importedAt": "2026-08-14",
+      "basePoints": 1,
+      "acousticBonus": 1
     },
     {
       "id": "obs-ida-138",
@@ -2499,8 +2773,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 4,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 1
     },
     {
       "id": "obs-ida-139",
@@ -2511,8 +2787,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 4,
-      "importedAt": "2026-08-14"
+      "points": 5,
+      "importedAt": "2026-08-14",
+      "basePoints": 5,
+      "acousticBonus": 0
     },
     {
       "id": "obs-ida-140",
@@ -2523,8 +2801,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 3,
-      "importedAt": "2026-08-14"
+      "points": 4,
+      "importedAt": "2026-08-14",
+      "basePoints": 4,
+      "acousticBonus": 0
     },
     {
       "id": "obs-ida-141",
@@ -2535,8 +2815,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 3,
-      "importedAt": "2026-08-14"
+      "points": 4,
+      "importedAt": "2026-08-14",
+      "basePoints": 4,
+      "acousticBonus": 0
     },
     {
       "id": "obs-ida-142",
@@ -2547,8 +2829,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 3,
-      "importedAt": "2026-08-14"
+      "points": 5,
+      "importedAt": "2026-08-14",
+      "basePoints": 4,
+      "acousticBonus": 1
     },
     {
       "id": "obs-ida-143",
@@ -2559,8 +2843,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DE-SH",
       "region": "DE-NORTH",
       "scoreWindow": "may_aug",
-      "points": 3,
-      "importedAt": "2026-08-14"
+      "points": 4,
+      "importedAt": "2026-08-14",
+      "basePoints": 4,
+      "acousticBonus": 0
     },
     {
       "id": "obs-ida-144",
@@ -2571,8 +2857,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DE-SH",
       "region": "DE-NORTH",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 3,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-ida-145",
@@ -2583,8 +2871,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DE-SH",
       "region": "DE-NORTH",
       "scoreWindow": "may_aug",
-      "points": 7,
-      "importedAt": "2026-08-14"
+      "points": 8,
+      "importedAt": "2026-08-14",
+      "basePoints": 8,
+      "acousticBonus": 0
     },
     {
       "id": "obs-ida-146",
@@ -2595,8 +2885,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DE-SH",
       "region": "DE-NORTH",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 4,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 1
     },
     {
       "id": "obs-ida-147",
@@ -2608,7 +2900,9 @@ window.BIRDLEAGUE_DATA = {
       "region": "DE-NORTH",
       "scoreWindow": "may_aug",
       "points": 1,
-      "importedAt": "2026-08-14"
+      "importedAt": "2026-08-14",
+      "basePoints": 1,
+      "acousticBonus": 0
     },
     {
       "id": "obs-ida-148",
@@ -2620,7 +2914,9 @@ window.BIRDLEAGUE_DATA = {
       "region": "DE-NORTH",
       "scoreWindow": "may_aug",
       "points": 1,
-      "importedAt": "2026-08-14"
+      "importedAt": "2026-08-14",
+      "basePoints": 1,
+      "acousticBonus": 0
     },
     {
       "id": "obs-ida-149",
@@ -2631,8 +2927,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DE-SH",
       "region": "DE-NORTH",
       "scoreWindow": "may_aug",
-      "points": 3,
-      "importedAt": "2026-08-14"
+      "points": 6,
+      "importedAt": "2026-08-14",
+      "basePoints": 4,
+      "acousticBonus": 2
     },
     {
       "id": "obs-ida-150",
@@ -2643,8 +2941,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DE-SH",
       "region": "DE-NORTH",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 3,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-ida-151",
@@ -2656,7 +2956,9 @@ window.BIRDLEAGUE_DATA = {
       "region": "DE-NORTH",
       "scoreWindow": "may_aug",
       "points": 1,
-      "importedAt": "2026-08-14"
+      "importedAt": "2026-08-14",
+      "basePoints": 1,
+      "acousticBonus": 0
     },
     {
       "id": "obs-ida-152",
@@ -2668,7 +2970,9 @@ window.BIRDLEAGUE_DATA = {
       "region": "DE-NORTH",
       "scoreWindow": "may_aug",
       "points": 1,
-      "importedAt": "2026-08-14"
+      "importedAt": "2026-08-14",
+      "basePoints": 1,
+      "acousticBonus": 0
     },
     {
       "id": "obs-ida-153",
@@ -2679,8 +2983,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DE-SH",
       "region": "DE-NORTH",
       "scoreWindow": "may_aug",
-      "points": 3,
-      "importedAt": "2026-08-14"
+      "points": 4,
+      "importedAt": "2026-08-14",
+      "basePoints": 4,
+      "acousticBonus": 0
     },
     {
       "id": "obs-ida-154",
@@ -2692,7 +2998,9 @@ window.BIRDLEAGUE_DATA = {
       "region": "DE-NORTH",
       "scoreWindow": "may_aug",
       "points": 1,
-      "importedAt": "2026-08-14"
+      "importedAt": "2026-08-14",
+      "basePoints": 1,
+      "acousticBonus": 0
     },
     {
       "id": "obs-ida-155",
@@ -2703,8 +3011,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DE-SH",
       "region": "DE-NORTH",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 3,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-ida-156",
@@ -2715,8 +3025,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DE-SH",
       "region": "DE-NORTH",
       "scoreWindow": "may_aug",
-      "points": 3,
-      "importedAt": "2026-08-14"
+      "points": 4,
+      "importedAt": "2026-08-14",
+      "basePoints": 4,
+      "acousticBonus": 0
     },
     {
       "id": "obs-ida-157",
@@ -2727,8 +3039,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DE-SH",
       "region": "DE-NORTH",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 3,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-ida-158",
@@ -2739,8 +3053,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DE-SH",
       "region": "DE-NORTH",
       "scoreWindow": "may_aug",
-      "points": 3,
-      "importedAt": "2026-08-14"
+      "points": 5,
+      "importedAt": "2026-08-14",
+      "basePoints": 4,
+      "acousticBonus": 1
     },
     {
       "id": "obs-ida-159",
@@ -2751,8 +3067,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DE-SH",
       "region": "DE-NORTH",
       "scoreWindow": "may_aug",
-      "points": 4,
-      "importedAt": "2026-08-14"
+      "points": 5,
+      "importedAt": "2026-08-14",
+      "basePoints": 5,
+      "acousticBonus": 0
     },
     {
       "id": "obs-ida-160",
@@ -2763,8 +3081,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DE-SH",
       "region": "DE-NORTH",
       "scoreWindow": "may_aug",
-      "points": 4,
-      "importedAt": "2026-08-14"
+      "points": 5,
+      "importedAt": "2026-08-14",
+      "basePoints": 5,
+      "acousticBonus": 0
     },
     {
       "id": "obs-ida-161",
@@ -2775,8 +3095,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DE-HH",
       "region": "DE-NORTH",
       "scoreWindow": "may_aug",
-      "points": 1,
-      "importedAt": "2026-08-14"
+      "points": 2,
+      "importedAt": "2026-08-14",
+      "basePoints": 1,
+      "acousticBonus": 1
     },
     {
       "id": "obs-ida-162",
@@ -2787,8 +3109,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DE-SH",
       "region": "DE-NORTH",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 3,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-ida-163",
@@ -2799,8 +3123,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DE-SH",
       "region": "DE-NORTH",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 3,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-ida-164",
@@ -2811,8 +3137,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DE-SH",
       "region": "DE-NORTH",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 3,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-ida-165",
@@ -2824,7 +3152,9 @@ window.BIRDLEAGUE_DATA = {
       "region": "DE-NORTH",
       "scoreWindow": "may_aug",
       "points": 1,
-      "importedAt": "2026-08-14"
+      "importedAt": "2026-08-14",
+      "basePoints": 1,
+      "acousticBonus": 0
     },
     {
       "id": "obs-ida-166",
@@ -2835,8 +3165,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DE-BY",
       "region": "DE-SOUTH",
       "scoreWindow": "may_aug",
-      "points": 3,
-      "importedAt": "2026-08-14"
+      "points": 5,
+      "importedAt": "2026-08-14",
+      "basePoints": 4,
+      "acousticBonus": 1
     },
     {
       "id": "obs-ida-167",
@@ -2847,8 +3179,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DE-BY",
       "region": "DE-SOUTH",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 5,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 2
     },
     {
       "id": "obs-ida-168",
@@ -2860,7 +3194,9 @@ window.BIRDLEAGUE_DATA = {
       "region": "DE-SOUTH",
       "scoreWindow": "may_aug",
       "points": 1,
-      "importedAt": "2026-08-14"
+      "importedAt": "2026-08-14",
+      "basePoints": 1,
+      "acousticBonus": 0
     },
     {
       "id": "obs-ida-169",
@@ -2872,7 +3208,9 @@ window.BIRDLEAGUE_DATA = {
       "region": "DE-SOUTH",
       "scoreWindow": "may_aug",
       "points": 1,
-      "importedAt": "2026-08-14"
+      "importedAt": "2026-08-14",
+      "basePoints": 1,
+      "acousticBonus": 0
     },
     {
       "id": "obs-ida-170",
@@ -2883,8 +3221,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DE-BY",
       "region": "DE-SOUTH",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 3,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-ida-171",
@@ -2895,8 +3235,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DE-HH",
       "region": "DE-NORTH",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 3,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-ida-172",
@@ -2908,7 +3250,9 @@ window.BIRDLEAGUE_DATA = {
       "region": "DE-NORTH",
       "scoreWindow": "may_aug",
       "points": 1,
-      "importedAt": "2026-08-14"
+      "importedAt": "2026-08-14",
+      "basePoints": 1,
+      "acousticBonus": 0
     },
     {
       "id": "obs-ida-173",
@@ -2919,8 +3263,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DE-HH",
       "region": "DE-NORTH",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 3,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-ida-174",
@@ -2931,8 +3277,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "SE-S",
       "region": "SE-CENTRAL",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 3,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-ida-175",
@@ -2943,8 +3291,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "SE-Z",
       "region": "SE-NORTH",
       "scoreWindow": "may_aug",
-      "points": 5,
-      "importedAt": "2026-08-14"
+      "points": 6,
+      "importedAt": "2026-08-14",
+      "basePoints": 6,
+      "acousticBonus": 0
     },
     {
       "id": "obs-ida-176",
@@ -2956,7 +3306,9 @@ window.BIRDLEAGUE_DATA = {
       "region": "SE-NORTH",
       "scoreWindow": "may_aug",
       "points": 1,
-      "importedAt": "2026-08-14"
+      "importedAt": "2026-08-14",
+      "basePoints": 1,
+      "acousticBonus": 0
     },
     {
       "id": "obs-ida-177",
@@ -2968,7 +3320,9 @@ window.BIRDLEAGUE_DATA = {
       "region": "SE-NORTH",
       "scoreWindow": "may_aug",
       "points": 1,
-      "importedAt": "2026-08-14"
+      "importedAt": "2026-08-14",
+      "basePoints": 1,
+      "acousticBonus": 0
     },
     {
       "id": "obs-ida-178",
@@ -2980,7 +3334,9 @@ window.BIRDLEAGUE_DATA = {
       "region": "SE-NORTH",
       "scoreWindow": "may_aug",
       "points": 1,
-      "importedAt": "2026-08-14"
+      "importedAt": "2026-08-14",
+      "basePoints": 1,
+      "acousticBonus": 0
     },
     {
       "id": "obs-ida-179",
@@ -2991,8 +3347,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "SE-Z",
       "region": "SE-NORTH",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 4,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 1
     },
     {
       "id": "obs-ida-180",
@@ -3003,8 +3361,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "SE-Z",
       "region": "SE-NORTH",
       "scoreWindow": "may_aug",
-      "points": 3,
-      "importedAt": "2026-08-14"
+      "points": 4,
+      "importedAt": "2026-08-14",
+      "basePoints": 4,
+      "acousticBonus": 0
     },
     {
       "id": "obs-ida-181",
@@ -3015,8 +3375,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "NO-19",
       "region": "NO",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 4,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 1
     },
     {
       "id": "obs-ida-182",
@@ -3027,8 +3389,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "NO-19",
       "region": "NO",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 4,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 1
     },
     {
       "id": "obs-ida-183",
@@ -3040,7 +3404,9 @@ window.BIRDLEAGUE_DATA = {
       "region": "NO",
       "scoreWindow": "may_aug",
       "points": 1,
-      "importedAt": "2026-08-14"
+      "importedAt": "2026-08-14",
+      "basePoints": 1,
+      "acousticBonus": 0
     },
     {
       "id": "obs-ida-184",
@@ -3052,7 +3418,9 @@ window.BIRDLEAGUE_DATA = {
       "region": "NO",
       "scoreWindow": "may_aug",
       "points": 1,
-      "importedAt": "2026-08-14"
+      "importedAt": "2026-08-14",
+      "basePoints": 1,
+      "acousticBonus": 0
     },
     {
       "id": "obs-ida-185",
@@ -3063,8 +3431,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "SE-BD",
       "region": "SE-NORTH",
       "scoreWindow": "may_aug",
-      "points": 3,
-      "importedAt": "2026-08-14"
+      "points": 4,
+      "importedAt": "2026-08-14",
+      "basePoints": 4,
+      "acousticBonus": 0
     },
     {
       "id": "obs-ida-186",
@@ -3075,8 +3445,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "SE-BD",
       "region": "SE-NORTH",
       "scoreWindow": "may_aug",
-      "points": 3,
-      "importedAt": "2026-08-14"
+      "points": 5,
+      "importedAt": "2026-08-14",
+      "basePoints": 4,
+      "acousticBonus": 1
     },
     {
       "id": "obs-ida-187",
@@ -3087,8 +3459,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "SE-BD",
       "region": "SE-NORTH",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 3,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-ida-188",
@@ -3100,7 +3474,9 @@ window.BIRDLEAGUE_DATA = {
       "region": "SE-NORTH",
       "scoreWindow": "may_aug",
       "points": 1,
-      "importedAt": "2026-08-14"
+      "importedAt": "2026-08-14",
+      "basePoints": 1,
+      "acousticBonus": 0
     },
     {
       "id": "obs-ida-189",
@@ -3111,8 +3487,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "SE-BD",
       "region": "SE-NORTH",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 3,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-ida-190",
@@ -3123,8 +3501,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "NO-18",
       "region": "NO",
       "scoreWindow": "may_aug",
-      "points": 1,
-      "importedAt": "2026-08-14"
+      "points": 3,
+      "importedAt": "2026-08-14",
+      "basePoints": 1,
+      "acousticBonus": 2
     },
     {
       "id": "obs-ida-191",
@@ -3135,8 +3515,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "SE-BD",
       "region": "SE-NORTH",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 3,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-ida-192",
@@ -3147,8 +3529,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "SE-Z",
       "region": "SE-NORTH",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 4,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 1
     },
     {
       "id": "obs-ida-193",
@@ -3159,8 +3543,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "SE-Z",
       "region": "SE-NORTH",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 5,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 2
     },
     {
       "id": "obs-ida-194",
@@ -3171,8 +3557,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "SE-Z",
       "region": "SE-NORTH",
       "scoreWindow": "may_aug",
-      "points": 3,
-      "importedAt": "2026-08-14"
+      "points": 5,
+      "importedAt": "2026-08-14",
+      "basePoints": 4,
+      "acousticBonus": 1
     },
     {
       "id": "obs-ida-195",
@@ -3183,8 +3571,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DE-HH",
       "region": "DE-NORTH",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 3,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-ida-196",
@@ -3195,8 +3585,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DE-HH",
       "region": "DE-NORTH",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 5,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 2
     },
     {
       "id": "obs-ida-197",
@@ -3207,8 +3599,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DE-SH",
       "region": "DE-NORTH",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 3,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-ida-198",
@@ -3219,8 +3613,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DE-SH",
       "region": "DE-NORTH",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 4,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 1
     },
     {
       "id": "obs-ida-199",
@@ -3231,8 +3627,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DE-SH",
       "region": "DE-NORTH",
       "scoreWindow": "may_aug",
-      "points": 3,
-      "importedAt": "2026-08-14"
+      "points": 6,
+      "importedAt": "2026-08-14",
+      "basePoints": 4,
+      "acousticBonus": 2
     },
     {
       "id": "obs-ida-200",
@@ -3243,8 +3641,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DE-HE",
       "region": "DE-CENTRAL",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 3,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-bengt-201",
@@ -3256,7 +3656,9 @@ window.BIRDLEAGUE_DATA = {
       "region": "DK",
       "scoreWindow": "may_aug",
       "points": 1,
-      "importedAt": "2026-08-14"
+      "importedAt": "2026-08-14",
+      "basePoints": 1,
+      "acousticBonus": 0
     },
     {
       "id": "obs-bengt-202",
@@ -3267,8 +3669,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 4,
-      "importedAt": "2026-08-14"
+      "points": 5,
+      "importedAt": "2026-08-14",
+      "basePoints": 5,
+      "acousticBonus": 0
     },
     {
       "id": "obs-bengt-203",
@@ -3279,8 +3683,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 3,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-bengt-204",
@@ -3291,8 +3697,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 3,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-bengt-205",
@@ -3303,8 +3711,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 3,
-      "importedAt": "2026-08-14"
+      "points": 4,
+      "importedAt": "2026-08-14",
+      "basePoints": 4,
+      "acousticBonus": 0
     },
     {
       "id": "obs-bengt-206",
@@ -3316,7 +3726,9 @@ window.BIRDLEAGUE_DATA = {
       "region": "DK",
       "scoreWindow": "may_aug",
       "points": 1,
-      "importedAt": "2026-08-14"
+      "importedAt": "2026-08-14",
+      "basePoints": 1,
+      "acousticBonus": 0
     },
     {
       "id": "obs-bengt-207",
@@ -3327,8 +3739,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 3,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-bengt-208",
@@ -3339,8 +3753,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 3,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-bengt-209",
@@ -3351,8 +3767,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 3,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-bengt-210",
@@ -3363,8 +3781,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 4,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 1
     },
     {
       "id": "obs-bengt-211",
@@ -3375,8 +3795,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 3,
-      "importedAt": "2026-08-14"
+      "points": 5,
+      "importedAt": "2026-08-14",
+      "basePoints": 4,
+      "acousticBonus": 1
     },
     {
       "id": "obs-bengt-212",
@@ -3387,8 +3809,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 4,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 1
     },
     {
       "id": "obs-bengt-213",
@@ -3399,8 +3823,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 3,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-bengt-214",
@@ -3411,8 +3837,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 3,
-      "importedAt": "2026-08-14"
+      "points": 5,
+      "importedAt": "2026-08-14",
+      "basePoints": 4,
+      "acousticBonus": 1
     },
     {
       "id": "obs-bengt-215",
@@ -3423,8 +3851,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 3,
-      "importedAt": "2026-08-14"
+      "points": 4,
+      "importedAt": "2026-08-14",
+      "basePoints": 4,
+      "acousticBonus": 0
     },
     {
       "id": "obs-bengt-216",
@@ -3436,7 +3866,9 @@ window.BIRDLEAGUE_DATA = {
       "region": "DK",
       "scoreWindow": "may_aug",
       "points": 1,
-      "importedAt": "2026-08-14"
+      "importedAt": "2026-08-14",
+      "basePoints": 1,
+      "acousticBonus": 0
     },
     {
       "id": "obs-bengt-217",
@@ -3447,8 +3879,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 3,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-bengt-218",
@@ -3459,8 +3893,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 3,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-bengt-219",
@@ -3472,7 +3908,9 @@ window.BIRDLEAGUE_DATA = {
       "region": "DK",
       "scoreWindow": "may_aug",
       "points": 1,
-      "importedAt": "2026-08-14"
+      "importedAt": "2026-08-14",
+      "basePoints": 1,
+      "acousticBonus": 0
     },
     {
       "id": "obs-bengt-220",
@@ -3484,7 +3922,9 @@ window.BIRDLEAGUE_DATA = {
       "region": "DK",
       "scoreWindow": "may_aug",
       "points": 1,
-      "importedAt": "2026-08-14"
+      "importedAt": "2026-08-14",
+      "basePoints": 1,
+      "acousticBonus": 0
     },
     {
       "id": "obs-bengt-221",
@@ -3496,7 +3936,9 @@ window.BIRDLEAGUE_DATA = {
       "region": "DK",
       "scoreWindow": "may_aug",
       "points": 1,
-      "importedAt": "2026-08-14"
+      "importedAt": "2026-08-14",
+      "basePoints": 1,
+      "acousticBonus": 0
     },
     {
       "id": "obs-bengt-222",
@@ -3508,7 +3950,9 @@ window.BIRDLEAGUE_DATA = {
       "region": "DK",
       "scoreWindow": "may_aug",
       "points": 1,
-      "importedAt": "2026-08-14"
+      "importedAt": "2026-08-14",
+      "basePoints": 1,
+      "acousticBonus": 0
     },
     {
       "id": "obs-bengt-223",
@@ -3519,8 +3963,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 3,
-      "importedAt": "2026-08-14"
+      "points": 5,
+      "importedAt": "2026-08-14",
+      "basePoints": 4,
+      "acousticBonus": 1
     },
     {
       "id": "obs-bengt-224",
@@ -3532,7 +3978,9 @@ window.BIRDLEAGUE_DATA = {
       "region": "DK",
       "scoreWindow": "may_aug",
       "points": 1,
-      "importedAt": "2026-08-14"
+      "importedAt": "2026-08-14",
+      "basePoints": 1,
+      "acousticBonus": 0
     },
     {
       "id": "obs-bengt-225",
@@ -3544,7 +3992,9 @@ window.BIRDLEAGUE_DATA = {
       "region": "DK",
       "scoreWindow": "may_aug",
       "points": 1,
-      "importedAt": "2026-08-14"
+      "importedAt": "2026-08-14",
+      "basePoints": 1,
+      "acousticBonus": 0
     },
     {
       "id": "obs-bengt-226",
@@ -3556,7 +4006,9 @@ window.BIRDLEAGUE_DATA = {
       "region": "DK",
       "scoreWindow": "may_aug",
       "points": 1,
-      "importedAt": "2026-08-14"
+      "importedAt": "2026-08-14",
+      "basePoints": 1,
+      "acousticBonus": 0
     },
     {
       "id": "obs-bengt-227",
@@ -3567,8 +4019,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 3,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-bengt-228",
@@ -3579,8 +4033,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 1,
-      "importedAt": "2026-08-14"
+      "points": 2,
+      "importedAt": "2026-08-14",
+      "basePoints": 1,
+      "acousticBonus": 1
     },
     {
       "id": "obs-bengt-229",
@@ -3592,7 +4048,9 @@ window.BIRDLEAGUE_DATA = {
       "region": "DK",
       "scoreWindow": "may_aug",
       "points": 1,
-      "importedAt": "2026-08-14"
+      "importedAt": "2026-08-14",
+      "basePoints": 1,
+      "acousticBonus": 0
     },
     {
       "id": "obs-bengt-230",
@@ -3603,8 +4061,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 3,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-bengt-231",
@@ -3616,7 +4076,9 @@ window.BIRDLEAGUE_DATA = {
       "region": "DK",
       "scoreWindow": "may_aug",
       "points": 1,
-      "importedAt": "2026-08-14"
+      "importedAt": "2026-08-14",
+      "basePoints": 1,
+      "acousticBonus": 0
     },
     {
       "id": "obs-bengt-232",
@@ -3627,8 +4089,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 3,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-bengt-233",
@@ -3639,8 +4103,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 3,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-bengt-234",
@@ -3651,8 +4117,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 3,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-bengt-235",
@@ -3663,8 +4131,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 4,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 1
     },
     {
       "id": "obs-bengt-236",
@@ -3676,7 +4146,9 @@ window.BIRDLEAGUE_DATA = {
       "region": "DK",
       "scoreWindow": "may_aug",
       "points": 1,
-      "importedAt": "2026-08-14"
+      "importedAt": "2026-08-14",
+      "basePoints": 1,
+      "acousticBonus": 0
     },
     {
       "id": "obs-bengt-237",
@@ -3687,8 +4159,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 3,
-      "importedAt": "2026-08-14"
+      "points": 5,
+      "importedAt": "2026-08-14",
+      "basePoints": 4,
+      "acousticBonus": 1
     },
     {
       "id": "obs-bengt-238",
@@ -3699,8 +4173,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 4,
-      "importedAt": "2026-08-14"
+      "points": 6,
+      "importedAt": "2026-08-14",
+      "basePoints": 5,
+      "acousticBonus": 1
     },
     {
       "id": "obs-bengt-239",
@@ -3712,7 +4188,9 @@ window.BIRDLEAGUE_DATA = {
       "region": "DK",
       "scoreWindow": "may_aug",
       "points": 1,
-      "importedAt": "2026-08-14"
+      "importedAt": "2026-08-14",
+      "basePoints": 1,
+      "acousticBonus": 0
     },
     {
       "id": "obs-bengt-240",
@@ -3724,7 +4202,9 @@ window.BIRDLEAGUE_DATA = {
       "region": "DK",
       "scoreWindow": "may_aug",
       "points": 1,
-      "importedAt": "2026-08-14"
+      "importedAt": "2026-08-14",
+      "basePoints": 1,
+      "acousticBonus": 0
     },
     {
       "id": "obs-bengt-241",
@@ -3735,8 +4215,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 3,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-bengt-242",
@@ -3747,8 +4229,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 3,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-bengt-243",
@@ -3760,7 +4244,9 @@ window.BIRDLEAGUE_DATA = {
       "region": "DK",
       "scoreWindow": "may_aug",
       "points": 1,
-      "importedAt": "2026-08-14"
+      "importedAt": "2026-08-14",
+      "basePoints": 1,
+      "acousticBonus": 0
     },
     {
       "id": "obs-bengt-244",
@@ -3771,8 +4257,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 3,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-bengt-245",
@@ -3783,8 +4271,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 3,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-bengt-246",
@@ -3795,8 +4285,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 3,
-      "importedAt": "2026-08-14"
+      "points": 5,
+      "importedAt": "2026-08-14",
+      "basePoints": 4,
+      "acousticBonus": 1
     },
     {
       "id": "obs-bengt-247",
@@ -3807,8 +4299,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 3,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-bengt-248",
@@ -3819,8 +4313,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 3,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-bengt-249",
@@ -3831,8 +4327,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 4,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 1
     },
     {
       "id": "obs-bengt-250",
@@ -3843,8 +4341,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 3,
-      "importedAt": "2026-08-14"
+      "points": 4,
+      "importedAt": "2026-08-14",
+      "basePoints": 4,
+      "acousticBonus": 0
     },
     {
       "id": "obs-bengt-251",
@@ -3855,8 +4355,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 4,
-      "importedAt": "2026-08-14"
+      "points": 5,
+      "importedAt": "2026-08-14",
+      "basePoints": 5,
+      "acousticBonus": 0
     },
     {
       "id": "obs-bengt-252",
@@ -3868,7 +4370,9 @@ window.BIRDLEAGUE_DATA = {
       "region": "DK",
       "scoreWindow": "may_aug",
       "points": 1,
-      "importedAt": "2026-08-14"
+      "importedAt": "2026-08-14",
+      "basePoints": 1,
+      "acousticBonus": 0
     },
     {
       "id": "obs-bengt-253",
@@ -3879,8 +4383,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 3,
-      "importedAt": "2026-08-14"
+      "points": 4,
+      "importedAt": "2026-08-14",
+      "basePoints": 4,
+      "acousticBonus": 0
     },
     {
       "id": "obs-bengt-254",
@@ -3891,8 +4397,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 3,
-      "importedAt": "2026-08-14"
+      "points": 4,
+      "importedAt": "2026-08-14",
+      "basePoints": 4,
+      "acousticBonus": 0
     },
     {
       "id": "obs-bengt-255",
@@ -3903,8 +4411,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 4,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 1
     },
     {
       "id": "obs-bengt-256",
@@ -3915,8 +4425,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 5,
-      "importedAt": "2026-08-14"
+      "points": 6,
+      "importedAt": "2026-08-14",
+      "basePoints": 6,
+      "acousticBonus": 0
     },
     {
       "id": "obs-bengt-257",
@@ -3927,8 +4439,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 3,
-      "importedAt": "2026-08-14"
+      "points": 4,
+      "importedAt": "2026-08-14",
+      "basePoints": 4,
+      "acousticBonus": 0
     },
     {
       "id": "obs-bengt-258",
@@ -3939,8 +4453,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 3,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-bengt-259",
@@ -3951,8 +4467,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 4,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 1
     },
     {
       "id": "obs-bengt-260",
@@ -3963,8 +4481,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DK-07",
       "region": "DK",
       "scoreWindow": "may_aug",
-      "points": 4,
-      "importedAt": "2026-08-14"
+      "points": 5,
+      "importedAt": "2026-08-14",
+      "basePoints": 5,
+      "acousticBonus": 0
     },
     {
       "id": "obs-bengt-261",
@@ -3976,7 +4496,9 @@ window.BIRDLEAGUE_DATA = {
       "region": "DE-NORTH",
       "scoreWindow": "may_aug",
       "points": 1,
-      "importedAt": "2026-08-14"
+      "importedAt": "2026-08-14",
+      "basePoints": 1,
+      "acousticBonus": 0
     },
     {
       "id": "obs-bengt-262",
@@ -3987,8 +4509,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DE-SH",
       "region": "DE-NORTH",
       "scoreWindow": "may_aug",
-      "points": 3,
-      "importedAt": "2026-08-14"
+      "points": 4,
+      "importedAt": "2026-08-14",
+      "basePoints": 4,
+      "acousticBonus": 0
     },
     {
       "id": "obs-bengt-263",
@@ -3999,8 +4523,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DE-SH",
       "region": "DE-NORTH",
       "scoreWindow": "may_aug",
-      "points": 7,
-      "importedAt": "2026-08-14"
+      "points": 8,
+      "importedAt": "2026-08-14",
+      "basePoints": 8,
+      "acousticBonus": 0
     },
     {
       "id": "obs-bengt-264",
@@ -4011,8 +4537,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DE-SH",
       "region": "DE-NORTH",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 3,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-bengt-265",
@@ -4023,8 +4551,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DE-SH",
       "region": "DE-NORTH",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 4,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 1
     },
     {
       "id": "obs-bengt-266",
@@ -4035,8 +4565,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DE-SH",
       "region": "DE-NORTH",
       "scoreWindow": "may_aug",
-      "points": 3,
-      "importedAt": "2026-08-14"
+      "points": 6,
+      "importedAt": "2026-08-14",
+      "basePoints": 4,
+      "acousticBonus": 2
     },
     {
       "id": "obs-bengt-267",
@@ -4048,7 +4580,9 @@ window.BIRDLEAGUE_DATA = {
       "region": "DE-NORTH",
       "scoreWindow": "may_aug",
       "points": 1,
-      "importedAt": "2026-08-14"
+      "importedAt": "2026-08-14",
+      "basePoints": 1,
+      "acousticBonus": 0
     },
     {
       "id": "obs-bengt-268",
@@ -4059,8 +4593,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DE-SH",
       "region": "DE-NORTH",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 3,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-bengt-269",
@@ -4071,8 +4607,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DE-SH",
       "region": "DE-NORTH",
       "scoreWindow": "may_aug",
-      "points": 1,
-      "importedAt": "2026-08-14"
+      "points": 2,
+      "importedAt": "2026-08-14",
+      "basePoints": 1,
+      "acousticBonus": 1
     },
     {
       "id": "obs-bengt-270",
@@ -4083,8 +4621,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DE-SH",
       "region": "DE-NORTH",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 3,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-bengt-271",
@@ -4095,8 +4635,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DE-SH",
       "region": "DE-NORTH",
       "scoreWindow": "may_aug",
-      "points": 3,
-      "importedAt": "2026-08-14"
+      "points": 4,
+      "importedAt": "2026-08-14",
+      "basePoints": 4,
+      "acousticBonus": 0
     },
     {
       "id": "obs-bengt-272",
@@ -4108,7 +4650,9 @@ window.BIRDLEAGUE_DATA = {
       "region": "DE-NORTH",
       "scoreWindow": "may_aug",
       "points": 1,
-      "importedAt": "2026-08-14"
+      "importedAt": "2026-08-14",
+      "basePoints": 1,
+      "acousticBonus": 0
     },
     {
       "id": "obs-bengt-273",
@@ -4119,8 +4663,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DE-SH",
       "region": "DE-NORTH",
       "scoreWindow": "may_aug",
-      "points": 3,
-      "importedAt": "2026-08-14"
+      "points": 4,
+      "importedAt": "2026-08-14",
+      "basePoints": 4,
+      "acousticBonus": 0
     },
     {
       "id": "obs-bengt-274",
@@ -4131,8 +4677,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DE-SH",
       "region": "DE-NORTH",
       "scoreWindow": "may_aug",
-      "points": 3,
-      "importedAt": "2026-08-14"
+      "points": 5,
+      "importedAt": "2026-08-14",
+      "basePoints": 4,
+      "acousticBonus": 1
     },
     {
       "id": "obs-bengt-275",
@@ -4143,8 +4691,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DE-SH",
       "region": "DE-NORTH",
       "scoreWindow": "may_aug",
-      "points": 4,
-      "importedAt": "2026-08-14"
+      "points": 5,
+      "importedAt": "2026-08-14",
+      "basePoints": 5,
+      "acousticBonus": 0
     },
     {
       "id": "obs-bengt-276",
@@ -4155,8 +4705,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DE-HH",
       "region": "DE-NORTH",
       "scoreWindow": "may_aug",
-      "points": 3,
-      "importedAt": "2026-08-14"
+      "points": 6,
+      "importedAt": "2026-08-14",
+      "basePoints": 4,
+      "acousticBonus": 2
     },
     {
       "id": "obs-bengt-277",
@@ -4167,8 +4719,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DE-HH",
       "region": "DE-NORTH",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 3,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-bengt-278",
@@ -4179,8 +4733,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DE-BY",
       "region": "DE-SOUTH",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 3,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-bengt-279",
@@ -4192,7 +4748,9 @@ window.BIRDLEAGUE_DATA = {
       "region": "DE-SOUTH",
       "scoreWindow": "may_aug",
       "points": 1,
-      "importedAt": "2026-08-14"
+      "importedAt": "2026-08-14",
+      "basePoints": 1,
+      "acousticBonus": 0
     },
     {
       "id": "obs-bengt-280",
@@ -4204,7 +4762,9 @@ window.BIRDLEAGUE_DATA = {
       "region": "DE-SOUTH",
       "scoreWindow": "may_aug",
       "points": 1,
-      "importedAt": "2026-08-14"
+      "importedAt": "2026-08-14",
+      "basePoints": 1,
+      "acousticBonus": 0
     },
     {
       "id": "obs-bengt-281",
@@ -4215,8 +4775,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DE-BY",
       "region": "DE-SOUTH",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 5,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 2
     },
     {
       "id": "obs-bengt-282",
@@ -4228,7 +4790,9 @@ window.BIRDLEAGUE_DATA = {
       "region": "DE-SOUTH",
       "scoreWindow": "may_aug",
       "points": 1,
-      "importedAt": "2026-08-14"
+      "importedAt": "2026-08-14",
+      "basePoints": 1,
+      "acousticBonus": 0
     },
     {
       "id": "obs-bengt-283",
@@ -4239,8 +4803,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DE-BY",
       "region": "DE-SOUTH",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 3,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-bengt-284",
@@ -4251,8 +4817,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DE-BY",
       "region": "DE-SOUTH",
       "scoreWindow": "may_aug",
-      "points": 6,
-      "importedAt": "2026-08-14"
+      "points": 7,
+      "importedAt": "2026-08-14",
+      "basePoints": 7,
+      "acousticBonus": 0
     },
     {
       "id": "obs-bengt-285",
@@ -4263,8 +4831,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DE-SH",
       "region": "DE-NORTH",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 5,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 2
     },
     {
       "id": "obs-bengt-286",
@@ -4276,7 +4846,9 @@ window.BIRDLEAGUE_DATA = {
       "region": "SE-NORTH",
       "scoreWindow": "may_aug",
       "points": 1,
-      "importedAt": "2026-08-14"
+      "importedAt": "2026-08-14",
+      "basePoints": 1,
+      "acousticBonus": 0
     },
     {
       "id": "obs-bengt-287",
@@ -4288,7 +4860,9 @@ window.BIRDLEAGUE_DATA = {
       "region": "SE-NORTH",
       "scoreWindow": "may_aug",
       "points": 1,
-      "importedAt": "2026-08-14"
+      "importedAt": "2026-08-14",
+      "basePoints": 1,
+      "acousticBonus": 0
     },
     {
       "id": "obs-bengt-288",
@@ -4299,8 +4873,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "SE-Z",
       "region": "SE-NORTH",
       "scoreWindow": "may_aug",
-      "points": 3,
-      "importedAt": "2026-08-14"
+      "points": 4,
+      "importedAt": "2026-08-14",
+      "basePoints": 4,
+      "acousticBonus": 0
     },
     {
       "id": "obs-bengt-289",
@@ -4312,7 +4888,9 @@ window.BIRDLEAGUE_DATA = {
       "region": "SE-NORTH",
       "scoreWindow": "may_aug",
       "points": 1,
-      "importedAt": "2026-08-14"
+      "importedAt": "2026-08-14",
+      "basePoints": 1,
+      "acousticBonus": 0
     },
     {
       "id": "obs-bengt-290",
@@ -4323,8 +4901,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "NO-19",
       "region": "NO",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 3,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-bengt-291",
@@ -4336,7 +4916,9 @@ window.BIRDLEAGUE_DATA = {
       "region": "NO",
       "scoreWindow": "may_aug",
       "points": 1,
-      "importedAt": "2026-08-14"
+      "importedAt": "2026-08-14",
+      "basePoints": 1,
+      "acousticBonus": 0
     },
     {
       "id": "obs-bengt-292",
@@ -4347,8 +4929,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "NO-19",
       "region": "NO",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 4,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 1
     },
     {
       "id": "obs-bengt-293",
@@ -4359,8 +4943,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "NO-19",
       "region": "NO",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 4,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 1
     },
     {
       "id": "obs-bengt-294",
@@ -4371,8 +4957,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "SE-BD",
       "region": "SE-NORTH",
       "scoreWindow": "may_aug",
-      "points": 3,
-      "importedAt": "2026-08-14"
+      "points": 5,
+      "importedAt": "2026-08-14",
+      "basePoints": 4,
+      "acousticBonus": 1
     },
     {
       "id": "obs-bengt-295",
@@ -4383,8 +4971,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "SE-BD",
       "region": "SE-NORTH",
       "scoreWindow": "may_aug",
-      "points": 3,
-      "importedAt": "2026-08-14"
+      "points": 4,
+      "importedAt": "2026-08-14",
+      "basePoints": 4,
+      "acousticBonus": 0
     },
     {
       "id": "obs-bengt-296",
@@ -4395,8 +4985,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "SE-BD",
       "region": "SE-NORTH",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 3,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-bengt-297",
@@ -4408,7 +5000,9 @@ window.BIRDLEAGUE_DATA = {
       "region": "SE-NORTH",
       "scoreWindow": "may_aug",
       "points": 1,
-      "importedAt": "2026-08-14"
+      "importedAt": "2026-08-14",
+      "basePoints": 1,
+      "acousticBonus": 0
     },
     {
       "id": "obs-bengt-298",
@@ -4419,8 +5013,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "NO-18",
       "region": "NO",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 4,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 1
     },
     {
       "id": "obs-bengt-299",
@@ -4431,8 +5027,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "SE-BD",
       "region": "SE-NORTH",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 3,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-bengt-300",
@@ -4443,8 +5041,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "SE-Z",
       "region": "SE-NORTH",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 4,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 1
     },
     {
       "id": "obs-bengt-301",
@@ -4455,8 +5055,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "SE-Z",
       "region": "SE-NORTH",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 5,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 2
     },
     {
       "id": "obs-bengt-302",
@@ -4467,8 +5069,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "SE-Z",
       "region": "SE-NORTH",
       "scoreWindow": "may_aug",
-      "points": 3,
-      "importedAt": "2026-08-14"
+      "points": 5,
+      "importedAt": "2026-08-14",
+      "basePoints": 4,
+      "acousticBonus": 1
     },
     {
       "id": "obs-bengt-303",
@@ -4479,8 +5083,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "SE-Z",
       "region": "SE-NORTH",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 3,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 0
     },
     {
       "id": "obs-bengt-304",
@@ -4492,7 +5098,9 @@ window.BIRDLEAGUE_DATA = {
       "region": "JP-TOKYO",
       "scoreWindow": "may_aug",
       "points": 1,
-      "importedAt": "2026-08-14"
+      "importedAt": "2026-08-14",
+      "basePoints": 1,
+      "acousticBonus": 0
     },
     {
       "id": "obs-bengt-305",
@@ -4503,8 +5111,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "JP-13",
       "region": "JP-TOKYO",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 4,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 1
     },
     {
       "id": "obs-bengt-306",
@@ -4516,7 +5126,9 @@ window.BIRDLEAGUE_DATA = {
       "region": "JP-TOKYO",
       "scoreWindow": "may_aug",
       "points": 1,
-      "importedAt": "2026-08-14"
+      "importedAt": "2026-08-14",
+      "basePoints": 1,
+      "acousticBonus": 0
     },
     {
       "id": "obs-bengt-307",
@@ -4528,7 +5140,9 @@ window.BIRDLEAGUE_DATA = {
       "region": "JP-TOKYO",
       "scoreWindow": "may_aug",
       "points": 1,
-      "importedAt": "2026-08-14"
+      "importedAt": "2026-08-14",
+      "basePoints": 1,
+      "acousticBonus": 0
     },
     {
       "id": "obs-bengt-308",
@@ -4539,8 +5153,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DE-SH",
       "region": "DE-NORTH",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 4,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 1
     },
     {
       "id": "obs-bengt-309",
@@ -4551,8 +5167,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DE-SH",
       "region": "DE-NORTH",
       "scoreWindow": "may_aug",
-      "points": 3,
-      "importedAt": "2026-08-14"
+      "points": 4,
+      "importedAt": "2026-08-14",
+      "basePoints": 4,
+      "acousticBonus": 0
     },
     {
       "id": "obs-bengt-310",
@@ -4563,8 +5181,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DE-HH",
       "region": "DE-NORTH",
       "scoreWindow": "may_aug",
-      "points": 1,
-      "importedAt": "2026-08-14"
+      "points": 2,
+      "importedAt": "2026-08-14",
+      "basePoints": 1,
+      "acousticBonus": 1
     },
     {
       "id": "obs-bengt-311",
@@ -4575,8 +5195,10 @@ window.BIRDLEAGUE_DATA = {
       "stateProvince": "DE-HE",
       "region": "DE-CENTRAL",
       "scoreWindow": "may_aug",
-      "points": 2,
-      "importedAt": "2026-08-14"
+      "points": 3,
+      "importedAt": "2026-08-14",
+      "basePoints": 3,
+      "acousticBonus": 0
     }
   ]
 };

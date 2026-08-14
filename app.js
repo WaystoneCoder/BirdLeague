@@ -1,12 +1,12 @@
 "use strict";
 
 const publishedData = JSON.parse(JSON.stringify(window.BIRDLEAGUE_DATA));
-const storageKey = "birdleague-data-v3";
+const storageKey = "birdleague-data-v4";
 const storedDataRaw = localStorage.getItem(storageKey);
 if (storedDataRaw) {
   try {
     const storedData = JSON.parse(storedDataRaw);
-    if ((storedData.schemaVersion || 0) === 3 && (storedData.updatedAt || "") > (publishedData.updatedAt || "")) {
+    if ((storedData.schemaVersion || 0) === 4 && (storedData.updatedAt || "") > (publishedData.updatedAt || "")) {
       window.BIRDLEAGUE_DATA = storedData;
     } else {
       localStorage.removeItem(storageKey);
@@ -52,9 +52,23 @@ function scoreWindowFromDate(value = "") {
   return "";
 }
 
+function scoreBreakdown(scientificName, region, scoreWindow) {
+  const entry = pointCatalog?.[scientificName];
+  const base = entry?.baseScores?.[region]?.[scoreWindow];
+  const acoustic = entry?.acoustic?.[scoreWindow];
+  const score = entry?.scores?.[region]?.[scoreWindow];
+  if (![base, score].every((value) => typeof value === "number" && Number.isFinite(value)) || !acoustic || typeof acoustic.bonus !== "number") return null;
+  return { base, acousticBonus: acoustic.bonus, acousticClass: acoustic.class || "", acousticReason: acoustic.reason || "", score };
+}
+
 function masterScore(scientificName, region, scoreWindow) {
-  const score = pointCatalog?.[scientificName]?.scores?.[region]?.[scoreWindow];
-  return typeof score === "number" && Number.isFinite(score) ? score : null;
+  return scoreBreakdown(scientificName, region, scoreWindow)?.score ?? null;
+}
+
+function scoreBreakdownText(scientificName, region, scoreWindow) {
+  const detail = scoreBreakdown(scientificName, region, scoreWindow);
+  if (!detail) return "";
+  return `Basis ${detail.base} + Akustik +${detail.acousticBonus}`;
 }
 
 function applyMasterData(targetData) {
@@ -69,7 +83,10 @@ function applyMasterData(targetData) {
     const species = speciesMap.get(observation.speciesId);
     if (!observation.region && observation.stateProvince) observation.region = regionFromStateProvince(observation.stateProvince);
     if (!observation.scoreWindow && observation.observedAt) observation.scoreWindow = scoreWindowFromDate(observation.observedAt);
-    observation.points = species ? masterScore(species.scientificName, observation.region, observation.scoreWindow) : null;
+    const detail = species ? scoreBreakdown(species.scientificName, observation.region, observation.scoreWindow) : null;
+    observation.basePoints = detail?.base ?? null;
+    observation.acousticBonus = detail?.acousticBonus ?? null;
+    observation.points = detail?.score ?? null;
   });
 }
 
@@ -292,7 +309,7 @@ function renderOverview() {
       ${statCard("Spieler", data.players.length, "jagen den Titel", "◎")}
       ${statCard("Raritäten", rarityFinds, "15-Punkte-Funde", "◆")}
       ${statCard("Neues Update", recentFinds.length, "neue Jahresarten", "✦")}
-      ${unratedFinds ? statCard("Bewertung offen", unratedFinds, "Funde ohne Region-Zeit-Wert", "…") : ""}
+      ${unratedFinds ? statCard("Bewertung offen", unratedFinds, "Funde ohne V4-Wertung", "…") : ""}
     </div>
     <div class="content-grid content-grid-wide">
       <article class="panel panel-span-2"><div class="panel-heading"><div><p class="eyebrow">Live-Tabelle</p><h3>Aktuelles Ranking</h3></div><span>♛</span></div>${rankingTable()}</article>
@@ -315,7 +332,7 @@ function renderPlayers() {
     <article class="profile-hero"><div class="profile-avatar">${selectedPlayer.initials}</div><div><p class="eyebrow">Spielerprofil</p><h2>${escapeHtml(selectedPlayer.name)}</h2><p>Platz ${standings.findIndex((item) => item.player.id === selectedPlayer.id) + 1} in der BirdLeague ${data.season}</p></div><div class="profile-score"><strong>${standing.points}${standing.unratedCount ? "*" : ""}</strong><span>${standing.unratedCount ? `${standing.unratedCount} Funde unbewertet` : "Punkte"}</span></div></article>
     <div class="content-grid">
       <article class="panel panel-span-2"><div class="panel-heading"><div><p class="eyebrow">Sammlung</p><h3>${observations.length} Jahresarten</h3></div><span>B</span></div>
-        <div class="species-table">${observations.map((item) => `<div><span class="points-badge ${item.points === 15 ? 'rarity' : ''}">${pointLabel(item.points)}</span><div><strong>${escapeHtml(item.species.germanName)}</strong><small><em>${escapeHtml(item.species.scientificName)}</em> · ${formatDate(item.observedAt)} · ${escapeHtml(regionLabel(item.region))}${item.location ? ` · ${escapeHtml(item.location)}` : ''}</small></div></div>`).join("")}</div>
+        <div class="species-table">${observations.map((item) => `<div><span class="points-badge ${item.points === 15 ? 'rarity' : ''}">${pointLabel(item.points)}</span><div><strong>${escapeHtml(item.species.germanName)}</strong><small><em>${escapeHtml(item.species.scientificName)}</em> · ${formatDate(item.observedAt)} · ${escapeHtml(regionLabel(item.region))}${item.location ? ` · ${escapeHtml(item.location)}` : ''} · <span class="score-breakdown">${escapeHtml(scoreBreakdownText(item.species.scientificName, item.region, item.scoreWindow))}</span></small></div></div>`).join("")}</div>
       </article>
       <article class="panel"><div class="panel-heading"><div><p class="eyebrow">Besonders</p><h3>Exklusive Arten</h3></div><span>★</span></div>
         <div class="exclusive-list">${exclusive.length ? exclusive.map((item) => `<div><strong>${escapeHtml(item.species.germanName)}</strong><span>${pointText(item.points)}</span></div>`).join("") : '<p class="muted">Aktuell keine exklusive Art.</p>'}</div>
@@ -397,14 +414,16 @@ function renderRules() {
   const rules = [
     ["1", "Eine Art pro Person und Saison", "Mehrfachaufnahmen derselben Art bringen keine zusätzlichen Punkte. Es zählt der früheste bestätigte Fund zwischen Mai und Mai."],
     ["2", "Nur bestätigte Funde", "In die Liga kommen ausschließlich bewusst bestätigte Vogelarten – egal ob aus Merlin/eBird oder BirdNET Live."],
-    ["3", "Region + Jahreszeit zählen", "Der Punktwert hängt davon ab, wie besonders die Art in der Fundregion und im jeweiligen Zeitfenster ist. Ein Vogel kann deshalb in Norwegen einen anderen Wert haben als in Deutschland."],
-    ["15", "Echte Raritäten", "15 Punkte sind außergewöhnlichen regionalen Raritäten vorbehalten. Gefährdungsstatus oder Suchaufwand allein reichen dafür nicht."],
-    ["↻", "Neue Kombinationen werden geprüft", "Taucht eine Art erstmals in einer neuen Region oder Jahreszeit auf, blockiert der Import, bis dafür ein transparenter Punktwert festgelegt wurde."],
+    ["R", "Regionalbasis", "Zuerst zählt, wie besonders die Art in der Fundregion und im jeweiligen Zeitfenster ist. Lokal häufige Reisearten werden dadurch nicht künstlich aufgewertet."],
+    ["+", "Akustikbonus", "Zusätzlich gibt es 0 bis 3 Punkte dafür, wie schwierig es typischerweise ist, bei einer Begegnung tatsächlich eine brauchbare Lautäußerung zu erwischen."],
+    ["10", "Regulärer Deckel", "Regionalbasis und Akustikbonus werden addiert; normale Funde sind bei 10 Punkten gedeckelt."],
+    ["15", "Echte Raritäten", "15 Punkte sind außergewöhnlichen regionalen Raritäten vorbehalten. Gefährdungsstatus allein reicht dafür nicht."],
+    ["↻", "Neue Kombinationen werden geprüft", "Taucht eine Art erstmals in einer neuen Region oder Jahreszeit auf, blockiert der Import, bis Regionalbasis und Akustikprofil festgelegt sind."],
     ["★", "Exklusive Arten", "Arten, die nur ein Spieler gefunden hat, werden hervorgehoben – ohne zusätzliche Bonuspunkte."]
   ];
 
   app.innerHTML = `<section class="page-content rules-page">
-    <article class="rules-intro"><span class="big-bird"><img src="logo-birdleague.png" alt=""></span><div><p class="eyebrow">BirdLeague-Regelwerk</p><h2>Einfach, transparent und ein bisschen nerdig.</h2><p>V3 bewertet den tatsächlichen Fundkontext statt nur die Art.</p></div></article>
+    <article class="rules-intro"><span class="big-bird"><img src="logo-birdleague.png" alt=""></span><div><p class="eyebrow">BirdLeague-Regelwerk</p><h2>Seltenheit trifft Aufnahme-Challenge.</h2><p>V4 trennt regionale Besonderheit und akustische Schwierigkeit – und macht damit aus einem Sichtfund noch nicht automatisch einen starken BirdLeague-Fund.</p></div></article>
     <div class="rules-grid">${rules.map(([number, title, text]) => `<article><span>${number}</span><h3>${escapeHtml(title)}</h3><p>${escapeHtml(text)}</p></article>`).join("")}</div>
   </section>`;
 }
@@ -729,7 +748,9 @@ function getImportAudit() {
       if (!row.region || row.region === "OTHER") missingReason = "Region fehlt/ist noch nicht unterstützt";
       else if (!row.scoreWindow) missingReason = "Zeitfenster fehlt";
       else if (!pointCatalog[sci]) missingReason = "Art fehlt in der Masterliste";
-      else missingReason = `${regionLabel(row.region)} · ${scoreWindowLabel(row.scoreWindow)} noch nicht bewertet`;
+      else if (!pointCatalog[sci]?.baseScores?.[row.region]?.[row.scoreWindow]) missingReason = `${regionLabel(row.region)} · ${scoreWindowLabel(row.scoreWindow)}: Regionalbasis fehlt`;
+      else if (!pointCatalog[sci]?.acoustic?.[row.scoreWindow]) missingReason = `${scoreWindowLabel(row.scoreWindow)}: Akustikprofil fehlt`;
+      else missingReason = `${regionLabel(row.region)} · ${scoreWindowLabel(row.scoreWindow)} noch nicht vollständig bewertet`;
       missing.push({ ...row, missingReason });
     }
     if (alreadyOwned.has(sci.toLowerCase())) alreadyPresentCount += 1;
@@ -805,6 +826,9 @@ function buildMergedData() {
         existingObservation.stateProvince = row.stateProvince || "";
         existingObservation.region = row.region || "";
         existingObservation.scoreWindow = row.scoreWindow || scoreWindowFromDate(row.date);
+        const detail = scoreBreakdown(scientificName, row.region, row.scoreWindow);
+        existingObservation.basePoints = detail?.base ?? null;
+        existingObservation.acousticBonus = detail?.acousticBonus ?? null;
         existingObservation.points = rowPoint;
         existingObservation.importedAt = today;
       }
@@ -820,12 +844,14 @@ function buildMergedData() {
       stateProvince: row.stateProvince || "",
       region: row.region || "",
       scoreWindow: row.scoreWindow || scoreWindowFromDate(row.date),
+      basePoints: scoreBreakdown(scientificName, row.region, row.scoreWindow)?.base ?? null,
+      acousticBonus: scoreBreakdown(scientificName, row.region, row.scoreWindow)?.acousticBonus ?? null,
       points: rowPoint,
       importedAt: today
     });
   });
 
-  next.schemaVersion = 3;
+  next.schemaVersion = 4;
   next.updatedAt = today;
   applyMasterData(next);
   return next;
@@ -848,7 +874,7 @@ function downloadTextFile(filename, content, type = "text/plain") {
 function downloadMergedDataJs() {
   const audit = getImportAudit();
   if (!audit.complete) {
-    renderImport(`${audit.missing.length} Fundkontext(e) haben noch keinen Region-/Zeit-Punktwert. Bitte zuerst die V3-Masterliste ergänzen.`);
+    renderImport(`${audit.missing.length} Fundkontext(e) haben noch keine vollständige V4-Wertung. Bitte zuerst die V4-Masterliste ergänzen.`);
     return;
   }
   const next = buildMergedData();
@@ -858,7 +884,7 @@ function downloadMergedDataJs() {
 function applyImportedRowsLocally() {
   const audit = getImportAudit();
   if (!audit.complete) {
-    renderImport(`${audit.missing.length} Fundkontext(e) haben noch keinen Region-/Zeit-Punktwert. Import wurde nicht übernommen.`);
+    renderImport(`${audit.missing.length} Fundkontext(e) haben noch keine vollständige V4-Wertung. Import wurde nicht übernommen.`);
     return;
   }
   const next = buildMergedData();
@@ -882,7 +908,7 @@ function renderImport(message = "") {
   const hasLocalDraft = Boolean(localStorage.getItem(storageKey));
   const audit = state.importedRows.length ? getImportAudit() : null;
   const meta = state.importMeta;
-  const missingHtml = audit?.missing.length ? `<div class="audit-warning"><strong>Fehlende Region-/Zeit-Bewertungen</strong>${audit.missing.map((row) => `<div><span>${escapeHtml(row.germanName || row.commonName || row.scientificName)}</span><em>${escapeHtml(row.missingReason)}${row.scientificName ? ` · ${escapeHtml(row.scientificName)}` : ""}</em></div>`).join("")}<p>BirdLeague übernimmt neue Art-/Region-/Zeit-Kombinationen bewusst nicht automatisch. Ergänze sie zuerst in der V3-Masterliste und aktualisiere anschließend <code>points.js</code>.</p></div>` : "";
+  const missingHtml = audit?.missing.length ? `<div class="audit-warning"><strong>Fehlende Region-/Zeit-Bewertungen</strong>${audit.missing.map((row) => `<div><span>${escapeHtml(row.germanName || row.commonName || row.scientificName)}</span><em>${escapeHtml(row.missingReason)}${row.scientificName ? ` · ${escapeHtml(row.scientificName)}` : ""}</em></div>`).join("")}<p>BirdLeague übernimmt neue Art-/Region-/Zeit-Kombinationen bewusst nicht automatisch. Ergänze sie zuerst in der V4-Masterliste und aktualisiere anschließend <code>points.js</code>.</p></div>` : "";
   const readyHtml = audit?.complete ? `<div class="audit-ready">✓ ${audit.ratedCount}/${audit.total} Arten haben für Fundregion und Zeitfenster einen Punktwert. Import ist bereit.</div>` : "";
   const sourceHtml = meta ? `<div class="import-source-summary">
       <strong>${meta.files} Datei${meta.files === 1 ? "" : "en"} verarbeitet</strong>
@@ -897,7 +923,7 @@ function renderImport(message = "") {
 
   app.innerHTML = `<section class="page-content import-page"><article class="panel import-panel">
     <div class="panel-heading"><div><p class="eyebrow">BirdLeague-Verwaltung</p><h3>Beobachtungen importieren & veröffentlichen</h3></div><span>⇧</span></div>
-    <p>eBird-CSV-Dateien werden über <code>State/Province</code> automatisch einer BirdLeague-Region zugeordnet. Für BirdNET Live oder CSVs ohne Regionscode kannst du eine Fallback-Region wählen. Der Punktwert wird aus Art + Region + Zeitfenster bestimmt.</p>
+    <p>eBird-CSV-Dateien werden über <code>State/Province</code> automatisch einer BirdLeague-Region zugeordnet. Für BirdNET Live oder CSVs ohne Regionscode kannst du eine Fallback-Region wählen. Der Punktwert besteht aus Regionalbasis + Akustikbonus. Die Regionalbasis hängt von Art, Region und Zeitfenster ab; der Akustikbonus bewertet, wie schwierig eine brauchbare Lautäußerung typischerweise zu erwischen ist.</p>
     <label>Spielername<input id="import-player" value="${escapeHtml(state.importPlayer)}" placeholder="z. B. Finn"></label>
     <label>Fallback-Region für Dateien ohne Regionscode
       <select id="import-region"><option value="">Bitte wählen, falls nötig</option>${regionOptions}</select>
@@ -907,18 +933,18 @@ function renderImport(message = "") {
     ${sourceHtml}
     ${audit ? `<div class="audit-grid">
       <div><strong>${audit.total}</strong><span>Jahresarten erkannt</span></div>
-      <div><strong>${audit.ratedCount}</strong><span>regional bewertet</span></div>
+      <div><strong>${audit.ratedCount}</strong><span>vollständig bewertet</span></div>
       <div><strong>${audit.newCount}</strong><span>neu für ${escapeHtml(state.importPlayer)}</span></div>
       <div><strong>${audit.alreadyPresentCount}</strong><span>bereits vorhanden</span></div>
     </div>${readyHtml}${missingHtml}` : ""}
-    ${state.importedRows.length ? `<div class="import-preview">${state.importedRows.slice(0, 10).map((row) => { const point = masterScore(row.scientificName, row.region, row.scoreWindow); return `<div><strong>${escapeHtml(row.germanName || row.commonName || row.scientificName)}</strong><span><b>${hasPointValue(point) ? `${point} P` : "unbewertet"}</b> · ${escapeHtml(regionLabel(row.region))} · ${escapeHtml(scoreWindowLabel(row.scoreWindow))} · <em>${escapeHtml(row.scientificName)}</em> · ${escapeHtml(row.date || "ohne Datum")}</span></div>`; }).join("")}</div>
+    ${state.importedRows.length ? `<div class="import-preview">${state.importedRows.slice(0, 10).map((row) => { const point = masterScore(row.scientificName, row.region, row.scoreWindow); return `<div><strong>${escapeHtml(row.germanName || row.commonName || row.scientificName)}</strong><span><b>${hasPointValue(point) ? `${point} P` : "unbewertet"}</b>${hasPointValue(point) ? ` · ${escapeHtml(scoreBreakdownText(row.scientificName, row.region, row.scoreWindow))}` : ""} · ${escapeHtml(regionLabel(row.region))} · ${escapeHtml(scoreWindowLabel(row.scoreWindow))} · <em>${escapeHtml(row.scientificName)}</em> · ${escapeHtml(row.date || "ohne Datum")}</span></div>`; }).join("")}</div>
       <div class="import-actions">
         <button class="primary-button" data-action="apply-import" ${audit && !audit.complete ? "disabled" : ""}>Lokal übernehmen</button>
         <button class="secondary-button" data-action="download-datajs" ${audit && !audit.complete ? "disabled" : ""}>data.js für GitHub herunterladen</button>
       </div>` : ""}
     <hr>
     <div class="import-actions">
-      <a class="secondary-button button-link" href="data/species-points.json" download>V3-Master-Punkteliste als JSON</a>
+      <a class="secondary-button button-link" href="data/species-points.json" download>V4-Master-Punkteliste als JSON</a>
       <button class="secondary-button" data-action="download-current-datajs">Aktuellen Stand als data.js herunterladen</button>
       ${hasLocalDraft ? '<button class="secondary-button" data-action="reset-local">Lokale Vorschau zurücksetzen</button>' : ""}
     </div>

@@ -186,3 +186,5 @@ tbody tr:hover { background: rgba(92,138,111,.06); }
 button:disabled { opacity:.45; cursor:not-allowed; }
 .button-link { display:inline-flex; align-items:center; text-decoration:none; }
 @media (max-width: 760px) { .audit-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } .audit-warning > div { flex-direction:column; gap:1px; } }
+
+.score-breakdown { color: var(--green-700); font-weight: 700; white-space: nowrap; }

@@ -1,41 +1,31 @@
-# BirdLeague V3 – regionale Punktelogik
+# BirdLeague V4
 
-BirdLeague bewertet ab V3 **Art × Region × Zeitfenster** statt jeder Art überall denselben Wert zu geben.
+BirdLeague ist eine statische GitHub-Pages-App für eine private Vogelstimmen-Liga. Pro Person zählt jede Art innerhalb der Saison Mai–Mai genau einmal; nur bestätigte Nachweise zählen.
 
-## Aktueller Datenstand
-- Bengt: 111 Jahresarten / 232 Punkte
-- Ida: 113 Jahresarten / 230 Punkte
-- Finn: 87 Jahresarten / 172 Punkte
-- 137 verschiedene Arten in der Liga
-- alle aktuellen Funde (Mai–August 2026) bewertet
+## V4-Punktelogik
 
-## Regionen
-- DE-NORTH – Deutschland Nord
-- DE-CENTRAL – Deutschland Mitte
-- DE-SOUTH – Deutschland Süd
-- DK – Dänemark
-- SE-SOUTH – Südschweden
-- SE-CENTRAL – Mittelschweden
-- SE-NORTH – Nordschweden
-- NO – Norwegen
-- JP-TOKYO – Japan / Tokio
-- OTHER – Fallback für neue Gebiete
+V4 trennt **Regionalbasis** und **Akustikbonus**.
 
-## Zeitfenster
-- may_aug – Mai bis August
-- sep_nov – September bis November
-- dec_feb – Dezember bis Februar
-- mar_apr – März bis April
+- Regionalbasis: Wie besonders ist die Art in der Fundregion und im jeweiligen Zeitfenster?
+- Akustikbonus: +0 bis +3 dafür, wie schwierig es typischerweise ist, bei einer Begegnung tatsächlich eine brauchbare Lautäußerung aufzunehmen.
+- Gesamtwert: Regionalbasis + Akustikbonus, regulär maximal 10 Punkte.
+- 15 Punkte: ausschließlich echte regionale Raritäten.
+- Gefährdungsstatus oder Reiseentfernung erzeugen keinen automatischen Bonus.
 
-Die Masterliste enthält bewusst nur bereits benötigte Region-/Zeit-Kombinationen. Eine neue Kombination wird beim Import als unbewertet markiert und blockiert die Veröffentlichung, bis ein Wert festgelegt wurde.
+Aktuelle Regionen: Deutschland Nord/Mitte/Süd, Dänemark, Süd-/Mittel-/Nordschweden, Norwegen, Tokio sowie OTHER als nicht bewerteter Fallback.
 
-## GitHub-Update
-Für die laufende Website insbesondere ersetzen:
-- `app.js`
-- `points.js`
-- `data.js`
-- `styles.css`
-- `sw.js`
-- `data/species-points.json`
+Aktuelle Zeitfenster: Mai–August, September–November, Dezember–Februar, März–April. Aktuell sind die tatsächlich benötigten Mai–August-Kombinationen bewertet; neue Kombinationen blockieren den Import bis zur bewussten Bewertung.
 
-Nach dem Commit GitHub Pages/Actions abwarten und ggf. hart neu laden.
+## Dateien
+
+- `points.js` – V4-Masterdaten mit Regionalbasis, Akustikprofil und Gesamtpunkten.
+- `data.js` – veröffentlichte Spieler und Funde.
+- `data/species-points.json` – maschinenlesbare V4-Masterliste.
+- `data/species-points.csv` – flache Prüf-/Bearbeitungstabelle.
+- `POINTS_V4.md` – Regeln und Kalibrierungsprinzipien.
+
+## Import
+
+Der Import akzeptiert eBird CSV sowie BirdNET Live ZIP/JSON/CSV. BirdNET übernimmt ausschließlich bestätigte Detektionen. Dedupliziert wird pro Spieler, Art und Saison; der früheste bestätigte Fund gewinnt.
+
+Wenn Regionalbasis oder Akustikprofil für den Fundkontext fehlen, wird der Import blockiert. Dadurch werden neue Reiseziele oder Jahreszeiten nicht mit einem unpassenden Standardwert bewertet.

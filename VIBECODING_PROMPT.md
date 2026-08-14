@@ -48,3 +48,8 @@ Baue aus dem vorhandenen lokalen CSV-Import einen vollständigen Admin-Workflow 
 - Eine bereits vorhandene Art wird nicht erneut als neuer Fund gewertet.
 - Eine unbekannte Art erscheint im Prüfbericht.
 - Die heruntergeladene `data.js` kann die vorhandene Datei ersetzen und die Website zeigt danach das neue Ranking.
+
+
+## BirdLeague V4 scoring update
+
+Scoring is now **regional base score + acoustic difficulty bonus (0–3)**, capped at 10 for regular finds; 15 is reserved for true regional rarities. The app must expose the breakdown (`Basis X + Akustik +Y`) and block imports when either the regional/time base score or the acoustic profile is missing.
