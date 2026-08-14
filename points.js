@@ -1,5 +1,10 @@
 /* BirdLeague Master-Punkteliste. Wissenschaftlicher Name = stabiler Schlüssel. */
 window.BIRDLEAGUE_POINTS = {
+  "Calidris alpina": {
+    "germanName": "Alpenstrandläufer",
+    "points": 4,
+    "category": "besonders"
+  },
   "Turdus merula": {
     "germanName": "Amsel",
     "points": 1,
@@ -20,6 +25,16 @@ window.BIRDLEAGUE_POINTS = {
     "points": 3,
     "category": "regelmäßig / lokal"
   },
+  "Gallinago gallinago": {
+    "germanName": "Bekassine",
+    "points": 5,
+    "category": "ungewöhnlich"
+  },
+  "Fringilla montifringilla": {
+    "germanName": "Bergfink",
+    "points": 3,
+    "category": "regelmäßig / lokal"
+  },
   "Acanthis flammea": {
     "germanName": "Birkenzeisig",
     "points": 5,
@@ -37,6 +52,11 @@ window.BIRDLEAGUE_POINTS = {
   },
   "Linaria cannabina": {
     "germanName": "Bluthänfling",
+    "points": 3,
+    "category": "regelmäßig / lokal"
+  },
+  "Anser albifrons": {
+    "germanName": "Blässgans",
     "points": 3,
     "category": "regelmäßig / lokal"
   },
@@ -65,6 +85,11 @@ window.BIRDLEAGUE_POINTS = {
     "points": 2,
     "category": "häufig"
   },
+  "Coloeus monedula": {
+    "germanName": "Dohle",
+    "points": 2,
+    "category": "häufig"
+  },
   "Curruca communis": {
     "germanName": "Dorngrasmücke",
     "points": 2,
@@ -74,6 +99,11 @@ window.BIRDLEAGUE_POINTS = {
     "germanName": "Eichelhäher",
     "points": 2,
     "category": "häufig"
+  },
+  "Somateria mollissima": {
+    "germanName": "Eiderente",
+    "points": 3,
+    "category": "regelmäßig / lokal"
   },
   "Pica pica": {
     "germanName": "Elster",
@@ -105,10 +135,20 @@ window.BIRDLEAGUE_POINTS = {
     "points": 1,
     "category": "sehr häufig"
   },
+  "Loxia curvirostra": {
+    "germanName": "Fichtenkreuzschnabel",
+    "points": 4,
+    "category": "besonders"
+  },
   "Phylloscopus trochilus": {
     "germanName": "Fitis",
     "points": 2,
     "category": "häufig"
+  },
+  "Sterna hirundo": {
+    "germanName": "Flussseeschwalbe",
+    "points": 3,
+    "category": "regelmäßig / lokal"
   },
   "Actitis hypoleucos": {
     "germanName": "Flussuferläufer",
@@ -130,10 +170,20 @@ window.BIRDLEAGUE_POINTS = {
     "points": 4,
     "category": "besonders"
   },
+  "Hippolais icterina": {
+    "germanName": "Gelbspötter",
+    "points": 4,
+    "category": "besonders"
+  },
   "Pyrrhula pyrrhula": {
     "germanName": "Gimpel",
     "points": 3,
     "category": "regelmäßig / lokal"
+  },
+  "Serinus serinus": {
+    "germanName": "Girlitz",
+    "points": 4,
+    "category": "besonders"
   },
   "Emberiza citrinella": {
     "germanName": "Goldammer",
@@ -150,6 +200,21 @@ window.BIRDLEAGUE_POINTS = {
     "points": 1,
     "category": "sehr häufig"
   },
+  "Ardea cinerea": {
+    "germanName": "Graureiher",
+    "points": 1,
+    "category": "sehr häufig"
+  },
+  "Muscicapa striata": {
+    "germanName": "Grauschnäpper",
+    "points": 4,
+    "category": "besonders"
+  },
+  "Numenius arquata": {
+    "germanName": "Großer Brachvogel",
+    "points": 4,
+    "category": "besonders"
+  },
   "Chloris chloris": {
     "germanName": "Grünfink",
     "points": 2,
@@ -162,6 +227,11 @@ window.BIRDLEAGUE_POINTS = {
   },
   "Picus viridis": {
     "germanName": "Grünspecht",
+    "points": 3,
+    "category": "regelmäßig / lokal"
+  },
+  "Mergus merganser": {
+    "germanName": "Gänsesäger",
     "points": 3,
     "category": "regelmäßig / lokal"
   },
@@ -190,6 +260,11 @@ window.BIRDLEAGUE_POINTS = {
     "points": 5,
     "category": "ungewöhnlich"
   },
+  "Larus fuscus": {
+    "germanName": "Heringsmöwe",
+    "points": 3,
+    "category": "regelmäßig / lokal"
+  },
   "Phasianus colchicus": {
     "germanName": "Jagdfasan",
     "points": 2,
@@ -199,6 +274,16 @@ window.BIRDLEAGUE_POINTS = {
     "germanName": "Kanadagans",
     "points": 1,
     "category": "sehr häufig"
+  },
+  "Coccothraustes coccothraustes": {
+    "germanName": "Kernbeißer",
+    "points": 2,
+    "category": "häufig"
+  },
+  "Vanellus vanellus": {
+    "germanName": "Kiebitz",
+    "points": 4,
+    "category": "besonders"
   },
   "Pluvialis squatarola": {
     "germanName": "Kiebitzregenpfeifer",
@@ -240,6 +325,11 @@ window.BIRDLEAGUE_POINTS = {
     "points": 2,
     "category": "häufig"
   },
+  "Larus marinus": {
+    "germanName": "Mantelmöwe",
+    "points": 4,
+    "category": "besonders"
+  },
   "Apus apus": {
     "germanName": "Mauersegler",
     "points": 2,
@@ -260,6 +350,11 @@ window.BIRDLEAGUE_POINTS = {
     "points": 5,
     "category": "ungewöhnlich"
   },
+  "Lagopus lagopus": {
+    "germanName": "Moorschneehuhn",
+    "points": 15,
+    "category": "echte Rarität"
+  },
   "Buteo buteo": {
     "germanName": "Mäusebussard",
     "points": 2,
@@ -270,10 +365,25 @@ window.BIRDLEAGUE_POINTS = {
     "points": 1,
     "category": "sehr häufig"
   },
+  "Luscinia megarhynchos": {
+    "germanName": "Nachtigall",
+    "points": 3,
+    "category": "regelmäßig / lokal"
+  },
   "Corvus cornix": {
     "germanName": "Nebelkrähe",
     "points": 3,
     "category": "regelmäßig / lokal"
+  },
+  "Lanius collurio": {
+    "germanName": "Neuntöter",
+    "points": 4,
+    "category": "besonders"
+  },
+  "Oriolus oriolus": {
+    "germanName": "Pirol",
+    "points": 4,
+    "category": "besonders"
   },
   "Corvus corone": {
     "germanName": "Rabenkrähe",
@@ -285,6 +395,11 @@ window.BIRDLEAGUE_POINTS = {
     "points": 2,
     "category": "häufig"
   },
+  "Branta bernicla": {
+    "germanName": "Ringelgans",
+    "points": 3,
+    "category": "regelmäßig / lokal"
+  },
   "Columba palumbus": {
     "germanName": "Ringeltaube",
     "points": 1,
@@ -292,6 +407,16 @@ window.BIRDLEAGUE_POINTS = {
   },
   "Emberiza schoeniclus": {
     "germanName": "Rohrammer",
+    "points": 3,
+    "category": "regelmäßig / lokal"
+  },
+  "Tadorna ferruginea": {
+    "germanName": "Rostgans",
+    "points": 4,
+    "category": "besonders"
+  },
+  "Turdus iliacus": {
+    "germanName": "Rotdrossel",
     "points": 3,
     "category": "regelmäßig / lokal"
   },
@@ -330,10 +455,20 @@ window.BIRDLEAGUE_POINTS = {
     "points": 4,
     "category": "besonders"
   },
+  "Aegithalos caudatus": {
+    "germanName": "Schwanzmeise",
+    "points": 2,
+    "category": "häufig"
+  },
   "Dryocopus martius": {
     "germanName": "Schwarzspecht",
     "points": 5,
     "category": "ungewöhnlich"
+  },
+  "Bombycilla garrulus": {
+    "germanName": "Seidenschwanz",
+    "points": 6,
+    "category": "selten / stark lokalisiert"
   },
   "Larus argentatus": {
     "germanName": "Silbermöwe",
@@ -344,6 +479,11 @@ window.BIRDLEAGUE_POINTS = {
     "germanName": "Singdrossel",
     "points": 2,
     "category": "häufig"
+  },
+  "Cygnus cygnus": {
+    "germanName": "Singschwan",
+    "points": 4,
+    "category": "besonders"
   },
   "Regulus ignicapilla": {
     "germanName": "Sommergoldhähnchen",
@@ -365,6 +505,11 @@ window.BIRDLEAGUE_POINTS = {
     "points": 5,
     "category": "ungewöhnlich"
   },
+  "Gavia stellata": {
+    "germanName": "Sterntaucher",
+    "points": 6,
+    "category": "selten / stark lokalisiert"
+  },
   "Carduelis carduelis": {
     "germanName": "Stieglitz",
     "points": 2,
@@ -385,6 +530,11 @@ window.BIRDLEAGUE_POINTS = {
     "points": 3,
     "category": "regelmäßig / lokal"
   },
+  "Recurvirostra avosetta": {
+    "germanName": "Säbelschnäbler",
+    "points": 4,
+    "category": "besonders"
+  },
   "Periparus ater": {
     "germanName": "Tannenmeise",
     "points": 2,
@@ -394,6 +544,16 @@ window.BIRDLEAGUE_POINTS = {
     "germanName": "Teichhuhn",
     "points": 3,
     "category": "regelmäßig / lokal"
+  },
+  "Acrocephalus scirpaceus": {
+    "germanName": "Teichrohrsänger",
+    "points": 3,
+    "category": "regelmäßig / lokal"
+  },
+  "Ficedula hypoleuca": {
+    "germanName": "Trauerschnäpper",
+    "points": 4,
+    "category": "besonders"
   },
   "Falco tinnunculus": {
     "germanName": "Turmfalke",
@@ -405,6 +565,21 @@ window.BIRDLEAGUE_POINTS = {
     "points": 1,
     "category": "sehr häufig"
   },
+  "Limosa limosa": {
+    "germanName": "Uferschnepfe",
+    "points": 6,
+    "category": "selten / stark lokalisiert"
+  },
+  "Riparia riparia": {
+    "germanName": "Uferschwalbe",
+    "points": 3,
+    "category": "regelmäßig / lokal"
+  },
+  "Turdus pilaris": {
+    "germanName": "Wacholderdrossel",
+    "points": 2,
+    "category": "häufig"
+  },
   "Phylloscopus sibilatrix": {
     "germanName": "Waldlaubsänger",
     "points": 5,
@@ -414,6 +589,26 @@ window.BIRDLEAGUE_POINTS = {
     "germanName": "Waldohreule",
     "points": 7,
     "category": "sehr selten, aber regelmäßig"
+  },
+  "Scolopax rusticola": {
+    "germanName": "Waldschnepfe",
+    "points": 5,
+    "category": "ungewöhnlich"
+  },
+  "Tringa ochropus": {
+    "germanName": "Waldwasserläufer",
+    "points": 4,
+    "category": "besonders"
+  },
+  "Poecile montanus": {
+    "germanName": "Weidenmeise",
+    "points": 4,
+    "category": "besonders"
+  },
+  "Branta leucopsis": {
+    "germanName": "Weißwangengans",
+    "points": 3,
+    "category": "regelmäßig / lokal"
   },
   "Anthus pratensis": {
     "germanName": "Wiesenpieper",
@@ -434,5 +629,10 @@ window.BIRDLEAGUE_POINTS = {
     "germanName": "Zilpzalp",
     "points": 1,
     "category": "sehr häufig"
+  },
+  "Ficedula parva": {
+    "germanName": "Zwergschnäpper",
+    "points": 8,
+    "category": "sehr selten"
   }
 };
