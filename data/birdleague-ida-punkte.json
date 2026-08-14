@@ -1,0 +1,915 @@
+{
+  "player": "Ida",
+  "season": {
+    "start": "2026-05-01",
+    "end": "2027-05-31"
+  },
+  "speciesCount": 113,
+  "totalPoints": 350,
+  "observations": [
+    {
+      "player": "Ida",
+      "commonName": "Austernfischer",
+      "scientificName": "Haematopus ostralegus",
+      "points": 3,
+      "date": "2026-05-10",
+      "location": "Kromose"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Birkenzeisig",
+      "scientificName": "Acanthis flammea",
+      "points": 5,
+      "date": "2026-05-10",
+      "location": "Kromose"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Blaumeise",
+      "scientificName": "Cyanistes caeruleus",
+      "points": 1,
+      "date": "2026-05-10",
+      "location": "Kromose"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Bluthänfling",
+      "scientificName": "Linaria cannabina",
+      "points": 3,
+      "date": "2026-05-10",
+      "location": "Kronos"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Buchfink",
+      "scientificName": "Fringilla coelebs",
+      "points": 1,
+      "date": "2026-05-10",
+      "location": "Kromose"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Dorngrasmücke",
+      "scientificName": "Curruca communis",
+      "points": 2,
+      "date": "2026-05-10",
+      "location": "Kronos"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Fitis",
+      "scientificName": "Phylloscopus trochilus",
+      "points": 2,
+      "date": "2026-05-10",
+      "location": "Kromose"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Flussuferläufer",
+      "scientificName": "Actitis hypoleucos",
+      "points": 5,
+      "date": "2026-05-10",
+      "location": "Kromose"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Gartenrotschwanz",
+      "scientificName": "Phoenicurus phoenicurus",
+      "points": 4,
+      "date": "2026-05-10",
+      "location": "Kromose"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Grünfink",
+      "scientificName": "Chloris chloris",
+      "points": 2,
+      "date": "2026-05-10",
+      "location": "Kromose"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Heckenbraunelle",
+      "scientificName": "Prunella modularis",
+      "points": 1,
+      "date": "2026-05-10",
+      "location": "Kromose"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Kiebitzregenpfeifer",
+      "scientificName": "Pluvialis squatarola",
+      "points": 7,
+      "date": "2026-05-10",
+      "location": "Kromose"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Klappergrasmücke",
+      "scientificName": "Curruca curruca",
+      "points": 3,
+      "date": "2026-05-10",
+      "location": "Kromose"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Rotschenkel",
+      "scientificName": "Tringa totanus",
+      "points": 5,
+      "date": "2026-05-10",
+      "location": "Kromose"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Sandregenpfeifer",
+      "scientificName": "Charadrius hiaticula",
+      "points": 5,
+      "date": "2026-05-10",
+      "location": "Kromose"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Türkentaube",
+      "scientificName": "Streptopelia decaocto",
+      "points": 1,
+      "date": "2026-05-10",
+      "location": "Kromose"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Zilpzalp",
+      "scientificName": "Phylloscopus collybita",
+      "points": 1,
+      "date": "2026-05-10",
+      "location": "Kromose"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Amsel",
+      "scientificName": "Turdus merula",
+      "points": 1,
+      "date": "2026-05-11",
+      "location": "Kronos"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Bachstelze",
+      "scientificName": "Motacilla alba",
+      "points": 1,
+      "date": "2026-05-11",
+      "location": "Kromose"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Baumpieper",
+      "scientificName": "Anthus trivialis",
+      "points": 3,
+      "date": "2026-05-11",
+      "location": "Kromose"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Feldlerche",
+      "scientificName": "Alauda arvensis",
+      "points": 2,
+      "date": "2026-05-11",
+      "location": "Rømø"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Feldsperling",
+      "scientificName": "Passer montanus",
+      "points": 2,
+      "date": "2026-05-11",
+      "location": "Kromose"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Goldammer",
+      "scientificName": "Emberiza citrinella",
+      "points": 2,
+      "date": "2026-05-11",
+      "location": "Kronos"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Graugans",
+      "scientificName": "Anser anser",
+      "points": 1,
+      "date": "2026-05-11",
+      "location": "Kromose"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Heidelerche",
+      "scientificName": "Lullula arborea",
+      "points": 5,
+      "date": "2026-05-11",
+      "location": "Kronos"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Jagdfasan",
+      "scientificName": "Phasianus colchicus",
+      "points": 2,
+      "date": "2026-05-11",
+      "location": "Kronos"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Kohlmeise",
+      "scientificName": "Parus major",
+      "points": 1,
+      "date": "2026-05-11",
+      "location": "Kronos"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Kuckuck",
+      "scientificName": "Cuculus canorus",
+      "points": 4,
+      "date": "2026-05-11",
+      "location": "Kronos"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Lachmöwe",
+      "scientificName": "Chroicocephalus ridibundus",
+      "points": 2,
+      "date": "2026-05-11",
+      "location": "Kromose"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Misteldrossel",
+      "scientificName": "Turdus viscivorus",
+      "points": 3,
+      "date": "2026-05-11",
+      "location": "Kromose"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Mönchsgrasmücke",
+      "scientificName": "Sylvia atricapilla",
+      "points": 1,
+      "date": "2026-05-11",
+      "location": "Kromose"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Rauchschwalbe",
+      "scientificName": "Hirundo rustica",
+      "points": 2,
+      "date": "2026-05-11",
+      "location": "Kromose"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Ringeltaube",
+      "scientificName": "Columba palumbus",
+      "points": 1,
+      "date": "2026-05-11",
+      "location": "Kronos"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Rotkehlchen",
+      "scientificName": "Erithacus rubecula",
+      "points": 1,
+      "date": "2026-05-11",
+      "location": "Kromose"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Sanderling",
+      "scientificName": "Calidris alba",
+      "points": 5,
+      "date": "2026-05-11",
+      "location": "Sonderstrand"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Sturmmöwe",
+      "scientificName": "Larus canus",
+      "points": 3,
+      "date": "2026-05-11",
+      "location": "Kronos"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Tannenmeise",
+      "scientificName": "Periparus ater",
+      "points": 2,
+      "date": "2026-05-11",
+      "location": "Kromose"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Zaunkönig",
+      "scientificName": "Troglodytes troglodytes",
+      "points": 1,
+      "date": "2026-05-11",
+      "location": "Kromose"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Großer Brachvogel",
+      "scientificName": "Numenius arquata",
+      "points": 4,
+      "date": "2026-05-12",
+      "location": "Kronos"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Kiebitz",
+      "scientificName": "Vanellus vanellus",
+      "points": 4,
+      "date": "2026-05-12",
+      "location": "Parkplatz"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Ringelgans",
+      "scientificName": "Branta bernicla",
+      "points": 3,
+      "date": "2026-05-12",
+      "location": "Deich"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Rohrammer",
+      "scientificName": "Emberiza schoeniclus",
+      "points": 3,
+      "date": "2026-05-12",
+      "location": "Bredebro"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Stieglitz",
+      "scientificName": "Carduelis carduelis",
+      "points": 2,
+      "date": "2026-05-12",
+      "location": "Kronos"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Stockente",
+      "scientificName": "Anas platyrhynchos",
+      "points": 1,
+      "date": "2026-05-12",
+      "location": "Kromose"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Säbelschnäbler",
+      "scientificName": "Recurvirostra avosetta",
+      "points": 4,
+      "date": "2026-05-12",
+      "location": "Deich"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Teichrohrsänger",
+      "scientificName": "Acrocephalus scirpaceus",
+      "points": 3,
+      "date": "2026-05-12",
+      "location": "Irgendwo Am Deich"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Uferschnepfe",
+      "scientificName": "Limosa limosa",
+      "points": 6,
+      "date": "2026-05-12",
+      "location": "Deich"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Wiesenpieper",
+      "scientificName": "Anthus pratensis",
+      "points": 3,
+      "date": "2026-05-12",
+      "location": "Deich"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Wintergoldhähnchen",
+      "scientificName": "Regulus regulus",
+      "points": 3,
+      "date": "2026-05-12",
+      "location": "Kronos"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Alpenstrandläufer",
+      "scientificName": "Calidris alpina",
+      "points": 4,
+      "date": "2026-05-14",
+      "location": "Kromose"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Feldschwirl",
+      "scientificName": "Locustella naevia",
+      "points": 5,
+      "date": "2026-05-14",
+      "location": "Kromose"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Flussseeschwalbe",
+      "scientificName": "Sterna hirundo",
+      "points": 3,
+      "date": "2026-05-14",
+      "location": "Rømø"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Goldregenpfeifer",
+      "scientificName": "Pluvialis apricaria",
+      "points": 6,
+      "date": "2026-05-14",
+      "location": "Rømø"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Graureiher",
+      "scientificName": "Ardea cinerea",
+      "points": 1,
+      "date": "2026-05-14",
+      "location": "Kromose"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Schilfrohrsänger",
+      "scientificName": "Acrocephalus schoenobaenus",
+      "points": 4,
+      "date": "2026-05-14",
+      "location": "Deich"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Buntspecht",
+      "scientificName": "Dendrocopos major",
+      "points": 2,
+      "date": "2026-05-17",
+      "location": "Wanderweg"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Elster",
+      "scientificName": "Pica pica",
+      "points": 1,
+      "date": "2026-05-17",
+      "location": "Wanderweg"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Gartenbaumläufer",
+      "scientificName": "Certhia brachydactyla",
+      "points": 3,
+      "date": "2026-05-17",
+      "location": "Wanderweg"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Gartengrasmücke",
+      "scientificName": "Sylvia borin",
+      "points": 3,
+      "date": "2026-05-17",
+      "location": "Waldweg"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Gelbspötter",
+      "scientificName": "Hippolais icterina",
+      "points": 4,
+      "date": "2026-05-17",
+      "location": "Wanderweg"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Grauschnäpper",
+      "scientificName": "Muscicapa striata",
+      "points": 4,
+      "date": "2026-05-17",
+      "location": "Wanderweg"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Haussperling",
+      "scientificName": "Passer domesticus",
+      "points": 1,
+      "date": "2026-05-17",
+      "location": "Wanderweg"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Kanadagans",
+      "scientificName": "Branta canadensis",
+      "points": 1,
+      "date": "2026-05-17",
+      "location": "Wanderweg"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Kolkrabe",
+      "scientificName": "Corvus corax",
+      "points": 3,
+      "date": "2026-05-17",
+      "location": "Wanderweg"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Nebelkrähe",
+      "scientificName": "Corvus cornix",
+      "points": 3,
+      "date": "2026-05-17",
+      "location": "Wanderweg"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Pirol",
+      "scientificName": "Oriolus oriolus",
+      "points": 4,
+      "date": "2026-05-17",
+      "location": "Wanderweg"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Rabenkrähe",
+      "scientificName": "Corvus corone",
+      "points": 1,
+      "date": "2026-05-17",
+      "location": "Wanderweg"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Schwarzspecht",
+      "scientificName": "Dryocopus martius",
+      "points": 5,
+      "date": "2026-05-17",
+      "location": "Wanderweg"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Singdrossel",
+      "scientificName": "Turdus philomelos",
+      "points": 2,
+      "date": "2026-05-17",
+      "location": "Wanderweg"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Sommergoldhähnchen",
+      "scientificName": "Regulus ignicapilla",
+      "points": 4,
+      "date": "2026-05-17",
+      "location": "Wanderweg"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Sumpfmeise",
+      "scientificName": "Poecile palustris",
+      "points": 3,
+      "date": "2026-05-17",
+      "location": "Wanderweg"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Waldlaubsänger",
+      "scientificName": "Phylloscopus sibilatrix",
+      "points": 5,
+      "date": "2026-05-17",
+      "location": "Wanderweg"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Zwergschnäpper",
+      "scientificName": "Ficedula parva",
+      "points": 8,
+      "date": "2026-05-17",
+      "location": "Wanderweg"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Felsentaube",
+      "scientificName": "Columba livia",
+      "points": 1,
+      "date": "2026-05-18",
+      "location": "Bengt’s Wohnung"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Hausrotschwanz",
+      "scientificName": "Phoenicurus ochruros",
+      "points": 2,
+      "date": "2026-05-21",
+      "location": "Reiten"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Nachtigall",
+      "scientificName": "Luscinia megarhynchos",
+      "points": 3,
+      "date": "2026-05-21",
+      "location": "Reitweg"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Schwanzmeise",
+      "scientificName": "Aegithalos caudatus",
+      "points": 2,
+      "date": "2026-05-21",
+      "location": "Reitweg"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Star",
+      "scientificName": "Sturnus vulgaris",
+      "points": 1,
+      "date": "2026-05-21",
+      "location": "Reiten"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Girlitz",
+      "scientificName": "Serinus serinus",
+      "points": 4,
+      "date": "2026-05-22",
+      "location": "Gundelsheeeeiiiiiim"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Kernbeißer",
+      "scientificName": "Coccothraustes coccothraustes",
+      "points": 2,
+      "date": "2026-05-22",
+      "location": "Gundelsheeeeiiiiiim"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Mauersegler",
+      "scientificName": "Apus apus",
+      "points": 2,
+      "date": "2026-05-22",
+      "location": "Gundelsheeeeiiiiiim"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Mehlschwalbe",
+      "scientificName": "Delichon urbicum",
+      "points": 2,
+      "date": "2026-05-22",
+      "location": "Gundelsheeeeiiiiiim"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Rostgans",
+      "scientificName": "Tadorna ferruginea",
+      "points": 4,
+      "date": "2026-05-22",
+      "location": "Gundelsheeeeiiiiiim"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Kleiber",
+      "scientificName": "Sitta europaea",
+      "points": 2,
+      "date": "2026-05-26",
+      "location": "Alstertaler Wanderweg"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Blässhuhn",
+      "scientificName": "Fulica atra",
+      "points": 1,
+      "date": "2026-05-31",
+      "location": "Reiten"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Silbermöwe",
+      "scientificName": "Larus argentatus",
+      "points": 2,
+      "date": "2026-05-31",
+      "location": "UKE"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Trauerschnäpper",
+      "scientificName": "Ficedula hypoleuca",
+      "points": 4,
+      "date": "2026-06-15",
+      "location": "See Schweden"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Blässgans",
+      "scientificName": "Anser albifrons",
+      "points": 3,
+      "date": "2026-06-16",
+      "location": "Schweden Fluss"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Erlenzeisig",
+      "scientificName": "Spinus spinus",
+      "points": 3,
+      "date": "2026-06-16",
+      "location": "Indalsälven"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Grünschenkel",
+      "scientificName": "Tringa nebularia",
+      "points": 6,
+      "date": "2026-06-16",
+      "location": "Schweden Fluss"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Rotdrossel",
+      "scientificName": "Turdus iliacus",
+      "points": 3,
+      "date": "2026-06-16",
+      "location": "Schweden Fluss"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Wacholderdrossel",
+      "scientificName": "Turdus pilaris",
+      "points": 2,
+      "date": "2026-06-16",
+      "location": "Schweden Fluss"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Weißwangengans",
+      "scientificName": "Branta leucopsis",
+      "points": 3,
+      "date": "2026-06-16",
+      "location": "Schweden Fluss"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Bekassine",
+      "scientificName": "Gallinago gallinago",
+      "points": 5,
+      "date": "2026-06-19",
+      "location": "Grytoya"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Moorschneehuhn",
+      "scientificName": "Lagopus lagopus",
+      "points": 15,
+      "date": "2026-06-19",
+      "location": "Grytoya"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Bergfink",
+      "scientificName": "Fringilla montifringilla",
+      "points": 3,
+      "date": "2026-06-20",
+      "location": "Grytoya berg"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Mantelmöwe",
+      "scientificName": "Larus marinus",
+      "points": 4,
+      "date": "2026-06-20",
+      "location": "Grytoya"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Seidenschwanz",
+      "scientificName": "Bombycilla garrulus",
+      "points": 6,
+      "date": "2026-06-21",
+      "location": "Mückenfluss"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Sterntaucher",
+      "scientificName": "Gavia stellata",
+      "points": 6,
+      "date": "2026-06-21",
+      "location": "Mückenfluss"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Fichtenkreuzschnabel",
+      "scientificName": "Loxia curvirostra",
+      "points": 4,
+      "date": "2026-06-22",
+      "location": "Mückenfluss"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Uferschwalbe",
+      "scientificName": "Riparia riparia",
+      "points": 3,
+      "date": "2026-06-22",
+      "location": "Fluss"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Weidenmeise",
+      "scientificName": "Poecile montanus",
+      "points": 4,
+      "date": "2026-06-22",
+      "location": "Fluss"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Eiderente",
+      "scientificName": "Somateria mollissima",
+      "points": 3,
+      "date": "2026-06-23",
+      "location": "Fjord"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Singschwan",
+      "scientificName": "Cygnus cygnus",
+      "points": 4,
+      "date": "2026-06-25",
+      "location": "See"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Gänsesäger",
+      "scientificName": "Mergus merganser",
+      "points": 3,
+      "date": "2026-06-26",
+      "location": "Schweden Fluss"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Waldschnepfe",
+      "scientificName": "Scolopax rusticola",
+      "points": 5,
+      "date": "2026-06-26",
+      "location": "Schweden Fluss"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Waldwasserläufer",
+      "scientificName": "Tringa ochropus",
+      "points": 4,
+      "date": "2026-06-26",
+      "location": "Schweden Fluss"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Heringsmöwe",
+      "scientificName": "Larus fuscus",
+      "points": 3,
+      "date": "2026-07-15",
+      "location": "UKE"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Gimpel",
+      "scientificName": "Pyrrhula pyrrhula",
+      "points": 3,
+      "date": "2026-07-17",
+      "location": "22391 Hamburg  Deutschland"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Grünspecht",
+      "scientificName": "Picus viridis",
+      "points": 3,
+      "date": "2026-07-30",
+      "location": "Westensee--Wroher Bucht"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Mäusebussard",
+      "scientificName": "Buteo buteo",
+      "points": 2,
+      "date": "2026-08-04",
+      "location": "Reiten"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Neuntöter",
+      "scientificName": "Lanius collurio",
+      "points": 4,
+      "date": "2026-08-11",
+      "location": "Reiten"
+    },
+    {
+      "player": "Ida",
+      "commonName": "Dohle",
+      "scientificName": "Coloeus monedula",
+      "points": 2,
+      "date": "2026-08-14",
+      "location": "Sachsenhäuser Straße 43  64753 Brombachtal  Deutschland"
+    }
+  ]
+}
