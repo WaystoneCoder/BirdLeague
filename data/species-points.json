@@ -1,6 +1,6 @@
 {
-  "version": 3,
-  "scoringModel": "Art × Region × Zeitfenster",
+  "version": 4,
+  "scoringModel": "Regionalbasis + Akustikbonus",
   "season": {
     "startMonth": 5,
     "endMonth": 5
@@ -24,27 +24,46 @@
     "mar_apr": "März–April"
   },
   "scale": {
-    "1": "sehr häufig",
-    "2": "häufig / gut erwartbar",
-    "3": "regelmäßig, aber habitat- oder saisongebunden",
-    "4": "ungewöhnlich / lokal",
-    "5": "selten",
-    "6": "selten, aber regelmäßig",
-    "7": "sehr selten, aber noch regelmäßig",
-    "8": "außergewöhnlich",
-    "9": "nationale Seltenheit",
-    "10": "extrem selten",
-    "15": "echte Rarität"
+    "1": "Alltagsfund / praktisch unvermeidbar",
+    "2": "sehr regelmäßig oder akustisch leicht anspruchsvoller Alltagsfund",
+    "3": "regelmäßig, aber nicht automatisch",
+    "4": "klarer BirdLeague-Fund",
+    "5": "starker Fund",
+    "6": "seltener oder akustisch besonders anspruchsvoller Fund",
+    "7": "sehr starker / sehr seltener Fund",
+    "8": "außergewöhnlicher regulärer Fund",
+    "9": "extrem außergewöhnlich",
+    "10": "maximaler regulärer BirdLeague-Fund",
+    "15": "echte regionale Rarität"
   },
-  "methodNote": "V3 bewertet die Wahrscheinlichkeit/Besonderheit eines Nachweises in der jeweiligen Region und Jahreszeit. Gefährdungsstatus oder Suchaufwand allein erhöhen den Wert nicht. Nur aktuell benötigte Region-Zeit-Kombinationen sind befüllt; neue Kombinationen müssen vor Import bewertet werden.",
+  "acousticScale": {
+    "0": "akustisch dankbar",
+    "1": "etwas Timing nötig",
+    "2": "akustisch anspruchsvoll",
+    "3": "akustische Glückssache"
+  },
+  "methodNote": "V4 trennt zwei Dinge: (1) regionale/saisonale Besonderheit des Auftretens und (2) die zusätzliche Schwierigkeit, bei einer Begegnung tatsächlich eine verwertbare Lautäußerung aufzunehmen. Gesamt = Regionalbasis + Akustikbonus, regulär gedeckelt bei 10. 15 Punkte bleiben echten regionalen Raritäten vorbehalten. Gefährdungsstatus allein gibt keine Zusatzpunkte.",
+  "calibrationNote": "Für die Spielbalance wurde die in V3 zu stark komprimierte Regionalbasis breiter gespreizt. Die Akustikwerte sind bewusst ein handkalibrierter Spielparameter auf Basis des typischen Ruf-/Gesangsverhaltens, keine veröffentlichte statistische Rufwahrscheinlichkeit.",
   "species": [
     {
       "germanName": "Alpenstrandläufer",
       "scientificName": "Calidris alpina",
       "englishName": "Dunlin",
+      "baseScores": {
+        "DK": {
+          "may_aug": 3
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 1,
+          "class": "etwas Timing nötig",
+          "reason": "Die Art ruft oder singt regelmäßig, aber nicht bei jeder Begegnung. Für eine brauchbare Aufnahme braucht es etwas Timing."
+        }
+      },
       "scores": {
         "DK": {
-          "may_aug": 2
+          "may_aug": 4
         }
       }
     },
@@ -52,6 +71,18 @@
       "germanName": "Amsel",
       "scientificName": "Turdus merula",
       "englishName": "Eurasian Blackbird",
+      "baseScores": {
+        "DK": {
+          "may_aug": 1
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
       "scores": {
         "DK": {
           "may_aug": 1
@@ -62,79 +93,18 @@
       "germanName": "Austernfischer",
       "scientificName": "Haematopus ostralegus",
       "englishName": "Eurasian Oystercatcher",
-      "scores": {
+      "baseScores": {
         "DK": {
-          "may_aug": 2
+          "may_aug": 3
         }
-      }
-    },
-    {
-      "germanName": "Bachstelze",
-      "scientificName": "Motacilla alba",
-      "englishName": "White Wagtail",
-      "scores": {
-        "DK": {
-          "may_aug": 1
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
         }
-      }
-    },
-    {
-      "germanName": "Baumpieper",
-      "scientificName": "Anthus trivialis",
-      "englishName": "Tree Pipit",
-      "scores": {
-        "DK": {
-          "may_aug": 2
-        }
-      }
-    },
-    {
-      "germanName": "Bekassine",
-      "scientificName": "Gallinago gallinago",
-      "englishName": "Common Snipe",
-      "scores": {
-        "NO": {
-          "may_aug": 2
-        }
-      }
-    },
-    {
-      "germanName": "Bergfink",
-      "scientificName": "Fringilla montifringilla",
-      "englishName": "Brambling",
-      "scores": {
-        "NO": {
-          "may_aug": 1
-        },
-        "SE-NORTH": {
-          "may_aug": 2
-        }
-      }
-    },
-    {
-      "germanName": "Birkenzeisig",
-      "scientificName": "Acanthis flammea",
-      "englishName": "Redpoll",
-      "scores": {
-        "DK": {
-          "may_aug": 4
-        }
-      }
-    },
-    {
-      "germanName": "Blauelster",
-      "scientificName": "Cyanopica cyanus",
-      "englishName": "Azure-winged Magpie",
-      "scores": {
-        "JP-TOKYO": {
-          "may_aug": 2
-        }
-      }
-    },
-    {
-      "germanName": "Blaukehlchen",
-      "scientificName": "Luscinia svecica",
-      "englishName": "Bluethroat",
+      },
       "scores": {
         "DK": {
           "may_aug": 3
@@ -142,9 +112,184 @@
       }
     },
     {
+      "germanName": "Bachstelze",
+      "scientificName": "Motacilla alba",
+      "englishName": "White Wagtail",
+      "baseScores": {
+        "DK": {
+          "may_aug": 1
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 1,
+          "class": "etwas Timing nötig",
+          "reason": "Die Art ruft oder singt regelmäßig, aber nicht bei jeder Begegnung. Für eine brauchbare Aufnahme braucht es etwas Timing."
+        }
+      },
+      "scores": {
+        "DK": {
+          "may_aug": 2
+        }
+      }
+    },
+    {
+      "germanName": "Baumpieper",
+      "scientificName": "Anthus trivialis",
+      "englishName": "Tree Pipit",
+      "baseScores": {
+        "DK": {
+          "may_aug": 3
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
+      "scores": {
+        "DK": {
+          "may_aug": 3
+        }
+      }
+    },
+    {
+      "germanName": "Bekassine",
+      "scientificName": "Gallinago gallinago",
+      "englishName": "Common Snipe",
+      "baseScores": {
+        "NO": {
+          "may_aug": 3
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 1,
+          "class": "etwas Timing nötig",
+          "reason": "Die Art ruft oder singt regelmäßig, aber nicht bei jeder Begegnung. Für eine brauchbare Aufnahme braucht es etwas Timing."
+        }
+      },
+      "scores": {
+        "NO": {
+          "may_aug": 4
+        }
+      }
+    },
+    {
+      "germanName": "Bergfink",
+      "scientificName": "Fringilla montifringilla",
+      "englishName": "Brambling",
+      "baseScores": {
+        "NO": {
+          "may_aug": 1
+        },
+        "SE-NORTH": {
+          "may_aug": 3
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
+      "scores": {
+        "NO": {
+          "may_aug": 1
+        },
+        "SE-NORTH": {
+          "may_aug": 3
+        }
+      }
+    },
+    {
+      "germanName": "Birkenzeisig",
+      "scientificName": "Acanthis flammea",
+      "englishName": "Redpoll",
+      "baseScores": {
+        "DK": {
+          "may_aug": 5
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
+      "scores": {
+        "DK": {
+          "may_aug": 5
+        }
+      }
+    },
+    {
+      "germanName": "Blauelster",
+      "scientificName": "Cyanopica cyanus",
+      "englishName": "Azure-winged Magpie",
+      "baseScores": {
+        "JP-TOKYO": {
+          "may_aug": 3
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 1,
+          "class": "etwas Timing nötig",
+          "reason": "Die Art ruft oder singt regelmäßig, aber nicht bei jeder Begegnung. Für eine brauchbare Aufnahme braucht es etwas Timing."
+        }
+      },
+      "scores": {
+        "JP-TOKYO": {
+          "may_aug": 4
+        }
+      }
+    },
+    {
+      "germanName": "Blaukehlchen",
+      "scientificName": "Luscinia svecica",
+      "englishName": "Bluethroat",
+      "baseScores": {
+        "DK": {
+          "may_aug": 4
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
+      "scores": {
+        "DK": {
+          "may_aug": 4
+        }
+      }
+    },
+    {
       "germanName": "Blaumeise",
       "scientificName": "Cyanistes caeruleus",
       "englishName": "Eurasian Blue Tit",
+      "baseScores": {
+        "DE-NORTH": {
+          "may_aug": 1
+        },
+        "DK": {
+          "may_aug": 1
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
       "scores": {
         "DE-NORTH": {
           "may_aug": 1
@@ -158,9 +303,21 @@
       "germanName": "Bluthänfling",
       "scientificName": "Linaria cannabina",
       "englishName": "Eurasian Linnet",
+      "baseScores": {
+        "DK": {
+          "may_aug": 3
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 1,
+          "class": "etwas Timing nötig",
+          "reason": "Die Art ruft oder singt regelmäßig, aber nicht bei jeder Begegnung. Für eine brauchbare Aufnahme braucht es etwas Timing."
+        }
+      },
       "scores": {
         "DK": {
-          "may_aug": 2
+          "may_aug": 4
         }
       }
     },
@@ -168,9 +325,21 @@
       "germanName": "Blässgans",
       "scientificName": "Anser albifrons",
       "englishName": "Greater White-fronted Goose",
+      "baseScores": {
+        "SE-NORTH": {
+          "may_aug": 6
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
       "scores": {
         "SE-NORTH": {
-          "may_aug": 5
+          "may_aug": 6
         }
       }
     },
@@ -178,6 +347,18 @@
       "germanName": "Blässhuhn",
       "scientificName": "Fulica atra",
       "englishName": "Eurasian Coot",
+      "baseScores": {
+        "DE-NORTH": {
+          "may_aug": 1
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
       "scores": {
         "DE-NORTH": {
           "may_aug": 1
@@ -188,9 +369,21 @@
       "germanName": "Brandseeschwalbe",
       "scientificName": "Thalasseus sandvicensis",
       "englishName": "Sandwich Tern",
+      "baseScores": {
+        "DE-NORTH": {
+          "may_aug": 4
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
       "scores": {
         "DE-NORTH": {
-          "may_aug": 3
+          "may_aug": 4
         }
       }
     },
@@ -198,9 +391,21 @@
       "germanName": "Braunkehlchen",
       "scientificName": "Saxicola rubetra",
       "englishName": "Whinchat",
+      "baseScores": {
+        "SE-SOUTH": {
+          "may_aug": 4
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
       "scores": {
         "SE-SOUTH": {
-          "may_aug": 3
+          "may_aug": 4
         }
       }
     },
@@ -208,6 +413,18 @@
       "germanName": "Braunohrbülbül",
       "scientificName": "Hypsipetes amaurotis",
       "englishName": "Brown-eared Bulbul",
+      "baseScores": {
+        "JP-TOKYO": {
+          "may_aug": 1
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
       "scores": {
         "JP-TOKYO": {
           "may_aug": 1
@@ -218,6 +435,18 @@
       "germanName": "Buchfink",
       "scientificName": "Fringilla coelebs",
       "englishName": "Common Chaffinch",
+      "baseScores": {
+        "DK": {
+          "may_aug": 1
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
       "scores": {
         "DK": {
           "may_aug": 1
@@ -228,9 +457,21 @@
       "germanName": "Buntspecht",
       "scientificName": "Dendrocopos major",
       "englishName": "Great Spotted Woodpecker",
+      "baseScores": {
+        "DE-NORTH": {
+          "may_aug": 3
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 1,
+          "class": "etwas Timing nötig",
+          "reason": "Die Art ruft oder singt regelmäßig, aber nicht bei jeder Begegnung. Für eine brauchbare Aufnahme braucht es etwas Timing."
+        }
+      },
       "scores": {
         "DE-NORTH": {
-          "may_aug": 2
+          "may_aug": 4
         }
       }
     },
@@ -238,6 +479,18 @@
       "germanName": "Dickschnabelkrähe",
       "scientificName": "Corvus macrorhynchos",
       "englishName": "Large-billed Crow",
+      "baseScores": {
+        "JP-TOKYO": {
+          "may_aug": 1
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
       "scores": {
         "JP-TOKYO": {
           "may_aug": 1
@@ -248,9 +501,21 @@
       "germanName": "Dohle",
       "scientificName": "Coloeus monedula",
       "englishName": "Eurasian Jackdaw",
+      "baseScores": {
+        "DE-CENTRAL": {
+          "may_aug": 3
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
       "scores": {
         "DE-CENTRAL": {
-          "may_aug": 2
+          "may_aug": 3
         }
       }
     },
@@ -258,9 +523,21 @@
       "germanName": "Dorngrasmücke",
       "scientificName": "Curruca communis",
       "englishName": "Greater Whitethroat",
+      "baseScores": {
+        "DK": {
+          "may_aug": 3
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
       "scores": {
         "DK": {
-          "may_aug": 2
+          "may_aug": 3
         }
       }
     },
@@ -268,9 +545,21 @@
       "germanName": "Eichelhäher",
       "scientificName": "Garrulus glandarius",
       "englishName": "Eurasian Jay",
-      "scores": {
+      "baseScores": {
         "SE-SOUTH": {
           "may_aug": 1
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 1,
+          "class": "etwas Timing nötig",
+          "reason": "Die Art ruft oder singt regelmäßig, aber nicht bei jeder Begegnung. Für eine brauchbare Aufnahme braucht es etwas Timing."
+        }
+      },
+      "scores": {
+        "SE-SOUTH": {
+          "may_aug": 2
         }
       }
     },
@@ -278,9 +567,21 @@
       "germanName": "Eiderente",
       "scientificName": "Somateria mollissima",
       "englishName": "Common Eider",
-      "scores": {
+      "baseScores": {
         "NO": {
           "may_aug": 1
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 2,
+          "class": "akustisch anspruchsvoll",
+          "reason": "Eiderenten sind oft gut sichtbar auf offenem Wasser; Lautäußerungen sind deutlich stärker an Balz, Gruppen- und Nahsituationen gebunden."
+        }
+      },
+      "scores": {
+        "NO": {
+          "may_aug": 3
         }
       }
     },
@@ -288,6 +589,18 @@
       "germanName": "Elster",
       "scientificName": "Pica pica",
       "englishName": "Eurasian Magpie",
+      "baseScores": {
+        "DE-NORTH": {
+          "may_aug": 1
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
       "scores": {
         "DE-NORTH": {
           "may_aug": 1
@@ -298,6 +611,21 @@
       "germanName": "Erlenzeisig",
       "scientificName": "Spinus spinus",
       "englishName": "Eurasian Siskin",
+      "baseScores": {
+        "SE-NORTH": {
+          "may_aug": 1
+        },
+        "SE-SOUTH": {
+          "may_aug": 1
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
       "scores": {
         "SE-NORTH": {
           "may_aug": 1
@@ -311,6 +639,18 @@
       "germanName": "Feldlerche",
       "scientificName": "Alauda arvensis",
       "englishName": "Eurasian Skylark",
+      "baseScores": {
+        "DK": {
+          "may_aug": 1
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "Der lange Singflug macht die Feldlerche in der Brutzeit akustisch besonders dankbar; bei Anwesenheit ist eine Aufnahme meist gut möglich."
+        }
+      },
       "scores": {
         "DK": {
           "may_aug": 1
@@ -321,9 +661,21 @@
       "germanName": "Feldschwirl",
       "scientificName": "Locustella naevia",
       "englishName": "Common Grasshopper Warbler",
+      "baseScores": {
+        "DK": {
+          "may_aug": 5
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
       "scores": {
         "DK": {
-          "may_aug": 4
+          "may_aug": 5
         }
       }
     },
@@ -331,12 +683,27 @@
       "germanName": "Feldsperling",
       "scientificName": "Passer montanus",
       "englishName": "Eurasian Tree Sparrow",
-      "scores": {
+      "baseScores": {
         "DK": {
-          "may_aug": 2
+          "may_aug": 3
         },
         "SE-SOUTH": {
-          "may_aug": 2
+          "may_aug": 3
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
+      "scores": {
+        "DK": {
+          "may_aug": 3
+        },
+        "SE-SOUTH": {
+          "may_aug": 3
         }
       }
     },
@@ -344,9 +711,21 @@
       "germanName": "Felsentaube",
       "scientificName": "Columba livia",
       "englishName": "Rock Pigeon",
-      "scores": {
+      "baseScores": {
         "DE-NORTH": {
           "may_aug": 1
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 1,
+          "class": "etwas Timing nötig",
+          "reason": "Die Art ruft oder singt regelmäßig, aber nicht bei jeder Begegnung. Für eine brauchbare Aufnahme braucht es etwas Timing."
+        }
+      },
+      "scores": {
+        "DE-NORTH": {
+          "may_aug": 2
         }
       }
     },
@@ -354,9 +733,21 @@
       "germanName": "Fichtenkreuzschnabel",
       "scientificName": "Loxia curvirostra",
       "englishName": "Red Crossbill",
+      "baseScores": {
+        "SE-NORTH": {
+          "may_aug": 3
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
       "scores": {
         "SE-NORTH": {
-          "may_aug": 2
+          "may_aug": 3
         }
       }
     },
@@ -364,9 +755,21 @@
       "germanName": "Fitis",
       "scientificName": "Phylloscopus trochilus",
       "englishName": "Willow Warbler",
+      "baseScores": {
+        "DK": {
+          "may_aug": 3
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
       "scores": {
         "DK": {
-          "may_aug": 2
+          "may_aug": 3
         }
       }
     },
@@ -374,12 +777,27 @@
       "germanName": "Flussseeschwalbe",
       "scientificName": "Sterna hirundo",
       "englishName": "Common Tern",
-      "scores": {
+      "baseScores": {
         "DE-NORTH": {
-          "may_aug": 3
+          "may_aug": 4
         },
         "DK": {
-          "may_aug": 3
+          "may_aug": 4
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
+      "scores": {
+        "DE-NORTH": {
+          "may_aug": 4
+        },
+        "DK": {
+          "may_aug": 4
         }
       }
     },
@@ -387,12 +805,27 @@
       "germanName": "Flussuferläufer",
       "scientificName": "Actitis hypoleucos",
       "englishName": "Common Sandpiper",
-      "scores": {
+      "baseScores": {
         "DK": {
-          "may_aug": 3
+          "may_aug": 4
         },
         "SE-SOUTH": {
-          "may_aug": 2
+          "may_aug": 3
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 1,
+          "class": "etwas Timing nötig",
+          "reason": "Die Art ruft oder singt regelmäßig, aber nicht bei jeder Begegnung. Für eine brauchbare Aufnahme braucht es etwas Timing."
+        }
+      },
+      "scores": {
+        "DK": {
+          "may_aug": 5
+        },
+        "SE-SOUTH": {
+          "may_aug": 4
         }
       }
     },
@@ -400,12 +833,27 @@
       "germanName": "Gartenbaumläufer",
       "scientificName": "Certhia brachydactyla",
       "englishName": "Short-toed Treecreeper",
-      "scores": {
+      "baseScores": {
         "DE-NORTH": {
-          "may_aug": 2
+          "may_aug": 3
         },
         "DK": {
-          "may_aug": 2
+          "may_aug": 3
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
+      "scores": {
+        "DE-NORTH": {
+          "may_aug": 3
+        },
+        "DK": {
+          "may_aug": 3
         }
       }
     },
@@ -413,12 +861,27 @@
       "germanName": "Gartengrasmücke",
       "scientificName": "Sylvia borin",
       "englishName": "Garden Warbler",
-      "scores": {
+      "baseScores": {
         "DE-NORTH": {
-          "may_aug": 3
+          "may_aug": 4
         },
         "DK": {
-          "may_aug": 3
+          "may_aug": 4
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
+      "scores": {
+        "DE-NORTH": {
+          "may_aug": 4
+        },
+        "DK": {
+          "may_aug": 4
         }
       }
     },
@@ -426,9 +889,21 @@
       "germanName": "Gartenrotschwanz",
       "scientificName": "Phoenicurus phoenicurus",
       "englishName": "Common Redstart",
+      "baseScores": {
+        "DK": {
+          "may_aug": 3
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
       "scores": {
         "DK": {
-          "may_aug": 2
+          "may_aug": 3
         }
       }
     },
@@ -436,9 +911,21 @@
       "germanName": "Gelbspötter",
       "scientificName": "Hippolais icterina",
       "englishName": "Icterine Warbler",
+      "baseScores": {
+        "DE-NORTH": {
+          "may_aug": 4
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
       "scores": {
         "DE-NORTH": {
-          "may_aug": 3
+          "may_aug": 4
         }
       }
     },
@@ -446,9 +933,21 @@
       "germanName": "Gimpel",
       "scientificName": "Pyrrhula pyrrhula",
       "englishName": "Eurasian Bullfinch",
+      "baseScores": {
+        "DE-NORTH": {
+          "may_aug": 3
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 2,
+          "class": "akustisch anspruchsvoll",
+          "reason": "Gimpel äußern meist leise, kurze Pfeifrufe. Eine saubere Aufnahme erfordert mehr Nähe und Timing als bei vielen anderen Finken."
+        }
+      },
       "scores": {
         "DE-NORTH": {
-          "may_aug": 2
+          "may_aug": 5
         }
       }
     },
@@ -456,9 +955,21 @@
       "germanName": "Girlitz",
       "scientificName": "Serinus serinus",
       "englishName": "European Serin",
+      "baseScores": {
+        "DE-SOUTH": {
+          "may_aug": 3
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
       "scores": {
         "DE-SOUTH": {
-          "may_aug": 2
+          "may_aug": 3
         }
       }
     },
@@ -466,9 +977,21 @@
       "germanName": "Goldammer",
       "scientificName": "Emberiza citrinella",
       "englishName": "Yellowhammer",
+      "baseScores": {
+        "DK": {
+          "may_aug": 3
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
       "scores": {
         "DK": {
-          "may_aug": 2
+          "may_aug": 3
         }
       }
     },
@@ -476,15 +999,33 @@
       "germanName": "Goldregenpfeifer",
       "scientificName": "Pluvialis apricaria",
       "englishName": "European Golden-Plover",
-      "scores": {
+      "baseScores": {
         "DK": {
-          "may_aug": 3
+          "may_aug": 4
         },
         "NO": {
-          "may_aug": 2
+          "may_aug": 3
         },
         "SE-SOUTH": {
-          "may_aug": 3
+          "may_aug": 4
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 1,
+          "class": "etwas Timing nötig",
+          "reason": "Die Art ruft oder singt regelmäßig, aber nicht bei jeder Begegnung. Für eine brauchbare Aufnahme braucht es etwas Timing."
+        }
+      },
+      "scores": {
+        "DK": {
+          "may_aug": 5
+        },
+        "NO": {
+          "may_aug": 4
+        },
+        "SE-SOUTH": {
+          "may_aug": 5
         }
       }
     },
@@ -492,6 +1033,21 @@
       "germanName": "Graugans",
       "scientificName": "Anser anser",
       "englishName": "Graylag Goose",
+      "baseScores": {
+        "DE-NORTH": {
+          "may_aug": 1
+        },
+        "DK": {
+          "may_aug": 1
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
       "scores": {
         "DE-NORTH": {
           "may_aug": 1
@@ -505,9 +1061,21 @@
       "germanName": "Graureiher",
       "scientificName": "Ardea cinerea",
       "englishName": "Gray Heron",
-      "scores": {
+      "baseScores": {
         "DK": {
           "may_aug": 1
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 1,
+          "class": "etwas Timing nötig",
+          "reason": "Graureiher geben zwar markante Flugrufe, sind bei vielen Sichtkontakten aber still. Der zusätzliche Aufnahmeaufwand ist vorhanden, aber nicht extrem."
+        }
+      },
+      "scores": {
+        "DK": {
+          "may_aug": 2
         }
       }
     },
@@ -515,9 +1083,21 @@
       "germanName": "Grauschnäpper",
       "scientificName": "Muscicapa striata",
       "englishName": "Spotted Flycatcher",
+      "baseScores": {
+        "DE-NORTH": {
+          "may_aug": 4
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 2,
+          "class": "akustisch anspruchsvoll",
+          "reason": "Grauschnäpper sind visuell oft gut zu entdecken, ihre Lautäußerungen sind dagegen eher leise, kurz und nicht dauerhaft präsent."
+        }
+      },
       "scores": {
         "DE-NORTH": {
-          "may_aug": 3
+          "may_aug": 6
         }
       }
     },
@@ -525,9 +1105,21 @@
       "germanName": "Großer Brachvogel",
       "scientificName": "Numenius arquata",
       "englishName": "Eurasian Curlew",
+      "baseScores": {
+        "DK": {
+          "may_aug": 3
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 1,
+          "class": "etwas Timing nötig",
+          "reason": "Die Art ruft oder singt regelmäßig, aber nicht bei jeder Begegnung. Für eine brauchbare Aufnahme braucht es etwas Timing."
+        }
+      },
       "scores": {
         "DK": {
-          "may_aug": 2
+          "may_aug": 4
         }
       }
     },
@@ -535,9 +1127,21 @@
       "germanName": "Grünfink",
       "scientificName": "Chloris chloris",
       "englishName": "European Greenfinch",
+      "baseScores": {
+        "DK": {
+          "may_aug": 3
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
       "scores": {
         "DK": {
-          "may_aug": 2
+          "may_aug": 3
         }
       }
     },
@@ -545,12 +1149,27 @@
       "germanName": "Grünschenkel",
       "scientificName": "Tringa nebularia",
       "englishName": "Common Greenshank",
-      "scores": {
+      "baseScores": {
         "DK": {
-          "may_aug": 3
+          "may_aug": 4
         },
         "SE-NORTH": {
-          "may_aug": 2
+          "may_aug": 3
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 1,
+          "class": "etwas Timing nötig",
+          "reason": "Die Art ruft oder singt regelmäßig, aber nicht bei jeder Begegnung. Für eine brauchbare Aufnahme braucht es etwas Timing."
+        }
+      },
+      "scores": {
+        "DK": {
+          "may_aug": 5
+        },
+        "SE-NORTH": {
+          "may_aug": 4
         }
       }
     },
@@ -558,15 +1177,33 @@
       "germanName": "Grünspecht",
       "scientificName": "Picus viridis",
       "englishName": "Eurasian Green Woodpecker",
-      "scores": {
+      "baseScores": {
         "DE-NORTH": {
-          "may_aug": 2
+          "may_aug": 3
         },
         "DE-SOUTH": {
-          "may_aug": 2
+          "may_aug": 3
         },
         "SE-SOUTH": {
+          "may_aug": 4
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
+      "scores": {
+        "DE-NORTH": {
           "may_aug": 3
+        },
+        "DE-SOUTH": {
+          "may_aug": 3
+        },
+        "SE-SOUTH": {
+          "may_aug": 4
         }
       }
     },
@@ -574,9 +1211,21 @@
       "germanName": "Gänsesäger",
       "scientificName": "Mergus merganser",
       "englishName": "Common Merganser",
+      "baseScores": {
+        "SE-NORTH": {
+          "may_aug": 3
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 2,
+          "class": "akustisch anspruchsvoll",
+          "reason": "Gänsesäger lassen sich häufig visuell entdecken, während Rufe relativ unauffällig und nicht bei jeder Begegnung zu hören sind."
+        }
+      },
       "scores": {
         "SE-NORTH": {
-          "may_aug": 2
+          "may_aug": 5
         }
       }
     },
@@ -584,9 +1233,21 @@
       "germanName": "Haubenmeise",
       "scientificName": "Lophophanes cristatus",
       "englishName": "Crested Tit",
+      "baseScores": {
+        "SE-SOUTH": {
+          "may_aug": 3
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
       "scores": {
         "SE-SOUTH": {
-          "may_aug": 2
+          "may_aug": 3
         }
       }
     },
@@ -594,9 +1255,24 @@
       "germanName": "Hausrotschwanz",
       "scientificName": "Phoenicurus ochruros",
       "englishName": "Black Redstart",
+      "baseScores": {
+        "DE-NORTH": {
+          "may_aug": 3
+        },
+        "DE-SOUTH": {
+          "may_aug": 1
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
       "scores": {
         "DE-NORTH": {
-          "may_aug": 2
+          "may_aug": 3
         },
         "DE-SOUTH": {
           "may_aug": 1
@@ -607,6 +1283,18 @@
       "germanName": "Haussperling",
       "scientificName": "Passer domesticus",
       "englishName": "House Sparrow",
+      "baseScores": {
+        "DE-NORTH": {
+          "may_aug": 1
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
       "scores": {
         "DE-NORTH": {
           "may_aug": 1
@@ -617,6 +1305,18 @@
       "germanName": "Heckenbraunelle",
       "scientificName": "Prunella modularis",
       "englishName": "Dunnock",
+      "baseScores": {
+        "DK": {
+          "may_aug": 1
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
       "scores": {
         "DK": {
           "may_aug": 1
@@ -627,9 +1327,21 @@
       "germanName": "Heidelerche",
       "scientificName": "Lullula arborea",
       "englishName": "Wood Lark",
+      "baseScores": {
+        "DK": {
+          "may_aug": 5
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
       "scores": {
         "DK": {
-          "may_aug": 4
+          "may_aug": 5
         }
       }
     },
@@ -637,9 +1349,21 @@
       "germanName": "Heringsmöwe",
       "scientificName": "Larus fuscus",
       "englishName": "Lesser Black-backed Gull",
+      "baseScores": {
+        "DE-NORTH": {
+          "may_aug": 3
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
       "scores": {
         "DE-NORTH": {
-          "may_aug": 2
+          "may_aug": 3
         }
       }
     },
@@ -647,9 +1371,21 @@
       "germanName": "Jagdfasan",
       "scientificName": "Phasianus colchicus",
       "englishName": "Ring-necked Pheasant",
+      "baseScores": {
+        "DK": {
+          "may_aug": 3
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 1,
+          "class": "etwas Timing nötig",
+          "reason": "Die Art ruft oder singt regelmäßig, aber nicht bei jeder Begegnung. Für eine brauchbare Aufnahme braucht es etwas Timing."
+        }
+      },
       "scores": {
         "DK": {
-          "may_aug": 2
+          "may_aug": 4
         }
       }
     },
@@ -657,6 +1393,18 @@
       "germanName": "Japanbrillenvogel",
       "scientificName": "Zosterops japonicus",
       "englishName": "Warbling White-eye",
+      "baseScores": {
+        "JP-TOKYO": {
+          "may_aug": 1
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
       "scores": {
         "JP-TOKYO": {
           "may_aug": 1
@@ -667,6 +1415,21 @@
       "germanName": "Kanadagans",
       "scientificName": "Branta canadensis",
       "englishName": "Canada Goose",
+      "baseScores": {
+        "DE-NORTH": {
+          "may_aug": 1
+        },
+        "DK": {
+          "may_aug": 1
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
       "scores": {
         "DE-NORTH": {
           "may_aug": 1
@@ -680,12 +1443,27 @@
       "germanName": "Kernbeißer",
       "scientificName": "Coccothraustes coccothraustes",
       "englishName": "Hawfinch",
-      "scores": {
+      "baseScores": {
         "DE-NORTH": {
-          "may_aug": 3
+          "may_aug": 4
         },
         "DE-SOUTH": {
-          "may_aug": 2
+          "may_aug": 3
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 2,
+          "class": "akustisch anspruchsvoll",
+          "reason": "Kernbeißer sind akustisch vergleichsweise zurückhaltend; ihre kurzen Rufe sind deutlich leichter zu verpassen als den Vogel selbst."
+        }
+      },
+      "scores": {
+        "DE-NORTH": {
+          "may_aug": 6
+        },
+        "DE-SOUTH": {
+          "may_aug": 5
         }
       }
     },
@@ -693,9 +1471,21 @@
       "germanName": "Kiebitz",
       "scientificName": "Vanellus vanellus",
       "englishName": "Northern Lapwing",
+      "baseScores": {
+        "DK": {
+          "may_aug": 3
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
       "scores": {
         "DK": {
-          "may_aug": 2
+          "may_aug": 3
         }
       }
     },
@@ -703,9 +1493,21 @@
       "germanName": "Kiebitzregenpfeifer",
       "scientificName": "Pluvialis squatarola",
       "englishName": "Black-bellied Plover",
+      "baseScores": {
+        "DK": {
+          "may_aug": 4
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 1,
+          "class": "etwas Timing nötig",
+          "reason": "Die Art ruft oder singt regelmäßig, aber nicht bei jeder Begegnung. Für eine brauchbare Aufnahme braucht es etwas Timing."
+        }
+      },
       "scores": {
         "DK": {
-          "may_aug": 3
+          "may_aug": 5
         }
       }
     },
@@ -713,9 +1515,21 @@
       "germanName": "Klappergrasmücke",
       "scientificName": "Curruca curruca",
       "englishName": "Lesser Whitethroat",
+      "baseScores": {
+        "DK": {
+          "may_aug": 4
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
       "scores": {
         "DK": {
-          "may_aug": 3
+          "may_aug": 4
         }
       }
     },
@@ -723,9 +1537,24 @@
       "germanName": "Kleiber",
       "scientificName": "Sitta europaea",
       "englishName": "Eurasian Nuthatch",
+      "baseScores": {
+        "DE-NORTH": {
+          "may_aug": 3
+        },
+        "SE-SOUTH": {
+          "may_aug": 1
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
       "scores": {
         "DE-NORTH": {
-          "may_aug": 2
+          "may_aug": 3
         },
         "SE-SOUTH": {
           "may_aug": 1
@@ -736,6 +1565,18 @@
       "germanName": "Kohlmeise",
       "scientificName": "Parus major",
       "englishName": "Great Tit",
+      "baseScores": {
+        "DK": {
+          "may_aug": 1
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
       "scores": {
         "DK": {
           "may_aug": 1
@@ -746,12 +1587,27 @@
       "germanName": "Kolkrabe",
       "scientificName": "Corvus corax",
       "englishName": "Common Raven",
-      "scores": {
+      "baseScores": {
         "DE-NORTH": {
-          "may_aug": 2
+          "may_aug": 3
         },
         "DK": {
-          "may_aug": 2
+          "may_aug": 3
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "Kolkraben sind sehr ruffreudig und ihre tiefen Rufe tragen weit. Daher kein zusätzlicher Akustikbonus."
+        }
+      },
+      "scores": {
+        "DE-NORTH": {
+          "may_aug": 3
+        },
+        "DK": {
+          "may_aug": 3
         }
       }
     },
@@ -759,12 +1615,27 @@
       "germanName": "Kranich",
       "scientificName": "Grus grus",
       "englishName": "Common Crane",
-      "scores": {
+      "baseScores": {
         "DE-NORTH": {
-          "may_aug": 2
+          "may_aug": 3
         },
         "SE-SOUTH": {
-          "may_aug": 2
+          "may_aug": 3
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
+      "scores": {
+        "DE-NORTH": {
+          "may_aug": 3
+        },
+        "SE-SOUTH": {
+          "may_aug": 3
         }
       }
     },
@@ -772,9 +1643,21 @@
       "germanName": "Kuckuck",
       "scientificName": "Cuculus canorus",
       "englishName": "Common Cuckoo",
+      "baseScores": {
+        "DK": {
+          "may_aug": 4
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
       "scores": {
         "DK": {
-          "may_aug": 3
+          "may_aug": 4
         }
       }
     },
@@ -782,12 +1665,27 @@
       "germanName": "Lachmöwe",
       "scientificName": "Chroicocephalus ridibundus",
       "englishName": "Black-headed Gull",
-      "scores": {
+      "baseScores": {
         "DE-NORTH": {
-          "may_aug": 2
+          "may_aug": 3
         },
         "DK": {
-          "may_aug": 2
+          "may_aug": 3
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
+      "scores": {
+        "DE-NORTH": {
+          "may_aug": 3
+        },
+        "DK": {
+          "may_aug": 3
         }
       }
     },
@@ -795,6 +1693,18 @@
       "germanName": "Mantelmöwe",
       "scientificName": "Larus marinus",
       "englishName": "Great Black-backed Gull",
+      "baseScores": {
+        "NO": {
+          "may_aug": 1
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
       "scores": {
         "NO": {
           "may_aug": 1
@@ -805,9 +1715,24 @@
       "germanName": "Mauersegler",
       "scientificName": "Apus apus",
       "englishName": "Common Swift",
+      "baseScores": {
+        "DE-NORTH": {
+          "may_aug": 3
+        },
+        "DE-SOUTH": {
+          "may_aug": 1
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
       "scores": {
         "DE-NORTH": {
-          "may_aug": 2
+          "may_aug": 3
         },
         "DE-SOUTH": {
           "may_aug": 1
@@ -818,12 +1743,27 @@
       "germanName": "Mehlschwalbe",
       "scientificName": "Delichon urbicum",
       "englishName": "Western House-Martin",
+      "baseScores": {
+        "DE-SOUTH": {
+          "may_aug": 1
+        },
+        "DK": {
+          "may_aug": 3
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
       "scores": {
         "DE-SOUTH": {
           "may_aug": 1
         },
         "DK": {
-          "may_aug": 2
+          "may_aug": 3
         }
       }
     },
@@ -831,12 +1771,27 @@
       "germanName": "Misteldrossel",
       "scientificName": "Turdus viscivorus",
       "englishName": "Mistle Thrush",
-      "scores": {
+      "baseScores": {
         "DE-NORTH": {
-          "may_aug": 2
+          "may_aug": 3
         },
         "DK": {
-          "may_aug": 2
+          "may_aug": 3
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
+      "scores": {
+        "DE-NORTH": {
+          "may_aug": 3
+        },
+        "DK": {
+          "may_aug": 3
         }
       }
     },
@@ -844,9 +1799,21 @@
       "germanName": "Mittelmeermöwe",
       "scientificName": "Larus michahellis",
       "englishName": "Yellow-legged Gull",
+      "baseScores": {
+        "DE-NORTH": {
+          "may_aug": 5
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
       "scores": {
         "DE-NORTH": {
-          "may_aug": 4
+          "may_aug": 5
         }
       }
     },
@@ -854,9 +1821,21 @@
       "germanName": "Moorschneehuhn",
       "scientificName": "Lagopus lagopus",
       "englishName": "Willow Ptarmigan",
+      "baseScores": {
+        "NO": {
+          "may_aug": 3
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 1,
+          "class": "etwas Timing nötig",
+          "reason": "Moorschneehühner rufen in passenden Situationen, sind aber nicht dauerhaft akustisch aktiv. Der Bonus bleibt moderat, weil die Art in Norwegen regional gut erwartbar sein kann."
+        }
+      },
       "scores": {
         "NO": {
-          "may_aug": 2
+          "may_aug": 4
         }
       }
     },
@@ -864,9 +1843,21 @@
       "germanName": "Mäusebussard",
       "scientificName": "Buteo buteo",
       "englishName": "Common Buzzard",
+      "baseScores": {
+        "DE-NORTH": {
+          "may_aug": 3
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 1,
+          "class": "etwas Timing nötig",
+          "reason": "Der typische Ruf ist gut hörbar und wird besonders im Flug gegeben, aber längst nicht jeder beobachtete Bussard ruft. Daher nur ein moderater Akustikbonus."
+        }
+      },
       "scores": {
         "DE-NORTH": {
-          "may_aug": 2
+          "may_aug": 4
         }
       }
     },
@@ -874,6 +1865,18 @@
       "germanName": "Mönchsgrasmücke",
       "scientificName": "Sylvia atricapilla",
       "englishName": "Eurasian Blackcap",
+      "baseScores": {
+        "DK": {
+          "may_aug": 1
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
       "scores": {
         "DK": {
           "may_aug": 1
@@ -884,9 +1887,21 @@
       "germanName": "Nachtigall",
       "scientificName": "Luscinia megarhynchos",
       "englishName": "Common Nightingale",
+      "baseScores": {
+        "DE-NORTH": {
+          "may_aug": 3
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
       "scores": {
         "DE-NORTH": {
-          "may_aug": 2
+          "may_aug": 3
         }
       }
     },
@@ -894,12 +1909,27 @@
       "germanName": "Nebelkrähe",
       "scientificName": "Corvus cornix",
       "englishName": "Hooded Crow",
-      "scores": {
+      "baseScores": {
         "DE-NORTH": {
-          "may_aug": 3
+          "may_aug": 4
         },
         "DK": {
-          "may_aug": 2
+          "may_aug": 3
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
+      "scores": {
+        "DE-NORTH": {
+          "may_aug": 4
+        },
+        "DK": {
+          "may_aug": 3
         }
       }
     },
@@ -907,9 +1937,21 @@
       "germanName": "Neuntöter",
       "scientificName": "Lanius collurio",
       "englishName": "Red-backed Shrike",
+      "baseScores": {
+        "DE-NORTH": {
+          "may_aug": 4
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 2,
+          "class": "akustisch anspruchsvoll",
+          "reason": "Neuntöter sind deutlich unauffälliger als typische Singvögel; Rufe und leiser Gesang sind nicht bei jeder Beobachtung zu bekommen."
+        }
+      },
       "scores": {
         "DE-NORTH": {
-          "may_aug": 3
+          "may_aug": 6
         }
       }
     },
@@ -917,9 +1959,21 @@
       "germanName": "Pirol",
       "scientificName": "Oriolus oriolus",
       "englishName": "Eurasian Golden Oriole",
+      "baseScores": {
+        "DE-NORTH": {
+          "may_aug": 5
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
       "scores": {
         "DE-NORTH": {
-          "may_aug": 4
+          "may_aug": 5
         }
       }
     },
@@ -927,6 +1981,21 @@
       "germanName": "Rabenkrähe",
       "scientificName": "Corvus corone",
       "englishName": "Carrion Crow",
+      "baseScores": {
+        "DE-NORTH": {
+          "may_aug": 1
+        },
+        "DK": {
+          "may_aug": 1
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
       "scores": {
         "DE-NORTH": {
           "may_aug": 1
@@ -940,9 +2009,21 @@
       "germanName": "Raubseeschwalbe",
       "scientificName": "Hydroprogne caspia",
       "englishName": "Caspian Tern",
+      "baseScores": {
+        "DE-SOUTH": {
+          "may_aug": 7
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
       "scores": {
         "DE-SOUTH": {
-          "may_aug": 6
+          "may_aug": 7
         }
       }
     },
@@ -950,6 +2031,18 @@
       "germanName": "Rauchschwalbe",
       "scientificName": "Hirundo rustica",
       "englishName": "Barn Swallow",
+      "baseScores": {
+        "DK": {
+          "may_aug": 1
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
       "scores": {
         "DK": {
           "may_aug": 1
@@ -960,9 +2053,21 @@
       "germanName": "Ringelgans",
       "scientificName": "Branta bernicla",
       "englishName": "Brant",
+      "baseScores": {
+        "DK": {
+          "may_aug": 3
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
       "scores": {
         "DK": {
-          "may_aug": 2
+          "may_aug": 3
         }
       }
     },
@@ -970,6 +2075,18 @@
       "germanName": "Ringeltaube",
       "scientificName": "Columba palumbus",
       "englishName": "Common Wood-Pigeon",
+      "baseScores": {
+        "DK": {
+          "may_aug": 1
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
       "scores": {
         "DK": {
           "may_aug": 1
@@ -980,9 +2097,21 @@
       "germanName": "Rohrammer",
       "scientificName": "Emberiza schoeniclus",
       "englishName": "Reed Bunting",
+      "baseScores": {
+        "DK": {
+          "may_aug": 3
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
       "scores": {
         "DK": {
-          "may_aug": 2
+          "may_aug": 3
         }
       }
     },
@@ -990,9 +2119,21 @@
       "germanName": "Rohrdommel",
       "scientificName": "Botaurus stellaris",
       "englishName": "Eurasian Bittern",
+      "baseScores": {
+        "DK": {
+          "may_aug": 6
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "Bei der Rohrdommel ist der weit tragende Balzruf in der Brutzeit gerade ein typischer Nachweisweg. Deshalb kein zusätzlicher Akustikbonus."
+        }
+      },
       "scores": {
         "DK": {
-          "may_aug": 5
+          "may_aug": 6
         }
       }
     },
@@ -1000,12 +2141,27 @@
       "germanName": "Rostgans",
       "scientificName": "Tadorna ferruginea",
       "englishName": "Ruddy Shelduck",
-      "scores": {
+      "baseScores": {
         "DE-SOUTH": {
-          "may_aug": 3
+          "may_aug": 4
         },
         "DK": {
-          "may_aug": 4
+          "may_aug": 5
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 1,
+          "class": "etwas Timing nötig",
+          "reason": "Die Art ruft oder singt regelmäßig, aber nicht bei jeder Begegnung. Für eine brauchbare Aufnahme braucht es etwas Timing."
+        }
+      },
+      "scores": {
+        "DE-SOUTH": {
+          "may_aug": 5
+        },
+        "DK": {
+          "may_aug": 6
         }
       }
     },
@@ -1013,6 +2169,18 @@
       "germanName": "Rotdrossel",
       "scientificName": "Turdus iliacus",
       "englishName": "Redwing",
+      "baseScores": {
+        "SE-NORTH": {
+          "may_aug": 1
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
       "scores": {
         "SE-NORTH": {
           "may_aug": 1
@@ -1023,6 +2191,21 @@
       "germanName": "Rotkehlchen",
       "scientificName": "Erithacus rubecula",
       "englishName": "European Robin",
+      "baseScores": {
+        "DE-NORTH": {
+          "may_aug": 1
+        },
+        "DK": {
+          "may_aug": 1
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
       "scores": {
         "DE-NORTH": {
           "may_aug": 1
@@ -1036,9 +2219,21 @@
       "germanName": "Rotschenkel",
       "scientificName": "Tringa totanus",
       "englishName": "Common Redshank",
+      "baseScores": {
+        "DK": {
+          "may_aug": 3
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
       "scores": {
         "DK": {
-          "may_aug": 2
+          "may_aug": 3
         }
       }
     },
@@ -1046,9 +2241,21 @@
       "germanName": "Saatkrähe",
       "scientificName": "Corvus frugilegus",
       "englishName": "Rook",
+      "baseScores": {
+        "DE-NORTH": {
+          "may_aug": 3
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
       "scores": {
         "DE-NORTH": {
-          "may_aug": 2
+          "may_aug": 3
         }
       }
     },
@@ -1056,9 +2263,21 @@
       "germanName": "Sanderling",
       "scientificName": "Calidris alba",
       "englishName": "Sanderling",
+      "baseScores": {
+        "DK": {
+          "may_aug": 4
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 1,
+          "class": "etwas Timing nötig",
+          "reason": "Die Art ruft oder singt regelmäßig, aber nicht bei jeder Begegnung. Für eine brauchbare Aufnahme braucht es etwas Timing."
+        }
+      },
       "scores": {
         "DK": {
-          "may_aug": 3
+          "may_aug": 5
         }
       }
     },
@@ -1066,9 +2285,21 @@
       "germanName": "Sandregenpfeifer",
       "scientificName": "Charadrius hiaticula",
       "englishName": "Common Ringed Plover",
+      "baseScores": {
+        "DK": {
+          "may_aug": 3
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 1,
+          "class": "etwas Timing nötig",
+          "reason": "Die Art ruft oder singt regelmäßig, aber nicht bei jeder Begegnung. Für eine brauchbare Aufnahme braucht es etwas Timing."
+        }
+      },
       "scores": {
         "DK": {
-          "may_aug": 2
+          "may_aug": 4
         }
       }
     },
@@ -1076,9 +2307,21 @@
       "germanName": "Schafstelze",
       "scientificName": "Motacilla flava",
       "englishName": "Western Yellow Wagtail",
+      "baseScores": {
+        "DK": {
+          "may_aug": 3
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 1,
+          "class": "etwas Timing nötig",
+          "reason": "Die Art ruft oder singt regelmäßig, aber nicht bei jeder Begegnung. Für eine brauchbare Aufnahme braucht es etwas Timing."
+        }
+      },
       "scores": {
         "DK": {
-          "may_aug": 2
+          "may_aug": 4
         }
       }
     },
@@ -1086,9 +2329,21 @@
       "germanName": "Schilfrohrsänger",
       "scientificName": "Acrocephalus schoenobaenus",
       "englishName": "Sedge Warbler",
+      "baseScores": {
+        "DK": {
+          "may_aug": 4
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
       "scores": {
         "DK": {
-          "may_aug": 3
+          "may_aug": 4
         }
       }
     },
@@ -1096,9 +2351,21 @@
       "germanName": "Schnatterente",
       "scientificName": "Mareca strepera",
       "englishName": "Gadwall",
+      "baseScores": {
+        "DE-NORTH": {
+          "may_aug": 3
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 2,
+          "class": "akustisch anspruchsvoll",
+          "reason": "Schnatterenten sind im Feld oft eher visuell als akustisch auffällig; ihre Rufe sind leise und situationsabhängig."
+        }
+      },
       "scores": {
         "DE-NORTH": {
-          "may_aug": 2
+          "may_aug": 5
         }
       }
     },
@@ -1106,9 +2373,21 @@
       "germanName": "Schwanzmeise",
       "scientificName": "Aegithalos caudatus",
       "englishName": "Long-tailed Tit",
+      "baseScores": {
+        "DE-NORTH": {
+          "may_aug": 3
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
       "scores": {
         "DE-NORTH": {
-          "may_aug": 2
+          "may_aug": 3
         }
       }
     },
@@ -1116,9 +2395,21 @@
       "germanName": "Schwarzkehlchen",
       "scientificName": "Saxicola rubicola",
       "englishName": "European Stonechat",
+      "baseScores": {
+        "DK": {
+          "may_aug": 4
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
       "scores": {
         "DK": {
-          "may_aug": 3
+          "may_aug": 4
         }
       }
     },
@@ -1126,9 +2417,21 @@
       "germanName": "Schwarzspecht",
       "scientificName": "Dryocopus martius",
       "englishName": "Black Woodpecker",
+      "baseScores": {
+        "DE-NORTH": {
+          "may_aug": 4
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 1,
+          "class": "etwas Timing nötig",
+          "reason": "Die Art ruft oder singt regelmäßig, aber nicht bei jeder Begegnung. Für eine brauchbare Aufnahme braucht es etwas Timing."
+        }
+      },
       "scores": {
         "DE-NORTH": {
-          "may_aug": 3
+          "may_aug": 5
         }
       }
     },
@@ -1136,9 +2439,21 @@
       "germanName": "Seidenschwanz",
       "scientificName": "Bombycilla garrulus",
       "englishName": "Bohemian Waxwing",
+      "baseScores": {
+        "SE-NORTH": {
+          "may_aug": 4
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
       "scores": {
         "SE-NORTH": {
-          "may_aug": 3
+          "may_aug": 4
         }
       }
     },
@@ -1146,9 +2461,21 @@
       "germanName": "Silbermöwe",
       "scientificName": "Larus argentatus",
       "englishName": "European Herring Gull",
+      "baseScores": {
+        "DE-NORTH": {
+          "may_aug": 3
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
       "scores": {
         "DE-NORTH": {
-          "may_aug": 2
+          "may_aug": 3
         }
       }
     },
@@ -1156,6 +2483,21 @@
       "germanName": "Singdrossel",
       "scientificName": "Turdus philomelos",
       "englishName": "Song Thrush",
+      "baseScores": {
+        "DE-NORTH": {
+          "may_aug": 1
+        },
+        "DK": {
+          "may_aug": 1
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
       "scores": {
         "DE-NORTH": {
           "may_aug": 1
@@ -1169,9 +2511,21 @@
       "germanName": "Singschwan",
       "scientificName": "Cygnus cygnus",
       "englishName": "Whooper Swan",
+      "baseScores": {
+        "SE-NORTH": {
+          "may_aug": 3
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
       "scores": {
         "SE-NORTH": {
-          "may_aug": 2
+          "may_aug": 3
         }
       }
     },
@@ -1179,9 +2533,21 @@
       "germanName": "Sommergoldhähnchen",
       "scientificName": "Regulus ignicapilla",
       "englishName": "Common Firecrest",
+      "baseScores": {
+        "DE-NORTH": {
+          "may_aug": 3
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
       "scores": {
         "DE-NORTH": {
-          "may_aug": 2
+          "may_aug": 3
         }
       }
     },
@@ -1189,9 +2555,21 @@
       "germanName": "Sperber",
       "scientificName": "Accipiter nisus",
       "englishName": "Eurasian Sparrowhawk",
+      "baseScores": {
+        "SE-SOUTH": {
+          "may_aug": 3
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 3,
+          "class": "akustische Glückssache",
+          "reason": "Sperber sind abseits des Brutplatzes oft still; Rufe häufen sich vor allem bei Brut, Alarm oder Fütterung. Eine zufällige Rufaufnahme ist deshalb ein klarer Zusatztreffer."
+        }
+      },
       "scores": {
         "SE-SOUTH": {
-          "may_aug": 2
+          "may_aug": 6
         }
       }
     },
@@ -1199,6 +2577,21 @@
       "germanName": "Star",
       "scientificName": "Sturnus vulgaris",
       "englishName": "European Starling",
+      "baseScores": {
+        "DE-NORTH": {
+          "may_aug": 1
+        },
+        "DE-SOUTH": {
+          "may_aug": 1
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
       "scores": {
         "DE-NORTH": {
           "may_aug": 1
@@ -1212,9 +2605,21 @@
       "germanName": "Steinschmätzer",
       "scientificName": "Oenanthe oenanthe",
       "englishName": "Northern Wheatear",
+      "baseScores": {
+        "DK": {
+          "may_aug": 4
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 1,
+          "class": "etwas Timing nötig",
+          "reason": "Die Art ruft oder singt regelmäßig, aber nicht bei jeder Begegnung. Für eine brauchbare Aufnahme braucht es etwas Timing."
+        }
+      },
       "scores": {
         "DK": {
-          "may_aug": 3
+          "may_aug": 5
         }
       }
     },
@@ -1222,9 +2627,21 @@
       "germanName": "Sterntaucher",
       "scientificName": "Gavia stellata",
       "englishName": "Red-throated Loon",
+      "baseScores": {
+        "SE-NORTH": {
+          "may_aug": 4
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 1,
+          "class": "etwas Timing nötig",
+          "reason": "Die Art ruft oder singt regelmäßig, aber nicht bei jeder Begegnung. Für eine brauchbare Aufnahme braucht es etwas Timing."
+        }
+      },
       "scores": {
         "SE-NORTH": {
-          "may_aug": 3
+          "may_aug": 5
         }
       }
     },
@@ -1232,9 +2649,21 @@
       "germanName": "Stieglitz",
       "scientificName": "Carduelis carduelis",
       "englishName": "European Goldfinch",
+      "baseScores": {
+        "DK": {
+          "may_aug": 3
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
       "scores": {
         "DK": {
-          "may_aug": 2
+          "may_aug": 3
         }
       }
     },
@@ -1242,12 +2671,27 @@
       "germanName": "Stockente",
       "scientificName": "Anas platyrhynchos",
       "englishName": "Mallard",
-      "scores": {
+      "baseScores": {
         "DE-NORTH": {
           "may_aug": 1
         },
         "DK": {
           "may_aug": 1
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 1,
+          "class": "etwas Timing nötig",
+          "reason": "Die Art ruft oder singt regelmäßig, aber nicht bei jeder Begegnung. Für eine brauchbare Aufnahme braucht es etwas Timing."
+        }
+      },
+      "scores": {
+        "DE-NORTH": {
+          "may_aug": 2
+        },
+        "DK": {
+          "may_aug": 2
         }
       }
     },
@@ -1255,6 +2699,18 @@
       "germanName": "Sturmmöwe",
       "scientificName": "Larus canus",
       "englishName": "Common Gull",
+      "baseScores": {
+        "DK": {
+          "may_aug": 1
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
       "scores": {
         "DK": {
           "may_aug": 1
@@ -1265,9 +2721,21 @@
       "germanName": "Sumpfmeise",
       "scientificName": "Poecile palustris",
       "englishName": "Marsh Tit",
+      "baseScores": {
+        "DE-NORTH": {
+          "may_aug": 3
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
       "scores": {
         "DE-NORTH": {
-          "may_aug": 2
+          "may_aug": 3
         }
       }
     },
@@ -1275,9 +2743,21 @@
       "germanName": "Sumpfrohrsänger",
       "scientificName": "Acrocephalus palustris",
       "englishName": "Marsh Warbler",
+      "baseScores": {
+        "DK": {
+          "may_aug": 4
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
       "scores": {
         "DK": {
-          "may_aug": 3
+          "may_aug": 4
         }
       }
     },
@@ -1285,9 +2765,21 @@
       "germanName": "Säbelschnäbler",
       "scientificName": "Recurvirostra avosetta",
       "englishName": "Pied Avocet",
+      "baseScores": {
+        "DK": {
+          "may_aug": 4
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 1,
+          "class": "etwas Timing nötig",
+          "reason": "Die Art ruft oder singt regelmäßig, aber nicht bei jeder Begegnung. Für eine brauchbare Aufnahme braucht es etwas Timing."
+        }
+      },
       "scores": {
         "DK": {
-          "may_aug": 3
+          "may_aug": 5
         }
       }
     },
@@ -1295,9 +2787,21 @@
       "germanName": "Tannenmeise",
       "scientificName": "Periparus ater",
       "englishName": "Coal Tit",
+      "baseScores": {
+        "DK": {
+          "may_aug": 3
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
       "scores": {
         "DK": {
-          "may_aug": 2
+          "may_aug": 3
         }
       }
     },
@@ -1305,9 +2809,21 @@
       "germanName": "Teichhuhn",
       "scientificName": "Gallinula chloropus",
       "englishName": "Eurasian Moorhen",
+      "baseScores": {
+        "DE-NORTH": {
+          "may_aug": 3
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 1,
+          "class": "etwas Timing nötig",
+          "reason": "Die Art ruft oder singt regelmäßig, aber nicht bei jeder Begegnung. Für eine brauchbare Aufnahme braucht es etwas Timing."
+        }
+      },
       "scores": {
         "DE-NORTH": {
-          "may_aug": 2
+          "may_aug": 4
         }
       }
     },
@@ -1315,9 +2831,21 @@
       "germanName": "Teichrohrsänger",
       "scientificName": "Acrocephalus scirpaceus",
       "englishName": "Common Reed Warbler",
+      "baseScores": {
+        "DK": {
+          "may_aug": 3
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
       "scores": {
         "DK": {
-          "may_aug": 2
+          "may_aug": 3
         }
       }
     },
@@ -1325,9 +2853,21 @@
       "germanName": "Trauerschnäpper",
       "scientificName": "Ficedula hypoleuca",
       "englishName": "European Pied Flycatcher",
+      "baseScores": {
+        "SE-CENTRAL": {
+          "may_aug": 3
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
       "scores": {
         "SE-CENTRAL": {
-          "may_aug": 2
+          "may_aug": 3
         }
       }
     },
@@ -1335,12 +2875,27 @@
       "germanName": "Turmfalke",
       "scientificName": "Falco tinnunculus",
       "englishName": "Eurasian Kestrel",
-      "scores": {
+      "baseScores": {
         "DE-SOUTH": {
-          "may_aug": 2
+          "may_aug": 3
         },
         "DK": {
-          "may_aug": 2
+          "may_aug": 3
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 2,
+          "class": "akustisch anspruchsvoll",
+          "reason": "Turmfalken rufen besonders an Brutplätzen, bei Alarm und Interaktionen. Ein normaler Sichtkontakt führt deutlich seltener automatisch zu einer Aufnahme."
+        }
+      },
+      "scores": {
+        "DE-SOUTH": {
+          "may_aug": 5
+        },
+        "DK": {
+          "may_aug": 5
         }
       }
     },
@@ -1348,6 +2903,18 @@
       "germanName": "Türkentaube",
       "scientificName": "Streptopelia decaocto",
       "englishName": "Eurasian Collared-Dove",
+      "baseScores": {
+        "DK": {
+          "may_aug": 1
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
       "scores": {
         "DK": {
           "may_aug": 1
@@ -1358,9 +2925,21 @@
       "germanName": "Uferschnepfe",
       "scientificName": "Limosa limosa",
       "englishName": "Black-tailed Godwit",
+      "baseScores": {
+        "DK": {
+          "may_aug": 4
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 1,
+          "class": "etwas Timing nötig",
+          "reason": "Die Art ruft oder singt regelmäßig, aber nicht bei jeder Begegnung. Für eine brauchbare Aufnahme braucht es etwas Timing."
+        }
+      },
       "scores": {
         "DK": {
-          "may_aug": 3
+          "may_aug": 5
         }
       }
     },
@@ -1368,12 +2947,27 @@
       "germanName": "Uferschwalbe",
       "scientificName": "Riparia riparia",
       "englishName": "Bank Swallow",
-      "scores": {
+      "baseScores": {
         "NO": {
-          "may_aug": 2
+          "may_aug": 3
         },
         "SE-NORTH": {
-          "may_aug": 2
+          "may_aug": 3
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
+      "scores": {
+        "NO": {
+          "may_aug": 3
+        },
+        "SE-NORTH": {
+          "may_aug": 3
         }
       }
     },
@@ -1381,6 +2975,18 @@
       "germanName": "Wacholderdrossel",
       "scientificName": "Turdus pilaris",
       "englishName": "Fieldfare",
+      "baseScores": {
+        "SE-NORTH": {
+          "may_aug": 1
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
       "scores": {
         "SE-NORTH": {
           "may_aug": 1
@@ -1391,9 +2997,21 @@
       "germanName": "Waldkauz",
       "scientificName": "Strix aluco",
       "englishName": "Tawny Owl",
+      "baseScores": {
+        "DE-CENTRAL": {
+          "may_aug": 3
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "Waldkäuze werden sehr häufig gerade über ihre Stimme gefunden. Akustik ist hier kein zusätzlicher Schwierigkeitsfaktor."
+        }
+      },
       "scores": {
         "DE-CENTRAL": {
-          "may_aug": 2
+          "may_aug": 3
         }
       }
     },
@@ -1401,9 +3019,21 @@
       "germanName": "Waldlaubsänger",
       "scientificName": "Phylloscopus sibilatrix",
       "englishName": "Wood Warbler",
+      "baseScores": {
+        "DE-NORTH": {
+          "may_aug": 5
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
       "scores": {
         "DE-NORTH": {
-          "may_aug": 4
+          "may_aug": 5
         }
       }
     },
@@ -1411,9 +3041,21 @@
       "germanName": "Waldohreule",
       "scientificName": "Asio otus",
       "englishName": "Long-eared Owl",
+      "baseScores": {
+        "SE-SOUTH": {
+          "may_aug": 5
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 2,
+          "class": "akustisch anspruchsvoll",
+          "reason": "Bei Waldohreulen sind erwachsene Tiere außerhalb konkreter Balz-, Brut- oder Alarmkontexte oft zurückhaltend; akustische Nachweise sind stark situationsabhängig."
+        }
+      },
       "scores": {
         "SE-SOUTH": {
-          "may_aug": 4
+          "may_aug": 7
         }
       }
     },
@@ -1421,9 +3063,21 @@
       "germanName": "Waldschnepfe",
       "scientificName": "Scolopax rusticola",
       "englishName": "Eurasian Woodcock",
+      "baseScores": {
+        "SE-NORTH": {
+          "may_aug": 4
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 1,
+          "class": "etwas Timing nötig",
+          "reason": "Die Art ruft oder singt regelmäßig, aber nicht bei jeder Begegnung. Für eine brauchbare Aufnahme braucht es etwas Timing."
+        }
+      },
       "scores": {
         "SE-NORTH": {
-          "may_aug": 3
+          "may_aug": 5
         }
       }
     },
@@ -1431,9 +3085,21 @@
       "germanName": "Waldwasserläufer",
       "scientificName": "Tringa ochropus",
       "englishName": "Green Sandpiper",
+      "baseScores": {
+        "SE-NORTH": {
+          "may_aug": 3
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 1,
+          "class": "etwas Timing nötig",
+          "reason": "Die Art ruft oder singt regelmäßig, aber nicht bei jeder Begegnung. Für eine brauchbare Aufnahme braucht es etwas Timing."
+        }
+      },
       "scores": {
         "SE-NORTH": {
-          "may_aug": 2
+          "may_aug": 4
         }
       }
     },
@@ -1441,6 +3107,18 @@
       "germanName": "Weidenmeise",
       "scientificName": "Poecile montanus",
       "englishName": "Willow Tit",
+      "baseScores": {
+        "SE-NORTH": {
+          "may_aug": 1
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
       "scores": {
         "SE-NORTH": {
           "may_aug": 1
@@ -1451,9 +3129,21 @@
       "germanName": "Weißwangengans",
       "scientificName": "Branta leucopsis",
       "englishName": "Barnacle Goose",
+      "baseScores": {
+        "SE-NORTH": {
+          "may_aug": 4
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
       "scores": {
         "SE-NORTH": {
-          "may_aug": 3
+          "may_aug": 4
         }
       }
     },
@@ -1461,9 +3151,21 @@
       "germanName": "Wiesenpieper",
       "scientificName": "Anthus pratensis",
       "englishName": "Meadow Pipit",
+      "baseScores": {
+        "DK": {
+          "may_aug": 3
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
       "scores": {
         "DK": {
-          "may_aug": 2
+          "may_aug": 3
         }
       }
     },
@@ -1471,12 +3173,27 @@
       "germanName": "Wintergoldhähnchen",
       "scientificName": "Regulus regulus",
       "englishName": "Goldcrest",
-      "scores": {
+      "baseScores": {
         "DE-NORTH": {
-          "may_aug": 2
+          "may_aug": 3
         },
         "DK": {
-          "may_aug": 2
+          "may_aug": 3
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
+      "scores": {
+        "DE-NORTH": {
+          "may_aug": 3
+        },
+        "DK": {
+          "may_aug": 3
         }
       }
     },
@@ -1484,6 +3201,18 @@
       "germanName": "Zaunkönig",
       "scientificName": "Troglodytes troglodytes",
       "englishName": "Eurasian Wren",
+      "baseScores": {
+        "DK": {
+          "may_aug": 1
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
       "scores": {
         "DK": {
           "may_aug": 1
@@ -1494,6 +3223,18 @@
       "germanName": "Zilpzalp",
       "scientificName": "Phylloscopus collybita",
       "englishName": "Common Chiffchaff",
+      "baseScores": {
+        "DK": {
+          "may_aug": 1
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
       "scores": {
         "DK": {
           "may_aug": 1
@@ -1504,9 +3245,21 @@
       "germanName": "Zwergschnäpper",
       "scientificName": "Ficedula parva",
       "englishName": "Red-breasted Flycatcher",
+      "baseScores": {
+        "DE-NORTH": {
+          "may_aug": 8
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        }
+      },
       "scores": {
         "DE-NORTH": {
-          "may_aug": 7
+          "may_aug": 8
         }
       }
     }
