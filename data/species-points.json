@@ -1,5 +1,5 @@
 {
-  "version": "4.4",
+  "version": "4.5",
   "scoringModel": "Regionalbasis + Akustikbonus",
   "season": {
     "startMonth": 5,
@@ -43,8 +43,8 @@
     "2": "akustisch anspruchsvoll",
     "3": "akustische Glückssache"
   },
-  "methodNote": "V4 trennt zwei Dinge: (1) regionale/saisonale Besonderheit des Auftretens und (2) die zusätzliche Schwierigkeit, bei einer Begegnung tatsächlich eine verwertbare Lautäußerung aufzunehmen. Gesamt = Regionalbasis + Akustikbonus, regulär gedeckelt bei 10. 15 Punkte bleiben echten regionalen Raritäten vorbehalten. Gefährdungsstatus allein gibt keine Zusatzpunkte.",
-  "calibrationNote": "V4.4 ergänzt Bourgogne-Franche-Comté (FR-BFC) als eigene Region sowie die im aktualisierten eBird-Export von Ida fehlenden September-Kontexte für Zwergtaucher, Steinkauz und Gebirgsstelze. Die V4-Grundlogik bleibt unverändert: Regionalbasis + Akustikbonus; regulär maximal 10, echte Raritäten 15.",
+  "methodNote": "BirdLeague V4.5: Punkte = regionale Basis (Art × Region × Zeitraum) + Akustikbonus (Art × Zeitraum), regulär maximal 10; 15 bleibt echten Raritäten vorbehalten. BirdNET-Aufnahmen gelten grundsätzlich als Nachweis; auffällige Erkennungen werden gewarnt statt automatisch verworfen.",
+  "calibrationNote": "V4.5 ergänzt die im BirdNET-Bulk-Export vom 19.09.2026 tatsächlich benötigten Region-/Zeit-Kontexte und unterstützt zusätzlich BirdNET-Session-Exports mit .selections.txt + HTML-Report. Auffällige seltene Treffer bleiben enthalten und werden transparent markiert.",
   "species": [
     {
       "germanName": "Alpenstrandläufer",
@@ -367,6 +367,28 @@
       }
     },
     {
+      "germanName": "Brachpieper",
+      "scientificName": "Anthus campestris",
+      "englishName": "Tawny Pipit",
+      "baseScores": {
+        "DE-CENTRAL": {
+          "may_aug": 7
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 1,
+          "class": "etwas Timing nötig",
+          "reason": "Der Brachpieper ruft im Flug und auf dem Zug, aber nicht bei jeder Begegnung. Der Ton-Nachweis erhöht die Schwierigkeit moderat."
+        }
+      },
+      "scores": {
+        "DE-CENTRAL": {
+          "may_aug": 8
+        }
+      }
+    },
+    {
       "germanName": "Brandseeschwalbe",
       "scientificName": "Thalasseus sandvicensis",
       "englishName": "Sandwich Tern",
@@ -621,6 +643,28 @@
       },
       "scores": {
         "NO": {
+          "may_aug": 3
+        }
+      }
+    },
+    {
+      "germanName": "Eisvogel",
+      "scientificName": "Alcedo atthis",
+      "englishName": "Common Kingfisher",
+      "baseScores": {
+        "DE-NORTH": {
+          "may_aug": 3
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "Der scharfe Flugruf ist ein typischer Erstnachweis des Eisvogels. Bei einem vorbeifliegenden Vogel ist die Stimme häufig sogar auffälliger als der kurze Sichtkontakt."
+        }
+      },
+      "scores": {
+        "DE-NORTH": {
           "may_aug": 3
         }
       }
@@ -1203,17 +1247,23 @@
       "baseScores": {
         "DK": {
           "may_aug": 1
+        },
+        "DE-NORTH": {
+          "may_aug": 1
         }
       },
       "acoustic": {
         "may_aug": {
           "bonus": 1,
           "class": "etwas Timing nötig",
-          "reason": "Graureiher geben zwar markante Flugrufe, sind bei vielen Sichtkontakten aber still. Der zusätzliche Aufnahmeaufwand ist vorhanden, aber nicht extrem."
+          "reason": "Graureiher geben markante Flugrufe, sind bei vielen Sichtkontakten aber still. Der zusätzliche Aufnahmeaufwand ist vorhanden, aber nicht extrem."
         }
       },
       "scores": {
         "DK": {
+          "may_aug": 2
+        },
+        "DE-NORTH": {
           "may_aug": 2
         }
       }
@@ -1393,6 +1443,28 @@
       "scores": {
         "SE-SOUTH": {
           "may_aug": 3
+        }
+      }
+    },
+    {
+      "germanName": "Haubentaucher",
+      "scientificName": "Podiceps cristatus",
+      "englishName": "Great Crested Grebe",
+      "baseScores": {
+        "DE-NORTH": {
+          "may_aug": 1
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 1,
+          "class": "etwas Timing nötig",
+          "reason": "Haubentaucher sind an geeigneten Gewässern gut zu finden, rufen aber außerhalb von Balz- und Familienkontakten nicht durchgehend. Für Ton braucht es etwas Timing."
+        }
+      },
+      "scores": {
+        "DE-NORTH": {
+          "may_aug": 2
         }
       }
     },
@@ -1840,7 +1912,8 @@
       "englishName": "Great Black-backed Gull",
       "baseScores": {
         "NO": {
-          "may_aug": 1
+          "may_aug": 1,
+          "sep_nov": 1
         }
       },
       "acoustic": {
@@ -1848,11 +1921,17 @@
           "bonus": 0,
           "class": "akustisch dankbar",
           "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        },
+        "sep_nov": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "An der norwegischen Küste ist die Art regelmäßig; Möwenrufe sind bei anwesenden Vögeln häufig zu hören und stellen meist keinen zusätzlichen Engpass dar."
         }
       },
       "scores": {
         "NO": {
-          "may_aug": 1
+          "may_aug": 1,
+          "sep_nov": 1
         }
       }
     },
@@ -2165,6 +2244,28 @@
       }
     },
     {
+      "germanName": "Ortolan",
+      "scientificName": "Emberiza hortulana",
+      "englishName": "Ortolan Bunting",
+      "baseScores": {
+        "DE-CENTRAL": {
+          "may_aug": 6
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 1,
+          "class": "etwas Timing nötig",
+          "reason": "Ortolane können gut hörbar singen oder rufen, doch besonders auf dem Zug ist eine verwertbare Lautäußerung nicht bei jeder Begegnung garantiert."
+        }
+      },
+      "scores": {
+        "DE-CENTRAL": {
+          "may_aug": 7
+        }
+      }
+    },
+    {
       "germanName": "Pirol",
       "scientificName": "Oriolus oriolus",
       "englishName": "Eurasian Golden Oriole",
@@ -2347,6 +2448,28 @@
       }
     },
     {
+      "germanName": "Rohrweihe",
+      "scientificName": "Circus aeruginosus",
+      "englishName": "Western Marsh Harrier",
+      "baseScores": {
+        "DE-NORTH": {
+          "may_aug": 3
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 2,
+          "class": "akustisch anspruchsvoll",
+          "reason": "Rohrweihen werden häufig visuell entdeckt; Rufe sind stärker an Balz, Revier- oder Familienkontakte gebunden und daher nicht bei jeder Beobachtung zu bekommen."
+        }
+      },
+      "scores": {
+        "DE-NORTH": {
+          "may_aug": 5
+        }
+      }
+    },
+    {
       "germanName": "Rostgans",
       "scientificName": "Tadorna ferruginea",
       "englishName": "Ruddy Shelduck",
@@ -2356,13 +2479,16 @@
         },
         "DK": {
           "may_aug": 5
+        },
+        "DE-CENTRAL": {
+          "may_aug": 4
         }
       },
       "acoustic": {
         "may_aug": {
           "bonus": 1,
           "class": "etwas Timing nötig",
-          "reason": "Die Art ruft oder singt regelmäßig, aber nicht bei jeder Begegnung. Für eine brauchbare Aufnahme braucht es etwas Timing."
+          "reason": "Rostgänse sind regional lokal und nicht bei jedem Aufenthalt ruffreudig. Für eine klare Aufnahme ist etwas Timing nötig."
         }
       },
       "scores": {
@@ -2371,6 +2497,9 @@
         },
         "DK": {
           "may_aug": 6
+        },
+        "DE-CENTRAL": {
+          "may_aug": 5
         }
       }
     },
@@ -2618,17 +2747,23 @@
       "baseScores": {
         "DE-NORTH": {
           "may_aug": 3
+        },
+        "DE-CENTRAL": {
+          "may_aug": 3
         }
       },
       "acoustic": {
         "may_aug": {
           "bonus": 0,
           "class": "akustisch dankbar",
-          "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+          "reason": "Schwanzmeisen sind in Familien- und kleinen Trupps sehr ruffreudig; bei Anwesenheit ist ein akustischer Nachweis meist leichter als ein längerer Sichtkontakt."
         }
       },
       "scores": {
         "DE-NORTH": {
+          "may_aug": 3
+        },
+        "DE-CENTRAL": {
           "may_aug": 3
         }
       }
@@ -2674,6 +2809,28 @@
       "scores": {
         "DE-NORTH": {
           "may_aug": 5
+        }
+      }
+    },
+    {
+      "germanName": "Seeadler",
+      "scientificName": "Haliaeetus albicilla",
+      "englishName": "White-tailed Eagle",
+      "baseScores": {
+        "NO": {
+          "sep_nov": 2
+        }
+      },
+      "acoustic": {
+        "sep_nov": {
+          "bonus": 3,
+          "class": "akustische Glückssache",
+          "reason": "An der norwegischen Küste kann ein Seeadler visuell vergleichsweise regelmäßig sein. Rufende Vögel sind dagegen deutlich weniger verlässlich; eine Tonaufnahme ist ein eigener Glückstreffer."
+        }
+      },
+      "scores": {
+        "NO": {
+          "sep_nov": 5
         }
       }
     },
@@ -3057,6 +3214,28 @@
       }
     },
     {
+      "germanName": "Sumpfohreule",
+      "scientificName": "Asio flammeus",
+      "englishName": "Short-eared Owl",
+      "baseScores": {
+        "DE-NORTH": {
+          "may_aug": 6
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 2,
+          "class": "akustisch anspruchsvoll",
+          "reason": "Sumpfohreulen sind außerhalb von Balz- und Revierverhalten oft still. Eine brauchbare Lautaufnahme ist deutlich schwieriger als ein Sichtkontakt."
+        }
+      },
+      "scores": {
+        "DE-NORTH": {
+          "may_aug": 8
+        }
+      }
+    },
+    {
       "germanName": "Sumpfrohrsänger",
       "scientificName": "Acrocephalus palustris",
       "englishName": "Marsh Warbler",
@@ -3313,6 +3492,28 @@
       "scores": {
         "SE-NORTH": {
           "may_aug": 1
+        }
+      }
+    },
+    {
+      "germanName": "Wachtelkönig",
+      "scientificName": "Crex crex",
+      "englishName": "Corn Crake",
+      "baseScores": {
+        "DE-NORTH": {
+          "may_aug": 6
+        }
+      },
+      "acoustic": {
+        "may_aug": {
+          "bonus": 0,
+          "class": "akustisch dankbar",
+          "reason": "Beim Wachtelkönig ist der charakteristische Ruf der typische Nachweisweg. Ist ein rufendes Tier anwesend, ist die Tonaufnahme selbst normalerweise nicht der zusätzliche Engpass."
+        }
+      },
+      "scores": {
+        "DE-NORTH": {
+          "may_aug": 6
         }
       }
     },

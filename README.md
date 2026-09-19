@@ -1,4 +1,4 @@
-# BirdLeague V4
+# BirdLeague V4.5
 
 BirdLeague ist eine statische GitHub-Pages-App für eine private Vogelstimmen-Liga. Pro Person zählt jede Art innerhalb der Saison Mai–Mai genau einmal; bei BirdNET Live gilt jede aufgezeichnete Vogelart unabhängig vom Reviewstatus als Nachweis.
 
@@ -55,3 +55,8 @@ Für bekannte BirdNET-Orte kann die Region direkt aus `locationName` ermittelt w
 - Steinkauz in `FR-BFC`, September–November: Basis 4 + Akustik +1 = **5 Punkte**.
 - Gebirgsstelze in `DE-SOUTH`, September–November: Basis 2 + Akustik +1 = **3 Punkte**.
 - Der aktualisierte Ida-eBird-Export ist damit vollständig bewertbar: 120 Jahresarten.
+
+
+## V4.5 – BirdNET Session/Bulk Format
+
+Zusätzlich zu JSON/CSV liest der ZIP-Importer nun BirdNET-Session-ZIPs mit `.selections.txt` und `_report.html`, auch verschachtelt innerhalb eines Bulk-ZIPs. Audio-Dateien werden beim Import nicht dekomprimiert. Der Fundort aus dem HTML-Report wird für die Regionserkennung verwendet. Auffällige seltene Vogelarten werden nur gewarnt; sie bleiben entsprechend der BirdNET-Vertrauensregel im Import.

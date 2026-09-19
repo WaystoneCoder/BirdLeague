@@ -1,4 +1,4 @@
-# BirdLeague Punktelogik V4
+# BirdLeague Punktelogik V4.5
 
 ## Grundidee
 
@@ -71,3 +71,10 @@ Die resultierenden Werte sind 2, 4, 3, 7 und 4 Punkte. Beim Drosselrohrsänger e
 ## V4.4 Ergänzungen aus Idas eBird-Export
 
 Neu unterstützt wird `FR-BFC` (Bourgogne-Franche-Comté). Für September–November gelten dort **4 Punkte für Zwergtaucher** (Basis 2 + Akustik +2) und **5 Punkte für Steinkauz** (Basis 4 + Akustik +1). Für die **Gebirgsstelze in Deutschland Süd** wurde September–November mit **3 Punkten** ergänzt (Basis 2 + Akustik +1).
+
+
+## V4.5 – korrekter BirdNET-Bulk-Export
+
+Der aktuelle BirdNET-Live-Bulk-Export kann Session-ZIPs enthalten, die ausschließlich `.selections.txt`, Audio und einen HTML-Report enthalten. V4.5 liest diese Struktur direkt, übernimmt Datum und Fundort aus der Session und überspringt die großen Audiodateien beim Parsen. Reviewstatus bleibt optional. Zusätzlich werden Heimchen, Rotfuchs, Waldgrille und Weinhähnchen als Nicht-Vogel-Taxa ignoriert.
+
+Für den Bulk-Export vom 19.09.2026 wurden die benötigten Kontexte für Schwanzmeise, Eisvogel, Brachpieper, Graureiher, Sumpfohreule, Rohrweihe, Wachtelkönig, Ortolan, Seeadler, Mantelmöwe, Haubentaucher und Rostgans ergänzt. Seltene/auffällige BirdNET-Treffer werden nicht gelöscht, sondern als Prüfhilfe markiert.

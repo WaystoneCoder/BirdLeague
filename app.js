@@ -605,7 +605,8 @@ function mapImportedRows(csvText, playerName, sourceName = "CSV") {
 
     const stateProvince = indexes.stateProvince >= 0 ? (row[indexes.stateProvince] || "").trim() : "";
     const automaticRegion = stateProvince ? regionFromStateProvince(stateProvince) : "";
-    const region = automaticRegion && automaticRegion !== "OTHER" ? automaticRegion : (state.importRegion || automaticRegion || "");
+    const locationRegion = isBirdNetCsv ? regionFromBirdNetLocation(location) : "";
+    const region = automaticRegion && automaticRegion !== "OTHER" ? automaticRegion : (locationRegion || state.importRegion || automaticRegion || "");
     mapped.push({
       player: playerName.trim(),
       commonName,
@@ -658,7 +659,11 @@ const birdNetNonBirdTaxa = new Set([
   "Tettigonia cantans",
   "Chorthippus brunneus",
   "Chorthippus mollis",
-  "Lithobates sylvaticus"
+  "Lithobates sylvaticus",
+  "Acheta domesticus",
+  "Vulpes vulpes",
+  "Nemobius sylvestris",
+  "Oecanthus pellucens"
 ]);
 
 const birdNetExcludedTaxa = {
@@ -667,7 +672,12 @@ const birdNetExcludedTaxa = {
   "Spinus pinus": "Fichtenzeisig/Pine Siskin ist eine nordamerikanische Art und in diesem europäischen Export als Fehlklassifikation zu behandeln."
 };
 
-const birdNetSuspiciousTaxa = {};
+const birdNetSuspiciousTaxa = {
+  "Anthus campestris": "Brachpieper ist regional ein auffälliger BirdNET-Treffer; bei hoher Punktewertung bitte die Aufnahme kurz gegenprüfen.",
+  "Emberiza hortulana": "Ortolan ist regional ein auffälliger BirdNET-Treffer; bei hoher Punktewertung bitte die Aufnahme kurz gegenprüfen.",
+  "Asio flammeus": "Sumpfohreule ist ein seltener BirdNET-Treffer; bitte die Aufnahme kurz gegenprüfen.",
+  "Crex crex": "Wachtelkönig ist ein seltener BirdNET-Treffer; außerhalb der Haupt-Rufzeit bitte die Aufnahme kurz gegenprüfen."
+};
 
 function birdNetAnomaly(scientificName, commonName, confidence, location) {
   const warnings = [];
@@ -817,6 +827,12 @@ async function readZipEntries(bytes) {
     const localNameLength = view.getUint16(localOffset + 26, true);
     const localExtraLength = view.getUint16(localOffset + 28, true);
     const dataStart = localOffset + 30 + localNameLength + localExtraLength;
+    const lowerFilename = filename.toLowerCase();
+    const relevant = lowerFilename.endsWith(".zip") || lowerFilename.endsWith(".json") || lowerFilename.endsWith(".csv") || lowerFilename.endsWith(".selections.txt") || lowerFilename.endsWith("_report.html");
+    if (!relevant) {
+      cursor += 46 + filenameLength + extraLength + commentLength;
+      continue;
+    }
     const compressed = bytes.slice(dataStart, dataStart + compressedSize);
     let plain;
     if (method === 0) plain = compressed;
@@ -831,6 +847,49 @@ async function readZipEntries(bytes) {
   return entries;
 }
 
+function birdNetSessionPayloadFromEntries(entries, parentName) {
+  const decoder = new TextDecoder("utf-8");
+  const selections = entries.filter((entry) => entry.filename.toLowerCase().endsWith(".selections.txt"));
+  if (!selections.length) return [];
+
+  let location = "";
+  const report = entries.find((entry) => entry.filename.toLowerCase().endsWith("_report.html"));
+  if (report) {
+    try {
+      const doc = new DOMParser().parseFromString(decoder.decode(report.bytes), "text/html");
+      const item = [...doc.querySelectorAll(".meta-item")].find((node) => node.querySelector(".label")?.textContent?.trim().toLowerCase() === "location");
+      location = item?.querySelector(".value")?.textContent?.trim() || "";
+    } catch (_) { /* location remains empty */ }
+  }
+
+  const dateMatch = String(parentName).match(/(\d{4}-\d{2}-\d{2})/);
+  const sessionDate = dateMatch?.[1] || "";
+  const clean = (value) => String(value ?? "").replace(/[\t\r\n]+/g, " ").trim();
+  const payloads = [];
+
+  selections.forEach((entry) => {
+    const rows = parseCsv(decoder.decode(entry.bytes));
+    if (rows.length < 2) return;
+    const headers = rows[0].map((value) => value.trim().toLowerCase());
+    const idx = (name) => headers.indexOf(name);
+    const commonIndex = idx("common name");
+    const scientificIndex = idx("scientific name");
+    const confidenceIndex = idx("confidence");
+    const reviewIndex = idx("review status");
+    if (commonIndex < 0 && scientificIndex < 0) return;
+
+    const out = [["Common Name", "Scientific Name", "Date", "Location", "Confidence", "Review Status"]];
+    rows.slice(1).forEach((row) => {
+      const commonName = commonIndex >= 0 ? row[commonIndex] : "";
+      const scientificName = scientificIndex >= 0 ? row[scientificIndex] : "";
+      if (!commonName && !scientificName) return;
+      out.push([commonName, scientificName, sessionDate, location, confidenceIndex >= 0 ? row[confidenceIndex] : "", reviewIndex >= 0 ? row[reviewIndex] : ""]);
+    });
+    if (out.length > 1) payloads.push({ filename: `${parentName} / ${entry.filename}`, text: out.map((row) => row.map(clean).join("\t")).join("\n"), type: "csv" });
+  });
+  return payloads;
+}
+
 async function extractBirdNetPayloadsFromZipBytes(bytes, parentName = "BirdNET ZIP", depth = 0) {
   if (depth > 2) throw new Error("BirdNET-ZIP ist tiefer verschachtelt als unterstützt.");
   const decoder = new TextDecoder("utf-8");
@@ -843,6 +902,9 @@ async function extractBirdNetPayloadsFromZipBytes(bytes, parentName = "BirdNET Z
   if (csvEntries.length) {
     return csvEntries.map((entry) => ({ filename: `${parentName} / ${entry.filename}`, text: decoder.decode(entry.bytes), type: "csv" }));
   }
+  const sessionPayloads = birdNetSessionPayloadFromEntries(entries, parentName);
+  if (sessionPayloads.length) return sessionPayloads;
+
   const nestedZips = entries.filter((entry) => entry.filename.toLowerCase().endsWith(".zip"));
   if (nestedZips.length) {
     const payloads = [];
