@@ -1,9 +1,9 @@
-/* BirdLeague – veröffentlichter Datenstand V4 Akustik */
+/* BirdLeague – veröffentlichter Datenstand */
 window.BIRDLEAGUE_DATA = {
   "schemaVersion": 4,
   "leagueName": "BirdLeague",
   "season": 2026,
-  "updatedAt": "2026-08-14",
+  "updatedAt": "2026-09-19",
   "players": [
     {
       "id": "finn",
@@ -843,6 +843,60 @@ window.BIRDLEAGUE_DATA = {
       "germanName": "Zwergschnäpper",
       "englishName": "Red-breasted Flycatcher",
       "scientificName": "Ficedula parva"
+    },
+    {
+      "id": "anthus-cervinus",
+      "germanName": "Rotkehlpieper",
+      "englishName": "Rotkehlpieper",
+      "scientificName": "Anthus cervinus"
+    },
+    {
+      "id": "certhia-familiaris",
+      "germanName": "Waldbaumläufer",
+      "englishName": "Waldbaumläufer",
+      "scientificName": "Certhia familiaris"
+    },
+    {
+      "id": "rallus-aquaticus",
+      "germanName": "Wasserralle",
+      "englishName": "Wasserralle",
+      "scientificName": "Rallus aquaticus"
+    },
+    {
+      "id": "acrocephalus-arundinaceus",
+      "germanName": "Drosselrohrsänger",
+      "englishName": "Drosselrohrsänger",
+      "scientificName": "Acrocephalus arundinaceus"
+    },
+    {
+      "id": "pandion-haliaetus",
+      "germanName": "Fischadler",
+      "englishName": "Fischadler",
+      "scientificName": "Pandion haliaetus"
+    },
+    {
+      "id": "dendrocoptes-medius",
+      "germanName": "Mittelspecht",
+      "englishName": "Middle Spotted Woodpecker",
+      "scientificName": "Dendrocoptes medius"
+    },
+    {
+      "id": "tachybaptus-ruficollis",
+      "germanName": "Zwergtaucher",
+      "englishName": "Little Grebe",
+      "scientificName": "Tachybaptus ruficollis"
+    },
+    {
+      "id": "athene-noctua",
+      "germanName": "Steinkauz",
+      "englishName": "Little Owl",
+      "scientificName": "Athene noctua"
+    },
+    {
+      "id": "motacilla-cinerea",
+      "germanName": "Gebirgsstelze",
+      "englishName": "Gray Wagtail",
+      "scientificName": "Motacilla cinerea"
     }
   ],
   "observations": [
@@ -5199,6 +5253,244 @@ window.BIRDLEAGUE_DATA = {
       "importedAt": "2026-08-14",
       "basePoints": 3,
       "acousticBonus": 0
+    },
+    {
+      "id": "obs-finn-312",
+      "playerId": "finn",
+      "speciesId": "loxia-curvirostra",
+      "observedAt": "2026-07-29",
+      "location": "Lidköpings kommun, Sverige",
+      "stateProvince": "SE-O",
+      "region": "SE-SOUTH",
+      "scoreWindow": "may_aug",
+      "basePoints": 3,
+      "acousticBonus": 0,
+      "points": 3,
+      "importedAt": "2026-09-19"
+    },
+    {
+      "id": "obs-finn-313",
+      "playerId": "finn",
+      "speciesId": "muscicapa-striata",
+      "observedAt": "2026-07-29",
+      "location": "Lidköpings kommun, Sverige",
+      "stateProvince": "SE-O",
+      "region": "SE-SOUTH",
+      "scoreWindow": "may_aug",
+      "basePoints": 2,
+      "acousticBonus": 2,
+      "points": 4,
+      "importedAt": "2026-09-19"
+    },
+    {
+      "id": "obs-finn-314",
+      "playerId": "finn",
+      "speciesId": "anthus-cervinus",
+      "observedAt": "2026-07-30",
+      "location": "Laxå kommun, Sverige",
+      "stateProvince": "SE-T",
+      "region": "SE-CENTRAL",
+      "scoreWindow": "may_aug",
+      "basePoints": 5,
+      "acousticBonus": 1,
+      "points": 6,
+      "importedAt": "2026-09-19"
+    },
+    {
+      "id": "obs-finn-315",
+      "playerId": "finn",
+      "speciesId": "certhia-familiaris",
+      "observedAt": "2026-07-30",
+      "location": "Laxå kommun, Sverige",
+      "stateProvince": "SE-T",
+      "region": "SE-CENTRAL",
+      "scoreWindow": "may_aug",
+      "basePoints": 2,
+      "acousticBonus": 1,
+      "points": 3,
+      "importedAt": "2026-09-19"
+    },
+    {
+      "id": "obs-finn-316",
+      "playerId": "finn",
+      "speciesId": "coloeus-monedula",
+      "observedAt": "2026-08-05",
+      "location": "Hamburg, Deutschland",
+      "stateProvince": "DE-HH",
+      "region": "DE-NORTH",
+      "scoreWindow": "may_aug",
+      "basePoints": 2,
+      "acousticBonus": 0,
+      "points": 2,
+      "importedAt": "2026-09-19"
+    },
+    {
+      "id": "obs-finn-317",
+      "playerId": "finn",
+      "speciesId": "rallus-aquaticus",
+      "observedAt": "2026-09-04",
+      "location": "Hamburg, Deutschland",
+      "stateProvince": "DE-HH",
+      "region": "DE-NORTH",
+      "scoreWindow": "sep_nov",
+      "basePoints": 4,
+      "acousticBonus": 0,
+      "points": 4,
+      "importedAt": "2026-09-19"
+    },
+    {
+      "id": "obs-finn-318",
+      "playerId": "finn",
+      "speciesId": "strix-aluco",
+      "observedAt": "2026-09-11",
+      "location": "Behlendorf, Schleswig-Holstein, Deutschland",
+      "stateProvince": "DE-SH",
+      "region": "DE-NORTH",
+      "scoreWindow": "sep_nov",
+      "basePoints": 3,
+      "acousticBonus": 0,
+      "points": 3,
+      "importedAt": "2026-09-19"
+    },
+    {
+      "id": "obs-finn-319",
+      "playerId": "finn",
+      "speciesId": "acrocephalus-arundinaceus",
+      "observedAt": "2026-09-14",
+      "location": "Alt Schwerin, Mecklenburg-Vorpommern, Deutschland",
+      "stateProvince": "DE-MV",
+      "region": "DE-NORTH",
+      "scoreWindow": "sep_nov",
+      "basePoints": 5,
+      "acousticBonus": 2,
+      "points": 7,
+      "importedAt": "2026-09-19"
+    },
+    {
+      "id": "obs-finn-320",
+      "playerId": "finn",
+      "speciesId": "turdus-iliacus",
+      "observedAt": "2026-09-14",
+      "location": "Alt Schwerin, Mecklenburg-Vorpommern, Deutschland",
+      "stateProvince": "DE-MV",
+      "region": "DE-NORTH",
+      "scoreWindow": "sep_nov",
+      "basePoints": 4,
+      "acousticBonus": 0,
+      "points": 4,
+      "importedAt": "2026-09-19"
+    },
+    {
+      "id": "obs-finn-321",
+      "playerId": "finn",
+      "speciesId": "pandion-haliaetus",
+      "observedAt": "2026-09-17",
+      "location": "Hamburg, Deutschland",
+      "stateProvince": "DE-HH",
+      "region": "DE-NORTH",
+      "scoreWindow": "sep_nov",
+      "basePoints": 4,
+      "acousticBonus": 3,
+      "points": 7,
+      "importedAt": "2026-09-19"
+    },
+    {
+      "id": "obs-ida-322",
+      "playerId": "ida",
+      "speciesId": "falco-tinnunculus",
+      "observedAt": "2026-08-16",
+      "location": "Sachsenhäuser Straße 43  64753 Brombachtal  Deutschland",
+      "stateProvince": "DE-HE",
+      "region": "DE-CENTRAL",
+      "scoreWindow": "may_aug",
+      "basePoints": 2,
+      "acousticBonus": 2,
+      "points": 4,
+      "importedAt": "2026-09-19"
+    },
+    {
+      "id": "obs-ida-323",
+      "playerId": "ida",
+      "speciesId": "dendrocoptes-medius",
+      "observedAt": "2026-08-16",
+      "location": "Sachsenhäuser Straße 43  64753 Brombachtal  Deutschland",
+      "stateProvince": "DE-HE",
+      "region": "DE-CENTRAL",
+      "scoreWindow": "may_aug",
+      "basePoints": 3,
+      "acousticBonus": 1,
+      "points": 4,
+      "importedAt": "2026-09-19"
+    },
+    {
+      "id": "obs-ida-324",
+      "playerId": "ida",
+      "speciesId": "strix-aluco",
+      "observedAt": "2026-08-29",
+      "location": "Tårupstrand-Fynshav  6430 Nordborg  Dänemark",
+      "stateProvince": "DK-07",
+      "region": "DK",
+      "scoreWindow": "may_aug",
+      "basePoints": 3,
+      "acousticBonus": 0,
+      "points": 3,
+      "importedAt": "2026-09-19"
+    },
+    {
+      "id": "obs-ida-325",
+      "playerId": "ida",
+      "speciesId": "garrulus-glandarius",
+      "observedAt": "2026-09-02",
+      "location": "Reiten",
+      "stateProvince": "DE-SH",
+      "region": "DE-NORTH",
+      "scoreWindow": "sep_nov",
+      "basePoints": 1,
+      "acousticBonus": 0,
+      "points": 1,
+      "importedAt": "2026-09-19"
+    },
+    {
+      "id": "obs-ida-326",
+      "playerId": "ida",
+      "speciesId": "tachybaptus-ruficollis",
+      "observedAt": "2026-09-07",
+      "location": "33 Avenue de la Liberté  21340 Nolay  Frankreich",
+      "stateProvince": "FR-BFC",
+      "region": "FR-BFC",
+      "scoreWindow": "sep_nov",
+      "basePoints": 2,
+      "acousticBonus": 2,
+      "points": 4,
+      "importedAt": "2026-09-19"
+    },
+    {
+      "id": "obs-ida-327",
+      "playerId": "ida",
+      "speciesId": "athene-noctua",
+      "observedAt": "2026-09-08",
+      "location": "33 Avenue de la Liberté  21340 Nolay  Frankreich",
+      "stateProvince": "FR-BFC",
+      "region": "FR-BFC",
+      "scoreWindow": "sep_nov",
+      "basePoints": 4,
+      "acousticBonus": 1,
+      "points": 5,
+      "importedAt": "2026-09-19"
+    },
+    {
+      "id": "obs-ida-328",
+      "playerId": "ida",
+      "speciesId": "motacilla-cinerea",
+      "observedAt": "2026-09-09",
+      "location": "Schirrmaierweg 1B  77790 Steinach  Deutschland",
+      "stateProvince": "DE-BW",
+      "region": "DE-SOUTH",
+      "scoreWindow": "sep_nov",
+      "basePoints": 2,
+      "acousticBonus": 1,
+      "points": 3,
+      "importedAt": "2026-09-19"
     }
   ]
 };
