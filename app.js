@@ -47,14 +47,13 @@ function regionFromBirdNetLocation(value = "") {
   const location = String(value || "").toLowerCase();
   if (!location) return "";
 
-  if (location.includes("deutschland") || location.includes("germany")) {
-    if (["hamburg", "schleswig-holstein", "niedersachsen", "bremen", "mecklenburg-vorpommern"].some((part) => location.includes(part))) return "DE-NORTH";
-    if (["nordrhein-westfalen", "hessen", "rheinland-pfalz", "saarland", "sachsen-anhalt", "thüringen", "thueringen", "sachsen", "brandenburg", "berlin"].some((part) => location.includes(part))) return "DE-CENTRAL";
-    if (["bayern", "baden-württemberg", "baden-wuerttemberg"].some((part) => location.includes(part))) return "DE-SOUTH";
-  }
+  // German federal states/localities are enough; the country name is not required.
+  if (["hamburg", "schleswig-holstein", "niedersachsen", "bremen", "mecklenburg-vorpommern", "westensee", "stolpe"].some((part) => location.includes(part))) return "DE-NORTH";
+  if (["nordrhein-westfalen", "hessen", "rheinland-pfalz", "saarland", "sachsen-anhalt", "thüringen", "thueringen", "sachsen", "brandenburg", "berlin", "brombachtal"].some((part) => location.includes(part))) return "DE-CENTRAL";
+  if (["bayern", "baden-württemberg", "baden-wuerttemberg"].some((part) => location.includes(part))) return "DE-SOUTH";
 
-  if (location.includes("danmark") || location.includes("denmark") || location.includes("dänemark")) return "DK";
-  if (location.includes("norge") || location.includes("norway") || location.includes("norwegen")) return "NO";
+  if (location.includes("danmark") || location.includes("denmark") || location.includes("dänemark") || location.includes("sonderburg") || location.includes("sønderborg")) return "DK";
+  if (location.includes("norge") || location.includes("norway") || location.includes("norwegen") || location.includes("flatanger")) return "NO";
   if (location.includes("tokyo") || location.includes("tokio")) return "JP-TOKYO";
   if (["bourgogne-franche-comté", "bourgogne-franche-comte", "côte-d’or", "côte-d'or", "cote-d'or", "nolay"].some((part) => location.includes(part))) return "FR-BFC";
 
@@ -552,6 +551,7 @@ function mapImportedRows(csvText, playerName, sourceName = "CSV") {
     date: ["date", "datum", "observation date", "erstfund", "timestamp (utc)", "timestamp"],
     location: ["location", "ort", "locality", "location name"],
     stateProvince: ["state/province", "state province", "state", "province", "region code", "bundesland"],
+    birdLeagueRegion: ["birdleague region", "birdleague-region", "birdleague_region"],
     confirmed: ["confirmed", "bestätigt", "confirmed?", "verified"],
     reviewStatus: ["reviewstatus", "review status"],
     confidence: ["confidence", "konfidenz", "score"]
@@ -604,9 +604,11 @@ function mapImportedRows(csvText, playerName, sourceName = "CSV") {
     }
 
     const stateProvince = indexes.stateProvince >= 0 ? (row[indexes.stateProvince] || "").trim() : "";
+    const explicitRegion = indexes.birdLeagueRegion >= 0 ? (row[indexes.birdLeagueRegion] || "").trim().toUpperCase() : "";
+    const supportedExplicitRegion = explicitRegion && regionLabels[explicitRegion] ? explicitRegion : "";
     const automaticRegion = stateProvince ? regionFromStateProvince(stateProvince) : "";
-    const locationRegion = isBirdNetCsv ? regionFromBirdNetLocation(location) : "";
-    const region = automaticRegion && automaticRegion !== "OTHER" ? automaticRegion : (locationRegion || state.importRegion || automaticRegion || "");
+    const locationRegion = regionFromBirdNetLocation(location);
+    const region = supportedExplicitRegion || (automaticRegion && automaticRegion !== "OTHER" ? automaticRegion : "") || locationRegion || state.importRegion || automaticRegion || "";
     mapped.push({
       player: playerName.trim(),
       commonName,
@@ -878,12 +880,13 @@ function birdNetSessionPayloadFromEntries(entries, parentName) {
     const reviewIndex = idx("review status");
     if (commonIndex < 0 && scientificIndex < 0) return;
 
-    const out = [["Common Name", "Scientific Name", "Date", "Location", "Confidence", "Review Status"]];
+    const derivedRegion = regionFromBirdNetLocation(location);
+    const out = [["Common Name", "Scientific Name", "Date", "Location", "BirdLeague Region", "Confidence", "Review Status"]];
     rows.slice(1).forEach((row) => {
       const commonName = commonIndex >= 0 ? row[commonIndex] : "";
       const scientificName = scientificIndex >= 0 ? row[scientificIndex] : "";
       if (!commonName && !scientificName) return;
-      out.push([commonName, scientificName, sessionDate, location, confidenceIndex >= 0 ? row[confidenceIndex] : "", reviewIndex >= 0 ? row[reviewIndex] : ""]);
+      out.push([commonName, scientificName, sessionDate, location, derivedRegion, confidenceIndex >= 0 ? row[confidenceIndex] : "", reviewIndex >= 0 ? row[reviewIndex] : ""]);
     });
     if (out.length > 1) payloads.push({ filename: `${parentName} / ${entry.filename}`, text: out.map((row) => row.map(clean).join("\t")).join("\n"), type: "csv" });
   });
@@ -1131,7 +1134,7 @@ function renderImport(message = "") {
   const hasLocalDraft = Boolean(localStorage.getItem(storageKey));
   const audit = state.importedRows.length ? getImportAudit() : null;
   const meta = state.importMeta;
-  const missingHtml = audit?.missing.length ? `<div class="audit-warning"><strong>Fehlende Region-/Zeit-Bewertungen</strong>${audit.missing.map((row) => `<div><span>${escapeHtml(row.germanName || row.commonName || row.scientificName)}</span><em>${escapeHtml(row.missingReason)}${row.scientificName ? ` · ${escapeHtml(row.scientificName)}` : ""}${row.location ? ` · Fundort: ${escapeHtml(row.location)}` : ""}${row.stateProvince ? ` · ${escapeHtml(row.stateProvince)}` : ""}</em></div>`).join("")}<p>BirdLeague übernimmt neue Art-/Region-/Zeit-Kombinationen bewusst nicht automatisch. Ergänze sie zuerst in der V4-Masterliste und aktualisiere anschließend <code>points.js</code>.</p></div>` : "";
+  const missingHtml = audit?.missing.length ? `<div class="audit-warning"><strong>Fehlende Region-/Zeit-Bewertungen</strong>${audit.missing.map((row) => `<div><span>${escapeHtml(row.germanName || row.commonName || row.scientificName)}</span><em>${escapeHtml(row.missingReason)}${row.scientificName ? ` · ${escapeHtml(row.scientificName)}` : ""}${row.location ? ` · Fundort: ${escapeHtml(row.location)}` : ""}${row.stateProvince ? ` · ${escapeHtml(row.stateProvince)}` : ""}${row.region ? ` · BirdLeague: ${escapeHtml(row.region)}` : ""}</em></div>`).join("")}<p>BirdLeague übernimmt neue Art-/Region-/Zeit-Kombinationen bewusst nicht automatisch. Ergänze sie zuerst in der V4-Masterliste und aktualisiere anschließend <code>points.js</code>.</p></div>` : "";
   const readyHtml = audit?.complete ? `<div class="audit-ready">✓ ${audit.ratedCount}/${audit.total} Arten haben für Fundregion und Zeitfenster einen Punktwert. Import ist bereit.</div>` : "";
   const sourceHtml = meta ? `<div class="import-source-summary">
       <strong>${meta.files} Datei/Session${meta.files === 1 ? "" : "s"} verarbeitet</strong>

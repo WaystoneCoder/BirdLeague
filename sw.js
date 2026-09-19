@@ -1,4 +1,4 @@
-const CACHE = "birdleague-v14";
+const CACHE = "birdleague-v16";
 const ASSETS = ["./", "./index.html", "./styles.css", "./taxonomy-de.js", "./points.js", "./data.js", "./app.js", "./logo-birdleague.png", "./icon-192.png", "./icon-512.png", "./manifest.webmanifest"];
 
 self.addEventListener("install", (event) => {
@@ -16,7 +16,7 @@ self.addEventListener("activate", (event) => {
 
 self.addEventListener("fetch", (event) => {
   const url = new URL(event.request.url);
-  const shouldRefresh = url.pathname.endsWith("/data.js") || url.pathname.endsWith("/points.js") || url.pathname.endsWith("/taxonomy-de.js") || event.request.mode === "navigate";
+  const shouldRefresh = url.pathname.endsWith("/data.js") || url.pathname.endsWith("/points.js") || url.pathname.endsWith("/taxonomy-de.js") || url.pathname.endsWith("/app.js") || url.pathname.endsWith("/sw.js") || event.request.mode === "navigate";
 
   if (shouldRefresh) {
     event.respondWith(

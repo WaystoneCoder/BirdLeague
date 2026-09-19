@@ -1,4 +1,4 @@
-/* BirdLeague Master-Punkteliste V4.5 – Regionalbasis + Akustikbonus */
+/* BirdLeague Master-Punkteliste V4.5.2 – Regionalbasis + Akustikbonus */
 window.BIRDLEAGUE_REGIONS = {
   "DE-NORTH": "Deutschland Nord",
   "DE-CENTRAL": "Deutschland Mitte",
@@ -549,7 +549,8 @@ window.BIRDLEAGUE_POINTS = {
         "may_aug": 1
       },
       "DE-NORTH": {
-        "sep_nov": 1
+        "sep_nov": 1,
+        "may_aug": 1
       }
     },
     "acoustic": {
@@ -569,7 +570,8 @@ window.BIRDLEAGUE_POINTS = {
         "may_aug": 2
       },
       "DE-NORTH": {
-        "sep_nov": 1
+        "sep_nov": 1,
+        "may_aug": 2
       }
     }
   },
@@ -1048,6 +1050,9 @@ window.BIRDLEAGUE_POINTS = {
     "baseScores": {
       "DE-NORTH": {
         "may_aug": 3
+      },
+      "DE-CENTRAL": {
+        "may_aug": 2
       }
     },
     "acoustic": {
@@ -1060,6 +1065,9 @@ window.BIRDLEAGUE_POINTS = {
     "scores": {
       "DE-NORTH": {
         "may_aug": 5
+      },
+      "DE-CENTRAL": {
+        "may_aug": 4
       }
     }
   },
@@ -1663,6 +1671,9 @@ window.BIRDLEAGUE_POINTS = {
       },
       "SE-SOUTH": {
         "may_aug": 1
+      },
+      "DE-CENTRAL": {
+        "may_aug": 2
       }
     },
     "acoustic": {
@@ -1678,6 +1689,9 @@ window.BIRDLEAGUE_POINTS = {
       },
       "SE-SOUTH": {
         "may_aug": 1
+      },
+      "DE-CENTRAL": {
+        "may_aug": 2
       }
     }
   },
@@ -3150,6 +3164,9 @@ window.BIRDLEAGUE_POINTS = {
     "baseScores": {
       "DE-NORTH": {
         "may_aug": 3
+      },
+      "DE-CENTRAL": {
+        "may_aug": 2
       }
     },
     "acoustic": {
@@ -3162,6 +3179,9 @@ window.BIRDLEAGUE_POINTS = {
     "scores": {
       "DE-NORTH": {
         "may_aug": 4
+      },
+      "DE-CENTRAL": {
+        "may_aug": 3
       }
     }
   },

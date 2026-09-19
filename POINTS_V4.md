@@ -78,3 +78,10 @@ Neu unterstützt wird `FR-BFC` (Bourgogne-Franche-Comté). Für September–Nove
 Der aktuelle BirdNET-Live-Bulk-Export kann Session-ZIPs enthalten, die ausschließlich `.selections.txt`, Audio und einen HTML-Report enthalten. V4.5 liest diese Struktur direkt, übernimmt Datum und Fundort aus der Session und überspringt die großen Audiodateien beim Parsen. Reviewstatus bleibt optional. Zusätzlich werden Heimchen, Rotfuchs, Waldgrille und Weinhähnchen als Nicht-Vogel-Taxa ignoriert.
 
 Für den Bulk-Export vom 19.09.2026 wurden die benötigten Kontexte für Schwanzmeise, Eisvogel, Brachpieper, Graureiher, Sumpfohreule, Rohrweihe, Wachtelkönig, Ortolan, Seeadler, Mantelmöwe, Haubentaucher und Rostgans ergänzt. Seltene/auffällige BirdNET-Treffer werden nicht gelöscht, sondern als Prüfhilfe markiert.
+
+
+### V4.5.2
+- Eichelhäher · Deutschland Nord · Mai–August: Basis 1 + Akustik 1 = 2
+- Gimpel · Deutschland Mitte · Mai–August: Basis 2 + Akustik 2 = 4
+- Kleiber · Deutschland Mitte · Mai–August: Basis 2 + Akustik 0 = 2
+- Teichhuhn · Deutschland Mitte · Mai–August: Basis 2 + Akustik 1 = 3

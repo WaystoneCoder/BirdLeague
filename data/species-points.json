@@ -1,5 +1,5 @@
 {
-  "version": "4.5",
+  "version": "4.5.2",
   "scoringModel": "Regionalbasis + Akustikbonus",
   "season": {
     "startMonth": 5,
@@ -44,7 +44,7 @@
     "3": "akustische Glückssache"
   },
   "methodNote": "BirdLeague V4.5: Punkte = regionale Basis (Art × Region × Zeitraum) + Akustikbonus (Art × Zeitraum), regulär maximal 10; 15 bleibt echten Raritäten vorbehalten. BirdNET-Aufnahmen gelten grundsätzlich als Nachweis; auffällige Erkennungen werden gewarnt statt automatisch verworfen.",
-  "calibrationNote": "V4.5 ergänzt die im BirdNET-Bulk-Export vom 19.09.2026 tatsächlich benötigten Region-/Zeit-Kontexte und unterstützt zusätzlich BirdNET-Session-Exports mit .selections.txt + HTML-Report. Auffällige seltene Treffer bleiben enthalten und werden transparent markiert.",
+  "calibrationNote": "V4.5.2 korrigiert die Zuordnung des BirdNET-Bulk-Exports vom 19.09.2026 zu Bengt und ergänzt die fehlenden Regionalbasen für Eichelhäher (DE-NORTH Mai–Aug), Gimpel, Kleiber und Teichhuhn (je DE-CENTRAL Mai–Aug). Die V4.5.1-Regionslogik bleibt erhalten.",
   "species": [
     {
       "germanName": "Alpenstrandläufer",
@@ -601,7 +601,8 @@
           "may_aug": 1
         },
         "DE-NORTH": {
-          "sep_nov": 1
+          "sep_nov": 1,
+          "may_aug": 1
         }
       },
       "acoustic": {
@@ -621,7 +622,8 @@
           "may_aug": 2
         },
         "DE-NORTH": {
-          "sep_nov": 1
+          "sep_nov": 1,
+          "may_aug": 2
         }
       }
     },
@@ -1119,6 +1121,9 @@
       "baseScores": {
         "DE-NORTH": {
           "may_aug": 3
+        },
+        "DE-CENTRAL": {
+          "may_aug": 2
         }
       },
       "acoustic": {
@@ -1131,6 +1136,9 @@
       "scores": {
         "DE-NORTH": {
           "may_aug": 5
+        },
+        "DE-CENTRAL": {
+          "may_aug": 4
         }
       }
     },
@@ -1760,6 +1768,9 @@
         },
         "SE-SOUTH": {
           "may_aug": 1
+        },
+        "DE-CENTRAL": {
+          "may_aug": 2
         }
       },
       "acoustic": {
@@ -1775,6 +1786,9 @@
         },
         "SE-SOUTH": {
           "may_aug": 1
+        },
+        "DE-CENTRAL": {
+          "may_aug": 2
         }
       }
     },
@@ -3308,6 +3322,9 @@
       "baseScores": {
         "DE-NORTH": {
           "may_aug": 3
+        },
+        "DE-CENTRAL": {
+          "may_aug": 2
         }
       },
       "acoustic": {
@@ -3320,6 +3337,9 @@
       "scores": {
         "DE-NORTH": {
           "may_aug": 4
+        },
+        "DE-CENTRAL": {
+          "may_aug": 3
         }
       }
     },

@@ -60,3 +60,11 @@ Für bekannte BirdNET-Orte kann die Region direkt aus `locationName` ermittelt w
 ## V4.5 – BirdNET Session/Bulk Format
 
 Zusätzlich zu JSON/CSV liest der ZIP-Importer nun BirdNET-Session-ZIPs mit `.selections.txt` und `_report.html`, auch verschachtelt innerhalb eines Bulk-ZIPs. Audio-Dateien werden beim Import nicht dekomprimiert. Der Fundort aus dem HTML-Report wird für die Regionserkennung verwendet. Auffällige seltene Vogelarten werden nur gewarnt; sie bleiben entsprechend der BirdNET-Vertrauensregel im Import.
+
+
+## V4.5.1 – Regionsfix
+BirdNET-Orte werden robuster direkt aus Bundesland/Ortsnamen einer BirdLeague-Region zugeordnet. Vorbereitete CSVs können zusätzlich eine explizite Spalte `BirdLeague Region` enthalten. `app.js` wird im Service Worker künftig network-first aktualisiert, um veraltete Importlogik zu vermeiden.
+
+
+## V4.5.2 – Bengt-Korrektur
+Der BirdNET-Bulk-Export vom 19.09.2026, 21:08 Uhr gehört zu Bengt. Ergänzt wurden außerdem die fehlenden Region-/Zeit-Bewertungen für Eichelhäher (DE-NORTH, Mai–Aug), Gimpel, Kleiber und Teichhuhn (DE-CENTRAL, Mai–Aug).
