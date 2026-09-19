@@ -1,4 +1,4 @@
-/* BirdLeague Master-Punkteliste V4 – Regionalbasis + Akustikbonus */
+/* BirdLeague Master-Punkteliste V4.3 – Regionalbasis + Akustikbonus */
 window.BIRDLEAGUE_REGIONS = {
   "DE-NORTH": "Deutschland Nord",
   "DE-CENTRAL": "Deutschland Mitte",
@@ -456,18 +456,24 @@ window.BIRDLEAGUE_POINTS = {
     "baseScores": {
       "DE-CENTRAL": {
         "may_aug": 3
+      },
+      "DE-NORTH": {
+        "may_aug": 2
       }
     },
     "acoustic": {
       "may_aug": {
         "bonus": 0,
         "class": "akustisch dankbar",
-        "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+        "reason": "Dohlen sind kontaktfreudig und rufen im Flug, an Brutplätzen und in Trupps regelmäßig. Wenn die Art anwesend ist, ist ein Ton-Nachweis meist kein zusätzlicher Engpass."
       }
     },
     "scores": {
       "DE-CENTRAL": {
         "may_aug": 3
+      },
+      "DE-NORTH": {
+        "may_aug": 2
       }
     }
   },
@@ -492,12 +498,36 @@ window.BIRDLEAGUE_POINTS = {
       }
     }
   },
+  "Acrocephalus arundinaceus": {
+    "germanName": "Drosselrohrsänger",
+    "englishName": "Great Reed Warbler",
+    "baseScores": {
+      "DE-NORTH": {
+        "sep_nov": 5
+      }
+    },
+    "acoustic": {
+      "sep_nov": {
+        "bonus": 2,
+        "class": "akustisch anspruchsvoll",
+        "reason": "Im September ist die intensive Gesangsphase weitgehend vorbei. Ein verwertbarer Ruf-/Kontaktnachweis eines ohnehin lokal auftretenden Drosselrohrsängers braucht deutlich mehr Timing als im Frühjahr."
+      }
+    },
+    "scores": {
+      "DE-NORTH": {
+        "sep_nov": 7
+      }
+    }
+  },
   "Garrulus glandarius": {
     "germanName": "Eichelhäher",
     "englishName": "Eurasian Jay",
     "baseScores": {
       "SE-SOUTH": {
         "may_aug": 1
+      },
+      "DE-NORTH": {
+        "sep_nov": 1
       }
     },
     "acoustic": {
@@ -505,11 +535,19 @@ window.BIRDLEAGUE_POINTS = {
         "bonus": 1,
         "class": "etwas Timing nötig",
         "reason": "Die Art ruft oder singt regelmäßig, aber nicht bei jeder Begegnung. Für eine brauchbare Aufnahme braucht es etwas Timing."
+      },
+      "sep_nov": {
+        "bonus": 0,
+        "class": "akustisch dankbar",
+        "reason": "Im Herbst sind Eichelhäher mit ihren rauen Rufen oft auffällig. Wenn die Art in der Umgebung aktiv ist, ist die Tonaufnahme meist kein zusätzlicher Engpass."
       }
     },
     "scores": {
       "SE-SOUTH": {
         "may_aug": 2
+      },
+      "DE-NORTH": {
+        "sep_nov": 1
       }
     }
   },
@@ -678,6 +716,9 @@ window.BIRDLEAGUE_POINTS = {
     "baseScores": {
       "SE-NORTH": {
         "may_aug": 3
+      },
+      "SE-SOUTH": {
+        "may_aug": 3
       }
     },
     "acoustic": {
@@ -690,6 +731,30 @@ window.BIRDLEAGUE_POINTS = {
     "scores": {
       "SE-NORTH": {
         "may_aug": 3
+      },
+      "SE-SOUTH": {
+        "may_aug": 3
+      }
+    }
+  },
+  "Pandion haliaetus": {
+    "germanName": "Fischadler",
+    "englishName": "Osprey",
+    "baseScores": {
+      "DE-NORTH": {
+        "sep_nov": 4
+      }
+    },
+    "acoustic": {
+      "sep_nov": {
+        "bonus": 3,
+        "class": "akustische Glückssache",
+        "reason": "Fischadler sind auf dem Zug oft lange sichtbar, bleiben dabei aber häufig still. Rufe treten vor allem bei Interaktionen, Alarm oder in Horstnähe auf; eine zufällige Rufaufnahme ist deshalb ein klarer Zusatztreffer."
+      }
+    },
+    "scores": {
+      "DE-NORTH": {
+        "sep_nov": 7
       }
     }
   },
@@ -840,6 +905,69 @@ window.BIRDLEAGUE_POINTS = {
     "scores": {
       "DK": {
         "may_aug": 3
+      }
+    }
+  },
+  "Motacilla cinerea": {
+    "germanName": "Gebirgsstelze",
+    "englishName": "Gray Wagtail",
+    "baseScores": {
+      "DE-NORTH": {
+        "may_aug": 3
+      },
+      "DE-CENTRAL": {
+        "may_aug": 2
+      },
+      "DE-SOUTH": {
+        "may_aug": 2
+      },
+      "DK": {
+        "may_aug": 4
+      },
+      "SE-SOUTH": {
+        "may_aug": 4
+      },
+      "SE-CENTRAL": {
+        "may_aug": 5
+      },
+      "SE-NORTH": {
+        "may_aug": 6
+      },
+      "NO": {
+        "may_aug": 4
+      }
+    },
+    "acoustic": {
+      "may_aug": {
+        "bonus": 1,
+        "class": "etwas Timing nötig",
+        "reason": "Gebirgsstelzen geben regelmäßig Flug- und Kontaktrufe, aber nicht jeder Sichtkontakt liefert automatisch eine saubere Aufnahme. Der Akustikbonus bleibt deshalb moderat."
+      }
+    },
+    "scores": {
+      "DE-NORTH": {
+        "may_aug": 4
+      },
+      "DE-CENTRAL": {
+        "may_aug": 3
+      },
+      "DE-SOUTH": {
+        "may_aug": 3
+      },
+      "DK": {
+        "may_aug": 5
+      },
+      "SE-SOUTH": {
+        "may_aug": 5
+      },
+      "SE-CENTRAL": {
+        "may_aug": 6
+      },
+      "SE-NORTH": {
+        "may_aug": 7
+      },
+      "NO": {
+        "may_aug": 5
       }
     }
   },
@@ -1014,6 +1142,9 @@ window.BIRDLEAGUE_POINTS = {
     "baseScores": {
       "DE-NORTH": {
         "may_aug": 4
+      },
+      "SE-SOUTH": {
+        "may_aug": 2
       }
     },
     "acoustic": {
@@ -1026,6 +1157,9 @@ window.BIRDLEAGUE_POINTS = {
     "scores": {
       "DE-NORTH": {
         "may_aug": 6
+      },
+      "SE-SOUTH": {
+        "may_aug": 4
       }
     }
   },
@@ -1716,6 +1850,69 @@ window.BIRDLEAGUE_POINTS = {
       }
     }
   },
+  "Dendrocoptes medius": {
+    "germanName": "Mittelspecht",
+    "englishName": "Middle Spotted Woodpecker",
+    "baseScores": {
+      "DE-NORTH": {
+        "may_aug": 4
+      },
+      "DE-CENTRAL": {
+        "may_aug": 3
+      },
+      "DE-SOUTH": {
+        "may_aug": 3
+      },
+      "DK": {
+        "may_aug": 5
+      },
+      "SE-SOUTH": {
+        "may_aug": 6
+      },
+      "SE-CENTRAL": {
+        "may_aug": 8
+      },
+      "SE-NORTH": {
+        "may_aug": 10
+      },
+      "NO": {
+        "may_aug": 10
+      }
+    },
+    "acoustic": {
+      "may_aug": {
+        "bonus": 1,
+        "class": "etwas Timing nötig",
+        "reason": "Rufe sind ein wichtiger Nachweis, nach der intensivsten Balzphase aber nicht dauerhaft zu hören. Eine brauchbare Aufnahme braucht daher etwas Timing im passenden Laubwaldhabitat."
+      }
+    },
+    "scores": {
+      "DE-NORTH": {
+        "may_aug": 5
+      },
+      "DE-CENTRAL": {
+        "may_aug": 4
+      },
+      "DE-SOUTH": {
+        "may_aug": 4
+      },
+      "DK": {
+        "may_aug": 6
+      },
+      "SE-SOUTH": {
+        "may_aug": 7
+      },
+      "SE-CENTRAL": {
+        "may_aug": 9
+      },
+      "SE-NORTH": {
+        "may_aug": 10
+      },
+      "NO": {
+        "may_aug": 10
+      }
+    }
+  },
   "Lagopus lagopus": {
     "germanName": "Moorschneehuhn",
     "englishName": "Willow Ptarmigan",
@@ -2055,6 +2252,9 @@ window.BIRDLEAGUE_POINTS = {
     "baseScores": {
       "SE-NORTH": {
         "may_aug": 1
+      },
+      "DE-NORTH": {
+        "sep_nov": 4
       }
     },
     "acoustic": {
@@ -2062,11 +2262,19 @@ window.BIRDLEAGUE_POINTS = {
         "bonus": 0,
         "class": "akustisch dankbar",
         "reason": "In der Brutzeit ist die Art bei Anwesenheit typischerweise regelmäßig und gut hörbar; der Ton-Nachweis ist meist kein zusätzlicher Engpass."
+      },
+      "sep_nov": {
+        "bonus": 0,
+        "class": "akustisch dankbar",
+        "reason": "Während des Herbstzuges sind die charakteristischen Flug- und Kontaktrufe ein typischer Nachweisweg. Die Schwierigkeit liegt stärker im saisonalen Auftreten als in der Tonaufnahme selbst."
       }
     },
     "scores": {
       "SE-NORTH": {
         "may_aug": 1
+      },
+      "DE-NORTH": {
+        "sep_nov": 4
       }
     }
   },
@@ -2094,6 +2302,27 @@ window.BIRDLEAGUE_POINTS = {
       },
       "DK": {
         "may_aug": 1
+      }
+    }
+  },
+  "Anthus cervinus": {
+    "germanName": "Rotkehlpieper",
+    "englishName": "Red-throated Pipit",
+    "baseScores": {
+      "SE-CENTRAL": {
+        "may_aug": 5
+      }
+    },
+    "acoustic": {
+      "may_aug": {
+        "bonus": 1,
+        "class": "etwas Timing nötig",
+        "reason": "Außerhalb des engeren Brutgebiets wird die Art oft über kurze Flug- und Kontaktrufe bemerkt. Diese sind diagnostisch, aber eine verwertbare Aufnahme braucht Aufmerksamkeit und Timing."
+      }
+    },
+    "scores": {
+      "SE-CENTRAL": {
+        "may_aug": 6
       }
     }
   },
@@ -2466,6 +2695,69 @@ window.BIRDLEAGUE_POINTS = {
       }
     }
   },
+  "Athene noctua": {
+    "germanName": "Steinkauz",
+    "englishName": "Little Owl",
+    "baseScores": {
+      "DE-NORTH": {
+        "may_aug": 5
+      },
+      "DE-CENTRAL": {
+        "may_aug": 4
+      },
+      "DE-SOUTH": {
+        "may_aug": 5
+      },
+      "DK": {
+        "may_aug": 6
+      },
+      "SE-SOUTH": {
+        "may_aug": 8
+      },
+      "SE-CENTRAL": {
+        "may_aug": 9
+      },
+      "SE-NORTH": {
+        "may_aug": 10
+      },
+      "NO": {
+        "may_aug": 10
+      }
+    },
+    "acoustic": {
+      "may_aug": {
+        "bonus": 0,
+        "class": "akustisch dankbar",
+        "reason": "Steinkäuze werden in geeigneten Revieren häufig akustisch entdeckt; die Stimme ist vor allem abends und nachts ein zentraler Nachweisweg. Die Schwierigkeit liegt stärker im regionalen Vorkommen als in der Aufnahme selbst."
+      }
+    },
+    "scores": {
+      "DE-NORTH": {
+        "may_aug": 5
+      },
+      "DE-CENTRAL": {
+        "may_aug": 4
+      },
+      "DE-SOUTH": {
+        "may_aug": 5
+      },
+      "DK": {
+        "may_aug": 6
+      },
+      "SE-SOUTH": {
+        "may_aug": 8
+      },
+      "SE-CENTRAL": {
+        "may_aug": 9
+      },
+      "SE-NORTH": {
+        "may_aug": 10
+      },
+      "NO": {
+        "may_aug": 10
+      }
+    }
+  },
   "Oenanthe oenanthe": {
     "germanName": "Steinschmätzer",
     "englishName": "Northern Wheatear",
@@ -2733,6 +3025,9 @@ window.BIRDLEAGUE_POINTS = {
       },
       "DK": {
         "may_aug": 3
+      },
+      "DE-CENTRAL": {
+        "may_aug": 2
       }
     },
     "acoustic": {
@@ -2748,6 +3043,9 @@ window.BIRDLEAGUE_POINTS = {
       },
       "DK": {
         "may_aug": 5
+      },
+      "DE-CENTRAL": {
+        "may_aug": 4
       }
     }
   },
@@ -2841,12 +3139,39 @@ window.BIRDLEAGUE_POINTS = {
       }
     }
   },
+  "Certhia familiaris": {
+    "germanName": "Waldbaumläufer",
+    "englishName": "Eurasian Treecreeper",
+    "baseScores": {
+      "SE-CENTRAL": {
+        "may_aug": 2
+      }
+    },
+    "acoustic": {
+      "may_aug": {
+        "bonus": 1,
+        "class": "etwas Timing nötig",
+        "reason": "Waldbaumläufer rufen regelmäßig, die hohen und kurzen Lautäußerungen sind aber weniger auffällig als bei vielen Singvögeln. Für eine gute Aufnahme ist etwas Nähe und Timing hilfreich."
+      }
+    },
+    "scores": {
+      "SE-CENTRAL": {
+        "may_aug": 3
+      }
+    }
+  },
   "Strix aluco": {
     "germanName": "Waldkauz",
     "englishName": "Tawny Owl",
     "baseScores": {
       "DE-CENTRAL": {
         "may_aug": 3
+      },
+      "DK": {
+        "may_aug": 3
+      },
+      "DE-NORTH": {
+        "sep_nov": 3
       }
     },
     "acoustic": {
@@ -2854,11 +3179,22 @@ window.BIRDLEAGUE_POINTS = {
         "bonus": 0,
         "class": "akustisch dankbar",
         "reason": "Waldkäuze werden sehr häufig gerade über ihre Stimme gefunden. Akustik ist hier kein zusätzlicher Schwierigkeitsfaktor."
+      },
+      "sep_nov": {
+        "bonus": 0,
+        "class": "akustisch dankbar",
+        "reason": "Der Herbst gehört zu den typischen Rufphasen des Waldkauzes; Revier- und Kontaktrufe sind dann ein zentraler Nachweisweg. Deshalb kein zusätzlicher Akustikbonus."
       }
     },
     "scores": {
       "DE-CENTRAL": {
         "may_aug": 3
+      },
+      "DK": {
+        "may_aug": 3
+      },
+      "DE-NORTH": {
+        "sep_nov": 3
       }
     }
   },
@@ -2943,6 +3279,27 @@ window.BIRDLEAGUE_POINTS = {
     "scores": {
       "SE-NORTH": {
         "may_aug": 4
+      }
+    }
+  },
+  "Rallus aquaticus": {
+    "germanName": "Wasserralle",
+    "englishName": "Water Rail",
+    "baseScores": {
+      "DE-NORTH": {
+        "sep_nov": 4
+      }
+    },
+    "acoustic": {
+      "sep_nov": {
+        "bonus": 0,
+        "class": "akustisch dankbar",
+        "reason": "Die Wasserralle lebt sehr verborgen, wird aber häufig gerade über ihre markanten Rufe festgestellt. Für BirdLeague ist die Akustik deshalb kein zusätzlicher Nachteil gegenüber einem Sichtnachweis."
+      }
+    },
+    "scores": {
+      "DE-NORTH": {
+        "sep_nov": 4
       }
     }
   },
@@ -3096,6 +3453,69 @@ window.BIRDLEAGUE_POINTS = {
     "scores": {
       "DE-NORTH": {
         "may_aug": 8
+      }
+    }
+  },
+  "Tachybaptus ruficollis": {
+    "germanName": "Zwergtaucher",
+    "englishName": "Little Grebe",
+    "baseScores": {
+      "DE-NORTH": {
+        "may_aug": 3
+      },
+      "DE-CENTRAL": {
+        "may_aug": 3
+      },
+      "DE-SOUTH": {
+        "may_aug": 3
+      },
+      "DK": {
+        "may_aug": 4
+      },
+      "SE-SOUTH": {
+        "may_aug": 4
+      },
+      "SE-CENTRAL": {
+        "may_aug": 5
+      },
+      "SE-NORTH": {
+        "may_aug": 6
+      },
+      "NO": {
+        "may_aug": 6
+      }
+    },
+    "acoustic": {
+      "may_aug": {
+        "bonus": 0,
+        "class": "akustisch dankbar",
+        "reason": "Der trillernde Balz- und Kontaktruf ist in der Brutzeit oft der auffälligste Nachweis. Wenn Zwergtaucher anwesend und aktiv sind, ist eine Tonaufnahme meist kein zusätzlicher Engpass."
+      }
+    },
+    "scores": {
+      "DE-NORTH": {
+        "may_aug": 3
+      },
+      "DE-CENTRAL": {
+        "may_aug": 3
+      },
+      "DE-SOUTH": {
+        "may_aug": 3
+      },
+      "DK": {
+        "may_aug": 4
+      },
+      "SE-SOUTH": {
+        "may_aug": 4
+      },
+      "SE-CENTRAL": {
+        "may_aug": 5
+      },
+      "SE-NORTH": {
+        "may_aug": 6
+      },
+      "NO": {
+        "may_aug": 6
       }
     }
   }

@@ -42,6 +42,29 @@ function regionFromStateProvince(value = "") {
   return "OTHER";
 }
 
+function regionFromBirdNetLocation(value = "") {
+  const location = String(value || "").toLowerCase();
+  if (!location) return "";
+
+  if (location.includes("deutschland") || location.includes("germany")) {
+    if (["hamburg", "schleswig-holstein", "niedersachsen", "bremen", "mecklenburg-vorpommern"].some((part) => location.includes(part))) return "DE-NORTH";
+    if (["nordrhein-westfalen", "hessen", "rheinland-pfalz", "saarland", "sachsen-anhalt", "thüringen", "thueringen", "sachsen", "brandenburg", "berlin"].some((part) => location.includes(part))) return "DE-CENTRAL";
+    if (["bayern", "baden-württemberg", "baden-wuerttemberg"].some((part) => location.includes(part))) return "DE-SOUTH";
+  }
+
+  if (location.includes("danmark") || location.includes("denmark") || location.includes("dänemark")) return "DK";
+  if (location.includes("norge") || location.includes("norway") || location.includes("norwegen")) return "NO";
+  if (location.includes("tokyo") || location.includes("tokio")) return "JP-TOKYO";
+
+  if (location.includes("sverige") || location.includes("sweden")) {
+    if (["skåne", "skane", "blekinge", "halland", "kronoberg", "kalmar", "jönköping", "jonkoping", "västra götaland", "vastra gotaland", "gotland", "lidköping", "lidkoping", "herrljunga", "varberg"].some((part) => location.includes(part))) return "SE-SOUTH";
+    if (["stockholm", "uppsala", "södermanland", "sodermanland", "östergötland", "ostergotland", "värmland", "varmland", "örebro", "orebro", "västmanland", "vastmanland", "dalarna", "gävleborg", "gavleborg", "laxå", "laxa"].some((part) => location.includes(part))) return "SE-CENTRAL";
+    if (["västernorrland", "vasternorrland", "jämtland", "jamtland", "västerbotten", "vasterbotten", "norrbotten"].some((part) => location.includes(part))) return "SE-NORTH";
+  }
+
+  return "";
+}
+
 function scoreWindowFromDate(value = "") {
   const normalized = normalizeDate(value);
   const month = Number(normalized.slice(5, 7));
@@ -412,8 +435,8 @@ function renderStats() {
 
 function renderRules() {
   const rules = [
-    ["1", "Eine Art pro Person und Saison", "Mehrfachaufnahmen derselben Art bringen keine zusätzlichen Punkte. Es zählt der früheste bestätigte Fund zwischen Mai und Mai."],
-    ["2", "Nur bestätigte Funde", "In die Liga kommen ausschließlich bewusst bestätigte Vogelarten – egal ob aus Merlin/eBird oder BirdNET Live."],
+    ["1", "Eine Art pro Person und Saison", "Mehrfachaufnahmen derselben Art bringen keine zusätzlichen Punkte. Es zählt der früheste Nachweis zwischen Mai und Mai."],
+    ["2", "BirdNET-Aufnahmen zählen", "Bei BirdNET Live zählt jede aufgezeichnete Vogelart unabhängig vom Review- oder Bestätigungsstatus. Auffällige Erkennungen werden markiert; bekannte Nicht-Vogel-Taxa werden nicht gewertet."],
     ["R", "Regionalbasis", "Zuerst zählt, wie besonders die Art in der Fundregion und im jeweiligen Zeitfenster ist. Lokal häufige Reisearten werden dadurch nicht künstlich aufgewertet."],
     ["+", "Akustikbonus", "Zusätzlich gibt es 0 bis 3 Punkte dafür, wie schwierig es typischerweise ist, bei einer Begegnung tatsächlich eine brauchbare Lautäußerung zu erwischen."],
     ["10", "Regulärer Deckel", "Regionalbasis und Akustikbonus werden addiert; normale Funde sind bei 10 Punkten gedeckelt."],
@@ -527,25 +550,27 @@ function mapImportedRows(csvText, playerName, sourceName = "CSV") {
     date: ["date", "datum", "observation date", "erstfund", "timestamp (utc)", "timestamp"],
     location: ["location", "ort", "locality", "location name"],
     stateProvince: ["state/province", "state province", "state", "province", "region code", "bundesland"],
-    confirmed: ["confirmed", "bestätigt", "confirmed?", "verified"]
+    confirmed: ["confirmed", "bestätigt", "confirmed?", "verified"],
+    reviewStatus: ["reviewstatus", "review status"],
+    confidence: ["confidence", "konfidenz", "score"]
   };
   const indexFor = (names) => headers.findIndex((header) => names.includes(header));
   const indexes = Object.fromEntries(Object.entries(aliases).map(([key, names]) => [key, indexFor(names)]));
   if (indexes.commonName < 0 && indexes.scientificName < 0) throw new Error("Keine Spalte für Vogelart gefunden.");
 
   const currentByScientificName = new Map(data.species.map((species) => [species.scientificName.toLowerCase(), species]));
-  const hasConfirmationColumn = indexes.confirmed >= 0;
-  let unconfirmedIgnored = 0;
+  const isBirdNetCsv = indexes.confidence >= 0 || indexes.reviewStatus >= 0 || (indexes.confirmed >= 0 && headers.some((header) => header.includes("timestamp")));
   let outOfSeasonIgnored = 0;
+  let nonBirdIgnored = 0;
+  let implausibleIgnored = 0;
+  let reviewedConfirmed = 0;
+  let unreviewedAccepted = 0;
   let detectionCount = 0;
+  const anomalies = [];
   const mapped = [];
 
   rows.slice(1).forEach((row) => {
     detectionCount += 1;
-    if (hasConfirmationColumn && !isConfirmedValue(row[indexes.confirmed])) {
-      unconfirmedIgnored += 1;
-      return;
-    }
     const commonName = indexes.commonName >= 0 ? (row[indexes.commonName] || "") : "";
     const scientificName = indexes.scientificName >= 0 ? (row[indexes.scientificName] || "").trim() : "";
     const existing = currentByScientificName.get(scientificName.toLowerCase());
@@ -554,6 +579,28 @@ function mapImportedRows(csvText, playerName, sourceName = "CSV") {
       outOfSeasonIgnored += 1;
       return;
     }
+
+    if (isBirdNetCsv && birdNetNonBirdTaxa.has(scientificName)) {
+      nonBirdIgnored += 1;
+      anomalies.push(`${commonName || scientificName}: Nicht-Vogel-Taxon aus BirdNET erkannt und nicht gewertet.`);
+      return;
+    }
+    if (isBirdNetCsv && birdNetExcludedTaxa[scientificName]) {
+      implausibleIgnored += 1;
+      anomalies.push(`${commonName || scientificName}: ${birdNetExcludedTaxa[scientificName]} Treffer wurde automatisch ignoriert.`);
+      return;
+    }
+
+    const location = indexes.location >= 0 ? (row[indexes.location] || "") : "";
+    if (isBirdNetCsv) {
+      const confirmedValue = indexes.confirmed >= 0 ? row[indexes.confirmed] : "";
+      const reviewValue = indexes.reviewStatus >= 0 ? row[indexes.reviewStatus] : "";
+      if (isConfirmedValue(confirmedValue) || isConfirmedValue(reviewValue)) reviewedConfirmed += 1;
+      else unreviewedAccepted += 1;
+      const confidence = indexes.confidence >= 0 ? row[indexes.confidence] : "";
+      anomalies.push(...birdNetAnomaly(scientificName, commonName, confidence, location));
+    }
+
     const stateProvince = indexes.stateProvince >= 0 ? (row[indexes.stateProvince] || "").trim() : "";
     const automaticRegion = stateProvince ? regionFromStateProvince(stateProvince) : "";
     const region = automaticRegion && automaticRegion !== "OTHER" ? automaticRegion : (state.importRegion || automaticRegion || "");
@@ -563,7 +610,7 @@ function mapImportedRows(csvText, playerName, sourceName = "CSV") {
       germanName: existing?.germanName || pointCatalog[scientificName]?.germanName || germanNames[scientificName] || commonName || scientificName,
       scientificName,
       date,
-      location: indexes.location >= 0 ? (row[indexes.location] || "") : "",
+      location,
       stateProvince,
       region,
       scoreWindow: scoreWindowFromDate(date),
@@ -576,11 +623,15 @@ function mapImportedRows(csvText, playerName, sourceName = "CSV") {
     meta: {
       files: 1,
       detections: detectionCount,
-      confirmed: mapped.length,
-      unconfirmedIgnored,
+      birdnetAccepted: isBirdNetCsv ? mapped.length : 0,
+      reviewedConfirmed,
+      unreviewedAccepted,
+      nonBirdIgnored,
+      implausibleIgnored,
       outOfSeasonIgnored,
-      birdnetFiles: hasConfirmationColumn ? 1 : 0,
-      ebirdFiles: hasConfirmationColumn ? 0 : 1
+      birdnetFiles: isBirdNetCsv ? 1 : 0,
+      ebirdFiles: isBirdNetCsv ? 0 : 1,
+      anomalies: [...new Set(anomalies)]
     }
   };
 }
@@ -600,28 +651,77 @@ function birdNetLocation(payload) {
   return "";
 }
 
+const birdNetNonBirdTaxa = new Set([
+  "Tettigonia viridissima",
+  "Tettigonia cantans",
+  "Chorthippus brunneus",
+  "Chorthippus mollis",
+  "Lithobates sylvaticus"
+]);
+
+const birdNetExcludedTaxa = {
+  "Certhia americana": "Amerikabaumläufer ist eine nordamerikanische Art und in diesem europäischen Export als Fehlklassifikation zu behandeln.",
+  "Vireo bellii": "Braunaugenvireo/Bell's Vireo ist eine nordamerikanische Art und in diesem europäischen Export als Fehlklassifikation zu behandeln.",
+  "Spinus pinus": "Fichtenzeisig/Pine Siskin ist eine nordamerikanische Art und in diesem europäischen Export als Fehlklassifikation zu behandeln."
+};
+
+const birdNetSuspiciousTaxa = {};
+
+function birdNetAnomaly(scientificName, commonName, confidence, location) {
+  const warnings = [];
+  const numericConfidence = Number(confidence);
+  if (Number.isFinite(numericConfidence) && numericConfidence < 0.5) {
+    warnings.push(`${commonName || scientificName}: niedrige BirdNET-Konfidenz (${Math.round(numericConfidence * 100)} %); wird trotzdem berücksichtigt.`);
+  }
+  if (birdNetSuspiciousTaxa[scientificName]) {
+    warnings.push(`${commonName || scientificName}: ${birdNetSuspiciousTaxa[scientificName]}${location ? ` Fundort: ${location}.` : ""}`);
+  }
+  return warnings;
+}
+
 function mapBirdNetJson(jsonText, playerName, sourceName = "BirdNET Live") {
   const payload = JSON.parse(jsonText);
   if (!Array.isArray(payload?.detections)) throw new Error("Die JSON-Datei ist kein erkannter BirdNET-Live-Export.");
 
   const sessionDate = birdNetSessionDate(payload);
   const location = birdNetLocation(payload);
-  let unconfirmedIgnored = 0;
+  const automaticRegion = regionFromBirdNetLocation(location);
+  let nonBirdIgnored = 0;
+  let implausibleIgnored = 0;
   let outOfSeasonIgnored = 0;
+  let reviewedConfirmed = 0;
+  let unreviewedAccepted = 0;
+  const anomalies = [];
   const mapped = [];
 
   payload.detections.forEach((detection) => {
-    if (!isConfirmedValue(detection.confirmed)) {
-      unconfirmedIgnored += 1;
-      return;
-    }
     const date = sessionDate || normalizeDate(detection.timestamp || "");
     if (date && !isDateInSeason(date)) {
       outOfSeasonIgnored += 1;
       return;
     }
+
     const scientificName = String(detection.scientificName || "").trim();
     const commonName = String(detection.commonName || "").trim();
+
+    if (birdNetNonBirdTaxa.has(scientificName)) {
+      nonBirdIgnored += 1;
+      anomalies.push(`${commonName || scientificName}: Nicht-Vogel-Taxon aus BirdNET erkannt und nicht gewertet.`);
+      return;
+    }
+    if (birdNetExcludedTaxa[scientificName]) {
+      implausibleIgnored += 1;
+      anomalies.push(`${commonName || scientificName}: ${birdNetExcludedTaxa[scientificName]} Treffer wurde automatisch ignoriert.`);
+      return;
+    }
+
+    const isReviewedConfirmed = isConfirmedValue(detection.confirmed) || isConfirmedValue(detection.reviewStatus);
+    if (isReviewedConfirmed) reviewedConfirmed += 1;
+    else unreviewedAccepted += 1;
+
+    anomalies.push(...birdNetAnomaly(scientificName, commonName, detection.confidence, location));
+    if (!location) anomalies.push(`${commonName || scientificName}: BirdNET-Session enthält keinen Fundort; Fallback-Region erforderlich.`);
+
     mapped.push({
       player: playerName.trim(),
       commonName,
@@ -630,7 +730,7 @@ function mapBirdNetJson(jsonText, playerName, sourceName = "BirdNET Live") {
       date,
       location,
       stateProvince: "",
-      region: state.importRegion || "",
+      region: automaticRegion || state.importRegion || "",
       scoreWindow: scoreWindowFromDate(date),
       source: sourceName
     });
@@ -641,21 +741,43 @@ function mapBirdNetJson(jsonText, playerName, sourceName = "BirdNET Live") {
     meta: {
       files: 1,
       detections: payload.detections.length,
-      confirmed: mapped.length,
-      unconfirmedIgnored,
+      birdnetAccepted: mapped.length,
+      reviewedConfirmed,
+      unreviewedAccepted,
+      nonBirdIgnored,
+      implausibleIgnored,
       outOfSeasonIgnored,
       birdnetFiles: 1,
-      ebirdFiles: 0
+      ebirdFiles: 0,
+      anomalies: [...new Set(anomalies)]
     }
   };
 }
 
 function mergeImportResults(results) {
-  const rows = dedupeImportedRows(results.flatMap((result) => result.rows));
+  const rawRows = results.flatMap((result) => result.rows);
+  const locatedSameDay = new Map();
+  rawRows.forEach((row) => {
+    if (!row.location) return;
+    const speciesKey = (row.scientificName || row.commonName || "").trim().toLowerCase();
+    const key = `${row.player.toLowerCase()}:${speciesKey}:${row.date || ""}`;
+    if (!locatedSameDay.has(key)) locatedSameDay.set(key, row);
+  });
+  const recoveredRows = rawRows.map((row) => {
+    if (row.location) return row;
+    const speciesKey = (row.scientificName || row.commonName || "").trim().toLowerCase();
+    const key = `${row.player.toLowerCase()}:${speciesKey}:${row.date || ""}`;
+    const fallback = locatedSameDay.get(key);
+    return fallback ? { ...row, location: fallback.location, stateProvince: fallback.stateProvince || row.stateProvince, region: fallback.region || row.region } : row;
+  });
+  const rows = dedupeImportedRows(recoveredRows);
   const meta = results.reduce((sum, result) => {
-    Object.keys(sum).forEach((key) => { sum[key] += Number(result.meta?.[key] || 0); });
+    ["files", "detections", "birdnetAccepted", "reviewedConfirmed", "unreviewedAccepted", "nonBirdIgnored", "implausibleIgnored", "outOfSeasonIgnored", "birdnetFiles", "ebirdFiles"]
+      .forEach((key) => { sum[key] += Number(result.meta?.[key] || 0); });
+    if (Array.isArray(result.meta?.anomalies)) sum.anomalies.push(...result.meta.anomalies);
     return sum;
-  }, { files: 0, detections: 0, confirmed: 0, unconfirmedIgnored: 0, outOfSeasonIgnored: 0, birdnetFiles: 0, ebirdFiles: 0 });
+  }, { files: 0, detections: 0, birdnetAccepted: 0, reviewedConfirmed: 0, unreviewedAccepted: 0, nonBirdIgnored: 0, implausibleIgnored: 0, outOfSeasonIgnored: 0, birdnetFiles: 0, ebirdFiles: 0, anomalies: [] });
+  meta.anomalies = [...new Set(meta.anomalies)];
   meta.uniqueSpecies = rows.length;
   return { rows, meta };
 }
@@ -666,8 +788,7 @@ async function inflateRaw(bytes) {
   return new Uint8Array(await new Response(stream).arrayBuffer());
 }
 
-async function extractBirdNetTextFromZip(file) {
-  const bytes = new Uint8Array(await file.arrayBuffer());
+async function readZipEntries(bytes) {
   const view = new DataView(bytes.buffer, bytes.byteOffset, bytes.byteLength);
   const decoder = new TextDecoder("utf-8");
   let eocd = -1;
@@ -676,11 +797,11 @@ async function extractBirdNetTextFromZip(file) {
   }
   if (eocd < 0) throw new Error("Die ZIP-Datei konnte nicht gelesen werden.");
 
-  const entries = view.getUint16(eocd + 10, true);
+  const count = view.getUint16(eocd + 10, true);
   let cursor = view.getUint32(eocd + 16, true);
-  const candidates = [];
+  const entries = [];
 
-  for (let index = 0; index < entries; index += 1) {
+  for (let index = 0; index < count; index += 1) {
     if (view.getUint32(cursor, true) !== 0x02014b50) throw new Error("Ungültige ZIP-Struktur.");
     const method = view.getUint16(cursor + 10, true);
     const compressedSize = view.getUint32(cursor + 20, true);
@@ -689,32 +810,61 @@ async function extractBirdNetTextFromZip(file) {
     const commentLength = view.getUint16(cursor + 32, true);
     const localOffset = view.getUint32(cursor + 42, true);
     const filename = decoder.decode(bytes.slice(cursor + 46, cursor + 46 + filenameLength));
-    if ((filename.endsWith(".json") && !filename.endsWith(".metadata.json")) || filename.endsWith(".csv")) {
-      candidates.push({ filename, method, compressedSize, localOffset });
+
+    if (view.getUint32(localOffset, true) !== 0x04034b50) throw new Error("Ungültiger ZIP-Dateieintrag.");
+    const localNameLength = view.getUint16(localOffset + 26, true);
+    const localExtraLength = view.getUint16(localOffset + 28, true);
+    const dataStart = localOffset + 30 + localNameLength + localExtraLength;
+    const compressed = bytes.slice(dataStart, dataStart + compressedSize);
+    let plain;
+    if (method === 0) plain = compressed;
+    else if (method === 8) plain = await inflateRaw(compressed);
+    else {
+      cursor += 46 + filenameLength + extraLength + commentLength;
+      continue;
     }
+    entries.push({ filename, bytes: plain });
     cursor += 46 + filenameLength + extraLength + commentLength;
   }
+  return entries;
+}
 
-  const candidate = candidates.find((entry) => entry.filename.endsWith(".json")) || candidates.find((entry) => entry.filename.endsWith(".csv"));
-  if (!candidate) throw new Error("In der BirdNET-ZIP wurde keine JSON- oder CSV-Datei gefunden.");
-  if (view.getUint32(candidate.localOffset, true) !== 0x04034b50) throw new Error("Ungültiger ZIP-Dateieintrag.");
-  const localNameLength = view.getUint16(candidate.localOffset + 26, true);
-  const localExtraLength = view.getUint16(candidate.localOffset + 28, true);
-  const start = candidate.localOffset + 30 + localNameLength + localExtraLength;
-  const compressed = bytes.slice(start, start + candidate.compressedSize);
-  let plain;
-  if (candidate.method === 0) plain = compressed;
-  else if (candidate.method === 8) plain = await inflateRaw(compressed);
-  else throw new Error(`ZIP-Kompressionsmethode ${candidate.method} wird nicht unterstützt.`);
-  return { filename: candidate.filename, text: decoder.decode(plain) };
+async function extractBirdNetPayloadsFromZipBytes(bytes, parentName = "BirdNET ZIP", depth = 0) {
+  if (depth > 2) throw new Error("BirdNET-ZIP ist tiefer verschachtelt als unterstützt.");
+  const decoder = new TextDecoder("utf-8");
+  const entries = await readZipEntries(bytes);
+  const mainJson = entries.filter((entry) => entry.filename.toLowerCase().endsWith(".json") && !entry.filename.toLowerCase().endsWith(".metadata.json"));
+  if (mainJson.length) {
+    return mainJson.map((entry) => ({ filename: `${parentName} / ${entry.filename}`, text: decoder.decode(entry.bytes), type: "json" }));
+  }
+  const csvEntries = entries.filter((entry) => entry.filename.toLowerCase().endsWith(".csv"));
+  if (csvEntries.length) {
+    return csvEntries.map((entry) => ({ filename: `${parentName} / ${entry.filename}`, text: decoder.decode(entry.bytes), type: "csv" }));
+  }
+  const nestedZips = entries.filter((entry) => entry.filename.toLowerCase().endsWith(".zip"));
+  if (nestedZips.length) {
+    const payloads = [];
+    for (const entry of nestedZips) {
+      payloads.push(...await extractBirdNetPayloadsFromZipBytes(entry.bytes, entry.filename, depth + 1));
+    }
+    return payloads;
+  }
+  throw new Error("In der BirdNET-ZIP wurde keine JSON-, CSV- oder Session-ZIP-Datei gefunden.");
+}
+
+async function extractBirdNetPayloadsFromZip(file) {
+  const bytes = new Uint8Array(await file.arrayBuffer());
+  return extractBirdNetPayloadsFromZipBytes(bytes, file.name, 0);
 }
 
 async function parseImportFile(file, playerName) {
   const name = file.name.toLowerCase();
   if (name.endsWith(".zip")) {
-    const extracted = await extractBirdNetTextFromZip(file);
-    if (extracted.filename.toLowerCase().endsWith(".json")) return mapBirdNetJson(extracted.text, playerName, file.name);
-    return mapImportedRows(extracted.text, playerName, file.name);
+    const payloads = await extractBirdNetPayloadsFromZip(file);
+    const results = payloads.map((payload) => payload.type === "json"
+      ? mapBirdNetJson(payload.text, playerName, payload.filename)
+      : mapImportedRows(payload.text, playerName, payload.filename));
+    return mergeImportResults(results);
   }
   const text = await file.text();
   if (name.endsWith(".json")) return mapBirdNetJson(text, playerName, file.name);
@@ -726,12 +876,13 @@ function getImportAudit() {
   const playerName = state.importPlayer.trim().toLowerCase();
   const player = data.players.find((item) => item.name.toLowerCase() === playerName);
   const speciesMap = getSpeciesMap();
-  const alreadyOwned = new Set(
-    uniqueObservations()
-      .filter((item) => item.playerId === player?.id)
-      .map((item) => speciesMap.get(item.speciesId)?.scientificName?.toLowerCase())
-      .filter(Boolean)
-  );
+  const existingByScientific = new Map();
+  uniqueObservations()
+    .filter((item) => item.playerId === player?.id)
+    .forEach((item) => {
+      const sci = speciesMap.get(item.speciesId)?.scientificName?.toLowerCase();
+      if (sci) existingByScientific.set(sci, item);
+    });
 
   const missing = [];
   const rated = [];
@@ -740,6 +891,16 @@ function getImportAudit() {
 
   state.importedRows.forEach((row) => {
     const sci = (row.scientificName || "").trim();
+    const existing = existingByScientific.get(sci.toLowerCase());
+    const wouldReplaceExisting = Boolean(existing && row.date && (!existing.observedAt || row.date < existing.observedAt));
+
+    if (existing && !wouldReplaceExisting) {
+      alreadyPresentCount += 1;
+      return;
+    }
+    if (existing) alreadyPresentCount += 1;
+    else newCount += 1;
+
     const point = masterScore(sci, row.region, row.scoreWindow);
     if (hasPointValue(point)) {
       rated.push({ ...row, points: point });
@@ -753,13 +914,11 @@ function getImportAudit() {
       else missingReason = `${regionLabel(row.region)} · ${scoreWindowLabel(row.scoreWindow)} noch nicht vollständig bewertet`;
       missing.push({ ...row, missingReason });
     }
-    if (alreadyOwned.has(sci.toLowerCase())) alreadyPresentCount += 1;
-    else newCount += 1;
   });
 
   return {
     total: state.importedRows.length,
-    ratedCount: rated.length,
+    ratedCount: rated.length + alreadyPresentCount,
     missing,
     alreadyPresentCount,
     newCount,
@@ -908,14 +1067,15 @@ function renderImport(message = "") {
   const hasLocalDraft = Boolean(localStorage.getItem(storageKey));
   const audit = state.importedRows.length ? getImportAudit() : null;
   const meta = state.importMeta;
-  const missingHtml = audit?.missing.length ? `<div class="audit-warning"><strong>Fehlende Region-/Zeit-Bewertungen</strong>${audit.missing.map((row) => `<div><span>${escapeHtml(row.germanName || row.commonName || row.scientificName)}</span><em>${escapeHtml(row.missingReason)}${row.scientificName ? ` · ${escapeHtml(row.scientificName)}` : ""}</em></div>`).join("")}<p>BirdLeague übernimmt neue Art-/Region-/Zeit-Kombinationen bewusst nicht automatisch. Ergänze sie zuerst in der V4-Masterliste und aktualisiere anschließend <code>points.js</code>.</p></div>` : "";
+  const missingHtml = audit?.missing.length ? `<div class="audit-warning"><strong>Fehlende Region-/Zeit-Bewertungen</strong>${audit.missing.map((row) => `<div><span>${escapeHtml(row.germanName || row.commonName || row.scientificName)}</span><em>${escapeHtml(row.missingReason)}${row.scientificName ? ` · ${escapeHtml(row.scientificName)}` : ""}${row.location ? ` · Fundort: ${escapeHtml(row.location)}` : ""}${row.stateProvince ? ` · ${escapeHtml(row.stateProvince)}` : ""}</em></div>`).join("")}<p>BirdLeague übernimmt neue Art-/Region-/Zeit-Kombinationen bewusst nicht automatisch. Ergänze sie zuerst in der V4-Masterliste und aktualisiere anschließend <code>points.js</code>.</p></div>` : "";
   const readyHtml = audit?.complete ? `<div class="audit-ready">✓ ${audit.ratedCount}/${audit.total} Arten haben für Fundregion und Zeitfenster einen Punktwert. Import ist bereit.</div>` : "";
   const sourceHtml = meta ? `<div class="import-source-summary">
-      <strong>${meta.files} Datei${meta.files === 1 ? "" : "en"} verarbeitet</strong>
+      <strong>${meta.files} Datei/Session${meta.files === 1 ? "" : "s"} verarbeitet</strong>
       <span>${meta.detections} Beobachtungen/Detektionen gelesen</span>
-      ${meta.birdnetFiles ? `<span>${meta.confirmed} bestätigte BirdNET-Detektionen berücksichtigt</span><span>${meta.unconfirmedIgnored} unbestätigte BirdNET-Detektionen ignoriert</span>` : ""}
+      ${meta.birdnetFiles ? `<span>${meta.birdnetAccepted} BirdNET-Detektionen berücksichtigt – Reviewstatus wird nicht gefiltert</span>${meta.reviewedConfirmed ? `<span>${meta.reviewedConfirmed} davon in BirdNET manuell bestätigt</span>` : ""}${meta.unreviewedAccepted ? `<span>${meta.unreviewedAccepted} ohne manuelle Bestätigung trotzdem berücksichtigt</span>` : ""}${meta.nonBirdIgnored ? `<span>${meta.nonBirdIgnored} Nicht-Vogel-Detektion${meta.nonBirdIgnored === 1 ? "" : "en"} ignoriert</span>` : ""}${meta.implausibleIgnored ? `<span>${meta.implausibleIgnored} geografisch unplausible BirdNET-Detektion${meta.implausibleIgnored === 1 ? "" : "en"} automatisch ignoriert</span>` : ""}` : ""}
       ${meta.outOfSeasonIgnored ? `<span>${meta.outOfSeasonIgnored} außerhalb Mai ${data.season} – Mai ${Number(data.season) + 1} ignoriert</span>` : ""}
     </div>` : "";
+  const anomalyHtml = meta?.anomalies?.length ? `<div class="audit-warning"><strong>Auffälligkeiten im BirdNET-Export</strong>${meta.anomalies.slice(0, 20).map((warning) => `<div><span>⚠</span><em>${escapeHtml(warning)}</em></div>`).join("")}${meta.anomalies.length > 20 ? `<p>+ ${meta.anomalies.length - 20} weitere Hinweise. Die Detektionen werden nicht allein wegen eines Hinweises verworfen.</p>` : `<p>Diese Hinweise blockieren den Import nicht automatisch. Auffällige Vogelarten werden grundsätzlich mitgeführt; fehlende Punktwerte müssen wie gewohnt geprüft werden.</p>`}</div>` : "";
   const regionOptions = Object.entries(regionLabels)
     .filter(([code]) => code !== "OTHER")
     .map(([code, label]) => `<option value="${escapeHtml(code)}" ${state.importRegion === code ? "selected" : ""}>${escapeHtml(label)}</option>`)
@@ -923,14 +1083,15 @@ function renderImport(message = "") {
 
   app.innerHTML = `<section class="page-content import-page"><article class="panel import-panel">
     <div class="panel-heading"><div><p class="eyebrow">BirdLeague-Verwaltung</p><h3>Beobachtungen importieren & veröffentlichen</h3></div><span>⇧</span></div>
-    <p>eBird-CSV-Dateien werden über <code>State/Province</code> automatisch einer BirdLeague-Region zugeordnet. Für BirdNET Live oder CSVs ohne Regionscode kannst du eine Fallback-Region wählen. Der Punktwert besteht aus Regionalbasis + Akustikbonus. Die Regionalbasis hängt von Art, Region und Zeitfenster ab; der Akustikbonus bewertet, wie schwierig eine brauchbare Lautäußerung typischerweise zu erwischen ist.</p>
+    <p>eBird-CSV-Dateien werden über <code>State/Province</code> automatisch einer BirdLeague-Region zugeordnet. Für BirdNET Live oder CSVs ohne Regionscode kannst du eine Fallback-Region wählen. Bei BirdNET werden aufgezeichnete Vogelarten unabhängig vom Reviewstatus berücksichtigt. Bekannte Nicht-Vogel-Taxa und eindeutig geografisch unplausible Fehlklassifikationen werden ausgeschlossen; andere Auffälligkeiten werden nur als Hinweis angezeigt. Der Punktwert besteht aus Regionalbasis + Akustikbonus. Die Regionalbasis hängt von Art, Region und Zeitfenster ab; der Akustikbonus bewertet, wie schwierig eine brauchbare Lautäußerung typischerweise zu erwischen ist.</p>
     <label>Spielername<input id="import-player" value="${escapeHtml(state.importPlayer)}" placeholder="z. B. Finn"></label>
     <label>Fallback-Region für Dateien ohne Regionscode
       <select id="import-region"><option value="">Bitte wählen, falls nötig</option>${regionOptions}</select>
     </label>
-    <label class="dropzone"><span class="upload-symbol">⇧</span><strong>Dateien auswählen</strong><span>eBird: CSV · BirdNET Live: ZIP, JSON oder CSV · Mehrfachauswahl möglich</span><input id="import-file" type="file" accept=".csv,.json,.zip,text/csv,application/json,application/zip" multiple></label>
+    <label class="dropzone"><span class="upload-symbol">⇧</span><strong>Dateien auswählen</strong><span>eBird: CSV · BirdNET Live: Session-ZIP, Bulk-ZIP, JSON oder CSV · Mehrfachauswahl möglich</span><input id="import-file" type="file" accept=".csv,.json,.zip,text/csv,application/json,application/zip" multiple></label>
     ${message ? `<div class="import-message">${escapeHtml(message)}</div>` : ""}
     ${sourceHtml}
+    ${anomalyHtml}
     ${audit ? `<div class="audit-grid">
       <div><strong>${audit.total}</strong><span>Jahresarten erkannt</span></div>
       <div><strong>${audit.ratedCount}</strong><span>vollständig bewertet</span></div>
@@ -1023,10 +1184,7 @@ app.addEventListener("change", async (event) => {
     state.importMeta = merged.meta;
 
     if (!merged.rows.length) {
-      const ignored = merged.meta.unconfirmedIgnored;
-      renderImport(ignored
-        ? `Keine bestätigten Jahresarten gefunden. ${ignored} unbestätigte BirdNET-Detektion${ignored === 1 ? " wurde" : "en wurden"} ignoriert.`
-        : "Keine importierbaren Jahresarten in der aktuellen Saison gefunden.");
+      renderImport("Keine importierbaren Vogelarten in der aktuellen Saison gefunden.");
       return;
     }
 

@@ -47,3 +47,22 @@ Reguläre Funde sind bei 10 Punkten gedeckelt. 15 Punkte bleiben echten regional
 ## Nicht berücksichtigt
 
 Gefährdungsstatus, persönliche Lieblingsarten oder bloße Reiseentfernung erhöhen den Wert nicht. Entscheidend sind regionales Auftreten und die akustische Aufnahme-Challenge.
+
+
+## V4.1 Ergänzungen
+
+Ergänzt wurden Zwergtaucher, Steinkauz, Mittelspecht, Gebirgsstelze, Rotkehlpieper, Waldbaumläufer und Fischadler sowie konkrete fehlende Region-/Zeit-Kontexte für Waldkauz, Turmfalke, Eichelhäher, Fichtenkreuzschnabel und Grauschnäpper. Die Grundlogik V4 bleibt unverändert: Regionalbasis + Akustikbonus.
+
+
+## BirdNET-Regel ab V4.2
+
+Für BirdNET Live gilt der Review-/Bestätigungsstatus nicht als Teilnahmefilter. Jede vom Export aufgezeichnete Vogelart wird zunächst als Nachweis behandelt. Auffälligkeiten werden transparent markiert, insbesondere sehr niedrige Konfidenz, fehlender Fundort oder ein geographisch offensichtlich ungewöhnliches Taxon. Bekannte Nicht-Vogel-Taxa werden nicht gewertet.
+
+Die Warnung ersetzt keine automatische Löschung: Eine auffällige Vogelart bleibt im Import sichtbar und wird nur dann praktisch blockiert, wenn für sie bzw. ihren Region-/Zeit-Kontext noch kein Punktwert festgelegt ist.
+
+
+## V4.3 Ergänzungen aus BirdNET (September 2026)
+
+Neu bzw. ergänzt wurden die tatsächlich benötigten Kontexte: Dohle (DE-NORTH, Mai–Aug), Wasserralle (DE-NORTH, Sep–Nov), Waldkauz (DE-NORTH, Sep–Nov), Drosselrohrsänger (DE-NORTH, Sep–Nov) und Rotdrossel (DE-NORTH, Sep–Nov).
+
+Die resultierenden Werte sind 2, 4, 3, 7 und 4 Punkte. Beim Drosselrohrsänger ergibt sich die hohe Wertung aus einer regional/saisonal besonderen Beobachtung (Basis 5) plus akustisch anspruchsvoller Nachbrutzeit (+2). Wasserralle und Waldkauz erhalten keinen Akustikbonus, weil die Stimme gerade ein typischer Nachweisweg ist; beim Waldkauz ist der Herbst zudem eine ausgeprägte Rufphase.
