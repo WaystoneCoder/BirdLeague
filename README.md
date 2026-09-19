@@ -12,7 +12,7 @@ V4 trennt **Regionalbasis** und **Akustikbonus**.
 - 15 Punkte: ausschließlich echte regionale Raritäten.
 - Gefährdungsstatus oder Reiseentfernung erzeugen keinen automatischen Bonus.
 
-Aktuelle Regionen: Deutschland Nord/Mitte/Süd, Dänemark, Süd-/Mittel-/Nordschweden, Norwegen, Tokio sowie OTHER als nicht bewerteter Fallback.
+Aktuelle Regionen: Deutschland Nord/Mitte/Süd, Dänemark, Süd-/Mittel-/Nordschweden, Norwegen, Frankreich – Bourgogne-Franche-Comté, Tokio sowie OTHER als nicht bewerteter Fallback.
 
 Aktuelle Zeitfenster: Mai–August, September–November, Dezember–Februar, März–April. Aktuell sind die tatsächlich benötigten Mai–August-Kombinationen bewertet; neue Kombinationen blockieren den Import bis zur bewussten Bewertung.
 
@@ -46,3 +46,12 @@ Für bekannte BirdNET-Orte kann die Region direkt aus `locationName` ermittelt w
 - Niedrige Konfidenz oder andere Auffälligkeiten führen nur zu einem Warnhinweis.
 - Fehlt bei einer BirdNET-Session der Standort, versucht BirdLeague zunächst, für dieselbe Art am selben Datum einen anderen Eintrag mit Standort zu verwenden. Wenn das nicht möglich ist, bleibt die Fallback-Region notwendig.
 - Der aktuelle bereinigte Import für Finn enthält manuell bestätigte Ortszuordnungen: 14.09. Alt Schwerin; 05.08., 13.08. und 19.08. Hamburg.
+
+
+## V4.4 – Ida / Frankreich und Herbstkontexte
+
+- Neue Region `FR-BFC`: Frankreich – Bourgogne-Franche-Comté. eBird-Code `FR-BFC` wird automatisch erkannt.
+- Zwergtaucher in `FR-BFC`, September–November: Basis 2 + Akustik +2 = **4 Punkte**.
+- Steinkauz in `FR-BFC`, September–November: Basis 4 + Akustik +1 = **5 Punkte**.
+- Gebirgsstelze in `DE-SOUTH`, September–November: Basis 2 + Akustik +1 = **3 Punkte**.
+- Der aktualisierte Ida-eBird-Export ist damit vollständig bewertbar: 120 Jahresarten.

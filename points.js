@@ -1,4 +1,4 @@
-/* BirdLeague Master-Punkteliste V4.3 – Regionalbasis + Akustikbonus */
+/* BirdLeague Master-Punkteliste V4.4 – Regionalbasis + Akustikbonus */
 window.BIRDLEAGUE_REGIONS = {
   "DE-NORTH": "Deutschland Nord",
   "DE-CENTRAL": "Deutschland Mitte",
@@ -9,6 +9,7 @@ window.BIRDLEAGUE_REGIONS = {
   "SE-NORTH": "Nordschweden",
   "NO": "Norwegen",
   "JP-TOKYO": "Japan – Tokio",
+  "FR-BFC": "Frankreich – Bourgogne-Franche-Comté",
   "OTHER": "Sonstige Region"
 };
 window.BIRDLEAGUE_SCORE_WINDOWS = {
@@ -919,7 +920,8 @@ window.BIRDLEAGUE_POINTS = {
         "may_aug": 2
       },
       "DE-SOUTH": {
-        "may_aug": 2
+        "may_aug": 2,
+        "sep_nov": 2
       },
       "DK": {
         "may_aug": 4
@@ -942,6 +944,11 @@ window.BIRDLEAGUE_POINTS = {
         "bonus": 1,
         "class": "etwas Timing nötig",
         "reason": "Gebirgsstelzen geben regelmäßig Flug- und Kontaktrufe, aber nicht jeder Sichtkontakt liefert automatisch eine saubere Aufnahme. Der Akustikbonus bleibt deshalb moderat."
+      },
+      "sep_nov": {
+        "bonus": 1,
+        "class": "etwas Timing nötig",
+        "reason": "Die Gebirgsstelze ist in Süddeutschland an geeigneten Fließgewässern im Frühherbst regelmäßig. Flug- und Kontaktrufe sind typisch, aber ein Sichtkontakt liefert nicht automatisch eine saubere Aufnahme."
       }
     },
     "scores": {
@@ -952,7 +959,8 @@ window.BIRDLEAGUE_POINTS = {
         "may_aug": 3
       },
       "DE-SOUTH": {
-        "may_aug": 3
+        "may_aug": 3,
+        "sep_nov": 3
       },
       "DK": {
         "may_aug": 5
@@ -2722,6 +2730,9 @@ window.BIRDLEAGUE_POINTS = {
       },
       "NO": {
         "may_aug": 10
+      },
+      "FR-BFC": {
+        "sep_nov": 4
       }
     },
     "acoustic": {
@@ -2729,6 +2740,11 @@ window.BIRDLEAGUE_POINTS = {
         "bonus": 0,
         "class": "akustisch dankbar",
         "reason": "Steinkäuze werden in geeigneten Revieren häufig akustisch entdeckt; die Stimme ist vor allem abends und nachts ein zentraler Nachweisweg. Die Schwierigkeit liegt stärker im regionalen Vorkommen als in der Aufnahme selbst."
+      },
+      "sep_nov": {
+        "bonus": 1,
+        "class": "etwas Timing nötig",
+        "reason": "Der Steinkauz ist in geeigneter Kulturlandschaft der Bourgogne-Franche-Comté lokal regelmäßig, aber keineswegs flächendeckend. Seine Rufe sind ein wichtiger Nachweisweg, im Frühherbst jedoch nicht bei jeder Begegnung garantiert."
       }
     },
     "scores": {
@@ -2755,6 +2771,9 @@ window.BIRDLEAGUE_POINTS = {
       },
       "NO": {
         "may_aug": 10
+      },
+      "FR-BFC": {
+        "sep_nov": 5
       }
     }
   },
@@ -3483,6 +3502,9 @@ window.BIRDLEAGUE_POINTS = {
       },
       "NO": {
         "may_aug": 6
+      },
+      "FR-BFC": {
+        "sep_nov": 2
       }
     },
     "acoustic": {
@@ -3490,6 +3512,11 @@ window.BIRDLEAGUE_POINTS = {
         "bonus": 0,
         "class": "akustisch dankbar",
         "reason": "Der trillernde Balz- und Kontaktruf ist in der Brutzeit oft der auffälligste Nachweis. Wenn Zwergtaucher anwesend und aktiv sind, ist eine Tonaufnahme meist kein zusätzlicher Engpass."
+      },
+      "sep_nov": {
+        "bonus": 2,
+        "class": "akustisch anspruchsvoll",
+        "reason": "Im Frühherbst ist der Zwergtaucher an geeigneten Gewässern regional nicht außergewöhnlich, aber außerhalb der intensivsten Balzphase deutlich weniger verlässlich ruffreudig. Für eine verwertbare Tonaufnahme braucht es daher mehr Timing."
       }
     },
     "scores": {
@@ -3516,6 +3543,9 @@ window.BIRDLEAGUE_POINTS = {
       },
       "NO": {
         "may_aug": 6
+      },
+      "FR-BFC": {
+        "sep_nov": 4
       }
     }
   }

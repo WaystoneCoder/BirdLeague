@@ -1,5 +1,5 @@
 {
-  "version": "4.3",
+  "version": "4.4",
   "scoringModel": "Regionalbasis + Akustikbonus",
   "season": {
     "startMonth": 5,
@@ -15,6 +15,7 @@
     "SE-NORTH": "Nordschweden",
     "NO": "Norwegen",
     "JP-TOKYO": "Japan – Tokio",
+    "FR-BFC": "Frankreich – Bourgogne-Franche-Comté",
     "OTHER": "Sonstige Region"
   },
   "scoreWindows": {
@@ -43,7 +44,7 @@
     "3": "akustische Glückssache"
   },
   "methodNote": "V4 trennt zwei Dinge: (1) regionale/saisonale Besonderheit des Auftretens und (2) die zusätzliche Schwierigkeit, bei einer Begegnung tatsächlich eine verwertbare Lautäußerung aufzunehmen. Gesamt = Regionalbasis + Akustikbonus, regulär gedeckelt bei 10. 15 Punkte bleiben echten regionalen Raritäten vorbehalten. Gefährdungsstatus allein gibt keine Zusatzpunkte.",
-  "calibrationNote": "V4.3 ergänzt die im BirdNET-Bulk-Import tatsächlich benötigten Norddeutschland-Kontexte für Mai–August bzw. September–November. BirdNET-Reviewstatus ist kein Filter. Offensichtlich geografisch unplausible nordamerikanische Fehlklassifikationen werden beim Import ausgeschlossen; sonstige auffällige/unsichere Treffer werden nur markiert.",
+  "calibrationNote": "V4.4 ergänzt Bourgogne-Franche-Comté (FR-BFC) als eigene Region sowie die im aktualisierten eBird-Export von Ida fehlenden September-Kontexte für Zwergtaucher, Steinkauz und Gebirgsstelze. Die V4-Grundlogik bleibt unverändert: Regionalbasis + Akustikbonus; regulär maximal 10, echte Raritäten 15.",
   "species": [
     {
       "germanName": "Alpenstrandläufer",
@@ -986,7 +987,8 @@
           "may_aug": 2
         },
         "DE-SOUTH": {
-          "may_aug": 2
+          "may_aug": 2,
+          "sep_nov": 2
         },
         "DK": {
           "may_aug": 4
@@ -1009,6 +1011,11 @@
           "bonus": 1,
           "class": "etwas Timing nötig",
           "reason": "Gebirgsstelzen geben regelmäßig Flug- und Kontaktrufe, aber nicht jeder Sichtkontakt liefert automatisch eine saubere Aufnahme. Der Akustikbonus bleibt deshalb moderat."
+        },
+        "sep_nov": {
+          "bonus": 1,
+          "class": "etwas Timing nötig",
+          "reason": "Die Gebirgsstelze ist in Süddeutschland an geeigneten Fließgewässern im Frühherbst regelmäßig. Flug- und Kontaktrufe sind typisch, aber ein Sichtkontakt liefert nicht automatisch eine saubere Aufnahme."
         }
       },
       "scores": {
@@ -1019,7 +1026,8 @@
           "may_aug": 3
         },
         "DE-SOUTH": {
-          "may_aug": 3
+          "may_aug": 3,
+          "sep_nov": 3
         },
         "DK": {
           "may_aug": 5
@@ -2863,6 +2871,9 @@
         },
         "NO": {
           "may_aug": 10
+        },
+        "FR-BFC": {
+          "sep_nov": 4
         }
       },
       "acoustic": {
@@ -2870,6 +2881,11 @@
           "bonus": 0,
           "class": "akustisch dankbar",
           "reason": "Steinkäuze werden in geeigneten Revieren häufig akustisch entdeckt; die Stimme ist vor allem abends und nachts ein zentraler Nachweisweg. Die Schwierigkeit liegt stärker im regionalen Vorkommen als in der Aufnahme selbst."
+        },
+        "sep_nov": {
+          "bonus": 1,
+          "class": "etwas Timing nötig",
+          "reason": "Der Steinkauz ist in geeigneter Kulturlandschaft der Bourgogne-Franche-Comté lokal regelmäßig, aber keineswegs flächendeckend. Seine Rufe sind ein wichtiger Nachweisweg, im Frühherbst jedoch nicht bei jeder Begegnung garantiert."
         }
       },
       "scores": {
@@ -2896,6 +2912,9 @@
         },
         "NO": {
           "may_aug": 10
+        },
+        "FR-BFC": {
+          "sep_nov": 5
         }
       }
     },
@@ -3656,6 +3675,9 @@
         },
         "NO": {
           "may_aug": 6
+        },
+        "FR-BFC": {
+          "sep_nov": 2
         }
       },
       "acoustic": {
@@ -3663,6 +3685,11 @@
           "bonus": 0,
           "class": "akustisch dankbar",
           "reason": "Der trillernde Balz- und Kontaktruf ist in der Brutzeit oft der auffälligste Nachweis. Wenn Zwergtaucher anwesend und aktiv sind, ist eine Tonaufnahme meist kein zusätzlicher Engpass."
+        },
+        "sep_nov": {
+          "bonus": 2,
+          "class": "akustisch anspruchsvoll",
+          "reason": "Im Frühherbst ist der Zwergtaucher an geeigneten Gewässern regional nicht außergewöhnlich, aber außerhalb der intensivsten Balzphase deutlich weniger verlässlich ruffreudig. Für eine verwertbare Tonaufnahme braucht es daher mehr Timing."
         }
       },
       "scores": {
@@ -3689,6 +3716,9 @@
         },
         "NO": {
           "may_aug": 6
+        },
+        "FR-BFC": {
+          "sep_nov": 4
         }
       }
     }

@@ -66,3 +66,8 @@ Die Warnung ersetzt keine automatische Löschung: Eine auffällige Vogelart blei
 Neu bzw. ergänzt wurden die tatsächlich benötigten Kontexte: Dohle (DE-NORTH, Mai–Aug), Wasserralle (DE-NORTH, Sep–Nov), Waldkauz (DE-NORTH, Sep–Nov), Drosselrohrsänger (DE-NORTH, Sep–Nov) und Rotdrossel (DE-NORTH, Sep–Nov).
 
 Die resultierenden Werte sind 2, 4, 3, 7 und 4 Punkte. Beim Drosselrohrsänger ergibt sich die hohe Wertung aus einer regional/saisonal besonderen Beobachtung (Basis 5) plus akustisch anspruchsvoller Nachbrutzeit (+2). Wasserralle und Waldkauz erhalten keinen Akustikbonus, weil die Stimme gerade ein typischer Nachweisweg ist; beim Waldkauz ist der Herbst zudem eine ausgeprägte Rufphase.
+
+
+## V4.4 Ergänzungen aus Idas eBird-Export
+
+Neu unterstützt wird `FR-BFC` (Bourgogne-Franche-Comté). Für September–November gelten dort **4 Punkte für Zwergtaucher** (Basis 2 + Akustik +2) und **5 Punkte für Steinkauz** (Basis 4 + Akustik +1). Für die **Gebirgsstelze in Deutschland Süd** wurde September–November mit **3 Punkten** ergänzt (Basis 2 + Akustik +1).

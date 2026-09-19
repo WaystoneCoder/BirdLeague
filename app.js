@@ -39,6 +39,7 @@ function regionFromStateProvince(value = "") {
   if (seNorth.has(code)) return "SE-NORTH";
   if (code.startsWith("NO-")) return "NO";
   if (code === "JP-13") return "JP-TOKYO";
+  if (code === "FR-BFC") return "FR-BFC";
   return "OTHER";
 }
 
@@ -55,6 +56,7 @@ function regionFromBirdNetLocation(value = "") {
   if (location.includes("danmark") || location.includes("denmark") || location.includes("dänemark")) return "DK";
   if (location.includes("norge") || location.includes("norway") || location.includes("norwegen")) return "NO";
   if (location.includes("tokyo") || location.includes("tokio")) return "JP-TOKYO";
+  if (["bourgogne-franche-comté", "bourgogne-franche-comte", "côte-d’or", "côte-d'or", "cote-d'or", "nolay"].some((part) => location.includes(part))) return "FR-BFC";
 
   if (location.includes("sverige") || location.includes("sweden")) {
     if (["skåne", "skane", "blekinge", "halland", "kronoberg", "kalmar", "jönköping", "jonkoping", "västra götaland", "vastra gotaland", "gotland", "lidköping", "lidkoping", "herrljunga", "varberg"].some((part) => location.includes(part))) return "SE-SOUTH";
