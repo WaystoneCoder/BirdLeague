@@ -5569,20 +5569,6 @@ window.BIRDLEAGUE_DATA = {
       "importedAt": "2026-09-19"
     },
     {
-      "id": "obs-bengt-331",
-      "playerId": "bengt",
-      "speciesId": "alcedo-atthis",
-      "observedAt": "2026-07-29",
-      "location": "Hamburg, Deutschland",
-      "stateProvince": "DE-HH",
-      "region": "DE-NORTH",
-      "scoreWindow": "may_aug",
-      "basePoints": 3,
-      "acousticBonus": 0,
-      "points": 3,
-      "importedAt": "2026-09-19"
-    },
-    {
       "id": "obs-bengt-332",
       "playerId": "bengt",
       "speciesId": "pyrrhula-pyrrhula",
@@ -5706,20 +5692,6 @@ window.BIRDLEAGUE_DATA = {
       "basePoints": 2,
       "acousticBonus": 3,
       "points": 5,
-      "importedAt": "2026-09-19"
-    },
-    {
-      "id": "obs-bengt-341",
-      "playerId": "bengt",
-      "speciesId": "asio-flammeus",
-      "observedAt": "2026-07-30",
-      "location": "Westensee, Schleswig-Holstein, Deutschland",
-      "stateProvince": "DE-SH",
-      "region": "DE-NORTH",
-      "scoreWindow": "may_aug",
-      "basePoints": 6,
-      "acousticBonus": 2,
-      "points": 8,
       "importedAt": "2026-09-19"
     },
     {
